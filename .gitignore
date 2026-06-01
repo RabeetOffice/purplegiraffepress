@@ -1,0 +1,18 @@
+# Local tooling / editor
+.claude/
+.vscode/
+.idea/
+*.code-workspace
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / temp
+*.log
+*.tmp
+*.cache
+
+# Unused extracted build artifacts (not referenced by the site)
+unpacked_assets/

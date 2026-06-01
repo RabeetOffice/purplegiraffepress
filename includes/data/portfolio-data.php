@@ -1,0 +1,52 @@
+<?php
+/* =================================================================
+   PORTFOLIO — single source of truth for every book card on the site.
+   Edit this file once; every page that pulls portfolio data updates.
+
+   Files that consume this data:
+     - includes/portfolio.php   (home-page Swiper ticker)
+     - portfolio.php            (full portfolio page · genres + search)
+
+   Each entry: category, author, title, amazon_link
+   Cover URL is auto-derived from the Amazon ASIN inside the link.
+================================================================= */
+
+if (!function_exists('amazonCoverFromLink')) {
+    function amazonCoverFromLink(string $amazonLink): string
+    {
+        if (preg_match('~/dp/([A-Z0-9]{10})~i', $amazonLink, $matches)) {
+            return 'https://m.media-amazon.com/images/P/' . strtoupper($matches[1]) . '.01._SCLZZZZZZZ_SX500_.jpg';
+        }
+        return 'assets/images/mascot.webp';
+    }
+}
+
+$portfolioItems = array_map(static function (array $item): array {
+    $item['image']         = amazonCoverFromLink($item['amazon_link']);
+    $item['category_slug'] = strtolower(preg_replace('/[^a-z0-9]+/i', '-', $item['category']));
+    return $item;
+}, [    
+    ['category' => 'Children Book', 'author' => 'Rayan Yale',         'title' => '100,000 Whys - The Big Journey for Curious Kids',          'amazon_link' => 'https://www.amazon.com/dp/B0GY862XJM/'],
+    ['category' => 'Children Book', 'author' => 'Theo Wonderquill',   'title' => '100,000 Whys Encyclopedia for Kids',                       'amazon_link' => 'https://www.amazon.com/dp/B0GZZMZ5LG/'],
+    ['category' => 'Children Book', 'author' => 'Nolan Bright',       'title' => '100,000 Whys for Curious Kids',                            'amazon_link' => 'https://www.amazon.com/dp/B0GZKWXXSQ/'],
+    ['category' => 'Children Book', 'author' => 'V Moua',             'title' => 'Sticks and Stones May Break My...',                        'amazon_link' => 'https://www.amazon.com/dp/B0GX32MSYM/'],
+    ['category' => 'Children Book', 'author' => 'V Moua',             'title' => 'I Am Not a Dinosaur!',                                     'amazon_link' => 'https://www.amazon.com/dp/B0GX34ZYDM/'],
+    ['category' => 'Children Book', 'author' => 'V Moua',             'title' => "Don't Worry, Cookie. We'll Save You!",                     'amazon_link' => 'https://www.amazon.com/dp/B0FPBGVVJR/'],
+    ['category' => 'Children Book', 'author' => 'Sophie Harbor',      'title' => 'The Ultimate Road Trip Activity Book For Kids 8-12',       'amazon_link' => 'https://www.amazon.com/dp/B0GZFB7SRP/'],
+    ['category' => 'Children Book', 'author' => 'Bobby B. Loo',       'title' => 'The Ultimate Campfire Book for Kids',                      'amazon_link' => 'https://www.amazon.com/dp/B0GXG3J9DT/'],
+    ['category' => 'Children Book', 'author' => 'Charlie Maple',      'title' => 'The Epic Science Challenge For Super Smart Kids',          'amazon_link' => 'https://www.amazon.com/dp/B0GXQFK6V9/'],
+    ['category' => 'Children Book', 'author' => 'Jeffrey Kyle',       'title' => 'The Mehrabian Rule for Kids',                              'amazon_link' => 'https://www.amazon.com/dp/B0GZ3B6PLP/'],
+    ['category' => 'Children Book', 'author' => 'Gabriel Nedelcu',    'title' => 'The Great Neurotrainer Workbook for Smart Kids',           'amazon_link' => 'https://www.amazon.com/dp/B0H1GVZBVY/'],
+    ['category' => 'Children Book', 'author' => 'Ashlee Ridlon',      'title' => "Whatever You Do, Don't Fall Asleep!",                      'amazon_link' => 'https://www.amazon.com/dp/B0GR74ZF3Y/'],
+    ['category' => 'Children Book', 'author' => 'Joey Acker',         'title' => 'The Worst Vacation Book in the Whole Entire World',        'amazon_link' => 'https://www.amazon.com/dp/B0GZCSHH24/'],
+    ['category' => 'Children Book', 'author' => 'Jessica Schoettle',  'title' => "Tilly's Rainbow Adventure",                                'amazon_link' => 'https://www.amazon.com/dp/B0H2Q7LQQW/'],
+]);
+
+/* Build the genre tabs list dynamically from the data — `All` first,
+   then unique categories sorted alphabetically. */
+$portfolioCategories = [];
+foreach ($portfolioItems as $b) {
+    $portfolioCategories[$b['category_slug']] = $b['category'];
+}
+asort($portfolioCategories);
+$portfolioTabs = ['all' => 'All'] + $portfolioCategories;

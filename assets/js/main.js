@@ -1,0 +1,249 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('siteHeader');
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+
+  const updateHeader = () => {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  };
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  if (menuToggle && mobilePanel) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobilePanel.classList.toggle('open');
+      document.body.classList.toggle('menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    mobilePanel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobilePanel.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  }
+
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    const hero = heroVideo.closest('.hero');
+    const sources = Array.from(heroVideo.querySelectorAll('source[data-src]'));
+    const showVideo = () => hero?.classList.add('video-ready');
+    const loadHeroVideo = () => {
+      sources.forEach((source) => {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+      });
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
+    };
+
+    heroVideo.addEventListener('canplay', showVideo, { once: true });
+    heroVideo.addEventListener('error', () => hero?.classList.remove('video-ready'), { once: true });
+
+    if ('IntersectionObserver' in window) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        loadHeroVideo();
+        videoObserver.disconnect();
+      }, { rootMargin: '300px 0px' });
+      videoObserver.observe(heroVideo);
+    } else {
+      loadHeroVideo();
+    }
+  }
+
+  document.querySelectorAll('.faq-question').forEach((button) => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const isOpen = item.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      button.querySelector('span:last-child').textContent = isOpen ? '-' : '+';
+    });
+  });
+
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add('in'));
+  }
+
+  /* ---------------------------------------------------------------
+     Service cards — cursor-tracking shimmer + subtle 3D tilt
+  --------------------------------------------------------------- */
+  const fineHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (fineHover.matches) {
+    const MAX_TILT = 6;
+    document.querySelectorAll('.services-grid .service-card').forEach((card) => {
+      let frame = 0;
+      card.addEventListener('pointermove', (event) => {
+        if (frame) return;
+        frame = requestAnimationFrame(() => {
+          frame = 0;
+          const rect = card.getBoundingClientRect();
+          const px = (event.clientX - rect.left) / rect.width;
+          const py = (event.clientY - rect.top) / rect.height;
+          card.style.setProperty('--mx', (px * 100).toFixed(2) + '%');
+          card.style.setProperty('--my', (py * 100).toFixed(2) + '%');
+          if (!reduceMotion.matches) {
+            card.classList.add('is-tilting');
+            card.style.setProperty('--ry', ((px - 0.5) * 2 * MAX_TILT).toFixed(2) + 'deg');
+            card.style.setProperty('--rx', ((0.5 - py) * 2 * MAX_TILT).toFixed(2) + 'deg');
+          }
+        });
+      });
+      card.addEventListener('pointerleave', () => {
+        if (frame) { cancelAnimationFrame(frame); frame = 0; }
+        card.classList.remove('is-tilting');
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
+  /* ---------------------------------------------------------------
+     Portfolio grid — genre tabs + live search
+  --------------------------------------------------------------- */
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  if (portfolioGrid) {
+    const cards = Array.from(portfolioGrid.querySelectorAll('.book-card'));
+    const tabs = Array.from(document.querySelectorAll('.genre-tab'));
+    const searchInput = document.getElementById('portfolioSearch');
+    const emptyMsg = document.querySelector('.portfolio-empty');
+    let activeFilter = 'all';
+
+    const applyPortfolioFilter = () => {
+      const query = (searchInput && searchInput.value ? searchInput.value : '').trim().toLowerCase();
+      let visible = 0;
+      cards.forEach((card) => {
+        const matchesGenre = activeFilter === 'all' || card.dataset.category === activeFilter;
+        const matchesQuery = !query || (card.dataset.search || '').indexOf(query) !== -1;
+        const show = matchesGenre && matchesQuery;
+        card.hidden = !show;
+        if (show) {
+          card.classList.add('in');
+          visible += 1;
+        }
+      });
+      if (emptyMsg) emptyMsg.hidden = visible !== 0;
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeFilter = tab.dataset.filter || 'all';
+        applyPortfolioFilter();
+      });
+    });
+    if (searchInput) searchInput.addEventListener('input', applyPortfolioFilter);
+  }
+
+  /* ---------------------------------------------------------------
+     Swiper sliders
+  --------------------------------------------------------------- */
+  if (typeof Swiper === 'undefined') return;
+
+  // Portfolio: a real slider on every breakpoint
+  document.querySelectorAll('.portfolio-swiper').forEach((el) => {
+    new Swiper(el, {
+      slidesPerView: 1.25,
+      spaceBetween: 18,
+      grabCursor: true,
+      a11y: { enabled: true },
+      pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
+      breakpoints: {
+        480: { slidesPerView: 1.9, spaceBetween: 20 },
+        640: { slidesPerView: 2.4, spaceBetween: 24 },
+        900: { slidesPerView: 3.4, spaceBetween: 26 },
+        1100: { slidesPerView: 4.2, spaceBetween: 30 },
+      },
+    });
+  });
+
+  // Catalog: full-bleed "storybook shelf" — continuous drift, pause on hover
+  document.querySelectorAll('.catalog-track').forEach((el) => {
+    const calm = reduceMotion.matches;
+    new Swiper(el, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      loop: true,
+      grabCursor: true,
+      a11y: { enabled: true },
+      speed: calm ? 600 : 5200,
+      freeMode: calm ? false : { enabled: true, momentum: false },
+      autoplay: calm ? false : {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+  });
+
+  // Services / steps / testimonials / blogs: slider on tablet & mobile only
+  const configFor = (el) => {
+    if (el.classList.contains('journey-line')) return [1.35, 2.4, 3.4];
+    if (el.classList.contains('testimonial-grid')) return [1.05, 1.5, 2.05];
+    if (el.classList.contains('notes-grid')) return [1.1, 1.5, 2.05];
+    return [1.12, 1.7, 2.3]; // services + default
+  };
+
+  const mobileSwipers = [];
+  const mq = window.matchMedia('(max-width: 1024px)');
+
+  const buildMobileSwipers = () => {
+    document.querySelectorAll('.mobile-swiper').forEach((el) => {
+      el.querySelectorAll('.reveal').forEach((r) => r.classList.add('in'));
+      const [base, bp560, bp768] = configFor(el);
+      const swiper = new Swiper(el, {
+        slidesPerView: base,
+        spaceBetween: 18,
+        grabCursor: true,
+        a11y: { enabled: true },
+        watchOverflow: true,
+        pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+        breakpoints: {
+          560: { slidesPerView: bp560, spaceBetween: 20 },
+          768: { slidesPerView: bp768, spaceBetween: 22 },
+        },
+      });
+      mobileSwipers.push(swiper);
+    });
+  };
+
+  const destroyMobileSwipers = () => {
+    while (mobileSwipers.length) {
+      mobileSwipers.pop().destroy(true, true);
+    }
+  };
+
+  const syncMobileSwipers = (event) => {
+    if (event.matches) {
+      if (!mobileSwipers.length) buildMobileSwipers();
+    } else {
+      destroyMobileSwipers();
+    }
+  };
+
+  syncMobileSwipers(mq);
+  mq.addEventListener('change', syncMobileSwipers);
+});
