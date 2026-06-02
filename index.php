@@ -1,4 +1,5 @@
 <?php include 'includes/config.php'; ?>
+<?php require_once 'includes/blog-data.php'; ?>
 <?php
 $page_title = "Australian Children's Book Publisher Since 2008 | Purple Giraffe Press";
 $page_description = "Purple Giraffe Press is an independent Australian children's book publisher founded in 2008. We publish picture books, chapter books, and middle grade stories children love to read again and again.";
@@ -42,7 +43,7 @@ $page_faqs = [
       <span class="float-card one">Custom illustrations</span>
       <span class="float-card two">Print + ebook</span>
       <span class="float-card three">School &amp; library ready</span>
-      <img src="<?php echo e(SITE_MASCOT); ?>" alt="Purple Giraffe Press mascot for children's book publishing">
+      <img src="./assets/images/hero-character-left.webp" alt="Purple Giraffe Press mascot for children's book publishing">
     </div>
   </div>
 </section>
@@ -83,7 +84,10 @@ $page_faqs = [
     <p class="lead">From the first manuscript polish to launch week, our small team handles editing, illustration, cover design, publishing, and marketing. The process stays clear, creative, and friendly the whole way through.</p>
   </div>
   <div class="container">
-    <?php include 'includes/services.php'; ?>
+    <?php $services_limit = 6; include 'includes/services.php'; ?>
+    <div class="center" style="margin-top: 38px;">
+      <a class="btn btn-primary" href="<?php echo e(asset('services.php')); ?>">View all services <span aria-hidden="true">&rarr;</span></a>
+    </div>
   </div>
 </section>
 
@@ -156,52 +160,13 @@ $page_faqs = [
   </div>
 </section>
 
-<section class="section figma-lavender notes-section">
-  <div class="container section-heading split-heading">
-    <div>
-      <p class="eyebrow script-mark">- from the studio</p>
-      <h2>Field notes &amp; <em>insights.</em></h2>
-    </div>
-    <a class="text-link" href="services.php">All articles →</a>
-  </div>
-  <div class="container">
-    <div class="notes-grid mobile-swiper swiper">
-      <div class="swiper-wrapper">
-        <article class="note-card swiper-slide reveal">
-          <div class="note-art">
-            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=80" alt="Stack of children's books and reading materials">
-            <span>★</span>
-          </div>
-          <p class="note-category">Craft</p>
-          <h3>The hand-drawn art comeback in children&apos;s books</h3>
-          <p>Why families are reaching for paint, pencil, and texture in picture books again.</p>
-          <a href="custom-illustrations.php">Read more →</a>
-        </article>
-        <article class="note-card swiper-slide reveal">
-          <div class="note-art">
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Writer planning a manuscript at a desk">
-            <span>■</span>
-          </div>
-          <p class="note-category">Industry</p>
-          <h3>Publishing a children&apos;s book in 2026: a first-time author&apos;s guide</h3>
-          <p>Royalties, rights, and the real story most brochures leave out.</p>
-          <a href="pricing.php">Read more →</a>
-        </article>
-        <article class="note-card swiper-slide reveal">
-          <div class="note-art">
-            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=900&q=80" alt="Art supplies for illustration and creative work">
-            <span>◆</span>
-          </div>
-          <p class="note-category">Illustration</p>
-          <h3>How to find your illustration style in 6 sketches</h3>
-          <p>A studio exercise we run with every illustrator we sign.</p>
-          <a href="artists.php">Read more →</a>
-        </article>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
+<?php
+/* Field notes — same carousel as the blog "More from the blog" section. */
+$recent_eyebrow = '- from the studio';
+$recent_heading = 'Field notes &amp; <em>insights.</em>';
+$recent_limit   = 6;
+require 'includes/blog-recent.php';
+?>
 
 <section class="section figma-cream">
   <div class="container svc-faq-grid">

@@ -23,8 +23,8 @@
     <span class="footer-sparkles" aria-hidden="true"></span>
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a class="footer-logo" href="index.php" aria-label="<?php echo e(SITE_NAME); ?> home">
-          <img src="<?php echo e(SITE_LOGO); ?>" alt="<?php echo e(SITE_NAME); ?> logo">
+        <a class="footer-logo" href="<?php echo e(asset('index.php')); ?>" aria-label="<?php echo e(SITE_NAME); ?> home">
+          <img src="<?php echo e(asset(SITE_LOGO)); ?>" alt="<?php echo e(SITE_NAME); ?> logo">
           <span><?php echo e(SITE_NAME); ?></span>
         </a>
         <p class="footer-tagline">Independent Australian children&apos;s book publishing since 2008. Stories that spark curiosity, build empathy, and reflect the world children actually live in.</p>
@@ -41,7 +41,7 @@
         <h2>Services</h2>
         <ul>
           <?php foreach ($footer_menu_services as $label => $link): ?>
-            <li><a href="<?php echo e($link); ?>"><?php echo e($label); ?></a></li>
+            <li><a href="<?php echo e(asset($link)); ?>"><?php echo e($label); ?></a></li>
           <?php endforeach; ?>
         </ul>
       </nav>
@@ -49,7 +49,7 @@
         <h2>Company</h2>
         <ul>
           <?php foreach ($footer_menu_company as $label => $link): ?>
-            <li><a href="<?php echo e($link); ?>"><?php echo e($label); ?></a></li>
+            <li><a href="<?php echo e(asset($link)); ?>"><?php echo e($label); ?></a></li>
           <?php endforeach; ?>
         </ul>
       </nav>
@@ -80,7 +80,7 @@
         <p><?php echo e(COPYRIGHT_TEXT); ?></p>
         <div class="footer-legal">
           <?php foreach ($legal_menu as $label => $link): ?>
-            <a href="<?php echo e($link); ?>"><?php echo e($label); ?></a>
+            <a href="<?php echo e(asset($link)); ?>"><?php echo e($label); ?></a>
           <?php endforeach; ?>
         </div>
       </div>
@@ -89,6 +89,12 @@
   <?php include __DIR__ . '/quote-popup.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js?v=<?php echo filemtime(__DIR__ . '/../assets/js/main.js'); ?>"></script>
+  <script src="<?php echo e(asset('assets/js/main.js')); ?>?v=<?php echo filemtime(__DIR__ . '/../assets/js/main.js'); ?>"></script>
 </body>
 </html>
+<?php
+/* Flush the live clean-URL output buffer started in header.php. */
+if (defined('CLEAN_URLS') && CLEAN_URLS && ob_get_level() > 0) {
+    ob_end_flush();
+}
+?>

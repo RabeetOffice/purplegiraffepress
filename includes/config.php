@@ -25,6 +25,7 @@ $nav_menu = [
     'Services' => 'services.php',
     'Pricing' => 'pricing.php',
     'Submissions' => 'submissions.php',
+    'Blog' => 'blogs/',
     'Contact' => 'contact.php',
 ];
 
@@ -34,6 +35,7 @@ $footer_menu_company = [
     'Partners' => 'partners.php',
     'Artists' => 'artists.php',
     'Submissions' => 'submissions.php',
+    'Blog' => 'blogs/',
 ];
 
 $footer_menu_services = [
@@ -52,11 +54,87 @@ $legal_menu = [
 
 define('COPYRIGHT_TEXT', 'Copyright ' . date('Y') . ' ' . SITE_NAME . '. All rights reserved.');
 
+/*
+ * Clean URLs (no ".php") on the LIVE site only.
+ *
+ * On localhost we keep ".php" so local navigation and editing work with no
+ * rewrite rules. On the live domain, links and canonicals drop ".php" and a
+ * root .htaccess maps the clean URLs back to the real .php files (and 301s any
+ * ".php" request to its clean form). Detection is by host, so the same code
+ * behaves correctly in both places with no manual switch.
+ */
+$__pgp_host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+define('IS_LOCAL',
+    $__pgp_host === ''                                   // CLI
+    || strncmp($__pgp_host, 'localhost', 9) === 0
+    || strncmp($__pgp_host, '127.0.0.1', 9) === 0
+    || strpos($__pgp_host, '::1') !== false
+    || substr($__pgp_host, -6) === '.local'
+    || substr($__pgp_host, -5) === '.test'
+);
+define('CLEAN_URLS', !IS_LOCAL);
+unset($__pgp_host);
+
 function e($value) {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
+/**
+ * Output-buffer filter (LIVE only): strip ".php" from internal href/action
+ * URLs so every page, including hardcoded links we have not touched, renders
+ * clean URLs. Absolute URLs, anchors and mailto:/tel: are left alone. The
+ * matching root .htaccess maps the clean URLs back to the real .php files.
+ * Never runs on localhost, so local editing is unaffected.
+ */
+function pgp_clean_html_links($html) {
+    return preg_replace_callback('~\s(href|action)="([^"]*)"~i', function ($m) {
+        $url = $m[2];
+        if ($url === '' || preg_match('~^([a-z][a-z0-9+.\-]*:|//|#)~i', $url)) {
+            return $m[0];                                  // external / anchor / mailto / tel
+        }
+        $new = preg_replace('~\.php(?=$|[?#])~', '', $url); // drop the extension
+        $new = preg_replace('~(^|/)index(?=$|[?#])~', '$1', $new); // index -> directory
+        if ($new === '' || $new[0] === '?' || $new[0] === '#') {
+            $new = './' . $new;
+        }
+        return ' ' . $m[1] . '="' . $new . '"';
+    }, $html);
+}
+
+/**
+ * Apply the environment's URL style to a site-root-relative path.
+ * On the live site, "page.php" becomes "page" and "index.php" collapses to the
+ * containing directory. On localhost, paths are returned unchanged.
+ * Asset paths (.css/.js/images) and directories are never altered.
+ */
+function clean_path($path) {
+    $path = ltrim((string) $path, '/');
+    if (defined('CLEAN_URLS') && CLEAN_URLS) {
+        $path = preg_replace('~(^|/)index\.php$~', '$1', $path);
+        $path = preg_replace('~\.php$~', '', $path);
+    }
+    return $path;
+}
+
 function page_url($path = '') {
-    return rtrim(SITE_CANONICAL_URL, '/') . '/' . ltrim($path, '/');
+    return rtrim(SITE_CANONICAL_URL, '/') . '/' . clean_path($path);
+}
+
+/**
+ * Resolve a site-root-relative path against the current page's depth, and
+ * apply the environment's URL style.
+ *
+ * Pages at the web root leave $GLOBALS['asset_base'] unset, so the depth prefix
+ * is empty. Pages in a subfolder (e.g. /blogs/) set $GLOBALS['asset_base'] =
+ * '../' before including config/header, so every asset, nav link and internal
+ * URL resolves correctly. Absolute URLs, anchors and tel:/mailto: links are
+ * passed through untouched.
+ */
+function asset($path = '') {
+    if ($path === '' || preg_match('~^([a-z][a-z0-9+.\-]*:|//|#)~i', $path)) {
+        return $path;
+    }
+    $out = ($GLOBALS['asset_base'] ?? '') . clean_path($path);
+    return $out === '' ? './' : $out;
 }
 ?>

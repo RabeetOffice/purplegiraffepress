@@ -52,6 +52,11 @@ if (!empty($services_only) && is_array($services_only)) {
         }
     }
 }
+/* Show only the first N services (e.g. the top 6 on the home page). The full
+   list always lives on services.php. */
+if (!empty($services_limit) && $services_limit > 0) {
+    $svc_list = array_slice($svc_list, 0, (int) $services_limit, true);
+}
 ?>
 <div class="services-grid mobile-swiper swiper">
   <div class="swiper-wrapper">
@@ -80,4 +85,4 @@ if (!empty($services_only) && is_array($services_only)) {
   </div>
   <div class="swiper-pagination"></div>
 </div>
-<?php $services_only = null; ?>
+<?php $services_only = $services_limit = null; ?>

@@ -1,0 +1,35 @@
+# Purple Giraffe Press - URL handling
+#
+# Clean, extension-less URLs on the LIVE site (e.g. /about-us, /blogs/<slug>).
+# On localhost the redirects below are skipped, so .php URLs keep working for
+# local editing. The internal rewrite that serves /page from /page.php runs in
+# every environment, so clean links work locally too if you use them.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # --- LIVE ONLY: 301-redirect .php requests to their clean URL ---------------
+  # Skipped on localhost / 127.0.0.1 so local navigation and editing keep .php.
+
+  # /index.php (or "/") -> /
+  RewriteCond %{HTTP_HOST} !^localhost [NC]
+  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+
+  # /anything.php -> /anything   (and /dir/page.php -> /dir/page)
+  RewriteCond %{HTTP_HOST} !^localhost [NC]
+  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # --- ALL ENVIRONMENTS: serve a clean URL from its .php file -----------------
+  # Only when the request is not already a real file/dir and the .php exists.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^(.+?)/?$ $1.php [L]
+</IfModule>
+
+# Friendly 404 (optional): uncomment if you add a 404.php
+# ErrorDocument 404 /404.php

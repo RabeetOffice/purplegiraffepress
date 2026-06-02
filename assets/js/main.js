@@ -180,6 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Blog "More from the blog": a real carousel on every breakpoint
+  document.querySelectorAll('.blog-recent-swiper').forEach((el) => {
+    new Swiper(el, {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      grabCursor: true,
+      a11y: { enabled: true },
+      watchOverflow: true,
+      pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+      navigation: {
+        nextEl: el.querySelector('.blog-recent-next'),
+        prevEl: el.querySelector('.blog-recent-prev'),
+      },
+      breakpoints: {
+        560: { slidesPerView: 1.8, spaceBetween: 22 },
+        768: { slidesPerView: 2.2, spaceBetween: 24 },
+        1024: { slidesPerView: 3, spaceBetween: 26 },
+      },
+    });
+  });
+
   // Catalog: full-bleed "storybook shelf" — continuous drift, pause on hover
   document.querySelectorAll('.catalog-track').forEach((el) => {
     const calm = reduceMotion.matches;
@@ -299,5 +320,74 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+  });
+})();
+
+/* ---------------------------------------------------------------
+   Blog single: build the in-article table of contents from <h2>
+   headings and highlight the current section while scrolling.
+   No-op on pages without .blog-content.
+--------------------------------------------------------------- */
+(function () {
+  const article = document.querySelector('.blog-content');
+  const tocList = document.getElementById('blog-toc');
+  if (!article || !tocList) return;
+  const headings = article.querySelectorAll('h2');
+  if (!headings.length) {
+    const box = tocList.closest('.blog-side-toc');
+    if (box) box.style.display = 'none';
+    return;
+  }
+  headings.forEach((h, i) => {
+    const id = 'sec-' + (i + 1);
+    h.id = id;
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#' + id;
+    a.setAttribute('data-toc-target', id);
+    a.textContent = h.textContent.trim();
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+  tocList.addEventListener('click', (e) => {
+    const link = e.target.closest('a[data-toc-target]');
+    if (!link) return;
+    e.preventDefault();
+    const target = document.getElementById(link.getAttribute('data-toc-target'));
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - 110;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+    history.replaceState(null, '', '#' + link.getAttribute('data-toc-target'));
+  });
+  const tocLinks = tocList.querySelectorAll('a[data-toc-target]');
+  const setActive = () => {
+    const y = window.pageYOffset + 140;
+    let current = null;
+    headings.forEach((h) => { if (h.offsetTop <= y) current = h.id; });
+    tocLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('data-toc-target') === current));
+  };
+  setActive();
+  window.addEventListener('scroll', setActive, { passive: true });
+})();
+
+/* ---------------------------------------------------------------
+   Card image skeletons: every .note-art that contains an <img> shows
+   a shimmer until the image loads. On load the image fades in; on error
+   the broken image is hidden so the skeleton remains.
+--------------------------------------------------------------- */
+(function () {
+  var arts = document.querySelectorAll('.note-art.has-img, .note-art');
+  Array.prototype.forEach.call(arts, function (art) {
+    var img = art.querySelector(':scope > img');
+    if (!img) return;
+    art.classList.add('has-img');
+    var loaded = function () { art.classList.add('is-loaded'); };
+    var failed = function () { art.classList.add('is-error'); };
+    if (img.complete) {
+      if (img.naturalWidth > 0) loaded(); else failed();
+    } else {
+      img.addEventListener('load', loaded, { once: true });
+      img.addEventListener('error', failed, { once: true });
+    }
   });
 })();
