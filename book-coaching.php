@@ -46,8 +46,8 @@ include 'includes/header.php';
       <h1>Write your book with <em>an expert</em> <strong>in your corner</strong></h1>
       <p class="lead">Some authors want to do the writing themselves, just with guidance. Coaching pairs you with a children's book pro for feedback, structure, and steady momentum.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="submissions.php">Start Your Book</a>
-        <a class="btn btn-light" href="portfolio.php">See Our Work</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Start Your Book</a>
+        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
     </div>
     <div class="svc-hero-form reveal"><?php include 'includes/forms/contact-form.php'; ?></div>
@@ -128,7 +128,7 @@ include 'includes/header.php';
       <h2>You write the book, we keep you on track</h2>
       <p class="lead">Most drafts stall in the middle. A coach gives you structure, momentum, and honest feedback so you actually finish.</p>
       <p>The book stays entirely yours. We guide the craft and the process, and you keep the writing and the credit.</p>
-      <div class="button-row"><a class="btn btn-primary" href="contact.php">Get a Free Estimate &rarr;</a></div>
+      <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -160,7 +160,7 @@ include 'includes/header.php';
       <p class="eyebrow script-mark">- good to know</p>
       <h2>Frequently asked <em>questions.</em></h2>
       <p>Honest answers to the questions authors ask us most. If yours is not here, a quick consultation will cover it.</p>
-      <a class="btn btn-sun" href="contact.php">Book a Free Consultation &rarr;</a>
+      <a class="btn btn-sun" href="contact.php" data-quote-open>Book a Free Consultation &rarr;</a>
     </div>
     <div class="svc-faq-list">
       <?php foreach ($page_faqs as $fi => $faq): ?>

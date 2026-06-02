@@ -9,7 +9,7 @@ define('SITE_ADDRESS', '14 Paperbark Lane, Fitzroy, Melbourne VIC 3065, Australi
 define('SITE_HOURS', 'Monday to Friday, 9:00 AM to 5:00 PM AEST');
 define('SITE_CANONICAL_URL', 'https://purplegiraffepress.com/');
 define('MAIN_CTA_TEXT', 'Start Publishing');
-define('MAIN_CTA_LINK', 'submissions.php');
+define('MAIN_CTA_LINK', 'contact.php');
 
 $social_links = [
     'Instagram' => 'https://instagram.com/purplegiraffepress',

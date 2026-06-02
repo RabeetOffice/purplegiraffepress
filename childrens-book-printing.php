@@ -27,8 +27,8 @@ include 'includes/header.php';
       <h1>Printing <em>built</em> for <strong>little hands</strong></h1>
       <p class="lead">Children's books get loved hard. We help you print on the right paper, with sturdy binding and rich color, and you approve a physical proof before any full run.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="submissions.php">Start Your Book</a>
-        <a class="btn btn-light" href="portfolio.php">See Our Work</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Start Your Book</a>
+        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
     </div>
     <div class="svc-hero-form reveal"><?php include 'includes/forms/contact-form.php'; ?></div>
@@ -109,7 +109,7 @@ include 'includes/header.php';
       <h2>Made to survive a thousand bedtimes</h2>
       <p class="lead">Children's books are handled hard. We help you choose paper, binding, and finish that hold up to daily love.</p>
       <p>You approve a real printed proof before the full run, so the book in your hands is the book you imagined.</p>
-      <div class="button-row"><a class="btn btn-primary" href="contact.php">Get a Free Estimate &rarr;</a></div>
+      <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -422,7 +422,7 @@ include 'includes/header.php';
       <h2>Not sure which print spec is right for you?</h2>
       <p>Every Purple Giraffe Press project includes a dedicated print consultation. We will recommend the perfect size, paper, cover, and method for your story and budget.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="contact.php">Get a Free Print Quote &rarr;</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Get a Free Print Quote &rarr;</a>
         <a class="btn btn-light" href="pricing.php">View Packages</a>
       </div>
     </div>
@@ -456,7 +456,7 @@ include 'includes/header.php';
       <p class="eyebrow script-mark">- before you print</p>
       <h2>Printing questions, <em>answered.</em></h2>
       <p>Honest answers to the questions authors ask most before going to print. If yours is not here, a quick consultation will cover it.</p>
-      <a class="btn btn-sun" href="contact.php">Book a Free Consultation &rarr;</a>
+      <a class="btn btn-sun" href="contact.php" data-quote-open>Book a Free Consultation &rarr;</a>
     </div>
     <div class="svc-faq-list">
       <?php foreach ($page_faqs as $fi => $faq): ?>

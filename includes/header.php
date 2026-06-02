@@ -146,7 +146,7 @@ $local_address_parts = explode(',', SITE_ADDRESS);
       </nav>
       <div class="nav-actions">
         <a class="nav-phone" href="tel:<?php echo e(preg_replace('/[^0-9]/', '', SITE_PHONE)); ?>"><?php echo e(SITE_PHONE); ?></a>
-        <a class="btn btn-primary" href="<?php echo e(MAIN_CTA_LINK); ?>"><?php echo e(MAIN_CTA_TEXT); ?></a>
+        <a class="btn btn-primary" href="<?php echo e(MAIN_CTA_LINK); ?>" data-quote-open><?php echo e(MAIN_CTA_TEXT); ?></a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -178,6 +178,6 @@ $local_address_parts = explode(',', SITE_ADDRESS);
         <a href="<?php echo e($link); ?>"><?php echo e($label); ?></a>
       <?php endif; ?>
     <?php endforeach; ?>
-    <a class="btn btn-primary" href="<?php echo e(MAIN_CTA_LINK); ?>"><?php echo e(MAIN_CTA_TEXT); ?></a>
+    <a class="btn btn-primary" href="<?php echo e(MAIN_CTA_LINK); ?>" data-quote-open><?php echo e(MAIN_CTA_TEXT); ?></a>
   </div>
   <main id="main">

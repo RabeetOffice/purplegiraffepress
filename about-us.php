@@ -33,7 +33,7 @@ $canonical_path = 'about-us.php';
     <div class="reveal">
       <figure class="about-home-figure reveal">
       <span class="about-home-glow" aria-hidden="true"></span>
-      <img src="./assets/images/about-us.png" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
+      <img src="./assets/images/about-us.webp" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
       <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. 2008</span>
     </figure>
     </div>

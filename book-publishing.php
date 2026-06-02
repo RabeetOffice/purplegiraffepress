@@ -46,8 +46,8 @@ include 'includes/header.php';
       <h1>Children's book publishing, <em>handled</em> <strong>end to end</strong></h1>
       <p class="lead">We take your manuscript from a rough draft to a finished book families can buy, and we stay beside you the whole way. You keep your rights and 100% of your royalties.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="submissions.php">Start Your Book</a>
-        <a class="btn btn-light" href="portfolio.php">See Our Work</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Start Your Book</a>
+        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
     </div>
     <div class="svc-hero-form reveal"><?php include 'includes/forms/contact-form.php'; ?></div>
@@ -128,7 +128,7 @@ include 'includes/header.php';
       <h2>A boutique press that puts authors first</h2>
       <p class="lead">We take on only a handful of books each season, so your story gets real attention instead of a place in a queue. You work directly with the people doing the work.</p>
       <p>You keep your copyright and 100% of your royalties. We earn our fee by doing great work, not by taking a cut of your sales forever.</p>
-      <div class="button-row"><a class="btn btn-primary" href="contact.php">Get a Free Estimate &rarr;</a></div>
+      <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -160,7 +160,7 @@ include 'includes/header.php';
       <p class="eyebrow script-mark">- good to know</p>
       <h2>Frequently asked <em>questions.</em></h2>
       <p>Honest answers to the questions authors ask us most. If yours is not here, a quick consultation will cover it.</p>
-      <a class="btn btn-sun" href="contact.php">Book a Free Consultation &rarr;</a>
+      <a class="btn btn-sun" href="contact.php" data-quote-open>Book a Free Consultation &rarr;</a>
     </div>
     <div class="svc-faq-list">
       <?php foreach ($page_faqs as $fi => $faq): ?>

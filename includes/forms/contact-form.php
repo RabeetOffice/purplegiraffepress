@@ -1,29 +1,36 @@
+<?php
+/* Optional overrides (set before including): $form_heading, $form_sub,
+   $form_id_prefix. Reset at the end so each include is independent. */
+$fh = $form_heading ?? 'Send us a message';
+$fs = $form_sub ?? 'We usually reply within one business day.';
+$fp = $form_id_prefix ?? '';
+?>
 <div class="card form-card">
   <div class="form-head">
     <span class="form-badge" aria-hidden="true">
       <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4.2 7 7.8 5.6L19.8 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
     <div>
-      <h3>Send us a message</h3>
-      <p>We usually reply within one business day.</p>
+      <h3><?php echo e($fh); ?></h3>
+      <p><?php echo e($fs); ?></p>
     </div>
   </div>
   <form class="site-form" action="#" method="post">
     <div class="field">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" placeholder="Your name" required>
+      <label for="<?php echo e($fp); ?>name">Name</label>
+      <input id="<?php echo e($fp); ?>name" name="name" type="text" placeholder="Your name" required>
     </div>
     <div class="field">
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      <label for="<?php echo e($fp); ?>email">Email</label>
+      <input id="<?php echo e($fp); ?>email" name="email" type="email" placeholder="you@email.com" required>
     </div>
     <div class="field">
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" placeholder="Optional">
+      <label for="<?php echo e($fp); ?>phone">Phone</label>
+      <input id="<?php echo e($fp); ?>phone" name="phone" type="tel" placeholder="Optional">
     </div>
     <div class="field">
-      <label for="book-type">Book Type <span class="req">*</span></label>
-      <select id="book-type" name="book_type" required>
+      <label for="<?php echo e($fp); ?>book-type">Book Type <span class="req">*</span></label>
+      <select id="<?php echo e($fp); ?>book-type" name="book_type" required>
         <option value="" disabled selected>Select your book type...</option>
         <option>Picture Book (ages 0-5)</option>
         <option>Early Reader (ages 5-8)</option>
@@ -37,8 +44,8 @@
       </select>
     </div>
     <div class="field full">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Tell us a little about your book or question..." required></textarea>
+      <label for="<?php echo e($fp); ?>message">Message</label>
+      <textarea id="<?php echo e($fp); ?>message" name="message" placeholder="Tell us a little about your book or question..." required></textarea>
     </div>
     <div class="field full nda-field">
       <label class="nda-check">
@@ -56,3 +63,4 @@
     </p>
   </form>
 </div>
+<?php $form_heading = $form_sub = $form_id_prefix = null; ?>

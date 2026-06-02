@@ -46,8 +46,8 @@ include 'includes/header.php';
       <h1>Help your book <em>find</em> the <strong>families it is for</strong></h1>
       <p class="lead">A finished book is only half the job. We build a launch that puts your story in front of reviewers, educators, and the parents who buy children's books.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="submissions.php">Start Your Book</a>
-        <a class="btn btn-light" href="portfolio.php">See Our Work</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Start Your Book</a>
+        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
     </div>
     <div class="svc-hero-form reveal"><?php include 'includes/forms/contact-form.php'; ?></div>
@@ -128,7 +128,7 @@ include 'includes/header.php';
       <h2>Honest marketing built around your book</h2>
       <p class="lead">We will not promise viral fame or guaranteed sales. We will build a focused, professional launch aimed at the readers who actually buy children's books.</p>
       <p>From reviewers who need lead time to launch week social, we plan the steps that give your book its best chance to be found.</p>
-      <div class="button-row"><a class="btn btn-primary" href="contact.php">Get a Free Estimate &rarr;</a></div>
+      <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -160,7 +160,7 @@ include 'includes/header.php';
       <p class="eyebrow script-mark">- good to know</p>
       <h2>Frequently asked <em>questions.</em></h2>
       <p>Honest answers to the questions authors ask us most. If yours is not here, a quick consultation will cover it.</p>
-      <a class="btn btn-sun" href="contact.php">Book a Free Consultation &rarr;</a>
+      <a class="btn btn-sun" href="contact.php" data-quote-open>Book a Free Consultation &rarr;</a>
     </div>
     <div class="svc-faq-list">
       <?php foreach ($page_faqs as $fi => $faq): ?>

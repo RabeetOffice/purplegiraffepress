@@ -46,8 +46,8 @@ include 'includes/header.php';
       <h1>Nonfiction for kids, done with <em>real</em> <strong>rigor</strong></h1>
       <p class="lead">Educational and nonfiction children's books carry extra responsibility. We help you explain real things clearly, accurately, and at exactly the right age.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="submissions.php">Start Your Book</a>
-        <a class="btn btn-light" href="portfolio.php">See Our Work</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Start Your Book</a>
+        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
     </div>
     <div class="svc-hero-form reveal"><?php include 'includes/forms/contact-form.php'; ?></div>
@@ -128,7 +128,7 @@ include 'includes/header.php';
       <h2>Trustworthy nonfiction children love</h2>
       <p class="lead">Children's nonfiction has to be correct and delightful at once. We keep the facts solid while keeping the reading a joy.</p>
       <p>From science to history, we help you explain real things at exactly the right age, with references handled properly.</p>
-      <div class="button-row"><a class="btn btn-primary" href="contact.php">Get a Free Estimate &rarr;</a></div>
+      <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -160,7 +160,7 @@ include 'includes/header.php';
       <p class="eyebrow script-mark">- good to know</p>
       <h2>Frequently asked <em>questions.</em></h2>
       <p>Honest answers to the questions authors ask us most. If yours is not here, a quick consultation will cover it.</p>
-      <a class="btn btn-sun" href="contact.php">Book a Free Consultation &rarr;</a>
+      <a class="btn btn-sun" href="contact.php" data-quote-open>Book a Free Consultation &rarr;</a>
     </div>
     <div class="svc-faq-list">
       <?php foreach ($page_faqs as $fi => $faq): ?>

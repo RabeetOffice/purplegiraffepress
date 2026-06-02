@@ -3,9 +3,18 @@
 $page_title = "Australian Children's Book Publisher Since 2008 | Purple Giraffe Press";
 $page_description = "Purple Giraffe Press is an independent Australian children's book publisher founded in 2008. We publish picture books, chapter books, and middle grade stories children love to read again and again.";
 $canonical_path = 'index.php';
-$faq_category = 'general';
-$load_faqs_only = true;
-include 'includes/faqs.php';
+$page_faqs = [
+  ["q" => "How do I get my children's book published in Australia?", "a" => "Start by sending us your manuscript, or even a rough idea. We read it, talk through your goals, and map a clear path from editing and illustration to design, printing, and distribution. You stay involved at every step and keep full ownership of your book. The whole process is built to feel guided rather than overwhelming, especially if this is your first book."],
+  ["q" => "Do I keep the rights and royalties to my book?", "a" => "Yes. You keep your copyright, your characters, and 100% of the royalties paid by retail platforms. We charge clear, flat fees for the work we do, such as editing, illustration, and design, and we never take an ongoing cut of your sales. Your book stays yours, for good."],
+  ["q" => "What kinds of children's books do you publish?", "a" => "We publish picture books for the very young, early readers, and middle grade chapter books for confident readers. We work across fiction and nonfiction, rhyme and prose, gentle bedtime stories and laugh out loud adventures. If it is written for children, there is a good chance it is a fit."],
+  ["q" => "I am a first-time author. Can you still help me?", "a" => "Absolutely, and most of the authors we work with are publishing for the first time. We explain each stage in plain language, handle the technical parts, and guide the creative decisions with you. You do not need any publishing experience to end up with a book you are proud of."],
+  ["q" => "How long does it take to publish a children's book?", "a" => "A typical picture book takes around four to seven months from an accepted manuscript to launch day. The biggest factor is illustration, since original art takes time to develop properly. Chapter books and nonfiction can move faster. We give you a realistic timeline at the start, so there are no surprises."],
+  ["q" => "How much does it cost to publish with Purple Giraffe Press?", "a" => "It depends on what your book needs. A full path with editing, illustration, design, and distribution is a larger investment than a single service like formatting. We price each project around the actual work involved rather than a one size fits all package. The first consultation is free and comes with an honest breakdown."],
+  ["q" => "Will my book be available in shops and online?", "a" => "Yes. We set up distribution so your book is orderable in print and ebook through major retailers, and available to bookshops, schools, and libraries. Your story can reach readers across Australia and in more than 40 countries, depending on the plan you choose."],
+  ["q" => "Do you provide illustrations, or do I need my own illustrator?", "a" => "We have illustrators in house and match you with an artist whose style suits your story and your reader's age. You see early sketches and guide the look before any final art begins. If you already have an illustrator you love, we are happy to work with them too."],
+  ["q" => "What makes Purple Giraffe Press different from other publishers?", "a" => "We are an independent Australian press that has been doing this since 2008, and we take on only a handful of books each season. That means real attention from the people actually doing the work, full creative control for you, and 100% of your royalties. We treat every manuscript like it is our own."],
+  ["q" => "How do I start, and is the first chat really free?", "a" => "Yes, the first consultation is genuinely free and there is no pressure. Tell us about your book using the quick form, or send your manuscript, and we will come back with friendly, practical next steps. You decide if and when you want to move forward."],
+];
 ?>
 <?php include 'includes/header.php'; ?>
 
@@ -20,8 +29,8 @@ include 'includes/faqs.php';
       <h1>Bring Your <em>Children's Book</em> to Life</h1>
       <p class="lead">Since 2008, Purple Giraffe Press has helped authors and illustrators bring children's books to life. We are with you from the first draft to launch day, and you keep 100% of your royalties.</p>
       <div class="button-row hero-actions">
-        <a class="btn btn-sun" href="submissions.php">Submit Your Story</a>
-        <a class="btn btn-light" href="contact.php">Get a Free Estimate</a>
+        <a class="btn btn-sun" href="contact.php">Submit Your Story</a>
+        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
       <div class="trust-row" aria-label="Why authors choose Purple Giraffe Press">
         <span>Australian, since 2008</span>
@@ -44,7 +53,7 @@ include 'includes/faqs.php';
   <div class="container about-home-layout">
     <figure class="about-home-figure reveal">
       <span class="about-home-glow" aria-hidden="true"></span>
-      <img src="./assets/images/about.png" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
+      <img src="./assets/images/about.webp" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
       <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. 2008</span>
     </figure>
     <div class="about-home-copy reveal">
@@ -59,7 +68,7 @@ include 'includes/faqs.php';
       </ul>
       <div class="button-row">
         <a class="btn btn-primary" href="about-us.php">More about our story →</a>
-        <a class="text-link" href="submissions.php">Submit your story</a>
+        <a class="text-link" href="contact.php">Submit your story</a>
       </div>
     </div>
   </div>
@@ -195,10 +204,25 @@ include 'includes/faqs.php';
 </section>
 
 <section class="section figma-cream">
-  <div class="container narrow center">
-    <p class="eyebrow script-mark">- questions</p>
-    <h2>Children&apos;s book publishing questions, answered.</h2>
-    <?php unset($load_faqs_only); include 'includes/faqs.php'; ?>
+  <div class="container svc-faq-grid">
+    <div class="svc-faq-left reveal">
+      <p class="eyebrow script-mark">- questions</p>
+      <h2>Children's book publishing, <em>answered.</em></h2>
+      <p>The questions first time authors ask us most, answered honestly. If yours is not here, a quick consultation will cover it.</p>
+      <a class="btn btn-sun" href="contact.php" data-quote-open>Book a Free Consultation &rarr;</a>
+    </div>
+    <div class="svc-faq-list">
+      <?php foreach ($page_faqs as $fi => $faq): ?>
+        <details class="svc-faq-item"<?php echo $fi === 0 ? ' open' : ''; ?>>
+          <summary>
+            <span class="qnum"><?php echo str_pad($fi + 1, 2, '0', STR_PAD_LEFT); ?></span>
+            <span class="qtxt"><?php echo e($faq['q']); ?></span>
+            <span class="toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="answer"><p><?php echo e($faq['a']); ?></p></div>
+        </details>
+      <?php endforeach; ?>
+    </div>
   </div>
 </section>
 

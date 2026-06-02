@@ -5,7 +5,7 @@
       <h2>Ready to publish <em>your story?</em></h2>
       <p>Tell us about your book in 60 seconds. We&apos;ll come back with a free, no-pressure consultation and a real plan.</p>
       <div class="button-row">
-        <a class="btn btn-sun" href="contact.php">Get a Free Consultation →</a>
+        <a class="btn btn-sun" href="contact.php" data-quote-open>Get a Free Consultation →</a>
         <a class="cta-call" href="tel:<?php echo e(preg_replace('/[^0-9]/', '', SITE_PHONE)); ?>">or call <strong><?php echo e(SITE_PHONE); ?></strong></a>
       </div>
     </div>

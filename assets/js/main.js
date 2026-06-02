@@ -247,3 +247,57 @@ document.addEventListener('DOMContentLoaded', () => {
   syncMobileSwipers(mq);
   mq.addEventListener('change', syncMobileSwipers);
 });
+
+/* ---------------------------------------------------------------
+   Quote / consultation popup
+   Open with any [data-quote-open] element or window.openQuotePopup().
+   Close with [data-quote-close] (overlay + close button) or Escape.
+--------------------------------------------------------------- */
+(function () {
+  const popup = document.getElementById('quotePopup');
+  if (!popup) return;
+  let lastFocus = null;
+
+  const openPopup = () => {
+    lastFocus = document.activeElement;
+    popup.classList.add('open');
+    popup.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('qp-open');
+    const first = popup.querySelector('input, select, textarea, button:not(.quote-popup-close)');
+    if (first) setTimeout(() => first.focus(), 60);
+  };
+  const closePopup = () => {
+    popup.classList.remove('open');
+    popup.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('qp-open');
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  };
+
+  window.openQuotePopup = openPopup;
+  window.closeQuotePopup = closePopup;
+
+  document.addEventListener('click', (e) => {
+    const opener = e.target.closest('[data-quote-open]');
+    if (opener) { e.preventDefault(); openPopup(); return; }
+    if (e.target.closest('[data-quote-close]')) { e.preventDefault(); closePopup(); }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popup.classList.contains('open')) closePopup();
+  });
+})();
+
+/* ---------------------------------------------------------------
+   FAQ accordion (.svc-faq-list): opening one item closes the rest.
+--------------------------------------------------------------- */
+(function () {
+  document.querySelectorAll('.svc-faq-list').forEach((list) => {
+    const items = Array.from(list.querySelectorAll('details.svc-faq-item'));
+    items.forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          items.forEach((other) => { if (other !== item) other.open = false; });
+        }
+      });
+    });
+  });
+})();
