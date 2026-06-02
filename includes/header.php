@@ -27,6 +27,22 @@ if (empty($breadcrumbs) || !is_array($breadcrumbs)) {
 }
 
 $local_address_parts = explode(',', SITE_ADDRESS);
+
+/* Social/Open Graph image — single blog posts use their cover (and type
+   "article"); everything else falls back to the brand logo. Pages may set their
+   own $og_image (absolute URL or site-relative path) / $og_type before include. */
+if (!isset($og_image)) {
+    if (isset($post) && is_array($post) && !empty($post['image'])) {
+        $og_image = $post['image'];
+        $og_type  = $og_type ?? 'article';
+    } else {
+        $og_image = page_url('assets/images/android-chrome-512x512.png');
+    }
+}
+if (!preg_match('#^https?://#', $og_image)) {
+    $og_image = page_url($og_image);
+}
+$og_type = $og_type ?? 'website';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,14 +53,43 @@ $local_address_parts = explode(',', SITE_ADDRESS);
   <title><?php echo e($page_title); ?></title>
   <meta name="description" content="<?php echo e($page_description); ?>">
   <link rel="canonical" href="<?php echo e($canonical_url); ?>">
+  <!-- Favicons / app icons -->
+  <link rel="icon" href="<?php echo e(asset('assets/images/favicon.ico')); ?>" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/images/favicon-32x32.png')); ?>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo e(asset('assets/images/favicon-16x16.png')); ?>">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo e(asset('assets/images/apple-touch-icon.png')); ?>">
+  <link rel="manifest" href="<?php echo e(asset('assets/images/site.webmanifest')); ?>">
+  <meta name="theme-color" content="#52208f">
+  <meta name="msapplication-TileColor" content="#52208f">
+  <meta name="apple-mobile-web-app-title" content="Purple Giraffe">
+  <meta name="application-name" content="<?php echo e(SITE_NAME); ?>">
+  <!-- Search & social -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta property="og:type" content="<?php echo e($og_type); ?>">
+  <meta property="og:site_name" content="<?php echo e(SITE_NAME); ?>">
+  <meta property="og:title" content="<?php echo e($page_title); ?>">
+  <meta property="og:description" content="<?php echo e($page_description); ?>">
+  <meta property="og:url" content="<?php echo e($canonical_url); ?>">
+  <meta property="og:image" content="<?php echo e($og_image); ?>">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?php echo e($page_title); ?>">
+  <meta name="twitter:description" content="<?php echo e($page_description); ?>">
+  <meta name="twitter:image" content="<?php echo e($og_image); ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,40..100,0..1&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- Bootstrap 5 (loaded first so custom styles win) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <!-- Swiper slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>?v=<?php echo filemtime(__DIR__ . '/../assets/css/style.css'); ?>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "<?php echo e(SITE_NAME); ?>",
+    "url": "<?php echo e(page_url('')); ?>"
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -43,7 +43,7 @@ $page_faqs = [
       <span class="float-card one">Custom illustrations</span>
       <span class="float-card two">Print + ebook</span>
       <span class="float-card three">School &amp; library ready</span>
-      <img src="./assets/images/hero-character-left.webp" alt="Purple Giraffe Press mascot for children's book publishing">
+      <img src="./assets/images/hero-character-left.webp" alt="Purple Giraffe Press mascot for children's book publishing" fetchpriority="high" decoding="async" width="509" height="663">
     </div>
   </div>
 </section>
