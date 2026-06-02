@@ -543,14 +543,6 @@ p {
   pointer-events: none;
 }
 
-.note-art span {
-  position: absolute;
-  right: 22px;
-  bottom: 18px;
-  color: var(--gold);
-  font-size: 1.4rem;
-  z-index: 1;
-}
 
 .note-lavender { background: linear-gradient(135deg, #a87ee4, #7d37cf); }
 .note-gold { background: linear-gradient(135deg, #fff2a5, #f4cc42); }
@@ -4809,11 +4801,6 @@ body.qp-open { overflow: hidden; }
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(82, 32, 143, .02), rgba(82, 32, 143, .18));
   pointer-events: none;
-}
-.blog-hero-glyph {
-  position: absolute; right: clamp(20px, 4vw, 40px); bottom: clamp(12px, 3vw, 26px);
-  font-size: clamp(3.5rem, 9vw, 7rem); line-height: 1;
-  color: rgba(255, 255, 255, .5);
 }
 
 /* ---- Article + sidebar layout ---- */

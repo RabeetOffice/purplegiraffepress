@@ -37,7 +37,6 @@ if (empty($recent_posts)) { $recent_limit = $recent_exclude = $recent_eyebrow = 
               <?php if (!empty($rp['image'])): ?>
                 <img src="<?php echo e($rp['image']); ?>" alt="<?php echo e($rp['title']); ?>" loading="lazy" decoding="async">
               <?php endif; ?>
-              <span aria-hidden="true"><?php echo e($rp['glyph'] ?? '★'); ?></span>
             </a>
             <p class="note-category"><?php echo e($rp['category'] ?? 'Story'); ?></p>
             <h3><a href="<?php echo e(blog_post_url($rp['slug'])); ?>"><?php echo e($rp['title']); ?></a></h3>

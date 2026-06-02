@@ -33,6 +33,5 @@ $tone = blog_category_tone($post['category'] ?? null);
     <?php if (!empty($post['image'])): ?>
       <img src="<?php echo e(asset($post['image'])); ?>" alt="<?php echo e($post['title']); ?>" loading="eager" decoding="async">
     <?php endif; ?>
-    <span class="blog-hero-glyph" aria-hidden="true"><?php echo e($post['glyph'] ?? '★'); ?></span>
   </figure>
 </div>

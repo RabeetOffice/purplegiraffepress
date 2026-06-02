@@ -81,7 +81,6 @@ $blog_schema = [
             <?php if (!empty($post['image'])): ?>
               <img src="<?php echo e(asset($post['image'])); ?>" alt="<?php echo e($post['title']); ?>" loading="lazy" decoding="async">
             <?php endif; ?>
-            <span aria-hidden="true"><?php echo e($post['glyph'] ?? '★'); ?></span>
           </a>
           <p class="note-category"><?php echo e($post['category'] ?? 'Story'); ?></p>
           <h3><a href="<?php echo e(blog_post_url($post['slug'])); ?>"><?php echo e($post['title']); ?></a></h3>
