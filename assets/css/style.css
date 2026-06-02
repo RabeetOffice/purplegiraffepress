@@ -2561,6 +2561,32 @@ strong { font-weight: 700; }
 .partner-card:hover .partner-mark, .artist-card:hover .artist-avatar { transform: scale(1.06) rotate(-4deg); }
 .partner-card h3, .artist-card h3, .feature-card h3, .value-card h3 { font-size: 1.2rem; }
 
+/* Partner brand-logo (favicon) badge */
+.partner-logo {
+  width: 84px; height: 84px; border-radius: 22px;
+  display: grid; place-items: center; margin: 0 auto 16px;
+  background: #fff;
+  border: 1px solid rgba(76, 25, 133, .1);
+  box-shadow: 0 10px 24px rgba(82, 32, 143, .1);
+  transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s ease;
+}
+.partner-logo img { width: 50px; height: 50px; object-fit: contain; display: block; }
+/* Monogram fallback when a brand has no favicon. */
+.partner-mono {
+  width: 100%; height: 100%; border-radius: inherit;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--lavender), var(--gold-soft));
+  color: var(--purple-800);
+  font-family: "Fredoka", "Inter", sans-serif; font-weight: 800; font-size: 1.6rem; letter-spacing: .02em;
+}
+.partner-card:hover .partner-logo { transform: scale(1.06) rotate(-3deg); box-shadow: 0 18px 34px rgba(82, 32, 143, .18); }
+
+/* Regional partner groups */
+.partner-group { margin-top: clamp(44px, 6vw, 68px); }
+.partner-group:first-of-type { margin-top: 8px; }
+.partner-group-title { text-align: center; font-size: clamp(1.55rem, 3vw, 2.15rem); margin: 0 0 30px; }
+.partner-group .partner-grid { margin-top: 0; }
+
 /* ---- Legal / rich text ---- */
 .rich-text {
   border-radius: 22px;
@@ -4017,8 +4043,11 @@ select:focus-visible, textarea:focus-visible, .btn:focus-visible {
 }
 .svc-faq-item[open] .toggle { transform: rotate(45deg); background: var(--figma-purple); color: #fff; }
 .svc-faq-item[open] .qtxt { color: var(--figma-purple); }
-.svc-faq-item .answer { padding: 0 0 20px; color: var(--muted); line-height: 1.7; }
+.svc-faq-item .answer { padding: 0 0 20px; color: var(--muted); line-height: 1.7; overflow: hidden; will-change: height; }
 .svc-faq-item .answer p { margin: 0; }
+/* Smooth expand/collapse (height is animated from JS). */
+.svc-faq-item.is-animating .answer { transition: height .34s cubic-bezier(.4, 0, .2, 1); }
+@media (prefers-reduced-motion: reduce) { .svc-faq-item.is-animating .answer { transition: none; } }
 @media (max-width: 900px) {
   .svc-faq-grid { grid-template-columns: 1fr; gap: 30px; }
   .svc-faq-left p { max-width: none; }
@@ -4994,4 +5023,203 @@ body.qp-open { overflow: hidden; }
   .blog-hero-cover { margin-top: -18px; }
   .blog-author { flex-direction: column; text-align: center; }
   .blog-author-role { display: block; margin: 8px auto 0; width: max-content; }
+}
+
+/* ============================================================
+   PRICING — instant estimate calculator + comparison table
+   ============================================================ */
+
+/* ---- Calculator ---- */
+.calc-card {
+  position: relative; overflow: hidden;
+  max-width: 880px; margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(76, 25, 133, .1);
+  border-radius: clamp(24px, 4vw, 40px);
+  padding: clamp(26px, 5vw, 56px);
+  box-shadow: 0 30px 80px rgba(82, 32, 143, .16);
+}
+.calc-glow {
+  position: absolute; width: 340px; height: 340px; border-radius: 50%;
+  right: -120px; top: -150px; pointer-events: none;
+  background: radial-gradient(circle, rgba(247, 201, 72, .35), transparent 70%);
+}
+.calc-steps {
+  list-style: none; margin: 0 0 clamp(26px, 4vw, 42px); padding: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.calc-step {
+  width: 46px; height: 46px; border-radius: 50%; flex: 0 0 auto;
+  display: grid; place-items: center; position: relative; z-index: 1;
+  background: #fff; border: 3px solid rgba(76, 25, 133, .16);
+  color: var(--figma-muted); font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.1rem;
+  transition: transform .3s ease, border-color .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+}
+.calc-step.is-active { border-color: var(--figma-purple); color: var(--figma-purple); transform: scale(1.08); box-shadow: 0 8px 22px rgba(82, 32, 143, .22); }
+.calc-step.is-done { background: var(--figma-purple); border-color: var(--figma-purple); color: #fff; }
+.calc-bar { flex: 0 1 80px; height: 5px; margin: 0 6px; border-radius: 999px; background: rgba(76, 25, 133, .14); position: relative; overflow: hidden; }
+.calc-bar i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--figma-purple); border-radius: 999px; transition: width .4s ease; }
+.calc-bar.is-fill i { width: 100%; }
+
+.calc-stage { min-height: 290px; display: flex; align-items: center; }
+.calc-panel { display: none; width: 100%; }
+.calc-panel.is-active { display: block; animation: calc-in .35s ease; }
+@keyframes calc-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.calc-q { text-align: center; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.1; margin: 0 0 clamp(20px, 3vw, 30px); }
+/* All options for a step sit on one line (equal columns), whatever the count. */
+.calc-options { display: grid; gap: 14px; grid-auto-flow: column; grid-auto-columns: 1fr; }
+.calc-opt {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px;
+  padding: 22px 12px; min-height: 156px; border-radius: 20px; cursor: pointer; text-align: center;
+  border: 2px solid rgba(76, 25, 133, .12); background: #fff;
+  font-family: "Inter", system-ui, sans-serif; color: var(--ink);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.calc-opt-ic {
+  width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center;
+  background: var(--lavender); color: var(--figma-purple);
+  transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+.calc-opt-ic svg { width: 26px; height: 26px; }
+.calc-opt-label { font-weight: 800; font-size: 1rem; line-height: 1.15; }
+.calc-opt-sub { font-weight: 600; font-size: .76rem; color: var(--figma-muted); line-height: 1.2; }
+.calc-opt:hover { transform: translateY(-4px); border-color: var(--figma-purple-2); box-shadow: 0 16px 34px rgba(82, 32, 143, .15); }
+.calc-opt:hover .calc-opt-ic { transform: scale(1.08) rotate(-4deg); }
+.calc-opt.is-sel { border-color: var(--figma-purple); background: var(--lavender-2); box-shadow: 0 18px 36px rgba(82, 32, 143, .2); }
+.calc-opt.is-sel .calc-opt-ic { background: linear-gradient(135deg, #7b35d0, #52208f); color: #fff; transform: scale(1.05); }
+.calc-opt.is-sel .calc-opt-label { color: var(--figma-purple); }
+
+.calc-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: clamp(22px, 3vw, 32px); min-height: 28px; }
+.calc-back { visibility: hidden; background: none; border: 0; cursor: pointer; font-family: inherit; font-weight: 800; font-size: .95rem; color: var(--figma-purple); }
+.calc-hint { color: var(--figma-muted); font-size: .85rem; font-weight: 600; margin-left: auto; }
+
+.calc-result { text-align: center; }
+.calc-result-badge { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 14px; display: grid; place-items: center; background: var(--mint); color: #12a37a; }
+.calc-result-badge svg { width: 40px; height: 40px; }
+.calc-result-label { text-transform: uppercase; letter-spacing: .1em; font-weight: 900; color: var(--figma-muted); font-size: .74rem; margin: 0 0 6px; }
+.calc-range { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: clamp(2.3rem, 6vw, 3.6rem); line-height: 1; color: var(--figma-purple); }
+.calc-dash { color: var(--gold); }
+.calc-basis { color: var(--figma-muted); font-style: italic; margin: 14px auto 0; max-width: 46ch; }
+.calc-cta { display: flex; flex-direction: column; gap: 14px; align-items: center; justify-content: center; margin-top: 26px; }
+.calc-restart { background: none; border: 0; cursor: pointer; font-family: inherit; font-weight: 800; font-size: .95rem; color: var(--figma-purple); text-decoration: underline; text-underline-offset: 3px; }
+/* Inline lead-capture form on the estimate result. */
+.calc-lead { max-width: 480px; margin: 26px auto 0; }
+.calc-lead-label { font-weight: 700; color: var(--ink); font-size: .98rem; margin: 0 0 12px; }
+.calc-lead-row { display: flex; gap: 10px; }
+.calc-lead-row input[type="email"] {
+  flex: 1 1 auto; min-width: 0; padding: 13px 18px; border-radius: 999px;
+  border: 2px solid rgba(76, 25, 133, .16); background: #fff;
+  font-family: inherit; font-size: .95rem; color: var(--ink); outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.calc-lead-row input[type="email"]:focus { border-color: var(--figma-purple); box-shadow: 0 0 0 4px rgba(123, 53, 208, .12); }
+.calc-lead-row .btn { flex: 0 0 auto; }
+.calc-lead .calc-fineprint { margin-top: 14px; }
+.calc-result .calc-restart { margin-top: 18px; }
+@media (max-width: 520px) {
+  .calc-lead-row { flex-direction: column; }
+  .calc-lead-row .btn { width: 100%; }
+}
+.calc-fineprint { color: var(--figma-muted); font-size: .8rem; margin-top: 18px; }
+@media (prefers-reduced-motion: reduce) { .calc-panel.is-active { animation: none; } }
+
+/* ---- Comparison table ---- */
+.pricing-table-wrap {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: #fff;
+  border: 1px solid rgba(76, 25, 133, .12);
+  border-radius: clamp(18px, 3vw, 28px);
+  box-shadow: 0 26px 70px rgba(82, 32, 143, .14);
+}
+.pricing-table { width: 100%; min-width: 920px; border-collapse: collapse; text-align: left; }
+.pricing-table th, .pricing-table td { padding: 15px 18px; }
+
+.pt-corner {
+  background: #fff; min-width: 220px;
+  border-bottom: 2px solid var(--lavender); border-right: 2px solid var(--lavender);
+}
+.pt-corner span { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.2rem; color: var(--ink); }
+.pt-pkg {
+  text-align: center; vertical-align: top; background: #fff;
+  border-bottom: 2px solid var(--lavender); border-left: 1px solid rgba(76, 25, 133, .06);
+}
+.pt-pkg.is-popular { background: linear-gradient(180deg, rgba(247, 201, 72, .16), rgba(255, 255, 255, 0)); }
+.pt-pop { display: inline-block; margin-bottom: 8px; padding: 3px 11px; border-radius: 999px; background: var(--gold); color: #3c2600; font-size: .64rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.pt-pill { display: inline-block; padding: 5px 14px; border-radius: 999px; font-weight: 900; font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; }
+.pt-pill-1 { background: var(--sky);       color: #0a3a5a; }
+.pt-pill-2 { background: var(--mint);      color: #0a4a37; }
+.pt-pill-3 { background: var(--gold-soft); color: #5a4500; }
+.pt-pill-4 { background: var(--lavender);  color: var(--figma-purple); }
+.pt-pill-5 { background: var(--peach);     color: #7a3410; }
+.pt-price { display: block; margin-top: 10px; font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 1.55rem; color: var(--ink); }
+.pt-was { display: block; font-size: .8rem; font-weight: 700; color: var(--figma-muted); text-decoration: line-through; }
+
+.pt-cat td {
+  background: var(--figma-purple); color: #fff;
+  font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: .92rem;
+  letter-spacing: .06em; text-transform: uppercase; padding: 11px 18px;
+}
+.pt-feature {
+  background: #fff;
+  font-weight: 700; color: var(--ink);
+  border-right: 2px solid var(--lavender); border-bottom: 1px solid rgba(76, 25, 133, .08);
+}
+.pt-cell {
+  text-align: center; color: var(--figma-muted); font-weight: 700;
+  border-bottom: 1px solid rgba(76, 25, 133, .08); border-left: 1px solid rgba(76, 25, 133, .05);
+}
+.pt-cell.is-popular { background: rgba(247, 201, 72, .07); }
+.pt-row:hover td { background: rgba(240, 232, 255, .5); }
+.pt-row:hover .pt-feature { background: var(--lavender-2); }
+.pt-yes { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--mint); color: #12a37a; }
+.pt-yes svg { width: 15px; height: 15px; }
+.pt-no { color: rgba(76, 25, 133, .28); font-weight: 900; font-size: 1.25rem; }
+.pt-txt { font-weight: 800; color: var(--figma-purple); font-size: .9rem; }
+
+/* Honeypot (anti-spam) — visually removed, off-screen for bots only. */
+.hp-field { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; }
+/* Form error notice (shown after a failed submission redirect). */
+.form-notice {
+  background: #fff4f4; border: 1px solid #f3c4c4; color: #a3162a;
+  border-radius: 12px; padding: 12px 16px; margin: 0 0 18px; font-weight: 700; font-size: .92rem;
+}
+/* Thank-you page success check. */
+.thanks-check {
+  display: inline-grid; place-items: center; width: 86px; height: 86px; border-radius: 50%;
+  margin: 0 auto 6px; background: var(--mint); color: #12a37a;
+  box-shadow: 0 16px 36px rgba(18, 163, 122, .22);
+}
+.thanks-check svg { width: 48px; height: 48px; }
+
+/* Swipe-to-scroll hint (whole table scrolls together; no sticky column). */
+.pt-swipe-hint { display: none; }
+
+@media (max-width: 760px) {
+  .calc-bar { flex-basis: 40px; }
+  .calc-opt { padding: 15px 12px; font-size: .95rem; min-height: 138px; }
+  .calc-opt-ic { width: 46px; height: 46px; }
+  /* Too tight for one line on phones: fall back to a 2-up grid. */
+  .calc-options { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .pt-swipe-hint {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin-bottom: 14px; color: var(--figma-purple); font-weight: 800; font-size: .85rem;
+  }
+  .pt-swipe-hint span { animation: pt-nudge 1.4s ease-in-out infinite; }
+  @keyframes pt-nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+  .pricing-table { min-width: 740px; }
+  .pricing-table th, .pricing-table td { padding: 12px 12px; }
+  .pt-corner { min-width: 150px; }
+  .pt-corner span { font-size: 1rem; }
+  .pt-price { font-size: 1.3rem; margin-top: 6px; }
+  .pt-was { font-size: .72rem; }
+  .pt-feature { font-size: .88rem; }
+  .pt-cat td { font-size: .82rem; padding: 9px 12px; }
+  .pt-pill { font-size: .62rem; padding: 4px 9px; }
+  .pt-pop { font-size: .58rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pt-swipe-hint span { animation: none; }
 }

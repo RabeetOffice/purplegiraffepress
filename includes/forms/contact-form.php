@@ -15,7 +15,21 @@ $fp = $form_id_prefix ?? '';
       <p><?php echo e($fs); ?></p>
     </div>
   </div>
-  <form class="site-form" action="#" method="post">
+  <form class="site-form" action="<?php echo e(asset('form-submission.php')); ?>" method="post">
+    <input type="hidden" name="form_type" value="quote">
+    <input type="hidden" name="source_page" value="<?php echo e($_SERVER['REQUEST_URI'] ?? ''); ?>">
+    <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+    <?php if (!empty($_GET['form_status']) && $_GET['form_status'] !== 'success'): ?>
+      <p class="form-notice field full" role="alert"><?php
+        $fs = $_GET['form_status'];
+        echo e([
+          'invalid'        => 'Please add your name and a valid email, then try again.',
+          'file-too-large' => 'That file is too large. Please keep attachments under 20MB.',
+          'file-blocked'   => 'That file type is not allowed. Use PDF, DOC, DOCX or TXT.',
+          'invalid-file'   => 'We could not read that file. Use PDF, DOC, DOCX or TXT.',
+        ][$fs] ?? 'Something went wrong sending your message. Please try again.');
+      ?></p>
+    <?php endif; ?>
     <div class="field">
       <label for="<?php echo e($fp); ?>name">Name</label>
       <input id="<?php echo e($fp); ?>name" name="name" type="text" placeholder="Your name" required>

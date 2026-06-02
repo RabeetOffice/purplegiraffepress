@@ -39,7 +39,21 @@ $enquiry_budgets = [
       <p>Fill in the details below and our publishing team will be in touch within 1 business day with a personalised plan.</p>
     </div>
   </div>
-  <form class="site-form enquiry-form" action="#" method="post" enctype="multipart/form-data">
+  <form class="site-form enquiry-form" action="<?php echo e(asset('form-submission.php')); ?>" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="form_type" value="enquiry">
+    <input type="hidden" name="source_page" value="<?php echo e($_SERVER['REQUEST_URI'] ?? ''); ?>">
+    <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+    <?php if (!empty($_GET['form_status']) && $_GET['form_status'] !== 'success'): ?>
+      <p class="form-notice field full" role="alert"><?php
+        $fs = $_GET['form_status'];
+        echo e([
+          'invalid'        => 'Please add your name and a valid email, then try again.',
+          'file-too-large' => 'That file is too large. Please keep attachments under 20MB.',
+          'file-blocked'   => 'That file type is not allowed. Use PDF, DOC, DOCX or TXT.',
+          'invalid-file'   => 'We could not read that file. Use PDF, DOC, DOCX or TXT.',
+        ][$fs] ?? 'Something went wrong sending your enquiry. Please try again.');
+      ?></p>
+    <?php endif; ?>
     <div class="field">
       <label for="enq-name">Full Name <span class="req">*</span></label>
       <input id="enq-name" name="name" type="text" placeholder="e.g. Jane Smith" required>

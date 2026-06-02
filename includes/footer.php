@@ -68,6 +68,12 @@
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('pin'); ?></svg></span>
             <span><?php echo e(SITE_ADDRESS); ?></span>
           </li>
+          <?php if (defined('SITE_TRADING_ADDRESS') && SITE_TRADING_ADDRESS !== ''): ?>
+          <li>
+            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('globe'); ?></svg></span>
+            <span><strong style="display:block;font-weight:800;">Trading address</strong><?php echo e(SITE_TRADING_ADDRESS); ?></span>
+          </li>
+          <?php endif; ?>
           <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('clock'); ?></svg></span>
             <span><?php echo e(SITE_HOURS); ?></span>

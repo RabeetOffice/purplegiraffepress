@@ -1,11 +1,12 @@
 <?php
-define('SITE_NAME', 'Purple Giraffe Press');
+define('SITE_NAME', 'Purple Giraffe Press Publishing');
 define('SITE_TAGLINE', 'Where little stories become big adventures');
 define('SITE_LOGO', 'assets/images/logo.webp');
 define('SITE_MASCOT', 'assets/images/mascot.webp');
-define('SITE_PHONE', '(03) 9001 2008');
-define('SITE_EMAIL', 'hello@purplegiraffepress.com');
-define('SITE_ADDRESS', '14 Paperbark Lane, Fitzroy, Melbourne VIC 3065, Australia');
+define('SITE_PHONE', '(07) 5690 2990');
+define('SITE_EMAIL', 'info@purplegiraffepress.com');
+define('SITE_ADDRESS', 'Level 9 Corporate Ct, Bundall QLD 4217, Australia');
+define('SITE_TRADING_ADDRESS', '60 E 42nd St #4600, New York, NY 10165, United States');
 define('SITE_HOURS', 'Monday to Friday, 9:00 AM to 5:00 PM AEST');
 define('SITE_CANONICAL_URL', 'https://purplegiraffepress.com/');
 define('MAIN_CTA_TEXT', 'Start Publishing');
@@ -53,6 +54,20 @@ $legal_menu = [
 ];
 
 define('COPYRIGHT_TEXT', 'Copyright ' . date('Y') . ' ' . SITE_NAME . '. All rights reserved.');
+
+/* ---- Outbound email (Gmail SMTP) ----
+   NOTE: keep this app password private — do not commit to a public repo. */
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_PORT', 587);
+define('SMTP_SECURE', 'tls');                              // 'tls' (587) or 'ssl' (465)
+define('SMTP_USER', 'support@purplegiraffepress.com');
+define('SMTP_PASS', 'qkwo ochl ukia jrzi');                // Gmail app password
+define('SMTP_FROM_EMAIL', 'support@purplegiraffepress.com');
+define('SMTP_FROM_NAME', SITE_NAME);
+
+/* Where lead/form notifications are delivered. Sent FROM the SMTP account
+   above; can be delivered to any inbox(es). */
+$LEAD = ['recipients' => ['info@purplegiraffepress.com', 'support@purplegiraffepress.com']];
 
 /*
  * Clean URLs (no ".php") on the LIVE site only.

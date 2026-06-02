@@ -308,15 +308,64 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 /* ---------------------------------------------------------------
-   FAQ accordion (.svc-faq-list): opening one item closes the rest.
+   FAQ accordion (.svc-faq-list): smooth height-animated open/close,
+   and opening one item closes the rest. We intercept the <summary>
+   click so we can animate before the native <details> toggle.
 --------------------------------------------------------------- */
 (function () {
-  document.querySelectorAll('.svc-faq-list').forEach((list) => {
+  const lists = document.querySelectorAll('.svc-faq-list');
+  if (!lists.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function collapse(item) {
+    const ans = item.querySelector('.answer');
+    if (!ans) { item.open = false; return; }
+    if (reduce) { item.open = false; return; }
+    const start = ans.scrollHeight;
+    item.classList.add('is-animating');
+    ans.style.height = start + 'px';
+    void ans.offsetHeight;                 // force reflow so the transition runs
+    ans.style.height = '0px';
+    const done = (e) => {
+      if (e && e.propertyName !== 'height') return;
+      ans.removeEventListener('transitionend', done);
+      item.open = false;
+      item.classList.remove('is-animating');
+      ans.style.height = '';
+    };
+    ans.addEventListener('transitionend', done);
+  }
+
+  function expand(item) {
+    const ans = item.querySelector('.answer');
+    item.open = true;                      // reveal content so it can be measured
+    if (!ans || reduce) { if (ans) ans.style.height = ''; return; }
+    const target = ans.scrollHeight;
+    item.classList.add('is-animating');
+    ans.style.height = '0px';
+    void ans.offsetHeight;
+    ans.style.height = target + 'px';
+    const done = (e) => {
+      if (e && e.propertyName !== 'height') return;
+      ans.removeEventListener('transitionend', done);
+      ans.style.height = '';               // back to auto so it reflows naturally
+      item.classList.remove('is-animating');
+    };
+    ans.addEventListener('transitionend', done);
+  }
+
+  lists.forEach((list) => {
     const items = Array.from(list.querySelectorAll('details.svc-faq-item'));
     items.forEach((item) => {
-      item.addEventListener('toggle', () => {
+      const summary = item.querySelector('summary');
+      if (!summary) return;
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
         if (item.open) {
-          items.forEach((other) => { if (other !== item) other.open = false; });
+          collapse(item);
+        } else {
+          items.forEach((other) => { if (other !== item && other.open) collapse(other); });
+          expand(item);
         }
       });
     });

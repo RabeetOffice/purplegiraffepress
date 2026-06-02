@@ -70,9 +70,9 @@ $local_address_parts = explode(',', SITE_ADDRESS);
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "<?php echo e(trim($local_address_parts[0] ?? SITE_ADDRESS)); ?>",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "postalCode": "3065",
+      "addressLocality": "Bundall",
+      "addressRegion": "QLD",
+      "postalCode": "4217",
       "addressCountry": "AU"
     },
     "openingHours": "Mo-Fr 09:00-17:00"

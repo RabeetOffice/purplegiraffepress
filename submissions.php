@@ -17,7 +17,7 @@ $window_md = [
     [11, 27],  // 27 Nov
 ];
 
-$tz  = new DateTimeZone('Australia/Melbourne');
+$tz  = new DateTimeZone('Australia/Brisbane');
 $now = new DateTime('now', $tz);
 $base_year = (int) $now->format('Y');
 
