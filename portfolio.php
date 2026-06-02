@@ -10,8 +10,8 @@ $canonical_path = 'portfolio.php';
   <div class="container banner-inner">
     <div>
       <div class="breadcrumbs"><a href="index.php">Home</a> / Portfolio</div>
-      <h1>Books with color, courage, and character.</h1>
-      <p class="lead">Our catalog celebrates picture books, early readers, and chapter books with rich illustrations and careful editorial support.</p>
+      <h1>Our Portfolio</h1>
+      <p class="lead">Explore some of the incredible children's books we've helped bring to life. From whimsical picture books to life-changing lessons, our authors create magic on every page.</p>
     </div>
     <img src="<?php echo e(SITE_MASCOT); ?>" alt="Purple giraffe mascot presenting the portfolio">
   </div>

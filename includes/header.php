@@ -1,7 +1,7 @@
 <?php
 $current_page = basename($_SERVER['PHP_SELF']);
 $page_title = $page_title ?? SITE_NAME . ' - ' . SITE_TAGLINE;
-$page_description = $page_description ?? "Purple Giraffe Press is a boutique children's book publisher helping authors write, illustrate, edit, and globally distribute award-winning kids' books while keeping 100% of their royalties.";
+$page_description = $page_description ?? "Purple Giraffe Press is an independent Australian children's book publisher, established in 2008. We publish picture books, chapter books, and middle grade stories that children return to again and again.";
 $canonical_path = $canonical_path ?? $current_page;
 $canonical_url = page_url($canonical_path);
 
@@ -57,10 +57,10 @@ $local_address_parts = explode(',', SITE_ADDRESS);
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "<?php echo e(trim($local_address_parts[0] ?? SITE_ADDRESS)); ?>",
-      "addressLocality": "Portland",
-      "addressRegion": "OR",
-      "postalCode": "97214",
-      "addressCountry": "US"
+      "addressLocality": "Melbourne",
+      "addressRegion": "VIC",
+      "postalCode": "3065",
+      "addressCountry": "AU"
     },
     "openingHours": "Mo-Fr 09:00-17:00"
   }

@@ -1,7 +1,7 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = "Children's Book Publisher for First-Time Authors | Purple Giraffe Press";
-$page_description = "A boutique children's book publisher that helps first-time authors write, illustrate, edit, and publish picture books and chapter books. You keep 100% of your royalties.";
+$page_title = "Australian Children's Book Publisher Since 2008 | Purple Giraffe Press";
+$page_description = "Purple Giraffe Press is an independent Australian children's book publisher founded in 2008. We publish picture books, chapter books, and middle grade stories children love to read again and again.";
 $canonical_path = 'index.php';
 $faq_category = 'general';
 $load_faqs_only = true;
@@ -16,17 +16,17 @@ include 'includes/faqs.php';
   <div class="sparkles" aria-hidden="true"></div>
   <div class="container hero-layout">
     <div class="hero-copy">
-      <p class="eyebrow script-mark">Boutique Children's Book Publisher</p>
+      <p class="eyebrow script-mark">Independent Australian Children's Book Publisher</p>
       <h1>Bring Your <em>Children's Book</em> to Life</h1>
-      <p class="lead">We help first-time authors write, edit, illustrate, and publish children's books that families love. We're with you from the first draft all the way to launch day, and you keep 100% of the royalties.</p>
+      <p class="lead">Since 2008, Purple Giraffe Press has helped authors and illustrators bring children's books to life. We are with you from the first draft to launch day, and you keep 100% of your royalties.</p>
       <div class="button-row hero-actions">
         <a class="btn btn-sun" href="submissions.php">Submit Your Story</a>
         <a class="btn btn-light" href="contact.php">Get a Free Estimate</a>
       </div>
       <div class="trust-row" aria-label="Why authors choose Purple Giraffe Press">
-        <span>100% author royalties</span>
+        <span>Australian, since 2008</span>
         <span>Award-winning illustrators</span>
-        <span>Global distribution</span>
+        <span>100% author royalties</span>
       </div>
     </div>
     <div class="mascot-stage" aria-label="Purple giraffe mascot in a storybook scene">
@@ -45,15 +45,15 @@ include 'includes/faqs.php';
     <figure class="about-home-figure reveal">
       <span class="about-home-glow" aria-hidden="true"></span>
       <img src="./assets/images/about.png" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
-      <span class="about-home-pill"><span aria-hidden="true">★</span> 100% author royalties</span>
+      <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. 2008</span>
     </figure>
     <div class="about-home-copy reveal">
       <p class="eyebrow script-mark">- about us</p>
-      <h2>A tiny press with big <em>storybook dreams.</em></h2>
-      <p>Purple Giraffe Press is a boutique children&apos;s book publisher in Portland, Oregon. We help first-time authors turn a rough draft into a finished book that kids ask for at bedtime, again and again.</p>
-      <p>We only take on a few stories each season, so every author works closely with our editors, illustrators, and designers. You keep full ownership of your work and 100% of your royalties, and we stay beside you from the first draft all the way to launch day.</p>
+      <h2>An Australian press with big <em>storybook dreams.</em></h2>
+      <p>Purple Giraffe Press is an independent children&apos;s book publisher, born in Australia in 2008. We turn manuscripts into finished books that children ask for at bedtime, again and again.</p>
+      <p>Our authors work closely with our editors, illustrators, and designers on every book. You keep full ownership of your work and 100% of your royalties, and we stay beside you from the first draft all the way to launch day.</p>
       <ul class="about-home-points">
-        <li><span aria-hidden="true">✓</span> Boutique, author-first care on every book</li>
+        <li><span aria-hidden="true">✓</span> Author-first care on every book</li>
         <li><span aria-hidden="true">✓</span> Award-winning illustration handled in-house</li>
         <li><span aria-hidden="true">✓</span> Global print and ebook distribution</li>
       </ul>
@@ -94,7 +94,7 @@ include 'includes/faqs.php';
     <div class="why-copy">
       <p class="eyebrow script-mark">- why purple giraffe?</p>
       <h2>The children&apos;s book publisher that puts <em>authors first.</em></h2>
-      <p>We&apos;re not a publishing factory. We&apos;re a small, close-knit team that takes on just a handful of stories each season, and we treat every manuscript like it&apos;s our own.</p>
+      <p>We&apos;re not a publishing factory. We&apos;re a close-knit Australian team that treats every manuscript like it&apos;s our own, from debut storytellers to beloved names.</p>
       <div class="founder-mini">
         <img src="<?php echo e(SITE_MASCOT); ?>" alt="Small Purple Giraffe Press mascot">
         <span><strong>- Maya Okafor</strong><small>Founder &amp; Publisher</small></span>
@@ -102,7 +102,7 @@ include 'includes/faqs.php';
     </div>
     <div class="benefit-grid">
       <article><span>✓</span><h3>100% Royalties</h3><p>You keep every cent your book earns, on every platform, forever.</p></article>
-      <article><span>✓</span><h3>Boutique Attention</h3><p>A small slate each season means real care, not a conveyor belt.</p></article>
+      <article><span>✓</span><h3>Proudly Australian</h3><p>Born in 2008, with stories set from the bush to the reef and far beyond.</p></article>
       <article><span>✓</span><h3>Award-Winning Illustrators</h3><p>In-house artists with Caldecott nods and library favorites.</p></article>
       <article><span>✓</span><h3>Global Distribution</h3><p>Print and ebook in 40+ countries, plus schools and libraries.</p></article>
     </div>
@@ -132,8 +132,8 @@ include 'includes/faqs.php';
   <div class="container stats-grid">
     <div><strong>500+</strong><span>Books Published</span></div>
     <div><strong>40+</strong><span>Countries Shipped</span></div>
-    <div><strong>98%</strong><span>Author Satisfaction</span></div>
-    <div><strong>12</strong><span>Award Wins</span></div>
+    <div><strong>10k+</strong><span>Books Donated</span></div>
+    <div><strong>2008</strong><span>Australian, Established</span></div>
   </div>
 </section>
 

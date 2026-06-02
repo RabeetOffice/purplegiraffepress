@@ -1,7 +1,7 @@
 <section class="cta-band">
   <div class="container cta-layout">
     <div>
-      <p class="eyebrow script-mark">- your turn</p>
+      <p class="eyebrow script-mark" style="color : #fff">- your turn</p>
       <h2>Ready to publish <em>your story?</em></h2>
       <p>Tell us about your book in 60 seconds. We&apos;ll come back with a free, no-pressure consultation and a real plan.</p>
       <div class="button-row">

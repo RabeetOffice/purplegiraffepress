@@ -27,7 +27,7 @@
           <img src="<?php echo e(SITE_LOGO); ?>" alt="<?php echo e(SITE_NAME); ?> logo">
           <span><?php echo e(SITE_NAME); ?></span>
         </a>
-        <p class="footer-tagline">Boutique children&apos;s book publishing. Big stories, kept honest, kept playful — with thoughtful editing, beautiful illustration, and 100% royalties.</p>
+        <p class="footer-tagline">Independent Australian children&apos;s book publishing since 2008. Stories that spark curiosity, build empathy, and reflect the world children actually live in.</p>
         <?php include __DIR__ . '/forms/newsletter-form.php'; ?>
         <div class="social-links">
           <?php foreach ($social_links as $label => $url): ?>

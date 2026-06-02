@@ -22,18 +22,32 @@
       <input id="phone" name="phone" type="tel" placeholder="Optional">
     </div>
     <div class="field">
-      <label for="interest">I need help with</label>
-      <select id="interest" name="interest">
-        <option>Publishing package</option>
-        <option>Illustration</option>
-        <option>Editing</option>
-        <option>Marketing</option>
-        <option>General question</option>
+      <label for="book-type">Book Type <span class="req">*</span></label>
+      <select id="book-type" name="book_type" required>
+        <option value="" disabled selected>Select your book type...</option>
+        <option>Picture Book (ages 0-5)</option>
+        <option>Early Reader (ages 5-8)</option>
+        <option>Chapter Book (ages 7-12)</option>
+        <option>Middle Grade (ages 8-12)</option>
+        <option>Young Adult (ages 13+)</option>
+        <option>Board Book (ages 0-3)</option>
+        <option>Activity / Colouring Book</option>
+        <option>Non-Fiction for Kids</option>
+        <option>Other</option>
       </select>
     </div>
     <div class="field full">
       <label for="message">Message</label>
       <textarea id="message" name="message" placeholder="Tell us a little about your book or question..." required></textarea>
+    </div>
+    <div class="field full nda-field">
+      <label class="nda-check">
+        <input type="checkbox" name="nda" value="yes">
+        <span class="nda-text">
+          <strong>Instant NDA Protection</strong>
+          <small>Send a signed Non-Disclosure Agreement directly to my inbox for my manuscript submission.</small>
+        </span>
+      </label>
     </div>
     <button class="btn btn-sun form-submit" type="submit">Send Message <span aria-hidden="true">&rarr;</span></button>
     <p class="form-note">
