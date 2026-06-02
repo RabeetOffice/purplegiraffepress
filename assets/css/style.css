@@ -2584,7 +2584,7 @@ strong { font-weight: 700; }
 /* Regional partner groups */
 .partner-group { margin-top: clamp(44px, 6vw, 68px); }
 .partner-group:first-of-type { margin-top: 8px; }
-.partner-group-title { text-align: center; font-size: clamp(1.55rem, 3vw, 2.15rem); margin: 0 0 30px; }
+.partner-group-title { text-align: center; font-size: clamp(1.55rem, 3vw, 2.15rem); margin: 0 0 30px; max-width: 100%; }
 .partner-group .partner-grid { margin-top: 0; }
 
 /* ---- Legal / rich text ---- */
@@ -4780,7 +4780,21 @@ body.qp-open { overflow: hidden; }
 .blog-empty { text-align: center; color: var(--figma-muted); margin-top: 26px; }
 
 /* ---- Single post header + hero cover ---- */
-.blog-post-banner h1 { max-width: 22ch; }
+/* Plain breadcrumb here (the category chip is the only pill), so the header
+   reads cleanly without two stacked pills. */
+.blog-post-banner .breadcrumbs {
+  background: transparent; padding: 0; border-radius: 0;
+  margin: 0 0 16px; font-size: .82rem;
+}
+.blog-post-banner .blog-chip-lg { margin: 0 0 22px; }
+.blog-post-banner h1 {
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  line-height: 1.12;
+  max-width: 20ch;
+  margin: 0 auto;
+}
+.blog-post-banner .blog-meta { margin-top: 24px; font-size: .9rem; font-weight: 600; }
+.blog-post-banner .blog-meta span:first-child { color: var(--figma-ink); font-weight: 700; }
 .blog-hero-cover {
   position: relative; z-index: 2;
   margin-top: -36px;
@@ -4842,9 +4856,28 @@ body.qp-open { overflow: hidden; }
   margin: 1.6em 0 .5em;
 }
 .blog-content p { color: #3c3050; line-height: 1.85; margin: 0 0 1.2em; font-size: 1.05rem; }
-.blog-content ul, .blog-content ol { margin: 0 0 1.4em; padding-left: 1.35em; }
-.blog-content li { color: #3c3050; line-height: 1.7; margin-bottom: .55em; font-size: 1.05rem; }
-.blog-content li::marker { color: var(--figma-purple-2); }
+/* Article lists — the global `ul{list-style:none}` reset strips markers, so
+   draw custom storybook bullets (gold dots) and numbered chips here. */
+.blog-content ul, .blog-content ol { list-style: none; margin: 0 0 1.4em; padding-left: 0; }
+.blog-content li {
+  position: relative; padding-left: 1.8em; margin-bottom: .6em;
+  color: #3c3050; line-height: 1.7; font-size: 1.05rem;
+}
+.blog-content ul > li::before {
+  content: ""; position: absolute; left: .15em; top: .62em;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #f0a93a);
+  box-shadow: 0 0 0 4px rgba(247, 201, 72, .18);
+}
+.blog-content ol { counter-reset: blog-ol; }
+.blog-content ol > li { counter-increment: blog-ol; }
+.blog-content ol > li::before {
+  content: counter(blog-ol); position: absolute; left: 0; top: .1em;
+  width: 1.5em; height: 1.5em; border-radius: 50%;
+  background: var(--lavender); color: var(--figma-purple);
+  font-family: "Fredoka", "Inter", sans-serif; font-weight: 800; font-size: .8em;
+  display: grid; place-items: center; line-height: 1;
+}
 .blog-content a:not(.btn):not(.text-link) {
   color: var(--figma-purple-2); font-weight: 700;
   text-decoration: underline; text-underline-offset: 2px;
@@ -4975,7 +5008,7 @@ body.qp-open { overflow: hidden; }
 }
 
 /* ---- "More from the blog" carousel (single posts) ---- */
-.blog-recent-swiper { overflow: hidden; }
+.blog-recent-swiper { overflow: hidden; padding: 6px 0 14px; }
 .blog-recent-swiper .swiper-slide { height: auto; }
 .blog-recent-swiper .note-card {
   height: 100%;
@@ -5175,6 +5208,61 @@ body.qp-open { overflow: hidden; }
 .pt-yes svg { width: 15px; height: 15px; }
 .pt-no { color: rgba(76, 25, 133, .28); font-weight: 900; font-size: 1.25rem; }
 .pt-txt { font-weight: 800; color: var(--figma-purple); font-size: .9rem; }
+
+/* ============================================================
+   ILLUSTRATORS (artists.php)
+   ============================================================ */
+.illus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 48px);
+  margin-top: clamp(40px, 5vw, 56px);
+}
+.illus-card {
+  display: flex; flex-direction: column; text-align: left;
+  background: #fff;
+  border: 1px solid rgba(76, 25, 133, .1);
+  border-radius: 28px;
+  padding: 16px;
+  box-shadow: 0 22px 60px rgba(82, 32, 143, .12);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.illus-card:hover { transform: translateY(-6px); border-color: var(--figma-purple-2); box-shadow: 0 32px 72px rgba(82, 32, 143, .2); }
+
+.illus-art {
+  position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden;
+  background: var(--lavender);
+  background: linear-gradient(140deg, color-mix(in srgb, var(--ac, #7b35d0) 24%, #fff), color-mix(in srgb, var(--ac, #7b35d0) 72%, #fff));
+}
+.illus-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.illus-card:hover .illus-art img { transform: scale(1.05); }
+.illus-motif { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(255, 255, 255, .6); }
+.illus-motif svg { width: 38%; height: 38%; }
+.illus-style {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  background: var(--ac, #7b35d0); color: #fff;
+  font-size: .64rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 999px; box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+}
+
+.illus-head { display: flex; align-items: flex-start; gap: 16px; padding: 0 8px; }
+.illus-photo {
+  flex: 0 0 auto; width: 76px; height: 76px; border-radius: 50%; overflow: hidden;
+  margin-top: -42px; position: relative; z-index: 3;
+  border: 4px solid #fff; background: var(--lavender);
+  box-shadow: 0 12px 26px rgba(82, 32, 143, .22);
+}
+.illus-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.illus-id { padding-top: 8px; }
+.illus-id h3 { font-size: 1.4rem; line-height: 1.1; margin: 0; }
+.illus-role { margin: 4px 0 0; font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--figma-muted); }
+.illus-bio {
+  margin: 16px 8px 8px; padding-top: 16px;
+  border-top: 2px dashed rgba(76, 25, 133, .16);
+  color: var(--figma-muted); font-size: .92rem; line-height: 1.7;
+}
+@media (max-width: 900px) { .illus-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .illus-grid { grid-template-columns: 1fr; } }
 
 /* Honeypot (anti-spam) — visually removed, off-screen for bots only. */
 .hp-field { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; }

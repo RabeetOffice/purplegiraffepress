@@ -11,8 +11,7 @@ $tone = blog_category_tone($post['category'] ?? null);
     <div>
       <div class="breadcrumbs">
         <a href="<?php echo e(asset('index.php')); ?>">Home</a> /
-        <a href="<?php echo e(blog_index_url()); ?>">Blog</a> /
-        <span><?php echo e($post['category'] ?? 'Story'); ?></span>
+        <a href="<?php echo e(blog_index_url()); ?>">Blog</a>
       </div>
       <?php if (!empty($post['category'])): ?>
         <span class="blog-chip blog-chip-lg"><?php echo e($post['category']); ?></span>

@@ -183,8 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Blog "More from the blog": a real carousel on every breakpoint
   document.querySelectorAll('.blog-recent-swiper').forEach((el) => {
     new Swiper(el, {
-      slidesPerView: 1.1,
-      spaceBetween: 20,
+      slidesPerView: 1.08,
+      spaceBetween: 24,
       grabCursor: true,
       a11y: { enabled: true },
       watchOverflow: true,
@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: el.querySelector('.blog-recent-prev'),
       },
       breakpoints: {
-        560: { slidesPerView: 1.8, spaceBetween: 22 },
-        768: { slidesPerView: 2.2, spaceBetween: 24 },
-        1024: { slidesPerView: 3, spaceBetween: 26 },
+        560: { slidesPerView: 1.7, spaceBetween: 30 },
+        768: { slidesPerView: 2.2, spaceBetween: 34 },
+        1024: { slidesPerView: 3, spaceBetween: 40 },
       },
     });
   });

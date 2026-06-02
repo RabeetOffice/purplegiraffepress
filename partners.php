@@ -82,12 +82,6 @@ $partner_groups = [
 
 <section class="section section-white">
   <div class="container">
-    <div class="section-heading center">
-      <p class="eyebrow script-mark">- our network</p>
-      <h2>Trusted distribution <em>partners.</em></h2>
-      <p class="lead">Your finished book is fed into the channels these partners run, so it can be found, ordered, and shelved wherever your readers are.</p>
-    </div>
-
     <?php foreach ($partner_groups as $group_title => $partners): ?>
       <div class="partner-group">
         <h2 class="partner-group-title"><?php echo e($group_title); ?></h2>
