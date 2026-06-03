@@ -1,8 +1,9 @@
 <?php
-/* On the live site, clean ".php" out of every internal link in the page
-   output (see pgp_clean_html_links). No-op on localhost. */
-if (defined('CLEAN_URLS') && CLEAN_URLS && function_exists('pgp_clean_html_links')) {
-    ob_start('pgp_clean_html_links');
+/* On the live site, optimise the whole page output: rewrite internal links to
+   their clean canonical form (pgp_clean_html_links) and minify the HTML
+   (pgp_minify_html). No-op on localhost. */
+if (defined('CLEAN_URLS') && CLEAN_URLS && function_exists('pgp_optimize_output')) {
+    ob_start('pgp_optimize_output');
 }
 $current_page = basename($_SERVER['PHP_SELF']);
 /* True on the blog listing and any single post, which live under /blogs/.
@@ -81,7 +82,7 @@ $og_type = $og_type ?? 'website';
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..900,40..100,0..1&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!-- Swiper slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>?v=<?php echo filemtime(__DIR__ . '/../assets/css/style.css'); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset_min('assets/css/style.css')); ?>">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

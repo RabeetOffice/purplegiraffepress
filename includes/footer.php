@@ -94,7 +94,7 @@
   </footer>
   <?php include __DIR__ . '/quote-popup.php'; ?>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script defer src="<?php echo e(asset('assets/js/main.js')); ?>?v=<?php echo filemtime(__DIR__ . '/../assets/js/main.js'); ?>"></script>
+  <script defer src="<?php echo e(asset_min('assets/js/main.js')); ?>"></script>
 </body>
 </html>
 <?php

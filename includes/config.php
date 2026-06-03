@@ -88,6 +88,16 @@ define('IS_LOCAL',
     || substr($__pgp_host, -5) === '.test'
 );
 define('CLEAN_URLS', !IS_LOCAL);
+
+/* Minify CSS/JS/HTML on the LIVE site; keep everything readable on localhost for
+ * debugging. Source files are never touched: minified CSS/JS are generated on
+ * demand into assets/cache/ (rebuilt automatically when the source changes), and
+ * HTML is minified in the output buffer. */
+define('MINIFY', !IS_LOCAL);
+
+/* Filesystem path to the web root (this file lives in /includes). */
+define('SITE_ROOT', dirname(__DIR__));
+
 unset($__pgp_host);
 
 function e($value) {
@@ -144,6 +154,51 @@ function pgp_clean_html_links($html) {
 }
 
 /**
+ * Minify the rendered HTML: strip HTML comments and collapse whitespace runs to
+ * a single space (which the browser renders identically). Blocks whose
+ * whitespace is significant — <pre>, <textarea>, <script>, <style> — are pulled
+ * out first and restored untouched, so inline JS/CSS and JSON-LD are never
+ * mangled. Conditional comments (<!--[if ...]>) are preserved.
+ */
+function pgp_minify_html($html) {
+    $store = [];
+    $html = preg_replace_callback(
+        '~<(pre|textarea|script|style)\b[^>]*>[\s\S]*?</\1\s*>~i',
+        function ($m) use (&$store) {
+            $key = "\x01PGP" . count($store) . "\x01";
+            $store[$key] = $m[0];
+            return $key;
+        },
+        $html
+    );
+
+    // Drop HTML comments, but keep IE conditional comments.
+    $html = preg_replace('~<!--(?!\[if)(?!<!\[endif)[\s\S]*?-->~', '', $html);
+
+    // Collapse every whitespace run to a single space (HTML collapses these when
+    // rendering, so this is visually lossless for normal flow content).
+    $html = preg_replace('~\s+~', ' ', $html);
+
+    if ($store) {
+        $html = strtr($html, $store);
+    }
+    return $html;
+}
+
+/**
+ * Output-buffer callback used on the live site: first rewrite internal links to
+ * their canonical clean form, then minify the HTML. Both steps are no-ops unless
+ * enabled (the buffer is only started on live — see header.php).
+ */
+function pgp_optimize_output($html) {
+    $html = pgp_clean_html_links($html);
+    if (defined('MINIFY') && MINIFY) {
+        $html = pgp_minify_html($html);
+    }
+    return $html;
+}
+
+/**
  * Apply the environment's URL style to a site-root-relative path.
  * On the live site, "page.php" becomes "page/" (extension dropped, canonical
  * trailing slash added) and "index.php" collapses to its directory ("index.php"
@@ -185,5 +240,113 @@ function asset($path = '') {
     }
     $out = ($GLOBALS['asset_base'] ?? '') . clean_path($path);
     return $out === '' ? './' : $out;
+}
+
+/**
+ * Safe, conservative CSS minifier. Strips comments (keeps /*! ... *​/), collapses
+ * whitespace to a single space (so calc()/clamp()/shorthand values stay valid),
+ * and tightens whitespace around structural punctuation. Never touches the inside
+ * of data: URIs (no {};/* and their spaces are already single).
+ */
+function pgp_minify_css($css) {
+    $css = preg_replace('~/\*(?!!)[\s\S]*?\*/~', '', $css);   // comments (keep /*! */)
+    $css = preg_replace('~\s+~', ' ', $css);                  // whitespace -> single space
+    $css = preg_replace('~ ?([{};,]) ?~', '$1', $css);        // tighten around braces/semis/commas
+    $css = preg_replace('~: ~', ':', $css);                   // "prop: val" -> "prop:val" (after-colon only)
+    $css = str_replace(';}', '}', $css);                      // drop the last semicolon in a block
+    return trim($css);
+}
+
+/**
+ * Safe JS minifier. Removes // and /* *​/ comments with a string-aware scanner
+ * (so quotes and escapes are never misread), then trims each line and drops blank
+ * lines while KEEPING line breaks — so Automatic Semicolon Insertion can never
+ * break, and no in-line tokens are merged. Assumes no multi-line template
+ * literals (the project has none); add backtick handling before introducing one.
+ */
+function pgp_minify_js($js) {
+    $len = strlen($js);
+    $out = '';
+    $i = 0;
+    while ($i < $len) {
+        $c    = $js[$i];
+        $next = $i + 1 < $len ? $js[$i + 1] : '';
+
+        if ($c === '/' && $next === '/') {                 // line comment
+            $i += 2;
+            while ($i < $len && $js[$i] !== "\n") { $i++; }
+            continue;
+        }
+        if ($c === '/' && $next === '*') {                 // block comment
+            $i += 2;
+            while ($i < $len && !($js[$i] === '*' && ($i + 1 < $len) && $js[$i + 1] === '/')) { $i++; }
+            $i += 2;
+            continue;
+        }
+        if ($c === '"' || $c === "'" || $c === '`') {      // string literal
+            $quote = $c;
+            $out  .= $c;
+            $i++;
+            while ($i < $len) {
+                $ch   = $js[$i];
+                $out .= $ch;
+                if ($ch === '\\' && $i + 1 < $len) {       // copy the escaped char too
+                    $out .= $js[$i + 1];
+                    $i   += 2;
+                    continue;
+                }
+                $i++;
+                if ($ch === $quote) { break; }
+            }
+            continue;
+        }
+        $out .= $c;
+        $i++;
+    }
+
+    $lines = preg_split('~\r\n|\r|\n~', $out);
+    $kept  = [];
+    foreach ($lines as $line) {
+        $t = trim($line);
+        if ($t !== '') { $kept[] = $t; }
+    }
+    return implode("\n", $kept);
+}
+
+/**
+ * Return the URL for a CSS/JS asset, minified on the live site. The minified copy
+ * is generated on demand into assets/cache/<name>.min.<ext> and rebuilt whenever
+ * the source changes (cache-busted with ?v=<source mtime>). On localhost (or if
+ * the cache dir is not writable) the original, readable source is served instead.
+ * Source files are never modified.
+ */
+function asset_min($webPath) {
+    $rootFs = defined('SITE_ROOT') ? SITE_ROOT : dirname(__DIR__);
+    $srcFs  = $rootFs . '/' . ltrim($webPath, '/');
+    if (!is_file($srcFs)) {
+        return asset($webPath);                            // unknown file: best effort
+    }
+    $srcMtime = filemtime($srcFs);
+    $ext      = strtolower(pathinfo($webPath, PATHINFO_EXTENSION));
+
+    if (!defined('MINIFY') || !MINIFY || ($ext !== 'css' && $ext !== 'js')) {
+        return asset($webPath) . '?v=' . $srcMtime;        // readable source, versioned
+    }
+
+    $cacheDir = $rootFs . '/assets/cache';
+    $name     = pathinfo($webPath, PATHINFO_FILENAME) . '.min.' . $ext;
+    $cacheFs  = $cacheDir . '/' . $name;
+    $cacheWeb = 'assets/cache/' . $name;
+
+    if (!is_file($cacheFs) || filemtime($cacheFs) < $srcMtime) {
+        if (!is_dir($cacheDir)) { @mkdir($cacheDir, 0775, true); }
+        $code = (string) file_get_contents($srcFs);
+        $min  = ($ext === 'css') ? pgp_minify_css($code) : pgp_minify_js($code);
+        if (@file_put_contents($cacheFs, $min, LOCK_EX) === false) {
+            return asset($webPath) . '?v=' . $srcMtime;    // not writable: serve source
+        }
+        @touch($cacheFs, $srcMtime);                       // tie cache mtime to source
+    }
+    return asset($cacheWeb) . '?v=' . $srcMtime;
 }
 ?>
