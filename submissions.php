@@ -1,7 +1,7 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = "Manuscript Submissions | Purple Giraffe Press";
-$page_description = "Submit your children's book manuscript to Purple Giraffe Press. See our 2026 submission windows, what we look for from authors and illustrators, and how to send your work.";
+$page_title = "Children's Book Manuscript Submissions | Purple Giraffe Press";
+$page_description = "Submit your children's book manuscript to Purple Giraffe Press. See our 2026 submission windows, what we look for, and how to send your work.";
 $canonical_path = 'submissions.php';
 
 /*
@@ -129,7 +129,7 @@ function sub_mail_icon() {
   <div class="container narrow center">
     <p class="eyebrow script-mark">- Submission Criteria</p>
     <h2>What we publish</h2>
-    <p class="lead">Purple Giraffe Press is an independent children&apos;s book publisher specialising in picture books, board books, chapter books, activity books, and non-fiction for young readers. We publish bright, imaginative titles that spark joy and learning.</p>
+    <p>Purple Giraffe Press is an independent children&apos;s book publisher specialising in picture books, board books, chapter books, activity books, and non-fiction for young readers. We publish bright, imaginative titles that spark joy and learning.</p>
   </div>
   <div class="container submit-blocks">
     <article class="card submit-block">
@@ -229,7 +229,7 @@ function sub_mail_icon() {
   <div class="container narrow center">
     <p class="eyebrow script-mark">- Our artists</p>
     <h2>Meet Our <em>Illustrators</em></h2>
-    <p class="lead">Browse the artists behind our books and the many styles they bring to the page, from watercolour and pencil to bold digital worlds.</p>
+    <p>Browse the artists behind our books and the many styles they bring to the page, from watercolour and pencil to bold digital worlds.</p>
     <div class="button-row center-row">
       <a class="btn btn-primary" href="artists.php">View Our Illustrators →</a>
     </div>

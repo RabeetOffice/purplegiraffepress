@@ -2,7 +2,7 @@
 include 'includes/config.php';
 
 $page_title       = 'Children\'s Book Marketing & Publicity | Purple Giraffe Press';
-$page_description = 'Children\'s book marketing and publicity: reviewer outreach, school and library positioning, podcast pitches, and social launch support for first time authors.';
+$page_description = 'Children\'s book marketing and publicity: reviewer outreach, school and library positioning, podcast pitches, and social launch support for new authors.';
 $canonical_path   = 'marketing-publicity.php';
 
 /* The FAQ content powers both the accordion below and the FAQPage schema in <head>. */
@@ -63,7 +63,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>A launch plan, not just a press release</h2>
-      <p class="lead">The hardest part of publishing is rarely making the book. It is helping the right readers discover it among the thousands of titles released every month.</p>
+      <p>The hardest part of publishing is rarely making the book. It is helping the right readers discover it among the thousands of titles released every month.</p>
       <p>We plan a launch around your story and audience, with the materials, outreach, and messaging that get children's books noticed.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A press kit, blurbs, and sales copy that travel</span></li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Positioning for schools, libraries, and social</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Marketing &amp; Publicity for children&#039;s books at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/marketing-publicity.webp" alt="Marketing &amp; Publicity for children&#039;s books at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Marketing &amp; Publicity journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Position</h3></div>
@@ -122,11 +122,11 @@ include 'includes/header.php';
 <!-- 6 - RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Purple Giraffe Press Marketing &amp; Publicity" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press Marketing &amp; Publicity" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>Honest marketing built around your book</h2>
-      <p class="lead">We will not promise viral fame or guaranteed sales. We will build a focused, professional launch aimed at the readers who actually buy children's books.</p>
+      <p>We will not promise viral fame or guaranteed sales. We will build a focused, professional launch aimed at the readers who actually buy children's books.</p>
       <p>From reviewers who need lead time to launch week social, we plan the steps that give your book its best chance to be found.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>

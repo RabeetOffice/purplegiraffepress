@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Services - Purple Giraffe Press';
+$page_title = "Children's Book Services | Purple Giraffe Press Publishing";
 $page_description = 'Children\'s book publishing services including editing, illustration, cover design, formatting, global distribution, marketing, and author websites.';
 $canonical_path = 'services.php';
 $page_faqs = [

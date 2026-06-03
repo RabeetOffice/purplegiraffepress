@@ -63,7 +63,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>Art made for your story, not pulled from a template</h2>
-      <p class="lead">The pictures are half of a children's book. They set the mood, carry the humor, and give young readers a reason to ask for the story again at bedtime.</p>
+      <p>The pictures are half of a children's book. They set the mood, carry the humor, and give young readers a reason to ask for the story again at bedtime.</p>
       <p>We start with who your characters are and who they are for, then build a visual world around them. Every page is drawn for your book.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Characters designed from scratch to fit your voice</span></li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>High resolution files ready for print and ebook</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Custom Illustrations for children&#039;s books at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/custom-illustrations.webp" alt="Custom Illustrations for children&#039;s books at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Custom Illustrations journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Brief</h3></div>
@@ -122,11 +122,11 @@ include 'includes/header.php';
 <!-- 6 - RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Purple Giraffe Press Custom Illustrations" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press Custom Illustrations" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>Illustrators who understand children's books</h2>
-      <p class="lead">Our artists draw for young eyes, with the warmth, humor, and clarity that make a picture book work. You see sketches early and guide the look at every stage.</p>
+      <p>Our artists draw for young eyes, with the warmth, humor, and clarity that make a picture book work. You see sketches early and guide the look at every stage.</p>
       <p>Nothing is recycled. Every spread is created for your book, and you own the final artwork outright.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>

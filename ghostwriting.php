@@ -2,7 +2,7 @@
 include 'includes/config.php';
 
 $page_title       = 'Children\'s Book Ghostwriting Services | Purple Giraffe Press';
-$page_description = 'Professional children\'s book ghostwriting. Share your idea, characters, or outline and we write a polished manuscript in your voice, with full credit to you.';
+$page_description = 'Professional children\'s book ghostwriting. Share an idea, characters, or outline and we write a polished manuscript in your voice. You keep full credit.';
 $canonical_path   = 'ghostwriting.php';
 
 /* The FAQ content powers both the accordion below and the FAQPage schema in <head>. */
@@ -63,7 +63,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>From a spark of an idea to a real manuscript</h2>
-      <p class="lead">Plenty of wonderful children's books start as a bedtime story, a lesson a parent wants to share, or a character a child dreamed up. Not everyone is a writer, and that is perfectly fine.</p>
+      <p>Plenty of wonderful children's books start as a bedtime story, a lesson a parent wants to share, or a character a child dreamed up. Not everyone is a writer, and that is perfectly fine.</p>
       <p>We interview you, learn your voice and intent, then write and revise the manuscript with you until it sounds like you wrote it.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>We capture your idea, voice, and intent</span></li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Your name on the cover, the rights all yours</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Ghostwriting for children&#039;s books at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/ghostwriting.webp" alt="Ghostwriting for children&#039;s books at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Ghostwriting journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Brief</h3></div>
@@ -122,11 +122,11 @@ include 'includes/header.php';
 <!-- 6 - RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Purple Giraffe Press Ghostwriting" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press Ghostwriting" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>A confidential partnership, start to finish</h2>
-      <p class="lead">Ghostwriting is a quiet craft. We do the writing, you make the decisions, and the finished book is credited entirely to you.</p>
+      <p>Ghostwriting is a quiet craft. We do the writing, you make the decisions, and the finished book is credited entirely to you.</p>
       <p>You are involved as much or as little as you like, from a single brief to reviewing every draft along the way.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>

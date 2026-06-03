@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Distribution Partners - Purple Giraffe Press';
+$page_title = 'Distribution Partners | Purple Giraffe Press Publishing';
 $page_description = 'Purple Giraffe Press distributes children\'s books through global, US, Australian, and UK & European retail, library, and distribution partners.';
 $canonical_path = 'partners.php';
 

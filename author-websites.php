@@ -2,7 +2,7 @@
 include 'includes/config.php';
 
 $page_title       = 'Children\'s Author Website Design | Purple Giraffe Press';
-$page_description = 'Custom author websites for children\'s book writers: book showcase, buy links, newsletter signup, events, and a friendly storybook feel that builds your audience.';
+$page_description = 'Custom author websites for children\'s book writers: book showcase, buy links, newsletter signup, events, and a storybook feel that grows your audience.';
 $canonical_path   = 'author-websites.php';
 
 /* The FAQ content powers both the accordion below and the FAQPage schema in <head>. */
@@ -63,7 +63,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>Your book deserves more than a sales page</h2>
-      <p class="lead">Families, teachers, and event organizers look you up online. A friendly author website turns that curiosity into newsletter signups, sales, and school visit requests.</p>
+      <p>Families, teachers, and event organizers look you up online. A friendly author website turns that curiosity into newsletter signups, sales, and school visit requests.</p>
       <p>We design a storybook style site that matches your book's world, with the pages you actually need and nothing you do not.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Beautiful pages for your titles and buy links</span></li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Events and an easy contact form</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Author Websites for children&#039;s books at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/author-websites.webp" alt="Author Websites for children&#039;s books at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Author Websites journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Plan</h3></div>
@@ -122,11 +122,11 @@ include 'includes/header.php';
 <!-- 6 - RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Purple Giraffe Press Author Websites" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press Author Websites" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>A friendly home you can actually manage</h2>
-      <p class="lead">Families, teachers, and event hosts look you up. A warm author site turns that interest into signups, sales, and school visits.</p>
+      <p>Families, teachers, and event hosts look you up. A warm author site turns that interest into signups, sales, and school visits.</p>
       <p>We build it to match your book's world and to be easy to update, so you are never stuck waiting on a developer.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>

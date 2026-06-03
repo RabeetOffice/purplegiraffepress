@@ -1,70 +1,196 @@
-# Purple Giraffe Press - URL handling
+# ============================================================================
+#  Purple Giraffe Press  -  .htaccess
+#  URL canonicalisation + performance (compression, caching) + hardening.
 #
-# Clean, extension-less URLs on the LIVE site (e.g. /about-us, /blogs/<slug>).
-# On localhost the redirects below are skipped, so .php URLs keep working for
-# local editing. The internal rewrite that serves /page from /page.php runs in
-# every environment, so clean links work locally too if you use them.
+#  URL model
+#    LIVE  : clean, extension-less URLs WITH a trailing slash  ->  /about-us/
+#            blog posts  ->  /blogs/<slug>/ ,  blog index  ->  /blogs/
+#            home        ->  /
+#            Every variant (/about-us, /about-us.php, /index.php) 301s to the
+#            single canonical form, so no duplicate URLs are ever generated.
+#    LOCAL : redirects are skipped (localhost / 127.0.0.1 / *.local / *.test),
+#            so ".php" navigation keeps working for local editing.
+#
+#  The form handler (form-submission.php -> /form-submission/) is served by the
+#  internal rewrite, and the canonical redirects are GET-only, so POSTed form
+#  data is never lost to a redirect.
+# ============================================================================
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # --- LIVE ONLY: 301-redirect .php requests to their clean URL ---------------
-  # Skipped on localhost / 127.0.0.1 so local navigation and editing keep .php.
+  # --- Flag local/dev hosts so the canonical redirects below skip them --------
+  RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1|\[::1\]) [NC,OR]
+  RewriteCond %{HTTP_HOST} \.(local|test)$ [NC]
+  RewriteRule ^ - [E=DEVHOST:1]
 
-  # /index.php (or "/") -> /
-  RewriteCond %{HTTP_HOST} !^localhost [NC]
-  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+  # --- Never serve direct requests to server-side partials --------------------
+  RewriteRule ^includes/ - [F,L]
+
+  # ===========================================================================
+  #  OPTIONAL canonical host (enable once HTTPS + your preferred host are live).
+  #  Forces https:// and a single hostname. Left off by default so it can never
+  #  lock out a site whose SSL is still being set up. Uncomment to enable.
+  # ---------------------------------------------------------------------------
+  # RewriteCond %{ENV:DEVHOST} !=1
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  #
+  # RewriteCond %{ENV:DEVHOST} !=1
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # ===========================================================================
+  #  CANONICAL REDIRECTS  (live only)
+  # ===========================================================================
+
+  # /index.php -> /
+  RewriteCond %{ENV:DEVHOST} !=1
   RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
   RewriteRule ^ / [R=301,L]
 
-  # /anything.php -> /anything   (and /dir/page.php -> /dir/page)
-  RewriteCond %{HTTP_HOST} !^localhost [NC]
-  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
-  RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
-  RewriteRule ^ /%1 [R=301,L]
+  # /dir/index.php -> /dir/
+  RewriteCond %{ENV:DEVHOST} !=1
+  RewriteCond %{THE_REQUEST} \s/+(.+)/index\.php[\s?] [NC]
+  RewriteRule ^ /%1/ [R=301,L]
 
-  # --- ALL ENVIRONMENTS: serve a clean URL from its .php file -----------------
-  # Only when the request is not already a real file/dir and the .php exists.
+  # /anything.php  ->  /anything/   (drop extension, add trailing slash; GET only)
+  RewriteCond %{ENV:DEVHOST} !=1
+  RewriteCond %{REQUEST_METHOD} =GET
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+  RewriteRule ^ /%1/ [R=301,L]
+
+  # /anything  ->  /anything/   (add trailing slash to a real, extension-less page)
+  RewriteCond %{ENV:DEVHOST} !=1
+  RewriteCond %{REQUEST_METHOD} =GET
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteCond %{DOCUMENT_ROOT}/$1.php -f [OR]
+  RewriteCond $1.php -f
+  RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+  # ===========================================================================
+  #  SERVE  (all environments): map the clean URL back to its .php file.
+  #  Handles both "/page" and "/page/". Real files, real dirs and the document
+  #  root (-> DirectoryIndex) are served by Apache normally.
+  # ===========================================================================
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}/$1.php -f [OR]
+  RewriteCond $1.php -f
   RewriteRule ^(.+?)/?$ $1.php [L]
+
+  # ===========================================================================
+  #  404 -> HOME  (live only): any extension-less URL that is not a real page
+  #  is sent to the home page, so stale/invalid links never surface a 404 or
+  #  spawn a phantom URL. Missing assets (with a file extension) still 404.
+  # ===========================================================================
+  RewriteCond %{ENV:DEVHOST} !=1
+  RewriteCond %{REQUEST_METHOD} =GET
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,6}$
+  RewriteRule ^ / [R=302,L]
 </IfModule>
 
-# ---------------------------------------------------------------------------
-# PERFORMANCE
-# ---------------------------------------------------------------------------
+# Default document for directories.
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
 
-# Gzip compression for text-based responses.
+# ============================================================================
+#  PERFORMANCE  -  compression
+# ============================================================================
+
+# Brotli first (best ratio) where available; gzip/deflate as the fallback.
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS application/xml application/rss+xml
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml application/manifest+json
+</IfModule>
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
   AddOutputFilterByType DEFLATE application/javascript application/x-javascript text/javascript
   AddOutputFilterByType DEFLATE application/json application/xml application/rss+xml
   AddOutputFilterByType DEFLATE image/svg+xml application/manifest+json
+  AddOutputFilterByType DEFLATE font/ttf font/otf font/woff
+  # Do not re-compress already-compressed binaries.
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|avif|ico|woff2|zip|gz|mp4|webm)$ no-gzip dont-vary
 </IfModule>
 
-# Long-lived caching for static assets (CSS/JS are versioned with ?v=, so safe).
+# ============================================================================
+#  PERFORMANCE  -  caching
+#  CSS/JS are versioned with ?v=filemtime, so a 1-year immutable cache is safe.
+#  HTML is always revalidated (dynamic PHP).
+# ============================================================================
 <IfModule mod_expires.c>
   ExpiresActive On
+  ExpiresDefault                          "access plus 1 month"
+
   ExpiresByType text/css                  "access plus 1 year"
   ExpiresByType application/javascript    "access plus 1 year"
   ExpiresByType text/javascript           "access plus 1 year"
+
   ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/avif                "access plus 1 year"
   ExpiresByType image/png                 "access plus 1 year"
   ExpiresByType image/jpeg                "access plus 1 year"
   ExpiresByType image/gif                 "access plus 1 year"
   ExpiresByType image/x-icon              "access plus 1 year"
   ExpiresByType image/svg+xml             "access plus 1 year"
+
   ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType font/woff                 "access plus 1 year"
+  ExpiresByType application/font-woff2    "access plus 1 year"
+
+  ExpiresByType video/mp4                 "access plus 1 year"
+  ExpiresByType video/webm                "access plus 1 year"
+
   ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType application/xml           "access plus 1 day"
   ExpiresByType text/html                 "access plus 0 seconds"
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|webp|png|jpe?g|gif|ico|svg|woff2?)$">
+  # Long-lived, immutable cache for fingerprinted static assets.
+  <FilesMatch "\.(css|js|webp|avif|png|jpe?g|gif|ico|svg|woff2?|mp4|webm)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+
+  # HTML is always revalidated.
+  <FilesMatch "\.(php|html)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Lean, consistent, safer responses.
+  Header unset ETag
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# Friendly 404 (optional): uncomment if you add a 404.php
-# ErrorDocument 404 /404.php
+# Drop ETags (we cache by version + max-age, so ETags only add weight).
+FileETag None
+
+# Serve text assets as UTF-8.
+AddDefaultCharset utf-8
+<IfModule mod_mime.c>
+  AddCharset utf-8 .css .js .json .xml .svg
+</IfModule>
+
+# ============================================================================
+#  HARDENING
+# ============================================================================
+# No directory listings.
+Options -Indexes
+
+# Block hidden files and sensitive sources (.git, .env, *.md, *.sql, etc.).
+<IfModule mod_authz_core.c>
+  <FilesMatch "(^\.|\.(env|ini|log|md|sql|lock|dist|bak)$)">
+    Require all denied
+  </FilesMatch>
+</IfModule>

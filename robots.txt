@@ -1,4 +1,22 @@
+# robots.txt - Purple Giraffe Press
+# https://purplegiraffepress.com/
+
 User-agent: *
 Allow: /
+
+# Utility endpoints with no search value
+Disallow: /form-submission/
+Disallow: /form-submission.php
+Disallow: /thank-you/
+Disallow: /thank-you.php
+
+# Server-side partials (never meant to be requested directly)
+Disallow: /includes/
+
+# Avoid indexing form-status query duplicates
+Disallow: /*?form_status=
+
+# Let crawlers fetch the assets they need to render pages
+Allow: /assets/
 
 Sitemap: https://purplegiraffepress.com/sitemap.xml

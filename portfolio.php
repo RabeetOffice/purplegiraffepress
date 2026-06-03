@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Portfolio - Purple Giraffe Press';
+$page_title = "Our Children's Book Portfolio | Purple Giraffe Press";
 $page_description = 'Explore a playful sample catalog of picture books, early readers, and chapter books from Purple Giraffe Press.';
 $canonical_path = 'portfolio.php';
 ?>

@@ -2,7 +2,7 @@
 include 'includes/config.php';
 
 $page_title       = 'Premium Nonfiction Book Services | Purple Giraffe Press';
-$page_description = 'Premium nonfiction services for children\'s and educational books: structure, fact checking, age appropriate explanation, references, and clear visual layout.';
+$page_description = 'Premium nonfiction services for children\'s and educational books: structure, fact checking, age-appropriate explanations, references, and clear layout.';
 $canonical_path   = 'premium-nonfiction-services.php';
 
 /* The FAQ content powers both the accordion below and the FAQPage schema in <head>. */
@@ -63,7 +63,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>Accurate, clear, and genuinely fun to read</h2>
-      <p class="lead">Children's nonfiction has to be two things at once: trustworthy and delightful. Facts must be correct, but they also have to land for a young reader.</p>
+      <p>Children's nonfiction has to be two things at once: trustworthy and delightful. Facts must be correct, but they also have to land for a young reader.</p>
       <p>Our support covers structure, fact checking, age appropriate language, references, and the visual layout that helps complex ideas make sense.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Content structured so it builds clearly for kids</span></li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Visuals and layout that make ideas click</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Premium Nonfiction Services for children&#039;s books at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/premium-nonfiction-services.webp" alt="Premium Nonfiction Services for children&#039;s books at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Premium Nonfiction Services journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Scope</h3></div>
@@ -122,11 +122,11 @@ include 'includes/header.php';
 <!-- 6 - RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Purple Giraffe Press Premium Nonfiction Services" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press Premium Nonfiction Services" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>Trustworthy nonfiction children love</h2>
-      <p class="lead">Children's nonfiction has to be correct and delightful at once. We keep the facts solid while keeping the reading a joy.</p>
+      <p>Children's nonfiction has to be correct and delightful at once. We keep the facts solid while keeping the reading a joy.</p>
       <p>From science to history, we help you explain real things at exactly the right age, with references handled properly.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>

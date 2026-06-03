@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Terms and Conditions - Purple Giraffe Press';
+$page_title = 'Terms and Conditions | Purple Giraffe Press Publishing';
 $page_description = 'Review the terms and conditions for using the Purple Giraffe Press website and publishing inquiry process.';
 $canonical_path = 'terms-and-conditions.php';
 ?>

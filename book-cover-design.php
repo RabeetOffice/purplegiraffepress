@@ -63,7 +63,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>Designed to sell from every angle</h2>
-      <p class="lead">Most readers meet your book as a small image on a screen before they ever hold it. A cover has to read clearly at thumbnail size and still feel special in print.</p>
+      <p>Most readers meet your book as a small image on a screen before they ever hold it. A cover has to read clearly at thumbnail size and still feel special in print.</p>
       <p>We balance character, color, and title typography, then prepare production ready files for paperback, hardcover, and ebook so nothing breaks at the printer.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A front cover built around bold, age right art</span></li>
@@ -71,7 +71,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Files ready for paperback, hardcover, and ebook</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Book Cover Design for children&#039;s books at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/book-cover-design.webp" alt="Book Cover Design for children&#039;s books at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -89,7 +89,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Book Cover Design journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Brief</h3></div>
@@ -122,11 +122,11 @@ include 'includes/header.php';
 <!-- 6 - RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Purple Giraffe Press Book Cover Design" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press Book Cover Design" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>First impressions that earn a second look</h2>
-      <p class="lead">A cover has seconds to make a parent or a child stop and look. We balance character, color, and title so it works in hand and as a tiny thumbnail.</p>
+      <p>A cover has seconds to make a parent or a child stop and look. We balance character, color, and title so it works in hand and as a tiny thumbnail.</p>
       <p>We design for every format you need and deliver production ready files, so nothing shifts or breaks at the printer.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>

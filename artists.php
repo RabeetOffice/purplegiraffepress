@@ -1,7 +1,7 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Meet Our Illustrators - Purple Giraffe Press';
-$page_description = 'Meet the illustrators Purple Giraffe Press pairs with children\'s book authors, from whimsical watercolour to cinematic 3D, bright and bubbly, and classic pencil and ink.';
+$page_title = "Meet Our Children's Book Illustrators | Purple Giraffe Press";
+$page_description = 'Meet the illustrators Purple Giraffe Press pairs with authors, from whimsical watercolour to cinematic 3D, bright cartoon, and classic pencil and ink.';
 $canonical_path = 'artists.php';
 
 /* Decorative motif shown on the artwork panel when no sample image is set. */
@@ -74,7 +74,7 @@ $illustrators = [
     <div>
       <p class="eyebrow script-mark">- for artists</p>
       <h2>Interested in illustrating <em>with us?</em></h2>
-      <p class="lead">We love artists who can translate a manuscript into expressive characters, clear page turns, and artwork families want to revisit.</p>
+      <p>We love artists who can translate a manuscript into expressive characters, clear page turns, and artwork families want to revisit.</p>
     </div>
     <div class="card">
       <h3>Send a portfolio</h3>

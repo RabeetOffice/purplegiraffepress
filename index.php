@@ -1,8 +1,8 @@
 <?php include 'includes/config.php'; ?>
 <?php require_once 'includes/blog-data.php'; ?>
 <?php
-$page_title = "Australian Children's Book Publisher Since 2008 | Purple Giraffe Press";
-$page_description = "Purple Giraffe Press is an independent Australian children's book publisher founded in 2008. We publish picture books, chapter books, and middle grade stories children love to read again and again.";
+$page_title = "Australian Children's Book Publisher | Purple Giraffe Press";
+$page_description = "Independent Australian children's book publisher since 2008, publishing picture books, chapter books and middle grade stories children love to reread.";
 $canonical_path = 'index.php';
 $page_faqs = [
   ["q" => "How do I get my children's book published in Australia?", "a" => "Start by sending us your manuscript, or even a rough idea. We read it, talk through your goals, and map a clear path from editing and illustration to design, printing, and distribution. You stay involved at every step and keep full ownership of your book. The whole process is built to feel guided rather than overwhelming, especially if this is your first book."],
@@ -81,7 +81,7 @@ $page_faqs = [
   <div class="container section-heading">
     <p class="eyebrow script-mark">- what we do</p>
     <h2>Everything your children&apos;s book needs.</h2>
-    <p class="lead">From the first manuscript polish to launch week, our small team handles editing, illustration, cover design, publishing, and marketing. The process stays clear, creative, and friendly the whole way through.</p>
+    <p>From the first manuscript polish to launch week, our small team handles editing, illustration, cover design, publishing, and marketing. The process stays clear, creative, and friendly the whole way through.</p>
   </div>
   <div class="container">
     <?php $services_limit = 6; include 'includes/services.php'; ?>

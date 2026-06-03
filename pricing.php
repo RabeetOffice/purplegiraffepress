@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Pricing & Instant Estimate - Purple Giraffe Press';
+$page_title = 'Pricing & Instant Estimate | Purple Giraffe Press Publishing';
 $page_description = 'Get an instant baseline estimate for your children\'s book, then compare publishing packages. Flat fees, 100% author royalties.';
 $canonical_path = 'pricing.php';
 
@@ -198,7 +198,7 @@ $page_faqs = [
     <div class="section-heading center">
       <p class="eyebrow script-mark">- choose your path</p>
       <h2>Compare our <em>publishing packages.</em></h2>
-      <p class="lead">Exactly the right support for your story, at a flat fee. Listed prices include a <strong>10% launch discount</strong>.</p>
+      <p>Exactly the right support for your story, at a flat fee. Listed prices include a <strong>10% launch discount</strong>.</p>
     </div>
 
     <p class="pt-swipe-hint">Swipe to compare all packages <span aria-hidden="true">&rarr;</span></p>

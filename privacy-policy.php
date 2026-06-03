@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Privacy Policy - Purple Giraffe Press';
+$page_title = "Privacy Policy | Purple Giraffe Press | Children's Books";
 $page_description = 'Read the Purple Giraffe Press privacy policy for website visitors, authors, and submission inquiries.';
 $canonical_path = 'privacy-policy.php';
 ?>

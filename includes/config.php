@@ -95,38 +95,72 @@ function e($value) {
 }
 
 /**
- * Output-buffer filter (LIVE only): strip ".php" from internal href/action
- * URLs so every page, including hardcoded links we have not touched, renders
- * clean URLs. Absolute URLs, anchors and mailto:/tel: are left alone. The
- * matching root .htaccess maps the clean URLs back to the real .php files.
- * Never runs on localhost, so local editing is unaffected.
+ * Output-buffer filter (LIVE only): rewrite internal href/src/action URLs to
+ * their canonical clean form -> ROOT-RELATIVE, extension-less, with a trailing
+ * slash on page URLs (e.g. "../services.php" -> "/services/", "index.php" ->
+ * "/", "../assets/x.webp" -> "/assets/x.webp"). Root-relative output is what
+ * makes trailing-slash URLs safe: a plain relative link would otherwise resolve
+ * against "/page/" and break. Asset URLs keep their filename (just made
+ * root-relative). Absolute URLs, //protocol-relative, #anchors and
+ * scheme links (mailto:/tel:/data:) are left untouched. The matching root
+ * .htaccess maps the clean URLs back to the real .php files. Never runs on
+ * localhost, so local ".php" editing is unaffected.
  */
 function pgp_clean_html_links($html) {
-    return preg_replace_callback('~\s(href|action)="([^"]*)"~i', function ($m) {
-        $url = $m[2];
-        if ($url === '' || preg_match('~^([a-z][a-z0-9+.\-]*:|//|#)~i', $url)) {
-            return $m[0];                                  // external / anchor / mailto / tel
+    return preg_replace_callback('~\s(href|src|action)="([^"]*)"~i', function ($m) {
+        $attr = $m[1];
+        $url  = $m[2];
+
+        // Leave external / protocol-relative / anchor / scheme URLs untouched.
+        if ($url === '' || preg_match('~^(?:[a-z][a-z0-9+.\-]*:|//|#)~i', $url)) {
+            return $m[0];
         }
-        $new = preg_replace('~\.php(?=$|[?#])~', '', $url); // drop the extension
-        $new = preg_replace('~(^|/)index(?=$|[?#])~', '$1', $new); // index -> directory
-        if ($new === '' || $new[0] === '?' || $new[0] === '#') {
-            $new = './' . $new;
+
+        // Separate the path from any ?query or #hash so we only touch the path.
+        $suffix = '';
+        if (preg_match('~^([^?#]*)([?#].*)$~', $url, $s)) {
+            $path   = $s[1];
+            $suffix = $s[2];
+        } else {
+            $path = $url;
         }
-        return ' ' . $m[1] . '="' . $new . '"';
+
+        // Drop ./ and ../ depth prefixes: live runs at the domain root, so every
+        // internal link resolves from "/".
+        $path = preg_replace('~^(?:\./|\.\./)+~', '', $path);
+
+        // index.php -> directory; page.php -> page/ ; assets keep their name.
+        if (preg_match('~(^|/)index\.php$~', $path)) {
+            $path = preg_replace('~(^|/)index\.php$~', '$1', $path);
+        } elseif (preg_match('~\.php$~', $path)) {
+            $path = preg_replace('~\.php$~', '/', $path);
+        }
+
+        // Force root-relative so trailing-slash pages resolve links correctly.
+        $path = '/' . ltrim($path, '/');
+
+        return ' ' . $attr . '="' . $path . $suffix . '"';
     }, $html);
 }
 
 /**
  * Apply the environment's URL style to a site-root-relative path.
- * On the live site, "page.php" becomes "page" and "index.php" collapses to the
- * containing directory. On localhost, paths are returned unchanged.
- * Asset paths (.css/.js/images) and directories are never altered.
+ * On the live site, "page.php" becomes "page/" (extension dropped, canonical
+ * trailing slash added) and "index.php" collapses to its directory ("index.php"
+ * -> "", "blogs/index.php" -> "blogs/"). On localhost, paths are returned
+ * unchanged so ".php" navigation keeps working. Asset paths (.css/.js/images)
+ * and directories are never altered.
  */
 function clean_path($path) {
     $path = ltrim((string) $path, '/');
     if (defined('CLEAN_URLS') && CLEAN_URLS) {
-        $path = preg_replace('~(^|/)index\.php$~', '$1', $path);
-        $path = preg_replace('~\.php$~', '', $path);
+        if (preg_match('~(^|/)index\.php$~', $path)) {
+            // index.php collapses to its directory (root index.php -> "").
+            $path = preg_replace('~(^|/)index\.php$~', '$1', $path);
+        } elseif (preg_match('~\.php$~', $path)) {
+            // page.php -> page/  (extension-less, with a canonical trailing slash).
+            $path = preg_replace('~\.php$~', '/', $path);
+        }
     }
     return $path;
 }

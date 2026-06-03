@@ -1,7 +1,7 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = "About Purple Giraffe Press | Australian Children's Book Publisher Since 2008";
-$page_description = "Purple Giraffe Press is an independent Australian children's book publisher founded in 2008. Discover our story, what we believe, what we publish, and how we give books back to children across Australia.";
+$page_title = "About Purple Giraffe Press | Australian Children's Publisher";
+$page_description = "Discover Purple Giraffe Press, an independent Australian children's book publisher since 2008: our story, what we publish, and how we give books back.";
 $canonical_path = 'about-us.php';
 ?>
 <?php include 'includes/header.php'; ?>
@@ -44,7 +44,7 @@ $canonical_path = 'about-us.php';
   <div class="container center">
     <p class="eyebrow">What we believe</p>
     <h2>A great children&apos;s book is a powerful thing</h2>
-    <p class="lead">In the hands of a child, a good book becomes a portal to other lands, other lives, and other possibilities. It teaches without lecturing. It comforts without patronising. It challenges without overwhelming. That belief shapes every decision we make.</p>
+    <p>In the hands of a child, a good book becomes a portal to other lands, other lives, and other possibilities. It teaches without lecturing. It comforts without patronising. It challenges without overwhelming. That belief shapes every decision we make.</p>
     <div class="values-grid">
       <article class="value-card reveal"><div class="icon">A</div><h3>In children</h3><p>We believe in their instinct for a good story, their capacity for wonder, and their ability to carry a book with them long into adulthood.</p></article>
       <article class="value-card reveal"><div class="icon">B</div><h3>In illustrators</h3><p>We believe in the artists who pour weeks into a single spread, so a child will gasp when they turn the page.</p></article>
@@ -75,8 +75,8 @@ $canonical_path = 'about-us.php';
   <div class="container center about-impact">
     <p class="eyebrow">Our impact</p>
     <h2>Access to books is not a luxury. It is a right.</h2>
-    <p class="lead">Since 2008, Purple Giraffe Press has donated thousands of books to schools, libraries, hospitals, and community organisations across Australia. We partner with literacy charities, support underfunded school library programmes, and work with educators so our books are genuinely useful tools in the classroom, not just beautiful objects.</p>
-    <p class="lead">We measure our success in the letters we receive from children who say a book changed how they see themselves, in the teachers who tell us a title turned a reluctant reader into an enthusiastic one, and in the parents whose child has read a book so many times the spine has finally given way. Those are the numbers that matter most to us.</p>
+    <p>Since 2008, Purple Giraffe Press has donated thousands of books to schools, libraries, hospitals, and community organisations across Australia. We partner with literacy charities, support underfunded school library programmes, and work with educators so our books are genuinely useful tools in the classroom, not just beautiful objects.</p>
+    <p>We measure our success in the letters we receive from children who say a book changed how they see themselves, in the teachers who tell us a title turned a reluctant reader into an enthusiastic one, and in the parents whose child has read a book so many times the spine has finally given way. Those are the numbers that matter most to us.</p>
   </div>
   <div class="container">
     <div class="stats-band">

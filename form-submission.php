@@ -13,9 +13,21 @@
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/smtp-mailer.php';
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-    header('Location: index.php');
+/**
+ * Redirect to a site page using a ROOT-RELATIVE path, resolved for the current
+ * environment + URL style. Works at the web root (live -> /thank-you/) and in a
+ * localhost subdirectory (-> /brands/.../thank-you.php). Root-relative on
+ * purpose: the form posts to the trailing-slash endpoint /form-submission/, so
+ * a bare relative target like "thank-you.php" would wrongly resolve under it.
+ */
+function site_redirect(string $page): void {
+    $base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
+    header('Location: ' . $base . '/' . clean_path($page));
     exit;
+}
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+    site_redirect('index.php');
 }
 
 /* ----------------------------- helpers ----------------------------- */
@@ -39,8 +51,7 @@ function client_ip(): string {
 /** Success → thank-you.php; anything else → back to the form with a status. */
 function redirect_back(string $status): void {
     if ($status === 'success') {
-        header('Location: thank-you.php');
-        exit;
+        site_redirect('thank-you.php');
     }
     $target = field_value('source_page') ?: ($_SERVER['HTTP_REFERER'] ?? 'index.php');
     $target = trim($target) ?: 'index.php';

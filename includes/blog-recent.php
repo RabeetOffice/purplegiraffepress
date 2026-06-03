@@ -35,7 +35,7 @@ if (empty($recent_posts)) { $recent_limit = $recent_exclude = $recent_eyebrow = 
           <article class="note-card swiper-slide">
             <a class="note-art <?php echo e($rp_tone); ?><?php echo !empty($rp['image']) ? ' has-img' : ''; ?>" href="<?php echo e(blog_post_url($rp['slug'])); ?>" aria-label="<?php echo e($rp['title']); ?>">
               <?php if (!empty($rp['image'])): ?>
-                <img src="<?php echo e($rp['image']); ?>" alt="<?php echo e($rp['title']); ?>" loading="lazy" decoding="async">
+                <img src="<?php echo e(asset($rp['image'])); ?>" alt="<?php echo e($rp['title']); ?>" loading="lazy" decoding="async">
               <?php endif; ?>
             </a>
             <p class="note-category"><?php echo e($rp['category'] ?? 'Story'); ?></p>

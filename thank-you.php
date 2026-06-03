@@ -1,6 +1,6 @@
 <?php include 'includes/config.php'; ?>
 <?php
-$page_title = 'Thank You - Purple Giraffe Press';
+$page_title = "Thank You | Purple Giraffe Press | Children's Books";
 $page_description = 'Thanks for getting in touch with Purple Giraffe Press. We will reply within one business day.';
 $canonical_path = 'thank-you.php';
 ?>

@@ -44,7 +44,7 @@ include 'includes/header.php';
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
       <h2>The format and finish your story deserves</h2>
-      <p class="lead">A children's book is a physical object that gets carried, dropped, and read a hundred times. The paper, binding, and finish matter as much as the art on the page.</p>
+      <p>A children's book is a physical object that gets carried, dropped, and read a hundred times. The paper, binding, and finish matter as much as the art on the page.</p>
       <p>We help you choose the right format, from board books for toddlers to hardcovers for gifting, and send a real printed proof before any full run.</p>
       <ul class="svc-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Board, paperback, or hardcover guidance</span></li>
@@ -52,7 +52,7 @@ include 'includes/header.php';
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>A physical proof before any full run</span></li>
       </ul>
     </div>
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1000&q=80" alt="Children's book printing at Purple Giraffe Press" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/childrens-book-printing.webp" alt="Children's book printing at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -70,7 +70,7 @@ include 'includes/header.php';
   <div class="container center">
     <p class="eyebrow script-mark">- how it works</p>
     <h2>Your Children's Book Printing journey, step by step</h2>
-    <p class="lead" style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
+    <p style="margin:14px auto 0;">Here is exactly how your project moves from first hello to finished book, one clear step at a time.</p>
     <div class="svc-steps">
       <article class="svc-step reveal">
         <div class="svc-step-head"><div class="num">1</div><h3>Specify</h3></div>
@@ -103,11 +103,11 @@ include 'includes/header.php';
 <!-- 6 · RIGHT TEXT / LEFT IMAGE -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1000&q=80" alt="Purple Giraffe Press children's book printing" loading="lazy"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/why-purple-giraffe.webp" alt="Purple Giraffe Press children's book printing" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- why purple giraffe</p>
       <h2>Made to survive a thousand bedtimes</h2>
-      <p class="lead">Children's books are handled hard. We help you choose paper, binding, and finish that hold up to daily love.</p>
+      <p>Children's books are handled hard. We help you choose paper, binding, and finish that hold up to daily love.</p>
       <p>You approve a real printed proof before the full run, so the book in your hands is the book you imagined.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Get a Free Estimate &rarr;</a></div>
     </div>
@@ -119,7 +119,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="print-section-head">
       <h2>Standard book sizes</h2>
-      <p class="lead">Choosing the right trim size is the very first print decision you will make. It shapes illustration layout, production cost, shelf presence, and reader experience.</p>
+      <p>Choosing the right trim size is the very first print decision you will make. It shapes illustration layout, production cost, shelf presence, and reader experience.</p>
     </div>
     <div class="print-grid cols-2">
       <article class="print-card reveal">
@@ -184,7 +184,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="print-section-head">
       <h2>Paper types and weights</h2>
-      <p class="lead">Paper stock has a bigger impact on your book's perceived quality than most authors realise. It affects colour vibrancy, durability, weight, and cost.</p>
+      <p>Paper stock has a bigger impact on your book's perceived quality than most authors realise. It affects colour vibrancy, durability, weight, and cost.</p>
     </div>
     <div class="print-stack">
       <article class="print-card reveal">
@@ -280,7 +280,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="print-section-head">
       <h2>Cover types and binding</h2>
-      <p class="lead">The cover is the first thing a child and parent touch. Your binding choice signals quality, durability, and price before the book is even opened.</p>
+      <p>The cover is the first thing a child and parent touch. Your binding choice signals quality, durability, and price before the book is even opened.</p>
     </div>
     <div class="print-grid cols-2">
       <article class="print-card flex reveal">
@@ -340,7 +340,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="print-section-head">
       <h2>Print methods explained</h2>
-      <p class="lead">Understanding how your book is physically produced helps you make smarter decisions about cost, quality, and distribution.</p>
+      <p>Understanding how your book is physically produced helps you make smarter decisions about cost, quality, and distribution.</p>
     </div>
     <div class="print-stack">
       <article class="print-card reveal">
@@ -376,7 +376,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="print-section-head">
       <h2>Finishing and special effects</h2>
-      <p class="lead">Premium finishing turns a good book into a remarkable one. These touches make books gift-worthy, award-worthy, and shelf-standout worthy.</p>
+      <p>Premium finishing turns a good book into a remarkable one. These touches make books gift-worthy, award-worthy, and shelf-standout worthy.</p>
     </div>
     <div class="print-grid">
       <article class="print-card sm reveal"><h3>Gloss Lamination</h3><p class="print-meta">Shiny protective film over the cover. Makes colours pop and is highly durable.</p></article>
@@ -397,7 +397,7 @@ include 'includes/header.php';
     <div class="print-section-head">
       <span class="print-kicker"><span class="lbl">Quick reference</span></span>
       <h2>Book type comparison chart</h2>
-      <p class="lead">At a glance, the most common specifications for each children's book format.</p>
+      <p>At a glance, the most common specifications for each children's book format.</p>
     </div>
     <div class="print-table-wrap reveal">
       <table class="print-table">
