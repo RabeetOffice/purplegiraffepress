@@ -440,3 +440,84 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 })();
+
+/* ---------------------------------------------------------------
+   reCAPTCHA v3 — lazy loaded.
+   Google's api.js is NOT fetched on page load. It is requested only
+   once the visitor actually interacts with a form (focus / pointer /
+   touch), so it never weighs down first paint. At submit time we
+   fetch a fresh token, attach it as a hidden field, and let the form
+   post normally; form-submission.php verifies it server-side. If
+   Google is blocked or unreachable, we fail open so a real visitor
+   can still submit.
+--------------------------------------------------------------- */
+(function () {
+  var siteKey = window.PGP_RC_SITE_KEY;
+  if (!siteKey) return;
+  var forms = document.querySelectorAll('form[action*="form-submission"]');
+  if (!forms.length) return;
+
+  var apiPromise = null;
+  function loadApi() {
+    if (apiPromise) return apiPromise;
+    apiPromise = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(siteKey);
+      s.async = true;
+      s.defer = true;
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error('recaptcha load failed')); };
+      document.head.appendChild(s);
+    });
+    return apiPromise;
+  }
+
+  // Preload Google's script the moment the user shows intent to use a form,
+  // so a token is ready (or nearly ready) by the time they submit.
+  function warm() { loadApi().catch(function () {}); }
+
+  function getToken() {
+    return loadApi().then(function () {
+      return new Promise(function (resolve, reject) {
+        if (!window.grecaptcha || !window.grecaptcha.ready) { reject(new Error('grecaptcha missing')); return; }
+        window.grecaptcha.ready(function () {
+          window.grecaptcha.execute(siteKey, { action: 'submit' }).then(resolve, reject);
+        });
+      });
+    });
+  }
+
+  Array.prototype.forEach.call(forms, function (form) {
+    form.addEventListener('focusin', warm, { once: true });
+    form.addEventListener('pointerdown', warm, { once: true });
+    form.addEventListener('touchstart', warm, { once: true, passive: true });
+
+    form.addEventListener('submit', function (e) {
+      // Second pass (token already attached) — let the native submit proceed.
+      if (form.dataset.rcDone === '1') return;
+      // The browser only fires 'submit' after HTML5 validation passes, so the
+      // fields are already valid here.
+      e.preventDefault();
+
+      var proceed = function () {
+        form.dataset.rcDone = '1';
+        if (typeof form.requestSubmit === 'function') form.requestSubmit();
+        else form.submit();
+      };
+
+      getToken().then(function (token) {
+        var field = form.querySelector('input[name="recaptcha_token"]');
+        if (!field) {
+          field = document.createElement('input');
+          field.type = 'hidden';
+          field.name = 'recaptcha_token';
+          form.appendChild(field);
+        }
+        field.value = token;
+        proceed();
+      }).catch(function () {
+        proceed(); // fail open — never block a real visitor on a reCAPTCHA hiccup
+      });
+    });
+  });
+})();

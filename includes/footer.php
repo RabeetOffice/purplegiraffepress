@@ -27,7 +27,7 @@
           <img src="<?php echo e(asset(SITE_LOGO)); ?>" alt="<?php echo e(SITE_NAME); ?> logo">
           <span><?php echo e(SITE_NAME); ?></span>
         </a>
-        <p class="footer-tagline">Independent Australian children&apos;s book publishing since 2008. Stories that spark curiosity, build empathy, and reflect the world children actually live in.</p>
+        <p class="footer-tagline"><?php echo e(SITE_NAME); ?> publishing since <?php echo e(SITE_FOUNDED_YEAR); ?>. Stories that spark curiosity, build empathy, and reflect the world children actually live in.</p>
         <?php include __DIR__ . '/forms/newsletter-form.php'; ?>
         <div class="social-links">
           <?php foreach ($social_links as $label => $url): ?>
@@ -93,6 +93,7 @@
     </div>
   </footer>
   <?php include __DIR__ . '/quote-popup.php'; ?>
+  <script>window.PGP_RC_SITE_KEY=<?php echo json_encode(defined('RECAPTCHA_SITE_KEY') ? RECAPTCHA_SITE_KEY : '', JSON_UNESCAPED_SLASHES); ?>;</script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="<?php echo e(asset_min('assets/js/main.js')); ?>"></script>
 </body>

@@ -1,7 +1,7 @@
 <?php include 'includes/config.php'; ?>
 <?php
 $page_title = "About Purple Giraffe Press | Australian Children's Publisher";
-$page_description = "Discover Purple Giraffe Press, an independent Australian children's book publisher since 2008: our story, what we publish, and how we give books back.";
+$page_description = "Discover Purple Giraffe Press, an independent Australian children's book publisher since " . SITE_FOUNDED_YEAR . ": our story, what we publish, and how we give books back.";
 $canonical_path = 'about-us.php';
 ?>
 <?php include 'includes/header.php'; ?>
@@ -21,8 +21,8 @@ $canonical_path = 'about-us.php';
   <div class="container split-grid">
     <div class="about-home-copy reveal">
       <p class="eyebrow script-mark">- Our Story</p>
-      <h2>Born in Australia, <em>back in 2008.</em></h2>
-      <p>Purple Giraffe Press began in 2008 with a simple but powerful conviction. Children&apos;s literature should do more than entertain. It should spark curiosity, build empathy, celebrate imagination, and reflect the rich, diverse world that children actually live in. From our very first title, we set out to make books that children return to again and again. Stories that grow with them, that they quote at the dinner table, and that they press into a friend&apos;s hands saying &ldquo;you have to read this&rdquo;.</p>
+      <h2>Born in Australia, <em>back in <?php echo e(SITE_FOUNDED_YEAR); ?>.</em></h2>
+      <p>Purple Giraffe Press began in <?php echo e(SITE_FOUNDED_YEAR); ?> with a simple but powerful conviction. Children&apos;s literature should do more than entertain. It should spark curiosity, build empathy, celebrate imagination, and reflect the rich, diverse world that children actually live in. From our very first title, we set out to make books that children return to again and again. Stories that grow with them, that they quote at the dinner table, and that they press into a friend&apos;s hands saying &ldquo;you have to read this&rdquo;.</p>
       <p>Australia has always been a place of extraordinary storytelling, shaped by ancient voices, wide open landscapes, and a deep spirit of adventure. It was here that Purple Giraffe Press took its first breath. What started as a small, passionate team of writers, illustrators, and educators has grown into one of Australia&apos;s most loved children&apos;s publishing houses, with titles on bookshelves, in classrooms, and under pillows across the country and well beyond it.</p>
       <ul class="about-home-points">
         <li><span aria-hidden="true">✓</span> Proudly Australian, with stories that travel the world</li>
@@ -34,7 +34,7 @@ $canonical_path = 'about-us.php';
       <figure class="about-home-figure reveal">
       <span class="about-home-glow" aria-hidden="true"></span>
       <img src="./assets/images/about-us.webp" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
-      <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. 2008</span>
+      <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. <?php echo e(SITE_FOUNDED_YEAR); ?></span>
     </figure>
     </div>
   </div>
@@ -75,7 +75,7 @@ $canonical_path = 'about-us.php';
   <div class="container center about-impact">
     <p class="eyebrow">Our impact</p>
     <h2>Access to books is not a luxury. It is a right.</h2>
-    <p>Since 2008, Purple Giraffe Press has donated thousands of books to schools, libraries, hospitals, and community organisations across Australia. We partner with literacy charities, support underfunded school library programmes, and work with educators so our books are genuinely useful tools in the classroom, not just beautiful objects.</p>
+    <p>Since <?php echo e(SITE_FOUNDED_YEAR); ?>, Purple Giraffe Press has donated thousands of books to schools, libraries, hospitals, and community organisations across Australia. We partner with literacy charities, support underfunded school library programmes, and work with educators so our books are genuinely useful tools in the classroom, not just beautiful objects.</p>
     <p>We measure our success in the letters we receive from children who say a book changed how they see themselves, in the teachers who tell us a title turned a reluctant reader into an enthusiastic one, and in the parents whose child has read a book so many times the spine has finally given way. Those are the numbers that matter most to us.</p>
   </div>
   <div class="container">
@@ -84,7 +84,7 @@ $canonical_path = 'about-us.php';
         <div><strong>10k+</strong><span>Books Donated</span></div>
         <div><strong>40+</strong><span>Countries Reached</span></div>
         <div><strong>500+</strong><span>Titles Published</span></div>
-        <div><strong>2008</strong><span>Australian, Established</span></div>
+        <div><strong><?php echo e(SITE_FOUNDED_YEAR); ?></strong><span>Australian, Established</span></div>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@ $canonical_path = 'about-us.php';
     <h2>More excited about children&apos;s books <em>than ever.</em></h2>
     <p>All these years on from where we began, the stories being written today represent some of the most vital and creative work happening anywhere in publishing. We feel privileged to be part of it. We are committed to growing our catalogue thoughtfully, supporting emerging Australian talent, and finding stories that matter to the children reading them right now, and to the adults they will one day become.</p>
     <p>Thank you for being part of our story. We hope our books have been, or will soon become, part of yours.</p>
-    <p class="eyebrow sign-off">Purple Giraffe Press &middot; Australia &middot; Est. 2008</p>
+    <p class="eyebrow sign-off">Purple Giraffe Press &middot; Australia &middot; Est. <?php echo e(SITE_FOUNDED_YEAR); ?></p>
   </div>
 </section>
 

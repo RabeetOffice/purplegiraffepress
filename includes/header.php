@@ -11,7 +11,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
    section from the request path for nav highlighting. */
 $in_blog = strpos(str_replace('\\', '/', $_SERVER['PHP_SELF']), '/blogs/') !== false;
 $page_title = $page_title ?? SITE_NAME . ' - ' . SITE_TAGLINE;
-$page_description = $page_description ?? "Purple Giraffe Press is an independent Australian children's book publisher, established in 2008. We publish picture books, chapter books, and middle grade stories that children return to again and again.";
+$page_description = $page_description ?? ("Purple Giraffe Press is an independent Australian children's book publisher, established in " . SITE_FOUNDED_YEAR . ". We publish picture books, chapter books, and middle grade stories that children return to again and again.");
 $canonical_path = $canonical_path ?? $current_page;
 $canonical_url = page_url($canonical_path);
 

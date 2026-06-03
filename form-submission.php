@@ -12,6 +12,14 @@
 ================================================================= */
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/smtp-mailer.php';
+require_once __DIR__ . '/includes/nda-pdf.php';
+require_once __DIR__ . '/includes/lead-store.php';
+
+// Session carries the NDA payload across the redirect to thank-you.php so the
+// download link can regenerate the PDF without putting the lead's details in a URL.
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 /**
  * Redirect to a site page using a ROOT-RELATIVE path, resolved for the current
@@ -21,8 +29,14 @@ require_once __DIR__ . '/includes/smtp-mailer.php';
  * a bare relative target like "thank-you.php" would wrongly resolve under it.
  */
 function site_redirect(string $page): void {
+    // Split off any ?query so clean_path only transforms the path portion.
+    $query = '';
+    if (($q = strpos($page, '?')) !== false) {
+        $query = substr($page, $q);
+        $page  = substr($page, 0, $q);
+    }
     $base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
-    header('Location: ' . $base . '/' . clean_path($page));
+    header('Location: ' . $base . '/' . clean_path($page) . $query);
     exit;
 }
 
@@ -256,13 +270,33 @@ if (field_value('company') !== '' || field_value('website_url') !== '') {
     redirect_back('success');
 }
 
+// reCAPTCHA v3 — drop confirmed bots before doing any real work. We only BLOCK on
+// a definitive bad signal from Google (invalid token or a score below threshold).
+// A missing token (JS off / blocked) or a network/Google error is allowed through
+// — the honeypot is the baseline, and we never want a transient outage to cost a
+// real enquiry. Blocked submissions are silently dropped (pretend success).
+// Skipped on localhost: the keys are domain-registered for the live site, so local
+// tokens would fail verification and wrongly block testing.
+require_once __DIR__ . '/includes/recaptcha.php';
+$rcToken = field_value('recaptcha_token');
+$rcScore = null;
+if (!IS_LOCAL && $rcToken !== '') {
+    $rc = recaptcha_verify($rcToken, client_ip(), defined('RECAPTCHA_MIN_SCORE') ? RECAPTCHA_MIN_SCORE : 0.5);
+    $rcScore = $rc['score'] ?? null;
+    if (!$rc['ok'] && in_array($rc['reason'], ['low-score', 'not-success'], true)) {
+        error_log('[recaptcha] blocked (' . $rc['reason'] . ', score=' . ($rc['score'] ?? 'n/a') . ')');
+        redirect_back('success');
+    }
+}
+
 $formType = field_value('form_type') ?: 'website';
 
 $firstName = field_value('first_name') ?: field_value('firstName');
 $lastName  = field_value('last_name')  ?: field_value('lastName');
 $name      = field_value('name') ?: trim($firstName . ' ' . $lastName);
 $message   = field_value('message') ?: field_value('about') ?: field_value('notes');
-$nda       = field_value('nda') !== '' ? 'Yes — include an NDA in the reply' : '';
+$ndaRequested = field_value('nda') !== '';
+$nda       = $ndaRequested ? 'Yes — include an NDA in the reply' : '';
 
 $lead = [
     'form_type'  => $formType,
@@ -304,6 +338,25 @@ if (($upload['ok'] ?? false) === true) {
     redirect_back($status);
 }
 
+// NDA: when requested, generate a pre-populated Mutual NDA PDF, attach it to the
+// lead email, and stash the details in the session so thank-you.php can offer the
+// same document for download. Regenerated on demand from $_SESSION (no file kept).
+$ndaTmp = null;
+if ($ndaRequested && $lead['name'] !== '') {
+    $ndaData = ['name' => $lead['name'], 'email' => $lead['email'], 'date' => date('F j, Y')];
+    $ndaTmp  = tempnam(sys_get_temp_dir(), 'pgpnda');
+    if ($ndaTmp !== false && @file_put_contents($ndaTmp, pgp_generate_nda_pdf($ndaData)) !== false) {
+        $attachments[] = ['path' => $ndaTmp, 'name' => pgp_nda_filename($lead['name'])];
+        $lead['nda']   = 'Yes — signed NDA generated and attached';
+    } else {
+        $ndaTmp = null;
+    }
+    $_SESSION['pgp_nda'] = $ndaData;
+} else {
+    // No NDA this time — clear any leftover so a stale one can't be downloaded.
+    unset($_SESSION['pgp_nda']);
+}
+
 // Send.
 if ($formType === 'newsletter') {
     $subject = 'New newsletter signup — ' . SITE_NAME;
@@ -325,5 +378,15 @@ if (!$sent) {
     error_log('[lead] mail send failed for ' . $lead['email']);
 }
 
-// User did their part — always land on thank-you. The error log is our trail.
-redirect_back('success');
+// Persist the lead to the database (independent of the email — a DB hiccup is
+// logged inside lead_store() and never blocks the submission).
+lead_store($lead, $sent, $rcScore);
+
+// The NDA download regenerates from $_SESSION, so the temp copy is no longer needed.
+if ($ndaTmp !== null && is_file($ndaTmp)) {
+    @unlink($ndaTmp);
+}
+
+// Land on thank-you. Flag the NDA in the URL so its "ready" card shows — and keeps
+// showing on refresh (the card is gated on ?nda=1 plus the saved session payload).
+site_redirect(!empty($_SESSION['pgp_nda']) ? 'thank-you.php?nda=1' : 'thank-you.php');

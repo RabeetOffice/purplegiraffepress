@@ -3666,7 +3666,7 @@ select:focus-visible, textarea:focus-visible, .btn:focus-visible {
    The long list scrolls on an INNER wrapper instead, with a slim brand bar. */
 .nav-dropdown-menu { overflow: visible; }
 .nav-dropdown-scroll {
-  max-height: min(62vh, 432px);
+  /* max-height: min(62vh, 432px); */
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 4px;
@@ -5332,10 +5332,11 @@ body.qp-open { overflow: hidden; }
   background: #fff4f4; border: 1px solid #f3c4c4; color: #a3162a;
   border-radius: 12px; padding: 12px 16px; margin: 0 0 18px; font-weight: 700; font-size: .92rem;
 }
-/* Thank-you page success check. */
+/* Thank-you page success check. Block-level so it sits centered on its own row
+   (above the heading) instead of inline beside the breadcrumb pill. */
 .thanks-check {
-  display: inline-grid; place-items: center; width: 86px; height: 86px; border-radius: 50%;
-  margin: 0 auto 6px; background: var(--mint); color: #12a37a;
+  display: grid; place-items: center; width: 86px; height: 86px; border-radius: 50%;
+  margin: 14px auto 10px; background: var(--mint); color: #12a37a;
   box-shadow: 0 16px 36px rgba(18, 163, 122, .22);
 }
 .thanks-check svg { width: 48px; height: 48px; }
@@ -5371,4 +5372,293 @@ body.qp-open { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   .pt-swipe-hint span { animation: none; }
+}
+
+/* ---- "Your signed NDA is ready" card (thank-you page) ---- */
+.nda-ready {
+  max-width: 540px;
+  margin: 34px auto 6px;
+  padding: 30px 30px 26px;
+  text-align: center;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff, #f7f1ff);
+  border: 1px solid rgba(82, 32, 143, .12);
+  box-shadow: 0 20px 46px rgba(82, 32, 143, .14);
+}
+.nda-ready-icon {
+  display: inline-grid; place-items: center;
+  width: 64px; height: 64px; margin: 0 auto 14px;
+  border-radius: 50%;
+  background: rgba(123, 53, 208, .12);
+  color: var(--figma-purple);
+}
+.nda-ready-icon svg { width: 32px; height: 32px; }
+.nda-ready-title {
+  font-size: clamp(1.4rem, 3.4vw, 1.7rem);
+  color: var(--figma-purple);
+  margin: 0 0 8px;
+}
+.nda-ready-text {
+  margin: 0 auto 20px;
+  max-width: 440px;
+  color: var(--figma-muted, #564b6b);
+  font-size: .98rem;
+  line-height: 1.65;
+}
+.nda-ready-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 30px; font-size: 1.02rem; font-weight: 800;
+  border-radius: 999px;
+}
+.nda-ready-btn svg { width: 20px; height: 20px; }
+.nda-ready-inbox {
+  margin: 16px 0 0;
+  font-size: .86rem;
+  color: var(--figma-muted, #685b79);
+}
+.nda-ready-inbox strong { color: var(--figma-purple); font-weight: 700; }
+@media (max-width: 540px) {
+  .nda-ready { padding: 26px 20px 22px; border-radius: 18px; }
+}
+
+/* ===================================================================
+   LEGAL PAGES — privacy policy + terms & conditions
+   Dark gradient hero, icon cards per clause, dark closing CTA.
+=================================================================== */
+.legal-hero {
+  position: relative;
+  text-align: center;
+  padding: clamp(140px, 16vh, 174px) 0 86px;
+  overflow: hidden;
+  /* Light banner treatment, matching the About page hero. */
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, .76)),
+    url("../images/background.webp") center 44% / cover no-repeat;
+}
+.legal-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(247, 201, 72, .12), transparent 24%),
+    radial-gradient(circle at 86% 74%, rgba(123, 53, 208, .10), transparent 28%);
+  pointer-events: none;
+}
+.legal-hero::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
+  background: linear-gradient(transparent, #f6f2fc);
+  pointer-events: none;
+}
+.legal-hero-inner { position: relative; z-index: 1; }
+.legal-pill {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 8px 18px; border-radius: 999px;
+  border: 1px solid rgba(82, 32, 143, .16);
+  background: rgba(123, 53, 208, .10);
+  color: var(--figma-purple); font-weight: 800; font-size: .72rem;
+  letter-spacing: .16em; text-transform: uppercase;
+}
+.legal-pill svg { width: 16px; height: 16px; color: var(--figma-purple-2); }
+.legal-hero h1 {
+  color: var(--figma-ink); margin: 20px auto 0; max-width: 20ch;
+  font-size: clamp(2.4rem, 5.4vw, 4rem); line-height: 1;
+}
+/* Heading accent keeps the brand gold-highlight marker (inherits global h1 em). */
+.legal-hero-sub {
+  color: var(--figma-muted);
+  max-width: 600px; margin: 16px auto 0;
+  font-size: 1.06rem; line-height: 1.6;
+}
+.legal-meta {
+  margin: 20px auto 0; color: var(--figma-muted);
+  font-size: .82rem; font-weight: 600; letter-spacing: .01em;
+}
+.legal-meta strong { color: var(--figma-ink); font-weight: 700; }
+
+.legal-body { background: #f6f2fc; }
+.legal-intro {
+  max-width: 860px; margin: 0 auto 26px; padding: 22px 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(82, 32, 143, .12);
+  background: linear-gradient(180deg, #ffffff, #fbf8ff);
+  color: var(--figma-muted); line-height: 1.75; font-size: 1rem;
+  box-shadow: 0 10px 26px rgba(82, 32, 143, .06);
+}
+.legal-intro p { margin: 0 0 12px; }
+.legal-intro p:last-child { margin-bottom: 0; }
+.legal-intro a { color: var(--figma-purple); font-weight: 700; }
+
+.legal-cards { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.legal-card {
+  display: grid; grid-template-columns: 52px 1fr; gap: 20px;
+  padding: 24px 28px; border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(82, 32, 143, .10);
+  box-shadow: 0 12px 30px rgba(82, 32, 143, .07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.legal-card:hover { transform: translateY(-3px); box-shadow: 0 22px 42px rgba(82, 32, 143, .13); }
+.legal-card-ic {
+  width: 52px; height: 52px; border-radius: 15px;
+  display: grid; place-items: center;
+  background: linear-gradient(150deg, rgba(123, 53, 208, .14), rgba(247, 201, 72, .20));
+  color: var(--figma-purple);
+  box-shadow: inset 0 0 0 1px rgba(82, 32, 143, .06);
+}
+.legal-card-ic svg { width: 25px; height: 25px; }
+.legal-card-title {
+  font-size: 1.24rem; line-height: 1.25; color: var(--figma-ink);
+  margin: 4px 0 0;
+}
+.legal-card-n { color: var(--figma-purple); }
+.legal-card-body { margin-top: 11px; color: var(--figma-muted); line-height: 1.75; font-size: .97rem; }
+.legal-card-body > p { margin: 0 0 12px; }
+.legal-card-body > p:last-child { margin-bottom: 0; }
+.legal-card-body strong { color: var(--figma-ink); font-weight: 700; }
+.legal-card-body a { color: var(--figma-purple); font-weight: 700; word-break: break-word; }
+.legal-list {
+  list-style: none; margin: 4px 0 14px; padding: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.legal-list:last-child { margin-bottom: 0; }
+.legal-list li { position: relative; padding-left: 26px; line-height: 1.6; }
+.legal-list li::before {
+  content: ""; position: absolute; left: 3px; top: .5em;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold); box-shadow: 0 0 0 4px rgba(247, 201, 72, .18);
+}
+
+.legal-cta {
+  max-width: 860px; margin: 40px auto 0; text-align: center;
+  padding: 48px 30px; border-radius: 26px;
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(700px 240px at 50% 0%, rgba(123, 53, 208, .5), transparent 65%),
+    linear-gradient(160deg, #2c1747, #3b2160 60%, #281440);
+  box-shadow: 0 26px 60px rgba(40, 20, 64, .26);
+}
+.legal-cta-ic {
+  width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255, 255, 255, .08); color: var(--gold);
+  border: 1px solid rgba(255, 255, 255, .14);
+}
+.legal-cta-ic svg { width: 32px; height: 32px; }
+.legal-cta h2 { color: #fff; font-size: clamp(1.5rem, 3.4vw, 2rem); margin: 0 0 10px; }
+.legal-cta p { color: rgba(255, 255, 255, .82); max-width: 520px; margin: 0 auto 22px; line-height: 1.7; }
+.legal-cta .btn { padding: 14px 32px; border-radius: 999px; font-weight: 800; }
+
+@media (max-width: 600px) {
+  .legal-card { grid-template-columns: 1fr; gap: 14px; padding: 22px 20px; }
+  .legal-card-ic { width: 46px; height: 46px; border-radius: 13px; }
+  .legal-cta { padding: 38px 22px; border-radius: 20px; }
+}
+
+/* ===================================================================
+   TESTIMONIALS — shared card, home two-row marquee, dedicated grid
+=================================================================== */
+.t-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* allow the card to shrink inside grid/flex tracks (no overflow) */
+  background: #fff;
+  border: 1px solid rgba(82, 32, 143, .10);
+  border-radius: 20px;
+  padding: 26px 26px 22px;
+  text-align: left;
+  /* No shadow at rest — only on hover. */
+  transition: transform .3s cubic-bezier(.22, .61, .36, 1), box-shadow .3s ease;
+}
+.t-card:hover {
+  transform: scale(1.045);
+  box-shadow: 0 18px 40px rgba(82, 32, 143, .18);
+  position: relative;
+  z-index: 2;
+}
+.t-stars { color: var(--gold); letter-spacing: 3px; font-size: 1rem; line-height: 1; margin-bottom: 15px; }
+.t-quote {
+  margin: 0 0 20px;
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--figma-ink);
+  overflow-wrap: break-word;
+}
+.t-foot {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(82, 32, 143, .10);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.t-avatar {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff; font-weight: 800; font-size: 1.05rem;
+  box-shadow: 0 6px 14px rgba(37, 18, 63, .18);
+}
+.t-meta { display: flex; flex-direction: column; min-width: 0; }
+.t-meta strong { color: var(--figma-ink); font-size: .98rem; font-weight: 700; line-height: 1.2; overflow-wrap: break-word; }
+.t-meta small {
+  margin-top: 4px;
+  color: var(--figma-muted);
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  line-height: 1.35;
+  overflow-wrap: break-word; /* long book titles wrap instead of forcing the column wider */
+}
+
+/* ---- Home: two-row marquee (opposite directions) ---- */
+.t-section { overflow-x: clip; } /* full-bleed marquee never adds horizontal page scroll */
+.t-section .section-heading { margin-bottom: 4px; }
+.t-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 30px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.t-row { overflow: hidden; padding: 18px 0; } /* room for the hover grow + shadow */
+.t-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+}
+.t-track--ltr { animation: t-marquee-ltr 70s linear infinite; }
+.t-track--rtl { animation: t-marquee-rtl 70s linear infinite; }
+@keyframes t-marquee-ltr { from { transform: translateX(0); }     to { transform: translateX(-50%); } }
+@keyframes t-marquee-rtl { from { transform: translateX(-50%); }  to { transform: translateX(0); } }
+.t-marquee:hover .t-track { animation-play-state: paused; }
+.t-card--marquee { flex: 0 0 348px; width: 348px; }
+.t-section-cta { margin-top: 40px; }
+
+/* ---- Service-page slider: new cards inside the existing grid/swiper ---- */
+.t-swiper .swiper-slide { display: flex; height: auto; }
+.t-swiper .swiper-slide > .t-card { width: 100%; }
+
+/* ---- Dedicated page: grid of all testimonials ---- */
+.t-page { background: #f6f2fc; }
+.t-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) { .t-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .t-grid { grid-template-columns: minmax(0, 1fr); max-width: 460px; }
+  .t-card--marquee { flex-basis: 280px; width: 280px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-track--ltr, .t-track--rtl { animation: none; }
+  .t-row { overflow-x: auto; }
+  .t-marquee { -webkit-mask-image: none; mask-image: none; }
+  .t-card:hover { transform: none; } /* keep the shadow, drop the grow */
 }

@@ -9,6 +9,7 @@
   <url><loc>https://purplegiraffepress.com/pricing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/contact/</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/submissions/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://purplegiraffepress.com/testimonials/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Services -->
   <url><loc>https://purplegiraffepress.com/book-publishing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

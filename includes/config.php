@@ -1,6 +1,7 @@
 <?php
-define('SITE_NAME', 'Purple Giraffe Press Publishing');
+define('SITE_NAME', 'Purple Giraffe Press');
 define('SITE_TAGLINE', 'Where little stories become big adventures');
+define('SITE_FOUNDED_YEAR', '2022');                       // brand founding year — used across copy + meta
 define('SITE_LOGO', 'assets/images/logo.webp');
 define('SITE_MASCOT', 'assets/images/mascot.webp');
 define('SITE_PHONE', '(07) 5690 2990');
@@ -35,6 +36,7 @@ $footer_menu_company = [
     'Portfolio' => 'portfolio.php',
     'Partners' => 'partners.php',
     'Artists' => 'artists.php',
+    'Testimonials' => 'testimonials.php',
     'Submissions' => 'submissions.php',
     'Blog' => 'blogs/',
 ];
@@ -68,6 +70,25 @@ define('SMTP_FROM_NAME', SITE_NAME);
 /* Where lead/form notifications are delivered. Sent FROM the SMTP account
    above; can be delivered to any inbox(es). */
 $LEAD = ['recipients' => ['info@purplegiraffepress.com', 'support@purplegiraffepress.com']];
+
+/* ---- Database (lead storage) ----
+   Every form submission is also saved to the `leads` table. On XAMPP the
+   defaults below (root / empty password) work out of the box; the database and
+   table are created automatically on first submission. On live hosting, set
+   these to the credentials your host provides (the DB usually already exists). */
+define('DB_HOST', '127.0.0.1');
+define('DB_PORT', 3306);
+define('DB_NAME', 'purplegiraffepress');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+
+/* ---- Google reCAPTCHA v3 ----
+   The SITE key is public (used in the browser). Keep the SECRET key private.
+   MIN_SCORE: 0.0 (very likely a bot) .. 1.0 (very likely human); submissions
+   that score below it are silently dropped, like the honeypot. Tune as needed. */
+define('RECAPTCHA_SITE_KEY',   '6LflWwotAAAAAOcn8ONcJqGGKidToGMvGQ32xyQi');
+define('RECAPTCHA_SECRET_KEY', '6LflWwotAAAAAJedzHdsrQ4liYbuBpme042rO48B');
+define('RECAPTCHA_MIN_SCORE',  0.5);
 
 /*
  * Clean URLs (no ".php") on the LIVE site only.

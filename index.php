@@ -2,7 +2,7 @@
 <?php require_once 'includes/blog-data.php'; ?>
 <?php
 $page_title = "Australian Children's Book Publisher | Purple Giraffe Press";
-$page_description = "Independent Australian children's book publisher since 2008, publishing picture books, chapter books and middle grade stories children love to reread.";
+$page_description = "Independent Australian children's book publisher since " . SITE_FOUNDED_YEAR . ", publishing picture books, chapter books and middle grade stories children love to reread.";
 $canonical_path = 'index.php';
 $page_faqs = [
   ["q" => "How do I get my children's book published in Australia?", "a" => "Start by sending us your manuscript, or even a rough idea. We read it, talk through your goals, and map a clear path from editing and illustration to design, printing, and distribution. You stay involved at every step and keep full ownership of your book. The whole process is built to feel guided rather than overwhelming, especially if this is your first book."],
@@ -13,7 +13,7 @@ $page_faqs = [
   ["q" => "How much does it cost to publish with Purple Giraffe Press?", "a" => "It depends on what your book needs. A full path with editing, illustration, design, and distribution is a larger investment than a single service like formatting. We price each project around the actual work involved rather than a one size fits all package. The first consultation is free and comes with an honest breakdown."],
   ["q" => "Will my book be available in shops and online?", "a" => "Yes. We set up distribution so your book is orderable in print and ebook through major retailers, and available to bookshops, schools, and libraries. Your story can reach readers across Australia and in more than 40 countries, depending on the plan you choose."],
   ["q" => "Do you provide illustrations, or do I need my own illustrator?", "a" => "We have illustrators in house and match you with an artist whose style suits your story and your reader's age. You see early sketches and guide the look before any final art begins. If you already have an illustrator you love, we are happy to work with them too."],
-  ["q" => "What makes Purple Giraffe Press different from other publishers?", "a" => "We are an independent Australian press that has been doing this since 2008, and we take on only a handful of books each season. That means real attention from the people actually doing the work, full creative control for you, and 100% of your royalties. We treat every manuscript like it is our own."],
+  ["q" => "What makes Purple Giraffe Press different from other publishers?", "a" => "We are an independent Australian press that has been doing this since " . SITE_FOUNDED_YEAR . ", and we take on only a handful of books each season. That means real attention from the people actually doing the work, full creative control for you, and 100% of your royalties. We treat every manuscript like it is our own."],
   ["q" => "How do I start, and is the first chat really free?", "a" => "Yes, the first consultation is genuinely free and there is no pressure. Tell us about your book using the quick form, or send your manuscript, and we will come back with friendly, practical next steps. You decide if and when you want to move forward."],
 ];
 ?>
@@ -28,13 +28,13 @@ $page_faqs = [
     <div class="hero-copy">
       <p class="eyebrow script-mark">Independent Australian Children's Book Publisher</p>
       <h1>Bring Your <em>Children's Book</em> to Life</h1>
-      <p class="lead">Since 2008, Purple Giraffe Press has helped authors and illustrators bring children's books to life. We are with you from the first draft to launch day, and you keep 100% of your royalties.</p>
+      <p class="lead">Since <?php echo e(SITE_FOUNDED_YEAR); ?>, Purple Giraffe Press has helped authors and illustrators bring children's books to life. We are with you from the first draft to launch day, and you keep 100% of your royalties.</p>
       <div class="button-row hero-actions">
         <a class="btn btn-sun" href="contact.php">Submit Your Story</a>
         <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Estimate</a>
       </div>
       <div class="trust-row" aria-label="Why authors choose Purple Giraffe Press">
-        <span>Australian, since 2008</span>
+        <span>Australian, since <?php echo e(SITE_FOUNDED_YEAR); ?></span>
         <span>Award-winning illustrators</span>
         <span>100% author royalties</span>
       </div>
@@ -55,12 +55,12 @@ $page_faqs = [
     <figure class="about-home-figure reveal">
       <span class="about-home-glow" aria-hidden="true"></span>
       <img src="./assets/images/about.webp" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
-      <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. 2008</span>
+      <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. <?php echo e(SITE_FOUNDED_YEAR); ?></span>
     </figure>
     <div class="about-home-copy reveal">
       <p class="eyebrow script-mark">- about us</p>
       <h2>An Australian press with big <em>storybook dreams.</em></h2>
-      <p>Purple Giraffe Press is an independent children&apos;s book publisher, born in Australia in 2008. We turn manuscripts into finished books that children ask for at bedtime, again and again.</p>
+      <p>Purple Giraffe Press is an independent children&apos;s book publisher, born in Australia in <?php echo e(SITE_FOUNDED_YEAR); ?>. We turn manuscripts into finished books that children ask for at bedtime, again and again.</p>
       <p>Our authors work closely with our editors, illustrators, and designers on every book. You keep full ownership of your work and 100% of your royalties, and we stay beside you from the first draft all the way to launch day.</p>
       <ul class="about-home-points">
         <li><span aria-hidden="true">✓</span> Author-first care on every book</li>
@@ -110,12 +110,12 @@ $page_faqs = [
       <p>We&apos;re not a publishing factory. We&apos;re a close-knit Australian team that treats every manuscript like it&apos;s our own, from debut storytellers to beloved names.</p>
       <div class="founder-mini">
         <img src="<?php echo e(SITE_MASCOT); ?>" alt="Small Purple Giraffe Press mascot">
-        <span><strong>- Maya Okafor</strong><small>Founder &amp; Publisher</small></span>
+        <span><strong>The Purple Giraffe Press Team</strong><small>Australian Children&apos;s Publisher</small></span>
       </div>
     </div>
     <div class="benefit-grid">
       <article><span>✓</span><h3>100% Royalties</h3><p>You keep every cent your book earns, on every platform, forever.</p></article>
-      <article><span>✓</span><h3>Proudly Australian</h3><p>Born in 2008, with stories set from the bush to the reef and far beyond.</p></article>
+      <article><span>✓</span><h3>Proudly Australian</h3><p>Born in <?php echo e(SITE_FOUNDED_YEAR); ?>, with stories set from the bush to the reef and far beyond.</p></article>
       <article><span>✓</span><h3>Award-Winning Illustrators</h3><p>In-house artists with Caldecott nods and library favorites.</p></article>
       <article><span>✓</span><h3>Global Distribution</h3><p>Print and ebook in 40+ countries, plus schools and libraries.</p></article>
     </div>
@@ -146,17 +146,18 @@ $page_faqs = [
     <div><strong>500+</strong><span>Books Published</span></div>
     <div><strong>40+</strong><span>Countries Shipped</span></div>
     <div><strong>10k+</strong><span>Books Donated</span></div>
-    <div><strong>2008</strong><span>Australian, Established</span></div>
+    <div><strong><?php echo e(SITE_FOUNDED_YEAR); ?></strong><span>Australian, Established</span></div>
   </div>
 </section>
 
-<section class="section figma-cream">
-  <div class="container section-heading">
+<section class="section figma-cream t-section">
+  <div class="container section-heading center">
     <p class="eyebrow script-mark">- author love</p>
     <h2>Authors who said <em>yes</em>, and never looked back.</h2>
   </div>
-  <div class="container">
-    <?php include 'includes/testimonials.php'; ?>
+  <?php include 'includes/testimonials-marquee.php'; ?>
+  <div class="container center t-section-cta">
+    <a class="btn btn-light" href="<?php echo e(asset('testimonials.php')); ?>">Read all reviews &rarr;</a>
   </div>
 </section>
 
