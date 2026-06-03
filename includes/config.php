@@ -14,9 +14,9 @@ define('MAIN_CTA_LINK', 'contact.php');
 
 $social_links = [
     'Instagram' => 'https://instagram.com/purplegiraffepress',
-    'Facebook' => 'https://facebook.com/purplegiraffepress',
-    'TikTok' => 'https://tiktok.com/@purplegiraffepress',
-    'YouTube' => 'https://youtube.com/purplegiraffepress',
+    'Facebook' => 'https://www.facebook.com/people/Purple-Giraffe-Press/61575292427308/',
+    // 'TikTok' => 'https://tiktok.com/@purplegiraffepress',
+    // 'YouTube' => 'https://youtube.com/purplegiraffepress',
 ];
 
 $nav_menu = [
