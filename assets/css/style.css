@@ -817,6 +817,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   object-position: center;
   z-index: 0;
   pointer-events: none;
+  filter: contrast(1.7);
   opacity: 0;
   transition: opacity .45s ease;
 }
@@ -5662,3 +5663,28 @@ body.qp-open { overflow: hidden; }
   .t-marquee { -webkit-mask-image: none; mask-image: none; }
   .t-card:hover { transform: none; } /* keep the shadow, drop the grow */
 }
+
+/* ============================================================
+   CTA band — lift it off the purple footer.
+   The old purple gradient sat flush against the purple footer and
+   the two shades blended. A warm cream "storybook" panel makes the
+   call-to-action read as its own moment with a clean boundary below.
+   ============================================================ */
+.cta-band {
+  background:
+    radial-gradient(circle at 86% 16%, rgba(247, 201, 72, .26), transparent 46%),
+    linear-gradient(135deg, #fbf5ff, #f1e7ff);
+  color: var(--purple-900);
+  border-top: 3px dotted rgba(247, 201, 72, .7);
+  box-shadow: inset 0 -1px 0 rgba(76, 25, 133, .08);
+}
+.cta-band h2,
+.cta-band p,
+.cta-band .eyebrow,
+.cta-band .script-mark { color: var(--purple-900); }
+.cta-band p { opacity: .82; }
+.cta-call { color: var(--purple-800); }
+.cta-call strong { color: var(--purple-800); }
+/* Halo behind the mascot: a soft purple tint reads on the light panel
+   where the old translucent-white halo had vanished. */
+.cta-mascot::before { background: rgba(122, 61, 209, .12); }

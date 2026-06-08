@@ -54,7 +54,7 @@ $page_faqs = [
   <div class="container about-home-layout">
     <figure class="about-home-figure reveal">
       <span class="about-home-glow" aria-hidden="true"></span>
-      <img src="./assets/images/about.webp" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
+      <img src="./assets/images/home-about.webp" alt="<?php echo e(SITE_NAME); ?> logo" loading="lazy">
       <span class="about-home-pill"><span aria-hidden="true">★</span> Australian, est. <?php echo e(SITE_FOUNDED_YEAR); ?></span>
     </figure>
     <div class="about-home-copy reveal">

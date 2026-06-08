@@ -26,9 +26,9 @@ $portfolioItems = array_map(static function (array $item): array {
     $item['category_slug'] = strtolower(preg_replace('/[^a-z0-9]+/i', '-', $item['category']));
     return $item;
 }, [    
+    ['category' => 'Children Book', 'author' => 'Jessica Schoettle',  'title' => "Tilly's Rainbow Adventure",                                'amazon_link' => 'https://www.amazon.com/dp/B0H2Q7LQQW/'],
+    ['category' => 'Children Book', 'author' => 'Ashlee Ridlon',      'title' => "Whatever You Do, Don't Fall Asleep!",                      'amazon_link' => 'https://www.amazon.com/dp/B0GR74ZF3Y/'],
     ['category' => 'Children Book', 'author' => 'Rayan Yale',         'title' => '100,000 Whys - The Big Journey for Curious Kids',          'amazon_link' => 'https://www.amazon.com/dp/B0GY862XJM/'],
-    ['category' => 'Children Book', 'author' => 'Theo Wonderquill',   'title' => '100,000 Whys Encyclopedia for Kids',                       'amazon_link' => 'https://www.amazon.com/dp/B0GZZMZ5LG/'],
-    ['category' => 'Children Book', 'author' => 'Nolan Bright',       'title' => '100,000 Whys for Curious Kids',                            'amazon_link' => 'https://www.amazon.com/dp/B0GZKWXXSQ/'],
     ['category' => 'Children Book', 'author' => 'V Moua',             'title' => 'Sticks and Stones May Break My...',                        'amazon_link' => 'https://www.amazon.com/dp/B0GX32MSYM/'],
     ['category' => 'Children Book', 'author' => 'V Moua',             'title' => 'I Am Not a Dinosaur!',                                     'amazon_link' => 'https://www.amazon.com/dp/B0GX34ZYDM/'],
     ['category' => 'Children Book', 'author' => 'V Moua',             'title' => "Don't Worry, Cookie. We'll Save You!",                     'amazon_link' => 'https://www.amazon.com/dp/B0FPBGVVJR/'],
@@ -37,9 +37,7 @@ $portfolioItems = array_map(static function (array $item): array {
     ['category' => 'Children Book', 'author' => 'Charlie Maple',      'title' => 'The Epic Science Challenge For Super Smart Kids',          'amazon_link' => 'https://www.amazon.com/dp/B0GXQFK6V9/'],
     ['category' => 'Children Book', 'author' => 'Jeffrey Kyle',       'title' => 'The Mehrabian Rule for Kids',                              'amazon_link' => 'https://www.amazon.com/dp/B0GZ3B6PLP/'],
     ['category' => 'Children Book', 'author' => 'Gabriel Nedelcu',    'title' => 'The Great Neurotrainer Workbook for Smart Kids',           'amazon_link' => 'https://www.amazon.com/dp/B0H1GVZBVY/'],
-    ['category' => 'Children Book', 'author' => 'Ashlee Ridlon',      'title' => "Whatever You Do, Don't Fall Asleep!",                      'amazon_link' => 'https://www.amazon.com/dp/B0GR74ZF3Y/'],
     ['category' => 'Children Book', 'author' => 'Joey Acker',         'title' => 'The Worst Vacation Book in the Whole Entire World',        'amazon_link' => 'https://www.amazon.com/dp/B0GZCSHH24/'],
-    ['category' => 'Children Book', 'author' => 'Jessica Schoettle',  'title' => "Tilly's Rainbow Adventure",                                'amazon_link' => 'https://www.amazon.com/dp/B0H2Q7LQQW/'],
 ]);
 
 /* Build the genre tabs list dynamically from the data — `All` first,
