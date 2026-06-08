@@ -91,6 +91,11 @@ p {
   padding: 96px 0;
 }
 
+@view-transition {
+  navigation: auto;
+  types: slide;
+}
+
 .figma-cream {
   background: transparent;   /* let the dreamy mesh show through */
 }
