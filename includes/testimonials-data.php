@@ -6,31 +6,22 @@
      - includes/testimonials.php          (service-page slider)
      - testimonials.php                    (dedicated page, grid)
 
-   NOTE: these are sample/placeholder testimonials with fictional
-   author + book names. Replace with real client testimonials.
+   Real reviews collected from the brand's Trustpilot profile. Each entry:
+     quote  => the review text
+     author => reviewer name
+     meta   => reviewer location (shown as the sub-line)
+     rating => star rating out of 5 (defaults to 5 if omitted)
 ================================================================= */
 
 $testimonials = [
-    ['quote' => 'Who knew publishing could be this much fun? They handle the heavy lifting so I can focus on making kids laugh.', 'author' => 'Marcus Bramble', 'book' => 'The Pigeon Who Lost His Bus Pass'],
-    ['quote' => 'A truly exceptional design team. They understand that negative space and timing are everything in a picture book.', 'author' => 'Jonah Clay', 'book' => 'The Hat That Wandered Off'],
-    ['quote' => 'Purple Giraffe Press brings an unforgettable, vibrant quality to everything they touch. Total professionals.', 'author' => 'Dana Santiago', 'book' => 'The Adventures of Little Beacon'],
-    ['quote' => 'The editing team helped me refine my rhymes without losing the charm. It is now a bedtime favourite across the country.', 'author' => 'Maria Rossi', 'book' => 'The Sleepy Little Owl'],
-    ['quote' => 'Translating a classic song into a new book was tough, but their audio and design teams rocked it completely.', 'author' => 'Selina Jaury', 'book' => 'Ms. Macdonald Had a Farm'],
-    ['quote' => 'An incredibly empowering experience. They give you the tools to succeed and you keep your rights.', 'author' => 'Vashti Harlow', 'book' => 'Little Leaders, Big Dreams'],
-    ['quote' => 'I kept one hundred percent of my royalties. I still cannot quite believe it.', 'author' => 'Theo Marigold', 'book' => 'Bee and the Big Sunflower Day'],
-    ['quote' => 'They treated my story like it was the only one in the world. Every single page feels alive.', 'author' => 'Amara Lewis', 'book' => 'The Giraffe Who Could Touch the Moon'],
-    ['quote' => 'A boutique experience from top to bottom. My book is now sitting in school libraries everywhere.', 'author' => 'Priya Kapoor', 'book' => "Olive's Very Unusual Hat"],
-    ['quote' => 'My first book and they never once made me feel like a beginner. Patient, kind, and genuinely brilliant.', 'author' => 'Daniel Okonkwo', 'book' => 'Football Boots and Fairy Tales'],
-    ['quote' => 'The illustrations took my breath away. My daughter asked who had painted her dreams.', 'author' => 'Hannah Boon', 'book' => "The Lighthouse Keeper's Cat"],
-    ['quote' => 'Funny, fast, and completely stress free. The proofs were flawless on the very first pass.', 'author' => 'Lucas Fenn', 'book' => "Robots Don't Eat Broccoli"],
-    ['quote' => 'Gentle, thoughtful editors who respect how clever children really are. A pure joy to work with.', 'author' => 'Ingrid Solberg', 'book' => "Snow Bear's Quiet Morning"],
-    ['quote' => 'Bright, bold, and beautiful. The printed book looks like a treasure. Highly recommended.', 'author' => 'Owen Pratt', 'book' => "The Earthworm's Big Day Out"],
-    ['quote' => 'They championed my bilingual edition when other presses said no. I am forever grateful.', 'author' => 'Carmen Vidal', 'book' => "Abuela's Magic Kitchen"],
-    ['quote' => 'From manuscript to launch day they were right beside me. I never felt lost for a second.', 'author' => 'Nadia Frost', 'book' => 'The Girl Who Painted Storms'],
-    ['quote' => 'The cover design sold the book before anyone had read a single word. Pure magic.', 'author' => 'Sam Whitfield', 'book' => 'Captain Custard and the Cloud Pirates'],
-    ['quote' => 'Distribution was the part I dreaded most. They made it effortless and now I am in forty countries.', 'author' => 'Bel Ortega', 'book' => "Tilly's Tiny Telescope"],
-    ['quote' => 'Three rounds of edits and every one made the story stronger. These people genuinely care.', 'author' => 'Reuben Marsh', 'book' => 'The Dragon Who Was Afraid of Marshmallows'],
-    ['quote' => 'Warm, professional, and wildly creative. Working with them felt like coming home.', 'author' => 'Esme Lindqvist', 'book' => 'Goodnight, Little Wombat'],
+    ['quote' => "Writing the book wasn't the difficult part. The real frustration came afterward, when I tried formatting it myself. Every adjustment seemed to create another problem somewhere else in the document. After reaching a breaking point I contacted Purple Giraffe Press for their book writing and formatting service. The finished manuscript looked clean and consistent from beginning to end, with page layout, chapter headings, and spacing all feeling professional.", 'author' => 'Jamie Brook', 'meta' => 'United States', 'rating' => 5],
+    ['quote' => "The day my book was released, I expected at least a few weeks of excitement and visibility. Instead, after friends and family purchased copies, things became surprisingly quiet. I quickly realized that publishing a book and getting people to notice it were two completely different challenges.", 'author' => 'M Baint', 'meta' => 'United States', 'rating' => 4],
+    ['quote' => "I had tried promoting my book on my own with very little success. Purple Giraffe Press stepped in with a clear plan and helped improve my online visibility. I appreciated their practical advice and consistent communication throughout the campaign.", 'author' => 'Porter Zoe', 'meta' => 'United States', 'rating' => 4],
+    ['quote' => "Great so far!", 'author' => 'Lisa', 'meta' => 'Australia', 'rating' => 5],
+    ['quote' => "I'm extremely sensitive to audio quality, so I noticed every little issue in the sample recording. A few sections needed adjustments, but the production team handled the revisions without any pushback. The final version sounded clean and professional!", 'author' => 'Tracy', 'meta' => 'United States', 'rating' => 5],
+    ['quote' => "Purple Giraffe Press is amazing. Their attention to detail and dedication to bringing my story to life was outstanding. I couldn't have asked for a better experience. Special thanks to Julia K for her invaluable help, and Mirsa for the breathtaking illustrations.", 'author' => 'Daniel Lunceford', 'meta' => 'United States', 'rating' => 5],
+    ['quote' => "Working with Purple Giraffe Press has been an absolute pleasure. They provided excellent advice and support throughout the publishing process. Shaun Rickelton, the project manager, ensured everything ran smoothly, and Mirsa's illustrations brought a magical touch to the book.", 'author' => 'Philip Toole', 'meta' => 'United States', 'rating' => 5],
+    ['quote' => "I had a wonderful experience working with Purple Giraffe Press. Their team was incredibly supportive and they brought my vision to life beautifully. The process was smooth from start to finish, and I especially appreciated the guidance I received from Julia K. The illustrations, led by Mirsa, were simply stunning.", 'author' => 'Pickering Feest', 'meta' => 'United States', 'rating' => 5],
 ];
 
 if (!function_exists('pgp_testimonial_card')) {
@@ -42,12 +33,17 @@ if (!function_exists('pgp_testimonial_card')) {
         $initial = $author !== '' ? mb_strtoupper(mb_substr($author, 0, 1)) : '?';
         $cls     = 't-card' . ($extraClass !== '' ? ' ' . $extraClass : '');
 
+        $rating  = (int) ($t['rating'] ?? 5);
+        $rating  = max(1, min(5, $rating));
+        $stars   = str_repeat('&#9733;', $rating) . str_repeat('&#9734;', 5 - $rating);
+        $subline = $t['meta'] ?? $t['book'] ?? '';
+
         return '<article class="' . $cls . '">'
-            . '<div class="t-stars" aria-label="Rated 5 out of 5">' . str_repeat('&#9733;', 5) . '</div>'
+            . '<div class="t-stars" aria-label="Rated ' . $rating . ' out of 5">' . $stars . '</div>'
             . '<blockquote class="t-quote">&ldquo;' . e($t['quote'] ?? '') . '&rdquo;</blockquote>'
             . '<div class="t-foot">'
             . '<span class="t-avatar" aria-hidden="true" style="background:' . e($color) . '">' . e($initial) . '</span>'
-            . '<span class="t-meta"><strong>' . e($author) . '</strong><small>' . e($t['book'] ?? '') . '</small></span>'
+            . '<span class="t-meta"><strong>' . e($author) . '</strong><small>' . e($subline) . '</small></span>'
             . '</div>'
             . '</article>';
     }

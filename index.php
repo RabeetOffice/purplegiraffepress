@@ -128,15 +128,12 @@ $page_faqs = [
     <h2>From manuscript to <em>masterpiece</em>, in five simple steps.</h2>
   </div>
   <div class="container">
-    <div class="journey-line mobile-swiper swiper">
-      <div class="swiper-wrapper">
-        <article class="swiper-slide reveal"><span>1</span><h3>Submit</h3><p>Send us your manuscript or story idea.</p></article>
-        <article class="swiper-slide reveal"><span>2</span><h3>Edit</h3><p>Three editing rounds with your editor.</p></article>
-        <article class="swiper-slide reveal"><span>3</span><h3>Illustrate</h3><p>Hand-paired with the perfect illustrator.</p></article>
-        <article class="swiper-slide reveal"><span>4</span><h3>Design</h3><p>Cover and interior typeset for young readers.</p></article>
-        <article class="swiper-slide reveal"><span>5</span><h3>Launch</h3><p>Global distribution, reviews, and press.</p></article>
-      </div>
-      <div class="swiper-pagination"></div>
+    <div class="journey-line">
+      <article class="reveal"><span>1</span><h3>Submit</h3><p>Send us your manuscript or story idea.</p></article>
+      <article class="reveal"><span>2</span><h3>Edit</h3><p>Three editing rounds with your editor.</p></article>
+      <article class="reveal"><span>3</span><h3>Illustrate</h3><p>Hand-paired with the perfect illustrator.</p></article>
+      <article class="reveal"><span>4</span><h3>Design</h3><p>Cover and interior typeset for young readers.</p></article>
+      <article class="reveal"><span>5</span><h3>Launch</h3><p>Global distribution, reviews, and press.</p></article>
     </div>
   </div>
 </section>

@@ -44,6 +44,11 @@ if (!preg_match('#^https?://#', $og_image)) {
     $og_image = page_url($og_image);
 }
 $og_type = $og_type ?? 'website';
+
+/* Pages may set $page_noindex = true; before include to keep themselves out of
+   search engines (kept reachable in code, just not indexed). All blog pages
+   (the listing and every individual post) are noindex by site policy. */
+$page_noindex = ($page_noindex ?? false) || $in_blog;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +70,11 @@ $og_type = $og_type ?? 'website';
   <meta name="apple-mobile-web-app-title" content="Purple Giraffe">
   <meta name="application-name" content="<?php echo e(SITE_NAME); ?>">
   <!-- Search & social -->
+  <?php if ($page_noindex): ?>
+  <meta name="robots" content="noindex, follow">
+  <?php else: ?>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <?php endif; ?>
   <meta property="og:type" content="<?php echo e($og_type); ?>">
   <meta property="og:site_name" content="<?php echo e(SITE_NAME); ?>">
   <meta property="og:title" content="<?php echo e($page_title); ?>">

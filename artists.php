@@ -3,6 +3,9 @@
 $page_title = "Meet Our Children's Book Illustrators | Purple Giraffe Press";
 $page_description = 'Meet the illustrators Purple Giraffe Press pairs with authors, from whimsical watercolour to cinematic 3D, bright cartoon, and classic pencil and ink.';
 $canonical_path = 'artists.php';
+/* Hidden page: kept in code and reachable by direct URL, but unlinked across the
+   site and excluded from search engines (see includes/header.php robots meta). */
+$page_noindex = true;
 
 /* Decorative motif shown on the artwork panel when no sample image is set. */
 function artist_motif(string $key): string {

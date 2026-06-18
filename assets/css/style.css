@@ -1503,9 +1503,7 @@ h1 em, h2 em { font-style: italic; background-image: linear-gradient(transparent
   .hero-copy h1, .hero-copy p { max-width: 315px; }
   .hero-copy .lead { font-size: .94rem; line-height: 1.65; }
   .hero-copy h1 { text-wrap: wrap; overflow-wrap: normal; }
-  .services-grid, .testimonial-grid, .notes-grid, .benefit-grid, .stats-grid, .journey-line { grid-template-columns: 1fr; }
-  .journey-line { gap: 24px; }
-  .journey-line::before { display: none; }
+  .services-grid, .testimonial-grid, .notes-grid, .benefit-grid, .stats-grid { grid-template-columns: 1fr; }
   .stats-grid { gap: 28px; }
 }
 
@@ -1905,8 +1903,7 @@ strong { font-weight: 700; }
 /* ---------- Mobile sliders (services / steps / testimonials / blogs) ---------- */
 .services-grid.mobile-swiper,
 .testimonial-grid.mobile-swiper,
-.notes-grid.mobile-swiper,
-.journey-line.mobile-swiper {
+.notes-grid.mobile-swiper {
   display: block;
   gap: 0;
   margin-top: 42px;
@@ -1930,19 +1927,62 @@ strong { font-weight: 700; }
   .services-grid.mobile-swiper > .swiper-wrapper { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .testimonial-grid.mobile-swiper > .swiper-wrapper { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .notes-grid.mobile-swiper > .swiper-wrapper { grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .journey-line.mobile-swiper > .swiper-wrapper { grid-template-columns: repeat(5, 1fr); gap: 0; }
 }
 
 /* TABLET & MOBILE (<=1024px): slider chrome */
 @media (max-width: 1024px) {
   .mobile-swiper { padding-bottom: 38px; overflow: hidden; }
   .mobile-swiper .swiper-pagination { bottom: 4px; }
-  .journey-line::before { display: none; }
   /* drop the playful rotation while cards live in a track */
   .swiper-initialized .testimonial-card { transform: none !important; }
   .notes-grid .note-card,
   .testimonial-grid .testimonial-card,
   .services-grid .service-card { height: 100%; }
+}
+
+/* ---------- Journey / process: responsive (5-across → timeline) ---------- */
+/* Tablet & small-desktop: keep the 5-step row, just tighten the spacing. */
+@media (max-width: 1024px) {
+  .journey-line { gap: 10px; margin-top: 36px; }
+  .journey-line::before { left: 9%; right: 9%; }
+  .journey-line p { font-size: .78rem; max-width: 130px; }
+}
+
+/* Phones / small tablets in portrait: vertical numbered timeline. */
+@media (max-width: 700px) {
+  .journey-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 32px auto 0;
+    max-width: 360px;
+    text-align: left;
+  }
+  .journey-line::before { display: none; }
+
+  .journey-line article {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    column-gap: 18px;
+    align-items: start;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  .journey-line article:last-child { padding-bottom: 0; }
+
+  /* dotted connector running down the centre of the step circles */
+  .journey-line article:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 52px;
+    bottom: -2px;
+    border-left: 2px dotted var(--gold);
+  }
+
+  .journey-line span { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
+  .journey-line h3 { grid-column: 2; grid-row: 1; margin: 8px 0 0; line-height: 1.15; }
+  .journey-line p  { grid-column: 2; grid-row: 2; margin: 4px 0 0; max-width: none; font-size: .85rem; }
 }
 
 /* ---------- Portfolio: real Swiper slider on every breakpoint ---------- */
@@ -4783,11 +4823,38 @@ body.qp-open { overflow: hidden; }
 /* ---- Single post header + hero cover ---- */
 /* Plain breadcrumb here (the category chip is the only pill), so the header
    reads cleanly without two stacked pills. */
+/* Stack the banner content so the breadcrumb and category chip sit on their
+   own separate lines instead of colliding on one row. */
+.blog-post-banner .banner-inner > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .blog-post-banner .breadcrumbs {
   background: transparent; padding: 0; border-radius: 0;
-  margin: 0 0 16px; font-size: .82rem;
+  margin: 0 0 14px; font-size: .82rem;
 }
-.blog-post-banner .blog-chip-lg { margin: 0 0 22px; }
+/* Category chip: its own line below the breadcrumb, as a filled gradient pill
+   with a small gold accent dot. */
+.blog-post-banner .blog-chip-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 8px 18px;
+  font-size: .72rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--figma-purple), var(--figma-purple-2));
+  box-shadow: 0 10px 24px rgba(82, 32, 143, .22);
+}
+.blog-post-banner .blog-chip-lg::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(247, 201, 72, .25);
+}
 .blog-post-banner h1 {
   font-size: clamp(1.9rem, 3.6vw, 3rem);
   line-height: 1.12;

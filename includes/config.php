@@ -35,7 +35,6 @@ $footer_menu_company = [
     'About Us' => 'about-us.php',
     'Portfolio' => 'portfolio.php',
     'Partners' => 'partners.php',
-    'Artists' => 'artists.php',
     'Testimonials' => 'testimonials.php',
     'Submissions' => 'submissions.php',
     'Blog' => 'blogs/',

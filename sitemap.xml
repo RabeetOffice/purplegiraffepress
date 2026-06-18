@@ -28,13 +28,8 @@
 
   <!-- Network -->
   <url><loc>https://purplegiraffepress.com/partners/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://purplegiraffepress.com/artists/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- Blog -->
-  <url><loc>https://purplegiraffepress.com/blogs/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://purplegiraffepress.com/blogs/why-every-childrens-story-deserves-custom-illustration/</loc><lastmod>2026-06-02</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://purplegiraffepress.com/blogs/step-by-step-journey-publishing-your-first-childrens-book/</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://purplegiraffepress.com/blogs/power-of-storytelling-how-childrens-books-shape-young-minds/</loc><lastmod>2026-05-21</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <!-- Blog: intentionally omitted — all blog pages are noindex by site policy -->
 
   <!-- Legal -->
   <url><loc>https://purplegiraffepress.com/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

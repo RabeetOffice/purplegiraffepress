@@ -225,15 +225,7 @@ function sub_mail_icon() {
   </div>
 </section>
 
-<section class="section section-white meet-illustrators">
-  <div class="container narrow center">
-    <p class="eyebrow script-mark">- Our artists</p>
-    <h2>Meet Our <em>Illustrators</em></h2>
-    <p>Browse the artists behind our books and the many styles they bring to the page, from watercolour and pencil to bold digital worlds.</p>
-    <div class="button-row center-row">
-      <a class="btn btn-primary" href="artists.php">View Our Illustrators →</a>
-    </div>
-  </div>
-</section>
+<?php /* "Meet Our Illustrators" CTA removed: the artists page is hidden/unlinked
+         site-wide (kept in code, noindex). Restore this block to re-expose it. */ ?>
 
 <?php include 'includes/footer.php'; ?>
