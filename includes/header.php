@@ -59,6 +59,29 @@ $page_noindex = ($page_noindex ?? false) || $in_blog;
   <title><?php echo e($page_title); ?></title>
   <meta name="description" content="<?php echo e($page_description); ?>">
   <link rel="canonical" href="<?php echo e($canonical_url); ?>">
+  <?php if (!IS_LOCAL): ?>
+  <!-- Search Console verification -->
+  <meta name="google-site-verification" content="7--rzGQczw5YpjL2j_LH2rUhdwMUZnmGtYQdQeMyPkM" />
+  <!-- Speed: warm up the analytics origins before the async tags fire -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.clarity.ms">
+  <!-- Google tag (gtag.js) - GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4SN1LWFY1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G4SN1LWFY1');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x8wn0x7tuj");
+  </script>
+  <?php endif; ?>
   <!-- Favicons / app icons -->
   <link rel="icon" href="<?php echo e(asset('assets/images/favicon.ico')); ?>" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo e(asset('assets/images/favicon-32x32.png')); ?>">

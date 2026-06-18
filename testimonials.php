@@ -13,6 +13,7 @@ require_once __DIR__ . '/includes/testimonials-data.php';
       <div class="breadcrumbs"><a href="index.php">Home</a> / Testimonials</div>
       <h1>Loved by <em>authors.</em></h1>
       <p class="lead">Hundreds of authors have brought their children&apos;s books to life with us. Here is what a few of them had to say.</p>
+      <div class="banner-trustpilot"><?php echo pgp_trustpilot_badge(); ?></div>
     </div>
     <img src="<?php echo e(SITE_MASCOT); ?>" alt="Purple Giraffe Press mascot beside author testimonials">
   </div>

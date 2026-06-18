@@ -13,3 +13,4 @@ $slice = array_slice($testimonials, 0, 6);
   </div>
   <div class="swiper-pagination"></div>
 </div>
+<div class="center t-slider-trustpilot"><?php echo pgp_trustpilot_badge(); ?></div>

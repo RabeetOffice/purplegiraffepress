@@ -154,6 +154,7 @@ $page_faqs = [
   </div>
   <?php include 'includes/testimonials-marquee.php'; ?>
   <div class="container center t-section-cta">
+    <div class="t-trustpilot"><?php echo pgp_trustpilot_badge(); ?></div>
     <a class="btn btn-light" href="<?php echo e(asset('testimonials.php')); ?>">Read all reviews &rarr;</a>
   </div>
 </section>
