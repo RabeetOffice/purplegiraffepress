@@ -24,8 +24,14 @@
   RewriteCond %{HTTP_HOST} \.(local|test)$ [NC]
   RewriteRule ^ - [E=DEVHOST:1]
 
+  # --- Admin studio: pass through untouched (keeps ".php" URLs, no canonical
+  #     redirects). Access control lives in the admin's PHP session layer and
+  #     admin/data + admin/includes carry their own "Require all denied".
+  RewriteRule ^admin(/.*)?$ - [L]
+
   # --- Never serve direct requests to server-side partials --------------------
   RewriteRule ^includes/ - [F,L]
+  RewriteRule ^trash/ - [F,L]
 
   # ===========================================================================
   #  OPTIONAL canonical host (enable once HTTPS + your preferred host are live).
@@ -35,10 +41,12 @@
   # RewriteCond %{ENV:DEVHOST} !=1
   # RewriteCond %{HTTPS} off
   # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-  #
-  # RewriteCond %{ENV:DEVHOST} !=1
-  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  # RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # Strip www so the canonical host is the bare domain (matches the non-www
+  # canonical URLs the site emits). Live only; skipped on localhost/dev.
+  RewriteCond %{ENV:DEVHOST} !=1
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
   # ===========================================================================
   #  CANONICAL REDIRECTS  (live only)

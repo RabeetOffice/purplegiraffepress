@@ -1,24 +1,48 @@
 <?php
+/* Safe site settings saved from the admin studio (admin/settings.php) override
+   the defaults below. The JSON lives outside the web root's readable paths
+   (admin/data is "Require all denied") and a missing/corrupt file simply means
+   the defaults apply. Empty-string overrides are honoured so a field can be
+   deliberately blanked from the admin. */
+$PGP_SETTINGS = [];
+$__pgp_ovr = __DIR__ . '/../admin/data/settings-overrides.json';
+if (is_file($__pgp_ovr)) {
+    $__pgp_tmp = json_decode((string) @file_get_contents($__pgp_ovr), true);
+    if (is_array($__pgp_tmp)) { $PGP_SETTINGS = $__pgp_tmp; }
+}
+unset($__pgp_ovr, $__pgp_tmp);
+if (!function_exists('pgp_setting')) {
+    function pgp_setting(string $key, $default) {
+        global $PGP_SETTINGS;
+        return array_key_exists($key, $PGP_SETTINGS) ? $PGP_SETTINGS[$key] : $default;
+    }
+}
+
 define('SITE_NAME', 'Purple Giraffe Press');
 define('SITE_TAGLINE', 'Where little stories become big adventures');
 define('SITE_FOUNDED_YEAR', '2022');                       // brand founding year — used across copy + meta
 define('SITE_LOGO', 'assets/images/logo.webp');
 define('SITE_MASCOT', 'assets/images/mascot.webp');
-define('SITE_PHONE', '(07) 5690 2990');
-define('SITE_EMAIL', 'info@purplegiraffepress.com');
-define('SITE_ADDRESS', 'Level 9 Corporate Ct, Bundall QLD 4217, Australia');
-define('SITE_TRADING_ADDRESS', '60 E 42nd St #4600, New York, NY 10165, United States');
-define('SITE_HOURS', 'Monday to Friday, 9:00 AM to 5:00 PM AEST');
+define('SITE_PHONE', (string) pgp_setting('site_phone', '(07) 5690 2990'));
+define('SITE_EMAIL', (string) pgp_setting('site_email', 'info@purplegiraffepress.com'));
+define('SITE_ADDRESS', (string) pgp_setting('site_address', 'Level 9 Corporate Ct, Bundall QLD 4217, Australia'));
+define('SITE_TRADING_ADDRESS', (string) pgp_setting('site_trading_address', '60 E 42nd St #4600, New York, NY 10165, United States'));
+define('SITE_HOURS', (string) pgp_setting('site_hours', 'Monday to Friday, 9:00 AM to 5:00 PM AEST'));
 define('SITE_CANONICAL_URL', 'https://purplegiraffepress.com/');
 define('MAIN_CTA_TEXT', 'Start Publishing');
 define('MAIN_CTA_LINK', 'contact.php');
 
-$social_links = [
+$social_links = pgp_setting('social_links', [
     'Instagram' => 'https://instagram.com/purplegiraffepress',
     'Facebook' => 'https://www.facebook.com/people/Purple-Giraffe-Press/61575292427308/',
     // 'TikTok' => 'https://tiktok.com/@purplegiraffepress',
     // 'YouTube' => 'https://youtube.com/purplegiraffepress',
-];
+]);
+/* Blank entries mean "hidden" - drop them from the rendered list. */
+if (!is_array($social_links)) { $social_links = []; }
+$social_links = array_filter($social_links, static function ($url) {
+    return is_string($url) && trim($url) !== '';
+});
 
 $nav_menu = [
     'Home' => 'index.php',
@@ -58,36 +82,43 @@ define('COPYRIGHT_TEXT', 'Copyright ' . date('Y') . ' ' . SITE_NAME . '. All rig
 
 /* ---- Outbound email (Gmail SMTP) ----
    NOTE: keep this app password private — do not commit to a public repo. */
-define('SMTP_HOST', 'smtp.gmail.com');
-define('SMTP_PORT', 587);
-define('SMTP_SECURE', 'tls');                              // 'tls' (587) or 'ssl' (465)
-define('SMTP_USER', 'support@purplegiraffepress.com');
-define('SMTP_PASS', 'qkwo ochl ukia jrzi');                // Gmail app password
-define('SMTP_FROM_EMAIL', 'support@purplegiraffepress.com');
-define('SMTP_FROM_NAME', SITE_NAME);
+/* These can be overridden from the admin Developer page (stored in the
+   web-blocked admin/data/settings-overrides.json). The values below are the
+   defaults used when nothing has been saved there. */
+define('SMTP_HOST', (string) pgp_setting('smtp_host', 'smtp.gmail.com'));
+define('SMTP_PORT', (int) pgp_setting('smtp_port', 587));
+define('SMTP_SECURE', (string) pgp_setting('smtp_secure', 'tls'));   // 'tls' (587) or 'ssl' (465)
+define('SMTP_USER', (string) pgp_setting('smtp_user', 'support@purplegiraffepress.com'));
+define('SMTP_PASS', (string) pgp_setting('smtp_pass', 'qkwo ochl ukia jrzi'));   // Gmail app password
+define('SMTP_FROM_EMAIL', (string) pgp_setting('smtp_from_email', 'support@purplegiraffepress.com'));
+define('SMTP_FROM_NAME', (string) pgp_setting('smtp_from_name', SITE_NAME));
 
 /* Where lead/form notifications are delivered. Sent FROM the SMTP account
    above; can be delivered to any inbox(es). */
-$LEAD = ['recipients' => ['info@purplegiraffepress.com', 'support@purplegiraffepress.com']];
+$LEAD = ['recipients' => pgp_setting('lead_recipients', ['info@purplegiraffepress.com', 'support@purplegiraffepress.com'])];
+if (!is_array($LEAD['recipients'])) { $LEAD['recipients'] = []; }
+$LEAD['recipients'] = array_values(array_filter($LEAD['recipients'], static function ($addr) {
+    return is_string($addr) && filter_var($addr, FILTER_VALIDATE_EMAIL);
+}));
 
 /* ---- Database (lead storage) ----
    Every form submission is also saved to the `leads` table. On XAMPP the
    defaults below (root / empty password) work out of the box; the database and
    table are created automatically on first submission. On live hosting, set
    these to the credentials your host provides (the DB usually already exists). */
-define('DB_HOST', '127.0.0.1');
-define('DB_PORT', 3306);
-define('DB_NAME', 'purplegiraffepress');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', (string) pgp_setting('db_host', '127.0.0.1'));
+define('DB_PORT', (int) pgp_setting('db_port', 3306));
+define('DB_NAME', (string) pgp_setting('db_name', 'purplegiraffepress'));
+define('DB_USER', (string) pgp_setting('db_user', 'root'));
+define('DB_PASS', (string) pgp_setting('db_pass', ''));
 
 /* ---- Google reCAPTCHA v3 ----
    The SITE key is public (used in the browser). Keep the SECRET key private.
    MIN_SCORE: 0.0 (very likely a bot) .. 1.0 (very likely human); submissions
    that score below it are silently dropped, like the honeypot. Tune as needed. */
-define('RECAPTCHA_SITE_KEY',   '6LflWwotAAAAAOcn8ONcJqGGKidToGMvGQ32xyQi');
-define('RECAPTCHA_SECRET_KEY', '6LflWwotAAAAAJedzHdsrQ4liYbuBpme042rO48B');
-define('RECAPTCHA_MIN_SCORE',  0.5);
+define('RECAPTCHA_SITE_KEY',   (string) pgp_setting('recaptcha_site_key',   '6LflWwotAAAAAOcn8ONcJqGGKidToGMvGQ32xyQi'));
+define('RECAPTCHA_SECRET_KEY', (string) pgp_setting('recaptcha_secret_key', '6LflWwotAAAAAJedzHdsrQ4liYbuBpme042rO48B'));
+define('RECAPTCHA_MIN_SCORE',  (float) pgp_setting('recaptcha_min_score',  0.5));
 
 /*
  * Clean URLs (no ".php") on the LIVE site only.

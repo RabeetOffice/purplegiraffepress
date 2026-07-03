@@ -1,0 +1,16 @@
+[
+    {
+        "username": "admin",
+        "password": "$2y$10$fxoRldsv9IFim9Y/5VTnD.XJuyo/viQgcEJsw1rVoHuZa12YIzPRe",
+        "role": "admin",
+        "active": true,
+        "created": "2026-07-03T11:17:31+02:00"
+    },
+    {
+        "username": "editor",
+        "password": "$2y$10$9K7GXEdehfY9WX/mLz4YYewL735omqK1pE96Kpx/iczPjtFMKen9C",
+        "role": "editor",
+        "active": true,
+        "created": "2026-07-03T11:17:31+02:00"
+    }
+]

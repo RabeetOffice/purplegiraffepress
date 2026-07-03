@@ -30,8 +30,8 @@ $portfolioItems = array_map(static function (array $item): array {
     return $item;
 }, [
     ['category' => 'Children Book', 'author' => 'Jessica Schoettle',  'title' => "Tilly's Rainbow Adventure",                                'amazon_link' => 'https://www.amazon.com/dp/B0H2Q7LQQW/'],
-    ['category' => 'Children Book', 'author' => 'Ashlee Ridlon',      'title' => "Whatever You Do, Don't Fall Asleep!",                      'amazon_link' => 'https://www.amazon.com/dp/B0GR74ZF3Y/'],
     ['category' => 'Children Book', 'author' => 'Rayan Yale',         'title' => '100,000 Whys - The Big Journey for Curious Kids',          'amazon_link' => 'https://www.amazon.com/dp/B0GY862XJM/'],
+    ['category' => 'Children Book', 'author' => 'Ashlee Ridlon',      'title' => "Whatever You Do, Don't Fall Asleep!",                      'amazon_link' => 'https://www.amazon.com/dp/B0GR74ZF3Y/'],
     ['category' => 'Children Book', 'author' => 'V Moua',             'title' => 'Sticks and Stones May Break My...',                        'amazon_link' => 'https://www.amazon.com/dp/B0GX32MSYM/'],
     ['category' => 'Children Book', 'author' => 'V Moua',             'title' => 'I Am Not a Dinosaur!',                                     'amazon_link' => 'https://www.amazon.com/dp/B0GX34ZYDM/'],
     ['category' => 'Children Book', 'author' => 'V Moua',             'title' => "Don't Worry, Cookie. We'll Save You!",                     'amazon_link' => 'https://www.amazon.com/dp/B0FPBGVVJR/'],

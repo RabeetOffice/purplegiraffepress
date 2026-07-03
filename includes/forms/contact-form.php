@@ -4,6 +4,9 @@
 $fh = $form_heading ?? 'Send us a message';
 $fs = $form_sub ?? 'We usually reply within one business day.';
 $fp = $form_id_prefix ?? '';
+/* Which lead type this instance reports as (e.g. the popup sets 'popup' so the
+   admin inbox can tell a popup submission apart from an on-page form). */
+$ftv = $form_type_value ?? 'quote';
 ?>
 <div class="card form-card">
   <div class="form-head">
@@ -16,7 +19,7 @@ $fp = $form_id_prefix ?? '';
     </div>
   </div>
   <form class="site-form" action="<?php echo e(asset('form-submission.php')); ?>" method="post">
-    <input type="hidden" name="form_type" value="quote">
+    <input type="hidden" name="form_type" value="<?php echo e($ftv); ?>">
     <input type="hidden" name="source_page" value="<?php echo e($_SERVER['REQUEST_URI'] ?? ''); ?>">
     <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
     <?php if (!empty($_GET['form_status']) && $_GET['form_status'] !== 'success'): ?>
@@ -77,4 +80,4 @@ $fp = $form_id_prefix ?? '';
     </p>
   </form>
 </div>
-<?php $form_heading = $form_sub = $form_id_prefix = null; ?>
+<?php $form_heading = $form_sub = $form_id_prefix = $form_type_value = null; ?>

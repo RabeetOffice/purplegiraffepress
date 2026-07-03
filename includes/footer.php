@@ -36,6 +36,10 @@
             </a>
           <?php endforeach; ?>
         </div>
+        <?php require_once __DIR__ . '/testimonials-data.php'; /* provides pgp_trustpilot_badge() */ ?>
+        <?php if (function_exists('pgp_trustpilot_badge')): ?>
+          <div class="footer-trustpilot" style="margin-top:16px;"><?php echo pgp_trustpilot_badge(); ?></div>
+        <?php endif; ?>
       </div>
       <nav class="footer-col" aria-label="Services">
         <h2>Services</h2>
@@ -96,6 +100,15 @@
   <script>window.PGP_RC_SITE_KEY=<?php echo json_encode(defined('RECAPTCHA_SITE_KEY') ? RECAPTCHA_SITE_KEY : '', JSON_UNESCAPED_SLASHES); ?>;</script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="<?php echo e(asset_min('assets/js/main.js')); ?>"></script>
+  <?php
+  /* Custom footer scripts from the admin Developer page. Injected on every
+     environment (so they can be tested locally); only the analytics/tracking
+     IDs are restricted to the live site. */
+  $__foot_raw = (string) pgp_setting('script_footer', '');
+  if (trim($__foot_raw) !== '') {
+      echo "<!-- Custom footer scripts (admin Developer page) -->\n" . $__foot_raw . "\n";
+  }
+  ?>
 </body>
 </html>
 <?php

@@ -26,15 +26,53 @@
 
 require_once __DIR__ . '/config.php';
 
-if (!function_exists('blog_categories')) {
-    /** Category metadata: display label + the cover/chip colour class. */
-    function blog_categories(): array {
+if (!function_exists('blog_category_defaults')) {
+    /** The built-in categories, used until the admin saves its own set. */
+    function blog_category_defaults(): array {
         return [
             'Writing'      => ['label' => 'Writing',      'tone' => 'note-purple'],
             'Reading'      => ['label' => 'Reading',      'tone' => 'note-gold'],
             'Illustration' => ['label' => 'Illustration', 'tone' => 'note-lavender'],
             'Publishing'   => ['label' => 'Publishing',   'tone' => 'note-purple'],
         ];
+    }
+}
+
+if (!function_exists('blog_category_tones')) {
+    /** Colour tones a category may use (must be real note-* classes on the site). */
+    function blog_category_tones(): array {
+        return ['note-purple' => 'Purple', 'note-gold' => 'Gold', 'note-lavender' => 'Lavender'];
+    }
+}
+
+if (!function_exists('blog_categories')) {
+    /**
+     * Category metadata: display label + the cover/chip colour class. Managed
+     * from the admin studio (admin/data/blog-categories.json); falls back to the
+     * built-in defaults when nothing is saved or the file is unreadable.
+     */
+    function blog_categories(): array {
+        static $cache = null;
+        if ($cache !== null) return $cache;
+
+        $file  = __DIR__ . '/../admin/data/blog-categories.json';
+        $tones = blog_category_tones();
+        if (is_file($file)) {
+            $data = json_decode((string) @file_get_contents($file), true);
+            if (is_array($data) && $data) {
+                $out = [];
+                foreach ($data as $cat) {
+                    $label = trim((string) ($cat['label'] ?? ''));
+                    if ($label === '') continue;
+                    $tone = (string) ($cat['tone'] ?? 'note-purple');
+                    if (!isset($tones[$tone])) $tone = 'note-purple';
+                    $out[$label] = ['label' => $label, 'tone' => $tone];
+                }
+                if ($out) { $cache = $out; return $cache; }
+            }
+        }
+        $cache = blog_category_defaults();
+        return $cache;
     }
 }
 

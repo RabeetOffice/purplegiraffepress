@@ -13,6 +13,11 @@ Disallow: /thank-you.php
 # Server-side partials (never meant to be requested directly)
 Disallow: /includes/
 
+# Private admin studio + its preview endpoint
+Disallow: /admin/
+Disallow: /blogs/admin-preview.php
+Disallow: /trash/
+
 # Avoid indexing form-status query duplicates
 Disallow: /*?form_status=
 

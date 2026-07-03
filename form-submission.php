@@ -142,7 +142,8 @@ function handle_manuscript_upload(string $field): array {
 
 function lead_form_label(string $t): string {
     return [
-        'quote'      => 'Quote Popup',
+        'popup'      => 'Popup Quote Form',
+        'quote'      => 'Quote Form',
         'enquiry'    => 'Publishing Enquiry',
         'newsletter' => 'Newsletter Signup',
         'estimate'   => 'Instant Estimate',
@@ -311,7 +312,19 @@ $lead = [
     'package'    => field_value('package'),
     'nda'        => $nda,
     'message'    => $message,
-    'page_url'   => field_value('source_page') ?: ($_SERVER['HTTP_REFERER'] ?? ''),
+    // Keep a real http(s) URL or a site-relative path (the popup/on-page forms
+    // send REQUEST_URI, e.g. "/pricing/"). Anything with a dangerous scheme
+    // (javascript:, data:, …) is dropped so it can never become a live link in
+    // the admin inbox.
+    'page_url'   => (static function () {
+        $u = trim(field_value('source_page') ?: ($_SERVER['HTTP_REFERER'] ?? ''));
+        if ($u === '') return '';
+        if (preg_match('~^https?://~i', $u)) return $u;                 // absolute http(s)
+        if ($u[0] === '/' && substr($u, 0, 2) !== '//' && !preg_match('~^/[^/]*:~', $u)) {
+            return $u;                                                  // site-relative path
+        }
+        return '';                                                      // scheme URL or junk
+    })(),
     'ip_address' => client_ip(),
 ];
 

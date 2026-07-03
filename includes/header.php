@@ -59,28 +59,55 @@ $page_noindex = ($page_noindex ?? false) || $in_blog;
   <title><?php echo e($page_title); ?></title>
   <meta name="description" content="<?php echo e($page_description); ?>">
   <link rel="canonical" href="<?php echo e($canonical_url); ?>">
+  <?php
+  /* Analytics + tracking IDs and raw script blocks are editable from the admin
+     Developer page (stored in admin/data/settings-overrides.json). Defaults keep
+     the site's original tags. Tracking only loads on the LIVE site so localhost
+     stays clean and analytics are not skewed by local work. IDs are sanitised to
+     a safe character set before being echoed. */
+  $__ga4     = preg_replace('~[^A-Za-z0-9\-]~', '', (string) pgp_setting('analytics_ga4_id', 'G-G4SN1LWFY1'));
+  $__gtm     = preg_replace('~[^A-Za-z0-9\-]~', '', (string) pgp_setting('analytics_gtm_id', ''));
+  $__clarity = preg_replace('~[^A-Za-z0-9\-]~', '', (string) pgp_setting('analytics_clarity_id', 'x8wn0x7tuj'));
+  $__gsc     = trim((string) pgp_setting('analytics_search_console', '7--rzGQczw5YpjL2j_LH2rUhdwMUZnmGtYQdQeMyPkM'));
+  $__head_raw = (string) pgp_setting('script_head', '');
+  ?>
   <?php if (!IS_LOCAL): ?>
+  <?php if ($__gsc !== ''): ?>
   <!-- Search Console verification -->
-  <meta name="google-site-verification" content="7--rzGQczw5YpjL2j_LH2rUhdwMUZnmGtYQdQeMyPkM" />
+  <meta name="google-site-verification" content="<?php echo e($__gsc); ?>" />
+  <?php endif; ?>
   <!-- Speed: warm up the analytics origins before the async tags fire -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://www.clarity.ms">
+  <?php if ($__gtm !== ''): ?>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',<?php echo json_encode($__gtm); ?>);</script>
+  <?php endif; ?>
+  <?php if ($__ga4 !== ''): ?>
   <!-- Google tag (gtag.js) - GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4SN1LWFY1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo e($__ga4); ?>"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-G4SN1LWFY1');
+    gtag('config', <?php echo json_encode($__ga4); ?>);
   </script>
+  <?php endif; ?>
+  <?php if ($__clarity !== ''): ?>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x8wn0x7tuj");
+    })(window, document, "clarity", "script", <?php echo json_encode($__clarity); ?>);
   </script>
+  <?php endif; ?>
+  <?php endif; ?>
+  <?php if (trim($__head_raw) !== ''): ?>
+  <!-- Custom head scripts (admin Developer page). Injected on every environment
+       so they can be tested locally; only the tracking IDs above are live-only. -->
+  <?php echo $__head_raw . "\n"; ?>
   <?php endif; ?>
   <!-- Favicons / app icons -->
   <link rel="icon" href="<?php echo e(asset('assets/images/favicon.ico')); ?>" sizes="any">
@@ -198,6 +225,14 @@ $page_noindex = ($page_noindex ?? false) || $in_blog;
   <?php endif; ?>
 </head>
 <body>
+  <?php if (!IS_LOCAL && $__gtm !== ''): ?>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo e($__gtm); ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <?php endif; ?>
+  <?php $__body_raw = (string) pgp_setting('script_body_open', ''); if (trim($__body_raw) !== ''): ?>
+  <!-- Custom body-open scripts (admin Developer page) - all environments. -->
+  <?php echo $__body_raw . "\n"; ?>
+  <?php endif; ?>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="siteHeader">
     <div class="nav-shell">

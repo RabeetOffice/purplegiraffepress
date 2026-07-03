@@ -57,26 +57,45 @@ $blog_schema = [
 </section>
 
 <!-- GRID + CATEGORY FILTER -->
+<style>
+  .blog-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-bottom:30px;}
+  .blog-toolbar .blog-filter{margin:0;}
+  .blog-search-wrap{position:relative;flex:1 1 260px;max-width:360px;}
+  .blog-search-wrap::before{content:"";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;background-repeat:no-repeat;background-size:contain;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%237b35d0' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.3-4.3'/%3E%3C/svg%3E");pointer-events:none;}
+  .blog-search{width:100%;font:inherit;font-size:1rem;color:#25123f;background:#fff;border:1.5px solid rgba(82,32,143,.16);border-radius:999px;padding:13px 18px 13px 44px;box-shadow:0 8px 22px -14px rgba(82,32,143,.45);transition:border-color .2s ease,box-shadow .2s ease;}
+  .blog-search::placeholder{color:#9a8cb3;}
+  .blog-search:focus{outline:none;border-color:#7b35d0;box-shadow:0 0 0 4px rgba(123,53,208,.14);}
+  @media(max-width:640px){.blog-search-wrap{max-width:none;flex-basis:100%;}}
+</style>
 <section class="section figma-cream">
   <div class="container">
     <?php
-    $cats_in_use = [];
+    /* Filter chips come from the MANAGED category list (blog_categories, which
+       the admin studio edits), so every category you create shows here. Any
+       category a post uses that is not in that list is appended so nothing is
+       ever unfilterable. */
+    $filter_cats = array_keys(blog_categories());
     foreach ($blog_posts as $bp) {
-        if (!empty($bp['category'])) $cats_in_use[$bp['category']] = true;
+        $c = (string) ($bp['category'] ?? '');
+        if ($c !== '' && !in_array($c, $filter_cats, true)) { $filter_cats[] = $c; }
     }
-    $cats_in_use = array_keys($cats_in_use);
     ?>
-    <div class="blog-filter" role="tablist" aria-label="Filter articles by category">
-      <button type="button" class="blog-filter-chip active" data-filter="all">All</button>
-      <?php foreach ($cats_in_use as $cat): ?>
-        <button type="button" class="blog-filter-chip" data-filter="<?php echo e($cat); ?>"><?php echo e($cat); ?></button>
-      <?php endforeach; ?>
+    <div class="blog-toolbar">
+      <div class="blog-search-wrap">
+        <input type="search" id="blogSearch" class="blog-search" placeholder="Search articles&hellip;" aria-label="Search articles" autocomplete="off">
+      </div>
+      <div class="blog-filter" role="tablist" aria-label="Filter articles by category">
+        <button type="button" class="blog-filter-chip active" data-filter="all">All</button>
+        <?php foreach ($filter_cats as $cat): ?>
+          <button type="button" class="blog-filter-chip" data-filter="<?php echo e($cat); ?>"><?php echo e($cat); ?></button>
+        <?php endforeach; ?>
+      </div>
     </div>
 
     <div class="notes-grid blog-archive-grid" id="blogGrid">
       <?php foreach ($blog_posts as $post): ?>
         <?php $tone = blog_category_tone($post['category'] ?? null); ?>
-        <article class="note-card reveal" data-category="<?php echo e($post['category'] ?? ''); ?>">
+        <article class="note-card reveal" data-category="<?php echo e($post['category'] ?? ''); ?>" data-search="<?php echo e(mb_strtolower(($post['title'] ?? '') . ' ' . ($post['excerpt'] ?? '') . ' ' . ($post['category'] ?? ''))); ?>">
           <a class="note-art <?php echo e($tone); ?><?php echo !empty($post['image']) ? ' has-img' : ''; ?>" href="<?php echo e(blog_post_url($post['slug'])); ?>" aria-label="<?php echo e($post['title']); ?>">
             <?php if (!empty($post['image'])): ?>
               <img src="<?php echo e(asset($post['image'])); ?>" alt="<?php echo e($post['title']); ?>" loading="lazy" decoding="async">
@@ -94,28 +113,46 @@ $blog_schema = [
 </section>
 
 <script>
-/* Category filter for the blog archive grid. */
+/* Category filter + text search for the blog archive grid (combined). */
 (function () {
   var grid = document.getElementById('blogGrid');
   if (!grid) return;
-  var chips = Array.prototype.slice.call(document.querySelectorAll('.blog-filter-chip'));
-  var cards = Array.prototype.slice.call(grid.querySelectorAll('.note-card'));
-  var empty = document.querySelector('.blog-empty');
+  var chips  = Array.prototype.slice.call(document.querySelectorAll('.blog-filter-chip'));
+  var cards  = Array.prototype.slice.call(grid.querySelectorAll('.note-card'));
+  var empty  = document.querySelector('.blog-empty');
+  var search = document.getElementById('blogSearch');
+  var activeFilter = 'all';
+
+  function apply() {
+    var term = (search && search.value ? search.value : '').toLowerCase().trim();
+    var visible = 0;
+    cards.forEach(function (card) {
+      var okCat = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
+      var okTerm = term === '' || (card.getAttribute('data-search') || '').indexOf(term) !== -1;
+      var show = okCat && okTerm;
+      card.hidden = !show;
+      if (show) { card.classList.add('in'); visible++; }
+    });
+    if (empty) {
+      empty.hidden = visible !== 0;
+      empty.textContent = term !== ''
+        ? 'No articles match your search. Try different words.'
+        : 'No articles in this category yet. Check back soon.';
+    }
+  }
 
   chips.forEach(function (chip) {
     chip.addEventListener('click', function () {
       chips.forEach(function (c) { c.classList.remove('active'); });
       chip.classList.add('active');
-      var filter = chip.getAttribute('data-filter');
-      var visible = 0;
-      cards.forEach(function (card) {
-        var show = filter === 'all' || card.getAttribute('data-category') === filter;
-        card.hidden = !show;
-        if (show) { card.classList.add('in'); visible++; }
-      });
-      if (empty) empty.hidden = visible !== 0;
+      activeFilter = chip.getAttribute('data-filter');
+      apply();
     });
   });
+  if (search) {
+    search.addEventListener('input', apply);
+    search.addEventListener('search', apply); // clearing the field (native "x")
+  }
 })();
 </script>
 
