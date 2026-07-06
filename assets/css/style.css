@@ -3628,10 +3628,10 @@ h1 em, h2 em, .cta-band h2 em {
 /* Body copy: a touch more ink + a sane line length. */
 p { color: #564b6b; }
 .lead {
-  font-size: clamp(1.07rem, 1.4vw, 1.22rem);
+  font-size: clamp(1.07rem, 1.4vw, 0.8rem);
   line-height: 1.75;
   color: #564b6b;
-  max-width: 60ch;
+  max-width: 70ch;
 }
 
 /* Handwritten kicker — consistent size so it reads as a deliberate label. */
@@ -3771,7 +3771,7 @@ select:focus-visible, textarea:focus-visible, .btn:focus-visible {
   padding: 0;
 }
 .svc-hero-copy h1 strong { font-style: normal; font-weight: 800; }
-.svc-hero-copy .lead { margin-top: 16px; max-width: 42ch; }
+.svc-hero-copy .lead { margin-top: 16px; max-width: 70ch; }
 .svc-hero-copy .button-row { margin-top: 26px; }
 .svc-hero-form .form-card { width: 100%; margin: 0; }
 @media (max-width: 920px) {
@@ -3789,6 +3789,9 @@ select:focus-visible, textarea:focus-visible, .btn:focus-visible {
   align-items: center;
 }
 .svc-copy h2 { margin-bottom: 14px; }
+.svc-copy p {
+  margin-bottom: 14px;
+}
 .svc-copy .svc-points {
   list-style: none;
   margin: 20px 0 0;
