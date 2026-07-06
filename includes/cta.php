@@ -1,3 +1,6 @@
+<?php /* Lead-capture contact form shown directly above every CTA. */ ?>
+<?php include __DIR__ . '/contact-section.php'; ?>
+
 <section class="cta-band">
   <div class="container cta-layout">
     <div>

@@ -208,11 +208,14 @@ $page_faqs = [
 </section>
 
 <?php
-/* Field notes — same carousel as the blog "More from the blog" section. */
+/* Field notes / blog carousel is hidden on the home page per request.
+   To restore it, uncomment the block below.
+
 $recent_eyebrow = '- from the studio';
 $recent_heading = 'Field notes &amp; <em>insights.</em>';
 $recent_limit   = 6;
 require 'includes/blog-recent.php';
+*/
 ?>
 
 <section class="section figma-cream">

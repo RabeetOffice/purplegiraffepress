@@ -49,6 +49,7 @@ $nav_menu = [
     'About' => 'about-us.php',
     'Portfolio' => 'portfolio.php',
     'Services' => 'services.php',
+    // 'Locations' => 'locations/',
     'Pricing' => 'pricing.php',
     'Submissions' => 'submissions.php',
     'Blog' => 'blogs/',
@@ -58,6 +59,7 @@ $nav_menu = [
 $footer_menu_company = [
     'About Us' => 'about-us.php',
     'Portfolio' => 'portfolio.php',
+    'Locations' => 'locations/',
     'Partners' => 'partners.php',
     'Testimonials' => 'testimonials.php',
     'Submissions' => 'submissions.php',
@@ -69,7 +71,7 @@ $footer_menu_services = [
     'Editing'              => 'editing.php',
     'Custom Illustrations' => 'custom-illustrations.php',
     'Book Cover Design'    => 'book-cover-design.php',
-    'Marketing & Publicity' => 'marketing-publicity.php',
+    'Book Promotion'       => 'book-promotion.php',
     'Author Websites'      => 'author-websites.php',
 ];
 
@@ -108,9 +110,9 @@ $LEAD['recipients'] = array_values(array_filter($LEAD['recipients'], static func
    these to the credentials your host provides (the DB usually already exists). */
 define('DB_HOST', (string) pgp_setting('db_host', '127.0.0.1'));
 define('DB_PORT', (int) pgp_setting('db_port', 3306));
-define('DB_NAME', (string) pgp_setting('db_name', 'purplegiraffepress'));
-define('DB_USER', (string) pgp_setting('db_user', 'root'));
-define('DB_PASS', (string) pgp_setting('db_pass', ''));
+define('DB_NAME', (string) pgp_setting('db_name', 'getvgaub_purpledb'));
+define('DB_USER', (string) pgp_setting('db_user', 'getvgaub_purpledbuser'));
+define('DB_PASS', (string) pgp_setting('db_pass', '7@OnnkjI^8jesXhm'));
 
 /* ---- Google reCAPTCHA v3 ----
    The SITE key is public (used in the browser). Keep the SECRET key private.

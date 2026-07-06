@@ -78,7 +78,7 @@ include 'includes/header.php';
       <p>We know that self-publishing a children’s book can feel overwhelming, especially if this is your first one. There are file formats to think about, print specifications, and a hundred small decisions about fonts and colours. You do not need to figure all of that out on your own. Our job is to take the technical side off your plate, so you can focus on the parts of the project you enjoy most, which is telling your story.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>
     </div>
-    <figure class="svc-media reveal"><img src="assets/images/about-us.webp" alt="Purple Giraffe Press team helping authors self-publish children's books" loading="lazy" decoding="async"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/book-cover-design-fold.webp" alt="Purple Giraffe Press team helping authors self-publish children's books" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -128,7 +128,7 @@ include 'includes/header.php';
 <!-- 5 - WHO WE WORK WITH: LEFT IMAGE / RIGHT TEXT -->
 <section class="section section-white">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="assets/images/custom-illustrations.webp" alt="Authors, parents, and small publishers Purple Giraffe Press works with" loading="lazy" decoding="async"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/love-section.webp" alt="Authors, parents, and small publishers Purple Giraffe Press works with" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- who we help</p>
       <h2>The Authors, Parents, and Publishers We Love Working With</h2>
@@ -163,7 +163,7 @@ include 'includes/header.php';
       </ul>
       <p>If you are searching for the best children's book designer for your project, these points matter more than flashy portfolios alone.</p>
     </div>
-    <figure class="svc-media reveal"><img src="assets/images/editing.webp" alt="Comparing children's book designers before choosing the right one" loading="lazy" decoding="async"></figure>
+    <figure class="svc-media reveal"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&amp;fit=crop&amp;w=1100&amp;q=72" alt="Comparing children's book designers before choosing the right one" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -283,7 +283,7 @@ include 'includes/header.php';
 <!-- 13 - COST: LEFT IMAGE / RIGHT TEXT -->
 <section class="section section-soft">
   <div class="container svc-split media-first">
-    <figure class="svc-media reveal"><img src="assets/images/book-publishing.webp" alt="Clear, itemised quote for children's book design" loading="lazy" decoding="async"></figure>
+    <figure class="svc-media reveal"><img src="assets/images/pricing.webp" alt="Clear, itemised quote for children's book design" loading="lazy" decoding="async"></figure>
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- pricing</p>
       <h2>How Much Does Children’s Book Design Cost?</h2>
@@ -302,11 +302,13 @@ include 'includes/header.php';
     <h2>Our most popular services</h2>
   </div>
   <div class="container">
-    <?php $services_only = ['editing', 'book-cover-design', 'marketing-publicity', 'book-publishing', 'custom-illustrations', 'author-websites']; include 'includes/services.php'; ?>
+    <?php $services_only = ['editing', 'book-cover-design', 'book-promotion', 'book-publishing', 'custom-illustrations', 'author-websites']; include 'includes/services.php'; ?>
   </div>
 </section>
 
 <!-- 15 - CLOSING CTA -->
+<?php include 'includes/contact-section.php'; ?>
+
 <section class="cta-band">
   <div class="container cta-layout">
     <div>

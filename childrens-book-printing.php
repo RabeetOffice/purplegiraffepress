@@ -445,7 +445,7 @@ include 'includes/header.php';
     <h2>Our most popular services</h2>
   </div>
   <div class="container">
-    <?php $services_only = ['editing', 'book-cover-design', 'marketing-publicity', 'book-publishing', 'custom-illustrations', 'author-websites']; include 'includes/services.php'; ?>
+    <?php $services_only = ['editing', 'book-cover-design', 'book-promotion', 'book-publishing', 'custom-illustrations', 'author-websites']; include 'includes/services.php'; ?>
   </div>
 </section>
 
@@ -474,4 +474,6 @@ include 'includes/header.php';
 </section>
 
 <!-- 10 · FOOTER -->
+<?php include 'includes/contact-section.php'; ?>
+
 <?php include 'includes/footer.php'; ?>

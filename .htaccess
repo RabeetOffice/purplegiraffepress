@@ -33,6 +33,12 @@
   RewriteRule ^includes/ - [F,L]
   RewriteRule ^trash/ - [F,L]
 
+  # --- Permanent content move: Marketing & Publicity -> Book Promotion ---------
+  #     Old URL (/marketing-publicity/, /marketing-publicity.php) 301s to the new
+  #     /book-promotion/ page. Applies in all environments so the old URL never
+  #     surfaces stale or 404s after the page file was retired.
+  RewriteRule ^marketing-publicity(\.php)?/?$ /book-promotion/ [R=301,L,NC]
+
   # ===========================================================================
   #  OPTIONAL canonical host (enable once HTTPS + your preferred host are live).
   #  Forces https:// and a single hostname. Left off by default so it can never

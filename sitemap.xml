@@ -18,13 +18,23 @@
   <url><loc>https://purplegiraffepress.com/book-cover-design/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/ghostwriting/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/proofreading/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://purplegiraffepress.com/marketing-publicity/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://purplegiraffepress.com/book-formatting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/book-promotion/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/premium-nonfiction-services/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/childrens-book-printing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/author-websites/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/audiobooks/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/book-coaching/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/distribution/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Locations -->
+  <url><loc>https://purplegiraffepress.com/locations/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://purplegiraffepress.com/locations/melbourne/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-editing-services-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-designer-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/ghostwriting-services-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/book-promotion-services-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-formatting-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Network -->
   <url><loc>https://purplegiraffepress.com/partners/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>

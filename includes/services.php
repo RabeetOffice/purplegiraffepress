@@ -33,8 +33,9 @@ $service_cards = [
     'editing'                     => ['title' => 'Editing',                     'icon' => 'edit',    'accent' => ['#4fd1b0', '#19b890', '#053a2c'], 'short' => "We sharpen your pacing and clarity while keeping your unique voice at the centre of the story"],
     'ghostwriting'                => ['title' => 'Ghostwriting',                'icon' => 'pen',     'accent' => ['#9b8cff', '#6f5bdc', '#1b1147'], 'short' => "If you have a great idea but need help with the words, we can draft the story with you in a voice that remains authentically yours"],
     'proofreading'                => ['title' => 'Proofreading',                'icon' => 'check',   'accent' => ['#5ec6a8', '#19b890', '#053a2c'], 'short' => "A meticulous final pass to catch the tiny errors that software often misses before the files are sent to print"],
+    'book-formatting'             => ['title' => 'Book Formatting',             'icon' => 'doc',     'accent' => ['#5fd0c4', '#1fb5a6', '#043a34'], 'short' => "We turn your manuscript and artwork into clean, print-ready and platform-ready files, formatted specifically for children’s books"],
     'book-cover-design'           => ['title' => 'Book Cover Design',           'icon' => 'cover',   'accent' => ['#ff9f7d', '#ff7a59', '#4a1500'], 'short' => "We create front, back, and spine layouts that grab a reader’s attention. Unlike many publishing companies for children’s books, we show you enuinely different options rather than just colour swaps"],
-    'marketing-publicity'         => ['title' => 'Marketing & Publicity',       'icon' => 'spark',   'accent' => ['#6ec8ff', '#3aa0ff', '#042a4a'], 'short' => "We build the foundations, retailer copy, and social assets to give your book a strong start with schools and libraries"],
+    'book-promotion'              => ['title' => 'Book Promotion',              'icon' => 'spark',   'accent' => ['#6ec8ff', '#3aa0ff', '#042a4a'], 'short' => "Honest, affordable promotion that gets your children’s book seen and loved on Amazon, Kindle, and beyond"],
     'premium-nonfiction-services' => ['title' => 'Premium Nonfiction', 'icon' => 'doc',     'accent' => ['#c9b4ef', '#7a3dd1', '#2a0f52'], 'short' => "We ensure memoirs and educational titles have the credible structure and flow they require to hold authority"],
     'childrens-book-printing'     => ['title' => "Children’s Book Printing",     'icon' => 'printer', 'accent' => ['#ffd36e', '#f7a324', '#4a2e00'], 'short' => "From small digital runs to large offset orders, we manage the quality of the physical book, checking paper weight and colour accuracy"],
     'author-websites'             => ['title' => 'Author Websites',             'icon' => 'screen',  'accent' => ['#f08fe4', '#d957c9', '#4a0640'], 'short' => "We build clean, functional sites that help readers and event organisers find you easily"],
@@ -52,6 +53,26 @@ if (!empty($services_only) && is_array($services_only)) {
         }
     }
 }
+
+/* Never link a service card back to the page you are already on. When this
+   block renders on a service page, drop that page's own card and backfill with
+   the next service not already listed, so the row stays the same size. On the
+   home page and services hub the current slug matches no service, so nothing
+   changes. */
+$current_service_slug = !empty($canonical_path)
+    ? basename($canonical_path, '.php')
+    : (isset($_SERVER['SCRIPT_NAME']) ? basename($_SERVER['SCRIPT_NAME'], '.php') : '');
+if ($current_service_slug !== '' && isset($svc_list[$current_service_slug])) {
+    unset($svc_list[$current_service_slug]);
+    foreach ($service_cards as $slug => $card) {
+        if ($slug === $current_service_slug || isset($svc_list[$slug])) {
+            continue;
+        }
+        $svc_list[$slug] = $card;
+        break;
+    }
+}
+
 /* Show only the first N services (e.g. the top 6 on the home page). The full
    list always lives on services.php. */
 if (!empty($services_limit) && $services_limit > 0) {

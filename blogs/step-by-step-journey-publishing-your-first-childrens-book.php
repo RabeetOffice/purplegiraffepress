@@ -102,7 +102,7 @@ require __DIR__ . '/../includes/blog-post-header.php';
 <li><strong>Hiring your own illustrator before the words are ready.</strong> Lock the text first, or you will pay to redraw spreads when the story changes.</li>
 <li><strong>Skipping the proofread.</strong> A single typo on a children's page is the thing a sharp-eyed parent will always spot.</li>
 <li><strong>Signing away the rights.</strong> Read any contract that asks you to hand over ownership of your book. Keeping your rights keeps your options open.</li>
-<li><strong>Treating the launch as the finish line.</strong> Publishing is the start of a book's life, not the end. Plan a little <a href="<?php echo e(asset('marketing-publicity.php')); ?>">marketing</a> from day one.</li>
+<li><strong>Treating the launch as the finish line.</strong> Publishing is the start of a book's life, not the end. Plan a little <a href="<?php echo e(asset('book-promotion.php')); ?>">marketing</a> from day one.</li>
 </ul>
 
 <h2>A word from our editorial team</h2>
