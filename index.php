@@ -85,19 +85,6 @@ $page_faqs = [
   </div>
   <div class="container">
     <?php $services_limit = 6; include 'includes/services.php'; ?>
-    <ul class="content-list reveal">
-      <li><strong>Book Publishing Management:</strong> We take care of the logistics, ISBNs, and platform registrations so you don’t have to learn the technicalities from scratch.</li>
-      <li><strong>Custom Illustrations:</strong> We match you with an artist who understands your characters and work through sketches together before any final painting begins.</li>
-      <li><strong>Editing:</strong> We sharpen your pacing and clarity while keeping your unique voice at the centre of the story.</li>
-      <li><strong>Ghostwriting:</strong> If you have a great idea but need help with the words, we can draft the story with you in a voice that remains authentically yours.</li>
-      <li><strong>Proofreading:</strong> A meticulous final pass to catch the tiny errors that software often misses before the files are sent to print.</li>
-      <li><strong>Book Cover Design:</strong> We create front, back, and spine layouts that grab a reader’s attention. Unlike many publishing companies for children’s books, we show you genuinely different options rather than just colour swaps.</li>
-      <li><strong>Marketing &amp; Publicity:</strong> We build the foundations, retailer copy, and social assets to give your book a strong start with schools and libraries.</li>
-      <li><strong>Premium Nonfiction:</strong> We ensure memoirs and educational titles have the credible structure and flow they require to hold authority.</li>
-      <li><strong>Children’s Book Printing:</strong> From small digital runs to large offset orders, we manage the quality of the physical book, checking paper weight and colour accuracy.</li>
-      <li><strong>Author Websites:</strong> We build clean, functional sites that help readers and event organisers find you easily.</li>
-      <li><strong>Audiobooks:</strong> We coordinate professional narration and mastering to reach families who prefer to listen during commutes or at bedtime.</li>
-    </ul>
     <div class="center" style="margin-top: 38px;">
       <a class="btn btn-primary" href="<?php echo e(asset('services.php')); ?>">View all services <span aria-hidden="true">&rarr;</span></a>
     </div>
