@@ -39,6 +39,12 @@
   #     surfaces stale or 404s after the page file was retired.
   RewriteRule ^marketing-publicity(\.php)?/?$ /book-promotion/ [R=301,L,NC]
 
+  # --- Retired page: Premium Nonfiction Services -> Home -----------------------
+  #     The page file was removed. Its old URL (/premium-nonfiction-services/ and
+  #     the .php variant) 301s to the home page, in all environments, so the old
+  #     URL never surfaces stale or 404s.
+  RewriteRule ^premium-nonfiction-services(\.php)?/?$ / [R=301,L,NC]
+
   # ===========================================================================
   #  OPTIONAL canonical host (enable once HTTPS + your preferred host are live).
   #  Forces https:// and a single hostname. Left off by default so it can never
