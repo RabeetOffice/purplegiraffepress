@@ -6045,3 +6045,168 @@ body.qp-open { overflow: hidden; }
   .mascot-stage img { width: min(85%, 430px); }
 }
 
+/* ============================================================
+   LIVE CHAT LAUNCHER (includes/live-chat.php)
+   A brand-matched button that opens the Tawk.to chat window in
+   place of Tawk's default bubble. Storybook purple + gold seam,
+   an online dot, an unread badge, and a one-time greeting card.
+   ============================================================ */
+.pgp-chat {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 900;               /* above the header (100), below the quote modal (1000) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;       /* only the children catch clicks */
+  transition: opacity .22s ease, transform .22s ease, visibility 0s;
+}
+.pgp-chat > * { pointer-events: auto; }
+
+/* Chat open: hide our launcher entirely (Tawk's window has its own minimise
+   control, so the button would only peek out behind it). */
+.pgp-chat.is-open {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s;
+}
+.pgp-chat.is-open > * { pointer-events: none; }
+
+/* ---- Launcher button ---- */
+.pgp-chat-fab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px 12px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--figma-purple-2) 0%, var(--figma-purple) 100%);
+  color: #fff;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: .98rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 16px 34px rgba(82, 32, 143, .34), 0 0 0 4px rgba(247, 201, 72, .28);
+  transition: transform .25s ease, box-shadow .25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.pgp-chat-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 46px rgba(82, 32, 143, .42), 0 0 0 4px rgba(247, 201, 72, .5);
+}
+.pgp-chat-fab:focus-visible {
+  outline: none;
+  box-shadow: 0 16px 34px rgba(82, 32, 143, .34), 0 0 0 4px var(--gold);
+}
+
+/* Icon disc with the gold storybook ring */
+.pgp-chat-fab-face {
+  position: relative;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .16);
+}
+.pgp-chat-ic { width: 24px; height: 24px; color: #fff; grid-area: 1 / 1; transition: opacity .2s ease, transform .3s ease; }
+.pgp-chat-ic-close { opacity: 0; transform: rotate(-45deg) scale(.6); }
+.pgp-chat.is-open .pgp-chat-ic-open  { opacity: 0; transform: rotate(45deg) scale(.6); }
+.pgp-chat.is-open .pgp-chat-ic-close { opacity: 1; transform: none; }
+
+.pgp-chat-fab-label { white-space: nowrap; }
+
+/* Online status dot */
+.pgp-chat-dot {
+  position: absolute;
+  top: 8px;
+  left: 40px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #34c759;
+  border: 2px solid var(--figma-purple);
+  box-shadow: 0 0 0 0 rgba(52, 199, 89, .55);
+  animation: pgp-chat-pulse 2.4s ease-out infinite;
+}
+@keyframes pgp-chat-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 199, 89, .5); }
+  70%  { box-shadow: 0 0 0 8px rgba(52, 199, 89, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0); }
+}
+
+/* Unread message badge */
+.pgp-chat-badge {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #3c2600;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-size: .74rem;
+  font-weight: 800;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 14px rgba(247, 201, 72, .5);
+}
+
+/* ---- One-time greeting card ---- */
+.pgp-chat-greet {
+  position: relative;
+  max-width: 260px;
+  background: #fff;
+  color: var(--figma-ink);
+  border: 1px solid rgba(82, 32, 143, .12);
+  border-radius: 18px 18px 6px 18px;
+  padding: 14px 16px 15px;
+  box-shadow: var(--shadow);
+  animation: pgp-chat-greet-in .35s cubic-bezier(.2, .8, .3, 1.2) both;
+}
+.pgp-chat-greet-title { font-family: "Fredoka", "Nunito", sans-serif; font-weight: 700; color: var(--figma-purple); margin: 0 0 3px; font-size: 1rem; }
+.pgp-chat-greet-text  { margin: 0; font-size: .9rem; line-height: 1.5; color: var(--figma-muted); }
+.pgp-chat-greet-x {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--figma-muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 6px;
+}
+.pgp-chat-greet-x:hover { color: var(--figma-purple); background: var(--figma-lavender); }
+@keyframes pgp-chat-greet-in {
+  from { opacity: 0; transform: translateY(10px) scale(.96); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---- Mobile: collapse the label to a round button ---- */
+@media (max-width: 560px) {
+  .pgp-chat { right: 16px; bottom: 16px; }
+  .pgp-chat-fab { padding: 12px; }
+  .pgp-chat-fab-label { display: none; }
+  .pgp-chat-dot { left: auto; right: 8px; top: 8px; }
+  .pgp-chat-greet { max-width: 220px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pgp-chat-fab,
+  .pgp-chat-ic,
+  .pgp-chat-dot,
+  .pgp-chat-greet { animation: none; transition: none; }
+}
+

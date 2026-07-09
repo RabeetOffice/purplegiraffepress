@@ -30,8 +30,8 @@ $page_faqs = [
       <p class="lead" style="font-weight : 800;">The People Who Explain Every Step Before They Take It</p>
       <p class="lead">Writing a story is a massive achievement, but the technical work that follows, the editing, the artwork briefs, the layout design, and the mountain of distribution paperwork, is where most authors feel stuck. This often leads to budgets climbing without a clear plan. Purple Giraffe Press exists to change that experience for authors across Australia. We ensure you understand the entire roadmap before a single task begins. You receive a defined project scope, a realistic timeline, and a quote tailored specifically for your book. You stay in control of the creative decisions that matter, from the illustration style to the final proofs, while we handle the mechanics of professional production. </p>
       <div class="button-row hero-actions">
-        <a class="btn btn-sun" href="contact.php">Submit Your Story</a>
-        <a class="btn btn-light" href="contact.php" data-quote-open>Get a Free Manuscript Assessment</a>
+        <a class="btn btn-sun" href="javascript:;" data-quote-open>Submit Your Story</a>
+        <a class="btn btn-light" href="javascript:;" data-quote-open>Get a Free Manuscript Assessment</a>
       </div>
       <!-- <div class="trust-row" aria-label="Why authors choose Purple Giraffe Press">
         <span>Australian, since <?php echo e(SITE_FOUNDED_YEAR); ?></span>
@@ -69,7 +69,7 @@ $page_faqs = [
       </ul> -->
       <div class="button-row">
         <a class="btn btn-primary" href="about-us.php">More about our story →</a>
-        <a class="text-link" href="contact.php">Submit your story</a>
+        <a class="text-link" href="javascript:;" data-quote-open>Submit your story</a>
       </div>
     </div>
   </div>

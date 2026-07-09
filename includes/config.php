@@ -122,6 +122,14 @@ define('RECAPTCHA_SITE_KEY',   (string) pgp_setting('recaptcha_site_key',   '6Lf
 define('RECAPTCHA_SECRET_KEY', (string) pgp_setting('recaptcha_secret_key', '6LflWwotAAAAAJedzHdsrQ4liYbuBpme042rO48B'));
 define('RECAPTCHA_MIN_SCORE',  (float) pgp_setting('recaptcha_min_score',  0.5));
 
+/* ---- Tawk.to live chat ----
+   Property + widget IDs from the Tawk dashboard (Administration > Channels >
+   Chat Widget > Widget Code). We hide Tawk's default bubble and open the chat
+   from our own brand-matched launcher (includes/live-chat.php). Blank either
+   value to switch live chat off site-wide. */
+define('TAWK_PROPERTY_ID', (string) pgp_setting('tawk_property_id', '6a4f5550ce35cb1d49b8e55d'));
+define('TAWK_WIDGET_ID',   (string) pgp_setting('tawk_widget_id',   '1jt2uah4e'));
+
 /*
  * Clean URLs (no ".php") on the LIVE site only.
  *

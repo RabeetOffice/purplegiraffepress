@@ -42,7 +42,7 @@ $enquiry_budgets = [
   <form class="site-form enquiry-form" action="<?php echo e(asset('form-submission.php')); ?>" method="post" enctype="multipart/form-data">
     <input type="hidden" name="form_type" value="enquiry">
     <input type="hidden" name="source_page" value="<?php echo e($_SERVER['REQUEST_URI'] ?? ''); ?>">
-    <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+    <div class="hp-field" aria-hidden="true"><label>Leave this field empty<input type="text" name="pgp_hp" tabindex="-1" autocomplete="off"></label></div>
     <?php if (!empty($_GET['form_status']) && $_GET['form_status'] !== 'success'): ?>
       <p class="form-notice field full" role="alert"><?php
         $fs = $_GET['form_status'];

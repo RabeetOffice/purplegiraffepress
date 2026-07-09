@@ -2,8 +2,11 @@
 /**
  * Read-only reader for the site's `leads` table (written by
  * includes/lead-store.php on every form submission). The admin NEVER writes
- * to that table; per-lead read/star flags live in a small JSON state file in
+ * lead rows; per-lead read/star flags live in a small JSON state file in
  * ADMIN_DATA_DIR instead, so the site's lead pipeline stays untouched.
+ * The one exception: if the database is reachable but the table does not
+ * exist yet (fresh DB, no submission since), it is provisioned here with the
+ * site's own DDL so the page shows an empty inbox instead of an error.
  *
  * Degrades gracefully: on localhost without MySQL running every function
  * returns an empty/sane fallback and nothing is ever thrown to the page.
@@ -67,8 +70,18 @@ function adm_leads_available(): bool {
         $pdo->query('SELECT 1 FROM leads LIMIT 1');
         $ok = true;
     } catch (PDOException $e) {
-        error_log('[adm-leads] table check failed: ' . $e->getMessage());
-        $ok = false;
+        /* Almost always a fresh database whose `leads` table hasn't been
+           created yet (the site creates it on the first form submission).
+           Provision it with the site's own canonical DDL and re-check. */
+        try {
+            require_once SITE_ROOT . '/includes/lead-store.php';
+            $pdo->exec(lead_table_ddl());
+            $pdo->query('SELECT 1 FROM leads LIMIT 1');
+            $ok = true;
+        } catch (Throwable $e2) {
+            error_log('[adm-leads] table check failed: ' . $e2->getMessage());
+            $ok = false;
+        }
     }
     return $ok;
 }

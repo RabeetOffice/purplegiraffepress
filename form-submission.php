@@ -267,7 +267,11 @@ HTML;
 /* ---------------------------- process ----------------------------- */
 
 // Honeypot: real users never fill this hidden field. Pretend success for bots.
-if (field_value('company') !== '' || field_value('website_url') !== '') {
+// Named pgp_hp on purpose: the old name "company" (with a "Company" label) was
+// silently filled by Chrome's address autofill for some real visitors, and
+// their enquiries were dropped as bot traffic. The old names stay checked so
+// cached pages that still carry them keep their bot protection.
+if (field_value('pgp_hp') !== '' || field_value('company') !== '' || field_value('website_url') !== '') {
     redirect_back('success');
 }
 

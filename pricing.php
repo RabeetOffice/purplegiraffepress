@@ -168,7 +168,7 @@ $page_faqs = [
           <form class="calc-lead" action="<?php echo e(asset('form-submission.php')); ?>" method="post">
             <input type="hidden" name="form_type" value="estimate">
             <input type="hidden" name="source_page" value="<?php echo e($_SERVER['REQUEST_URI'] ?? ''); ?>">
-            <span class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></span>
+            <span class="hp-field" aria-hidden="true"><label>Leave this field empty<input type="text" name="pgp_hp" tabindex="-1" autocomplete="off"></label></span>
             <input type="hidden" name="book_type" id="calcBookType">
             <input type="hidden" name="length" id="calcLength">
             <input type="hidden" name="illustrations" id="calcIllus">

@@ -97,6 +97,7 @@
     </div>
   </footer>
   <?php include __DIR__ . '/quote-popup.php'; ?>
+  <?php include __DIR__ . '/live-chat.php'; ?>
   <script>window.PGP_RC_SITE_KEY=<?php echo json_encode(defined('RECAPTCHA_SITE_KEY') ? RECAPTCHA_SITE_KEY : '', JSON_UNESCAPED_SLASHES); ?>;</script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="<?php echo e(asset_min('assets/js/main.js')); ?>"></script>
