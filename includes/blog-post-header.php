@@ -31,7 +31,7 @@ $tone = blog_category_tone($post['category'] ?? null);
 <div class="container">
   <figure class="blog-hero-cover <?php echo e($tone); ?>">
     <?php if (!empty($post['image'])): ?>
-      <img src="<?php echo e(asset($post['image'])); ?>" alt="<?php echo e($post['title']); ?>" width="1376" height="768" loading="eager" fetchpriority="high" decoding="async">
+      <img src="<?php echo e(asset($post['image'])); ?>" alt="<?php echo e($post['title']); ?>" width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async">
     <?php endif; ?>
   </figure>
 </div>

@@ -46,9 +46,9 @@ if (!preg_match('#^https?://#', $og_image)) {
 $og_type = $og_type ?? 'website';
 
 /* Pages may set $page_noindex = true; before include to keep themselves out of
-   search engines (kept reachable in code, just not indexed). All blog pages
-   (the listing and every individual post) are noindex by site policy. */
-$page_noindex = ($page_noindex ?? false) || $in_blog;
+   search engines (kept reachable in code, just not indexed). Blog pages are
+   indexable like the rest of the site. */
+$page_noindex = ($page_noindex ?? false);
 ?>
 <!DOCTYPE html>
 <html lang="en">

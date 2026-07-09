@@ -173,8 +173,8 @@ admin_layout_start('Dashboard', 'dashboard');
 </div>
 
 <div class="adm-card">
-  <p class="adm-help">A little note from the giraffe: blog pages on this site are noindex by policy and are deliberately left out of sitemap.xml.
-  Publishing here updates the website for your readers, while search engines are politely told not to index the blog. That is intentional, not a glitch.</p>
+  <p class="adm-help">A little note from the giraffe: blog pages are indexable, and publishing or unpublishing here also updates the blog list in sitemap.xml automatically.
+  No extra steps needed - your article goes live for readers and search engines at the same time.</p>
 </div>
 
 <?php admin_layout_end(); ?>

@@ -88,7 +88,11 @@ function admin_backup_file(string $path): void {
 /** Backup then atomically replace a live site file. */
 function admin_replace_site_file(string $path, string $content): bool {
     admin_backup_file($path);
-    return admin_atomic_write($path, $content);
+    if (!admin_atomic_write($path, $content)) return false;
+    /* tempnam() creates the temp file 0600. Site files must be world-readable:
+       statically-served ones (sitemap.xml) 403 on LiteSpeed/suEXEC hosts otherwise. */
+    @chmod($path, 0644);
+    return true;
 }
 
 /* ---------------------------------------------------------------- strings */

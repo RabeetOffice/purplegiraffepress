@@ -522,7 +522,7 @@ p {
 }
 
 .note-art {
-  height: 180px;
+  aspect-ratio: 16 / 9; /* matches the 1920x1080 blog covers - no cropping */
   position: relative;
   overflow: hidden;
   background: var(--figma-lavender);
@@ -4880,7 +4880,7 @@ body.qp-open { overflow: hidden; }
 .blog-hero-cover {
   position: relative; z-index: 2;
   margin-top: -36px;
-  height: clamp(240px, 38vw, 460px);
+  aspect-ratio: 16 / 9; /* covers are uploaded at 1920x1080 - show them uncropped */
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--figma-lavender);

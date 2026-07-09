@@ -73,10 +73,11 @@ and `@@post:slug@@` — and only expanded to the site's real
 the body has been stripped of any PHP. This is what lets the editor produce a
 `.php` file without ever letting editor content become executable code.
 
-**Note on blog indexing (site policy):** every blog page on this site is
-`noindex` and deliberately absent from `sitemap.xml`. The admin honours that — it
-does **not** add posts to the sitemap. Publishing updates the site; search engines
-are still told not to index blog pages. That is existing site behaviour, not a bug.
+**Note on blog indexing (site policy):** blog pages are indexable like the rest
+of the site, and `sitemap.xml` carries an auto-managed Blog block (between the
+`<!-- Blog … -->` / `<!-- /Blog -->` markers). Publishing and unpublishing rewrite
+that block so the sitemap always lists the blog index plus every published post —
+do not hand-edit between the markers.
 
 Publishing is atomic and backed up: the new `blogs/<slug>.php` and the regenerated
 `includes/blog-data.php` are both `php -l` linted **before** either replaces the
@@ -95,9 +96,9 @@ it is published.
 2. **Writable paths.** PHP (the web-server user) needs write permission on:
    `blogs/`, `assets/images/blog/`, `assets/images/portfolio/`, `includes/`
    (for `blog-data.php`, `testimonials-data.php`, `blog-author.php`,
-   `data/portfolio-data.php`), `sitemap`-adjacent files are *not* needed,
-   `admin/data/` (and its `posts/` and `backups/` subfolders), and a `trash/`
-   folder at the web root (created on demand).
+   `data/portfolio-data.php`), `sitemap.xml` at the web root (the publish flow
+   rewrites its Blog block), `admin/data/` (and its `posts/` and `backups/`
+   subfolders), and a `trash/` folder at the web root (created on demand).
 3. **GD extension.** Cover/inline image uploads convert to WebP via GD
    (`imagewebp`). If GD is missing, uploads still work but keep their original
    format under a forced image extension (still safe).
@@ -138,7 +139,7 @@ you edit something in the admin.
   parsed fields equal the live values.
 - **End-to-end publish flow** over the live Apache: login, CSRF rejection, draft
   save, sanitizer strips `<script>`/`on*`/PHP, admin-only preview (404 to the
-  public), publish (file lints, has schema, is noindex, renders 200), registry +
+  public), publish (file lints, has schema, renders 200), registry +
   sitemap consistency, unpublish (file trashed, entry removed), delete.
 - **RCE probes** — PHP tags (incl. nested in blockquote, short echo, in attribute,
   dangling), comments/CDATA, `on*` handlers, `javascript:`/`data:` URLs and token

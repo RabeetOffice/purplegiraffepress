@@ -6,8 +6,9 @@
  * - Publishing generates blogs/<slug>.php from a template derived verbatim
  *   from the brand's newest hand-built post, and surgically upserts one entry
  *   in includes/blog-data.php (every untouched entry stays byte-identical).
- * - The sitemap is intentionally NOT touched: all blog pages on this site are
- *   noindex by policy and are deliberately absent from sitemap.xml.
+ * - sitemap.xml carries an auto-managed Blog block: publish and unpublish
+ *   rewrite it (sitemap_sync_blog) so the sitemap always lists the blog index
+ *   plus every published post. Blog pages are indexable like the rest of the site.
  * - Internal links use placeholder tokens in stored bodies:
  *     @@asset:page.php@@  ->  <?php echo e(asset('page.php')); ?>
  *     @@post:slug@@       ->  <?php echo e(blog_post_url('slug')); ?>
@@ -23,6 +24,7 @@ define('SITE_BLOGS_DIR', SITE_ROOT . '/blogs');
 define('SITE_TRASH_DIR', SITE_ROOT . '/trash');
 define('SITE_REGISTRY_FILE', SITE_ROOT . '/includes/blog-data.php');
 define('ADMIN_PREVIEW_FILE', SITE_BLOGS_DIR . '/admin-preview.php');
+define('SITE_SITEMAP_FILE', SITE_ROOT . '/sitemap.xml');
 
 /* ================================================================ PHP guard */
 
@@ -736,6 +738,48 @@ function post_import(string $slug): ?array {
 
 /* ================================================================= publish */
 
+/**
+ * Rewrite the auto-managed Blog block in sitemap.xml from the registry, so the
+ * sitemap always lists the blog index plus every published post. The block sits
+ * between the marker comments below; everything outside them is left untouched.
+ * Fail-soft by design: a sitemap hiccup must never block a publish/unpublish.
+ */
+function sitemap_sync_blog(): array {
+    $beginTag = '<!-- Blog (auto-managed: publishing from the admin studio rewrites this block) -->';
+    $endTag   = '<!-- /Blog -->';
+
+    if (!is_file(SITE_SITEMAP_FILE)) return [false, 'sitemap.xml not found'];
+    $xml = file_get_contents(SITE_SITEMAP_FILE);
+    if ($xml === false) return [false, 'sitemap.xml could not be read'];
+
+    $begin = strpos($xml, $beginTag);
+    $end   = strpos($xml, $endTag, $begin === false ? 0 : $begin);
+    if ($begin === false || $end === false) {
+        return [false, 'Blog markers missing from sitemap.xml'];
+    }
+
+    $parsed = registry_parse();
+    if ($parsed === null) return [false, 'could not parse includes/blog-data.php'];
+
+    /* Always the clean live URLs (matching the hand-written entries), never
+       page_url(), so a publish from localhost cannot leak .php-style links. */
+    $base  = rtrim(SITE_CANONICAL_URL, '/');
+    $lines = ['  <url><loc>' . $base . '/blogs/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>'];
+    foreach ($parsed['entries'] as $entry) {
+        $slug = (string) $entry['slug'];
+        if (!pgp_token_valid_slug($slug)) continue;
+        $lines[] = '  <url><loc>' . $base . '/blogs/' . $slug . '/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>';
+    }
+
+    $block = $beginTag . "\n" . implode("\n", $lines) . "\n  " . $endTag;
+    $xml   = substr($xml, 0, $begin) . $block . substr($xml, $end + strlen($endTag));
+
+    if (!admin_replace_site_file(SITE_SITEMAP_FILE, $xml)) {
+        return [false, 'sitemap.xml could not be written (permissions?)'];
+    }
+    return [true, 'ok'];
+}
+
 function post_validate_for_publish(array $src): ?string {
     $reg = $src['registry'] ?? [];
     if (trim((string) ($reg['title'] ?? '')) === '') return 'The post needs a title before publishing.';
@@ -779,7 +823,10 @@ function post_publish(string $slug): array {
 
     $src['status'] = 'published';
     post_source_save($src);
-    return [true, 'Published. The article is live at blogs/' . $slug . '.php'];
+
+    [$smOk, $smMsg] = sitemap_sync_blog();
+    return [true, 'Published. The article is live at blogs/' . $slug . '.php'
+        . ($smOk ? ' and listed in sitemap.xml.' : '. Heads up: sitemap.xml was not updated (' . $smMsg . ').')];
 }
 
 function post_unpublish(string $slug): array {
@@ -803,7 +850,10 @@ function post_unpublish(string $slug): array {
 
     $src['status'] = 'draft';
     post_source_save($src);
-    return [true, 'Unpublished. The file was moved to /trash and the index entry removed.'];
+
+    [$smOk, $smMsg] = sitemap_sync_blog();
+    return [true, 'Unpublished. The file was moved to /trash and the index entry removed.'
+        . ($smOk ? '' : ' Heads up: sitemap.xml was not updated (' . $smMsg . ').')];
 }
 
 function post_delete(string $slug): array {
