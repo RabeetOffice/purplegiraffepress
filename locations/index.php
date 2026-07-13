@@ -26,6 +26,13 @@ $locations = [
         'image'  => 'https://images.unsplash.com/photo-1545044846-351ba102b6d5?auto=format&fit=crop&w=900&q=72',
         'short'  => "Children's book editing, design and publishing support for authors across Melbourne and Victoria.",
     ],
+    [
+        'name'   => 'London',
+        'region' => 'United Kingdom',
+        'href'   => 'locations/london.php',
+        'image'  => 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=72',
+        'short'  => "Children's book editing, design and publishing support for authors across London and the UK.",
+    ],
 ];
 ?>
 
@@ -34,7 +41,7 @@ $locations = [
     <div>
       <div class="breadcrumbs"><a href="<?php echo e(asset('index.php')); ?>">Home</a> / Locations</div>
       <h1>Children's Book Services, <em>City by City</em></h1>
-      <p class="lead">Purple Giraffe Press works with children's authors right across Australia. Find your city below to see the services we offer near you, from editing and cover design to full publishing support.</p>
+      <p class="lead">Purple Giraffe Press works with children's authors right across Australia and beyond. Find your city below to see the services we offer near you, from editing and cover design to full publishing support.</p>
     </div>
     <img src="<?php echo e(asset(SITE_MASCOT)); ?>" alt="Purple Giraffe Press mascot pointing at a map">
   </div>
