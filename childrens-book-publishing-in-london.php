@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -83,7 +92,7 @@ include 'includes/header.php';
       <h2>How We Help Transform Your Children&rsquo;s Story Into A Real Book</h2>
       <p>Purple Giraffe Press is a children's book publishing house in London built around one simple goal: helping your story become the best version of itself, on the page and in print.</p>
       <p>We work with parents, teachers, illustrators, and first-time writers who want their story to become a real book. Some of our authors want a traditional deal. Others want more say over their book and are open to a different route. We help you work out which one suits you.</p>
-      <p>Purple Giraffe Press supports authors through every stage of getting a children's book ready and out into the world. We do not just look at your manuscript once and send you away.</p>
+      <p>Purple Giraffe Press supports authors through every stage of getting a children's book ready and out into the world. We do not just look at your manuscript once and send you away. Purple Giraffe Press supports authors through every stage of getting a children's book ready and out into the world. We do not just look at your manuscript once and send you away.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Publish Your Book &rarr;</a></div>
     </div>
     <figure class="svc-media reveal"><img src="assets/images/book-publishing.webp" alt="Children's book publishing services in London at Purple Giraffe Press" loading="lazy" decoding="async"></figure>
@@ -94,7 +103,7 @@ include 'includes/header.php';
 <section class="section section-soft">
   <div class="container section-heading center">
     <p class="eyebrow script-mark">- what we offer</p>
-    <h2>We stay with you from the first draft through to a finished book.</h2>
+    <!-- <h2>We stay with you from the first draft through to a finished book.</h2> -->
   </div>
   <div class="container">
     <div class="feature-grid">

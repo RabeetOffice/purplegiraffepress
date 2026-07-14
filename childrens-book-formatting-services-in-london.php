@@ -56,6 +56,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -84,8 +93,8 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what we do</p>
-      <h2>Wherever You Are in the Process, We Can Help</h2>
+      <!-- <p class="eyebrow script-mark">- what we do</p> -->
+      <p>Wherever You Are in the Process, We Can Help</p>
       <p>At Purple Giraffe Press, we sort out all of this for authors and small publishers across London. We take your manuscript and your artwork and turn them into a clean, properly laid-out book, ready for print or for upload to Amazon and other platforms. Search online, and you will find plenty of choice, but few formatters who work only with children's stories rather than adult fiction with a few extra line breaks added in.</p>
       <p>You do not need a finished manuscript to come to us. Some authors arrive with rough text and no artwork yet. Others have a fully illustrated book that just needs the interior built.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>

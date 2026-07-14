@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -79,10 +88,10 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what it is</p>
-      <h2>Whatever stage you are at, we can pick up the project and carry it through to something you are proud to publish</h2>
+      <!-- <p class="eyebrow script-mark">- what it is</p> -->
+      <!-- <h2>Whatever stage you are at, we can pick up the project and carry it through to something you are proud to publish</h2> -->
       <p>If you have searched for a children's book designer in London before, you have probably noticed how many studios claim to do everything under the sun. We would rather just show you the actual work we do and let you decide for yourself.</p>
-      <p>Maybe you have finished writing your story, and now you are stuck on what comes next. Maybe you have tried a template, and it just does not look right.</p>
+      <p>Maybe you have finished writing your story, and now you are stuck on what comes next. Maybe you have tried a template, and it just does not look right. Whatever stage you are at, we can pick up the project and carry it through to something you are proud to publish.</p>
       <p>London has no shortage of design studios, but not many of them focus purely on children's books. That focus matters. Designing a picture book is a different job from designing a business brochure or a website. The pacing is different. The reading age is different. Even the way colour is used has to be thought through, since bright, busy pages work for some age groups and overwhelm others.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>
     </div>

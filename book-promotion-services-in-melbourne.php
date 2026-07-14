@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). streetAddress omitted
+   until we have a Melbourne address. */
+$location_business = [
+    'locality'   => 'Melbourne',
+    'region'     => 'VIC',
+    'postalCode' => '3000',
+    'country'    => 'AU',
+];
+
 include 'includes/header.php';
 ?>
 

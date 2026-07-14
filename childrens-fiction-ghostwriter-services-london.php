@@ -56,6 +56,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 

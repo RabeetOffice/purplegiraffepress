@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -79,8 +88,8 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what it is</p>
-      <h2>The Website Is Often the Last Piece of the Puzzle, and the One That Gets Rushed.</h2>
+      <!-- <p class="eyebrow script-mark">- what it is</p> -->
+      <p>The Website Is Often the Last Piece of the Puzzle, and the One That Gets Rushed.</p>
       <p>We work with authors across London and the wider UK who want a children’s book author website in London that actually helps their career, not just a page that sits online looking pretty. Whether you are self-published, working with a small press, or already signed to a publisher, we build sites that support what you are trying to do next.</p>
       <p>Many of the authors who come to us have spent years perfecting a manuscript, working with editors, and building relationships with schools and libraries. We think it deserves as much care as everything else you have already put into your books.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Website &rarr;</a></div>

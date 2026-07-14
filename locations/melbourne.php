@@ -16,6 +16,15 @@ $breadcrumbs = [
     ['name' => 'Melbourne', 'url' => page_url('locations/melbourne.php')],
 ];
 
+/* City LocalBusiness schema (see includes/header.php). streetAddress is left out
+   until we have a Melbourne address. */
+$location_business = [
+    'locality'   => 'Melbourne',
+    'region'     => 'VIC',
+    'postalCode' => '3000',
+    'country'    => 'AU',
+];
+
 require __DIR__ . '/../includes/header.php';
 
 /* Services offered to Melbourne authors. Each service becomes its own Melbourne

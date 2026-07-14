@@ -56,6 +56,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). streetAddress omitted
+   until we have a Melbourne address. */
+$location_business = [
+    'locality'   => 'Melbourne',
+    'region'     => 'VIC',
+    'postalCode' => '3000',
+    'country'    => 'AU',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -84,9 +93,9 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what it is</p>
-      <h2>We Handle The Writing. You Keep The Idea, The Credit, And The Finished Book.</h2>
-      <p>Purple Giraffe Press works with people across Melbourne who want their fiction written properly, from the first chapter to the last page.</p>
+      <!-- <p class="eyebrow script-mark">- what it is</p> -->
+      <!-- <h2>We Handle The Writing. You Keep The Idea, The Credit, And The Finished Book.</h2> -->
+      <p>Purple Giraffe Press works with people across Melbourne who want their fiction written properly, from the first chapter to the last page. We handle the writing. You keep the idea, the credit, and the finished book.</p>
       <p>Whether you are working on a crime thriller, a family drama, a romance, or a fantasy series, our team can help you get it done. We have been doing ghostwriting fiction in Melbourne for authors, business owners, and first-time writers who just want their story told well.</p>
       <p>Some clients come to us with a single idea and nothing else written down. Others already have a rough draft sitting in a folder, half finished and stuck. Both are fine starting points. We meet you where you are and build from there.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>

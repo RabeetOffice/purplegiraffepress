@@ -163,6 +163,10 @@ $page_noindex = ($page_noindex ?? false);
     "sameAs": <?php echo json_encode(array_values($social_links)); ?>
   }
   </script>
+  <?php /* Head-office LocalBusiness. Suppressed on city pages (those that set
+           $location_business), which get their own dedicated LocalBusiness below
+           so each carries a single, city-correct local signal. */ ?>
+  <?php if (empty($location_business)): ?>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -183,6 +187,45 @@ $page_noindex = ($page_noindex ?? false);
     "openingHours": "Mo-Fr 09:00-17:00"
   }
   </script>
+  <?php endif; ?>
+  <?php
+  /* City-specific LocalBusiness. Any location hub or per-city service page can
+     opt in by setting $location_business before including this header, e.g.
+       $location_business = ['locality' => 'Melbourne', 'region' => 'VIC',
+                             'postalCode' => '3000', 'country' => 'AU'];
+     streetAddress is only emitted when supplied, so we can add real addresses
+     later without touching each page. This carries a local signal for the city
+     alongside the head-office LocalBusiness above. */
+  if (!empty($location_business) && is_array($location_business)):
+      $lb = $location_business;
+      $lb_addr = ['@type' => 'PostalAddress'];
+      if (!empty($lb['streetAddress'])) { $lb_addr['streetAddress'] = $lb['streetAddress']; }
+      $lb_addr['addressLocality'] = $lb['locality'] ?? '';
+      if (!empty($lb['region'])) { $lb_addr['addressRegion'] = $lb['region']; }
+      $lb_addr['postalCode']     = $lb['postalCode'] ?? '';
+      $lb_addr['addressCountry'] = $lb['country'] ?? 'AU';
+      $location_schema = [
+          '@context'   => 'https://schema.org',
+          '@type'      => 'LocalBusiness',
+          'name'       => SITE_NAME,
+          'image'      => page_url(SITE_LOGO),
+          'url'        => page_url(''),
+          'telephone'  => SITE_PHONE,
+          'priceRange' => '$',
+          'address'    => $lb_addr,
+          'openingHoursSpecification' => [
+              '@type'     => 'OpeningHoursSpecification',
+              'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              'opens'     => '09:00',
+              'closes'    => '17:00',
+          ],
+          'sameAs'     => array_values($social_links),
+      ];
+      echo '<script type="application/ld+json">' . "\n";
+      echo json_encode($location_schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+      echo "\n  </script>\n";
+  endif;
+  ?>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

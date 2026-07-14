@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). streetAddress omitted
+   until we have a Melbourne address. */
+$location_business = [
+    'locality'   => 'Melbourne',
+    'region'     => 'VIC',
+    'postalCode' => '3000',
+    'country'    => 'AU',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -79,9 +88,8 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what it is</p>
-      <h2>We Know That A Picture Book Lives Or Dies By Its Art.</h2>
-      <p>At Purple Giraffe Press, we work with parents, grandparents, teachers, and first-time authors across Melbourne who want to turn their words into a real illustrated book in Melbourne that feels finished and professional. The words might be lovely, but if the pictures do not match the tone and feel of the story, the whole thing falls flat. That is why so many local writers search for children's book illustrations in Melbourne before they even start looking for a printer or a publisher. The pictures come first, because they are what a young reader notices before a single word is read to them.</p>
+      <!-- <p class="eyebrow script-mark">- what it is</p> -->
+      <p>At Purple Giraffe Press, we work with parents, grandparents, teachers, and first-time authors across Melbourne who want to turn their words into a real illustrated book in Melbourne that feels finished and professional. We know that a picture book lives or dies by its art. The words might be lovely, but if the pictures do not match the tone and feel of the story, the whole thing falls flat. That is why so many local writers search for children's book illustrations in Melbourne before they even start looking for a printer or a publisher. The pictures come first, because they are what a young reader notices before a single word is read to them.</p>
       <p>We have spent years working only in this space. We are not a general design studio that also does book covers on the side. Children's books are what we do every day.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>
     </div>

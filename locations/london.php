@@ -16,6 +16,15 @@ $breadcrumbs = [
     ['name' => 'London',    'url' => page_url('locations/london.php')],
 ];
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 require __DIR__ . '/../includes/header.php';
 
 /* Services offered to London authors. Each service becomes its own London

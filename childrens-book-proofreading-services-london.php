@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -78,10 +87,9 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what it is</p>
-      <h2>Children's Books Need A Different Kind Of Proofreading From Adult Fiction.</h2>
+      <!-- <p class="eyebrow script-mark">- what it is</p> -->
       <p>At Purple Giraffe Press, we work with authors, parents, teachers, and small publishers across London to give children's manuscripts a careful final check. We keep the process simple and the pricing honest, so you always know what is happening with your book and what it will cost.</p>
-      <p>Sentences are shorter. Rhythm matters more. A missing comma can change how a whole line sounds when read aloud at bedtime. We treat every manuscript with the same care we would want for our own child's bookshelf.</p>
+      <p>Children's books need a different kind of proofreading from adult fiction. Sentences are shorter. Rhythm matters more. A missing comma can change how a whole line sounds when read aloud at bedtime. We treat every manuscript with the same care we would want for our own child's bookshelf.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>
     </div>
     <figure class="svc-media reveal"><img src="assets/images/proofreading.webp" alt="Children's book proofreading services in London at Purple Giraffe Press" loading="lazy" decoding="async"></figure>

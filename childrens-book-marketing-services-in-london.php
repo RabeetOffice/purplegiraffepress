@@ -51,6 +51,15 @@ $page_faqs = array (
   ),
 );
 
+/* City LocalBusiness schema (see includes/header.php). UK country code and a
+   central-London placeholder postcode until we have a real London address. */
+$location_business = [
+    'locality'   => 'London',
+    'region'     => 'London',
+    'postalCode' => 'EC1V 2NX',
+    'country'    => 'GB',
+];
+
 include 'includes/header.php';
 ?>
 
@@ -79,8 +88,8 @@ include 'includes/header.php';
 <section class="section section-white">
   <div class="container svc-split">
     <div class="svc-copy reveal">
-      <p class="eyebrow script-mark">- what it is</p>
-      <h2>We work with first-time authors, small publishers, and independent writers who want proper support without a huge agency price tag</h2>
+      <!-- <p class="eyebrow script-mark">- what it is</p> -->
+      <p>We work with first-time authors, small publishers, and independent writers who want proper support without a huge agency price tag.</p>
       <p>Whether you have written a picture book for young children, a novel, or a self-published title on Kindle, we can help you plan a campaign that fits your book and your budget.</p>
       <p>If you are looking for book promotion services for authors in London who actually listen to what you need, you are in the right place. Read on to see how we work, what we offer, and how to get started.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>
@@ -350,7 +359,8 @@ include 'includes/header.php';
 <section class="section figma-cream">
   <div class="container section-heading center">
     <p class="eyebrow script-mark">- explore more</p>
-    <h2>Our most popular services</h2>
+    <h2>Other Children's Book Services Available for London Writers</h2>
+    <p style="padding-top:20px">What your project includes depends on your goals. We offer a full suite of professional services tailored to the specific needs of children’s literature.</p>
   </div>
   <div class="container">
     <?php $services_only = ['editing', 'book-cover-design', 'book-publishing', 'custom-illustrations', 'ghostwriting', 'author-websites']; include 'includes/services.php'; ?>
