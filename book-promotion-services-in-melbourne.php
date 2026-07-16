@@ -308,16 +308,8 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- 14 - TOP 6 SERVICES -->
-<section class="section figma-cream">
-  <div class="container section-heading center">
-    <p class="eyebrow script-mark">- explore more</p>
-    <h2>Our most popular services</h2>
-  </div>
-  <div class="container">
-    <?php $services_only = ['editing', 'book-cover-design', 'book-promotion', 'book-publishing', 'custom-illustrations', 'author-websites']; include 'includes/services.php'; ?>
-  </div>
-</section>
+<!-- OTHER SERVICES IN THIS CITY (dynamic, excludes current page) -->
+<?php include 'includes/location-services.php'; ?>
 
 <!-- 15 - CONTACT FORM SECTION -->
 <?php include 'includes/contact-section.php'; ?>
