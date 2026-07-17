@@ -216,10 +216,10 @@ function sub_mail_icon() {
     <div class="not-ready reveal">
       <p class="eyebrow script-mark">- Not quite ready to submit?</p>
       <h2>We can help you <em>get there.</em></h2>
-      <p>That is okay. Our team of expert book coaches and editors can help you polish your manuscript before the submission window opens.</p>
+      <p>That is okay. Our team of expert editors can help you polish your manuscript before the submission window opens.</p>
       <div class="button-row center-row">
         <a class="btn btn-sun" href="contact.php" data-quote-open>Get a Free Estimate</a>
-        <a class="btn btn-light" href="book-coaching.php">Explore book coaching →</a>
+        <a class="btn btn-light" href="editing.php">Explore editing →</a>
       </div>
     </div>
   </div>

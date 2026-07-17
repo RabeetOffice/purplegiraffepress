@@ -67,27 +67,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Paperback Book Printing</h3>
-        <p>This option is the most common choice for novels, short story collections and many children’s picture books. It is lighter to hold, cheaper to produce, and easier to send out for reviews or sell at markets, school fairs, and local events. We use good quality paper stock so pages do not feel thin or let text show through from the other side.</p>
+        <div class="fc-body">
+          <p>This option is the most common choice for novels, short story collections and many children’s picture books. It is lighter to hold, cheaper to produce, and easier to send out for reviews or sell at markets, school fairs, and local events. We use good quality paper stock so pages do not feel thin or let text show through from the other side.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Hardback Printing for a Book With More Presence</h3>
-        <p>If you want your book to have more presence on a shelf, a hardback book is worth thinking about. A hard-cover book feels more permanent and a little more special, which is why many authors choose this option for gift copies, keepsake editions, or family history projects meant to be kept for years.</p>
+        <div class="fc-body">
+          <p>If you want your book to have more presence on a shelf, a hardback book is worth thinking about. A hard-cover book feels more permanent and a little more special, which is why many authors choose this option for gift copies, keepsake editions, or family history projects meant to be kept for years.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v18"></path></svg></div>
         <h3>Hardbound Book Printing</h3>
-        <p>This binding method refers to the way pages are sewn or glued firmly into a solid cover, rather than just stapled or spiral-bound. This gives a hard-back book real strength, so it holds up well to repeated reading, which matters a lot for children’s books that get pulled off the shelf again and again.</p>
+        <div class="fc-body">
+          <p>This binding method refers to the way pages are sewn or glued firmly into a solid cover, rather than just stapled or spiral-bound. This gives a hard-back book real strength, so it holds up well to repeated reading, which matters a lot for children’s books that get pulled off the shelf again and again.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
         <h3>Booklet and Small Batch Printing</h3>
-        <p>Not every project needs a full print run of hundreds of copies. Sometimes all you need is a booklet hardcover option for a small collection, a school project, or a short run for family and friends. We are happy to help with smaller print jobs too, so you are never stuck ordering far more books than you actually need just to make a print run worthwhile.</p>
+        <div class="fc-body">
+          <p>Not every project needs a full print run of hundreds of copies. Sometimes all you need is a booklet hardcover option for a small collection, a school project, or a short run for family and friends. We are happy to help with smaller print jobs too, so you are never stuck ordering far more books than you actually need just to make a print run worthwhile.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Cover Design and Finishing Touches</h3>
-        <p>Getting the book cover hardcover finish right, or choosing a simple matte look instead, is often what makes a reader pick your book up in the first place. We can work with a cover design you already have, or help guide you toward finishing options like matte, gloss, or textured coatings that suit your genre, your budget, and the feel you are going for.</p>
+        <div class="fc-body">
+          <p>Getting the book cover hardcover finish right, or choosing a simple matte look instead, is often what makes a reader pick your book up in the first place. We can work with a cover design you already have, or help guide you toward finishing options like matte, gloss, or textured coatings that suit your genre, your budget, and the feel you are going for.</p>
+        </div>
       </article>
     </div>
   </div>

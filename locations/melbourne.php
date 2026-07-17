@@ -6,8 +6,8 @@
 $GLOBALS['asset_base'] = '../';
 require_once __DIR__ . '/../includes/config.php';
 
-$page_title       = "Children's Book Services in Melbourne | Purple Giraffe Press";
-$page_description = "Children's book editing, design and publishing help for Melbourne and Victoria authors. Explore the Purple Giraffe Press services available to Melbourne writers.";
+$page_title       = "Children's Book Services Melbourne | Purple Giraffe";
+$page_description = "Explore Purple Giraffe Press's children's book services in Melbourne. Editing, illustration, publishing and more, tailored to local authors.";
 $canonical_path   = 'locations/melbourne.php';
 $breadcrumb_name  = 'Melbourne';
 $breadcrumbs = [
@@ -26,19 +26,6 @@ $location_business = [
 ];
 
 require __DIR__ . '/../includes/header.php';
-
-/* Services offered to Melbourne authors. Sourced from the shared city services
-   data (includes/location-services-data.php) so the hub and every Melbourne
-   service page stay in sync from one place. */
-require_once __DIR__ . '/../includes/location-services-data.php';
-$melb_services = pgp_location_services('melbourne')['services'];
-
-/* Centre the grid when a handful of services exist, so cards do not sit
-   awkwardly against the left edge. 4 cards read best as a balanced 2x2. */
-$n = count($melb_services);
-$grid_style = $n === 1 ? 'grid-template-columns:minmax(0,400px);justify-content:center;'
-            : ($n === 2 ? 'grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;'
-            : ($n === 4 ? 'grid-template-columns:repeat(2,minmax(0,340px));justify-content:center;' : ''));
 ?>
 
 <section class="banner">
@@ -56,34 +43,17 @@ $grid_style = $n === 1 ? 'grid-template-columns:minmax(0,400px);justify-content:
   </div>
 </section>
 
-<section class="section section-white">
-  <div class="container section-heading center">
-    <p class="eyebrow script-mark">- melbourne services</p>
-    <h2>Services for Melbourne Authors</h2>
-    <p>Pick the help your book needs. We work with authors across Melbourne and Victoria, so you get children's book specialists close to home.</p>
-  </div>
-  <div class="container">
-    <div class="services-grid" style="<?php echo $grid_style; ?>">
-      <?php $i = 0; foreach ($melb_services as $s): $a = $s['accent'];
-        $style = sprintf('--accent:%s;--accent-2:%s;--accent-ink:%s;--i:%d;', $a[0], $a[1], $a[2], $i); ?>
-      <article class="service-card reveal" style="<?php echo e($style); ?>">
-        <span class="service-shine" aria-hidden="true"></span>
-        <span class="service-num" aria-hidden="true"><?php echo sprintf('%02d', $i + 1); ?></span>
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><?php echo $s['icon']; ?></svg>
-        </div>
-        <h3><?php echo e($s['title']); ?></h3>
-        <p><?php echo e($s['short']); ?></p>
-        <a class="card-link" href="<?php echo e(asset($s['href'])); ?>">
-          <span class="card-link-label">Learn more</span>
-          <span class="card-link-arrow" aria-hidden="true">&rarr;</span>
-          <span class="sr-only"> about <?php echo e($s['title']); ?> in Melbourne</span>
-        </a>
-      </article>
-      <?php $i++; endforeach; ?>
-    </div>
-  </div>
-</section>
+<?php
+/* Service cards come from the shared city renderer, so adding a Melbourne page
+   to includes/location-services-data.php surfaces it here automatically. */
+$location_city             = 'melbourne';
+$location_services_limit   = 0;   // the city index links to every Melbourne service; service pages show a rotating 6
+$location_services_eyebrow = '- explore more services';
+$location_services_heading = 'Services for Melbourne Authors';
+$location_services_intro   = "Pick the help your book needs. We work with authors across Melbourne and Victoria, so you get children's book specialists close to home.";
+$location_services_section = 'section section-white';
+require __DIR__ . '/../includes/location-services.php';
+?>
 
 <?php require __DIR__ . '/../includes/cta.php'; ?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

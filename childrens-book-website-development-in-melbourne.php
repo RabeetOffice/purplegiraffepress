@@ -109,27 +109,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Author Website Developers Melbourne Children’s Writers Trust</h3>
-        <p>We know how the children’s book world works. We understand things like series pages, age ranges, teacher resource downloads, and links to booksellers or your publisher’s page. You will not need to explain the basics to us.</p>
+        <div class="fc-body">
+          <p>We know how the children’s book world works. We understand things like series pages, age ranges, teacher resource downloads, and links to booksellers or your publisher’s page. You will not need to explain the basics to us.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Children’s Book Website Design Melbourne Built to Sell Your Story</h3>
-        <p>Every book gets its own space to shine. We design pages that show off your cover art, a short blurb kids and parents can actually read, age guidance, and links to buy or borrow the book. If you have more than one book or a series, we set up clear navigation so readers can find their way around without getting lost.</p>
+        <div class="fc-body">
+          <p>Every book gets its own space to shine. We design pages that show off your cover art, a short blurb kids and parents can actually read, age guidance, and links to buy or borrow the book. If you have more than one book or a series, we set up clear navigation so readers can find their way around without getting lost.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Website Design for Children’s Authors Melbourne With Real Reader Appeal</h3>
-        <p>A thriller writer’s website and a picture book author’s website should not look the same. We design with your actual audience in mind, which is often parents, teachers, and young readers browsing on a tablet or phone. That changes font choices, colours, button sizes, and how much text goes on each page.</p>
+        <div class="fc-body">
+          <p>A thriller writer’s website and a picture book author’s website should not look the same. We design with your actual audience in mind, which is often parents, teachers, and young readers browsing on a tablet or phone. That changes font choices, colours, button sizes, and how much text goes on each page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Children’s Book Illustrator Website Design Melbourne That Showcases Your Art</h3>
-        <p>If you illustrate as well as write, or you are an illustrator looking for author-style work, we build galleries that let your art breathe. No cramped thumbnails or slow-loading pages. We set up portfolios that are easy to browse and easy to update as you add new work.</p>
+        <div class="fc-body">
+          <p>If you illustrate as well as write, or you are an illustrator looking for author-style work, we build galleries that let your art breathe. No cramped thumbnails or slow-loading pages. We set up portfolios that are easy to browse and easy to update as you add new work.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Children’s Book Illustrator Website Design in Melbourne</h3>
-        <p>Launching a new book, running a school tour, or promoting a reading event? We built a focused landing page just for that. One clear goal per page, whether that is book sales, event sign-ups, or newsletter subscribers, with nothing distracting the reader from taking the next step.</p>
+        <div class="fc-body">
+          <p>Launching a new book, running a school tour, or promoting a reading event? We built a focused landing page just for that. One clear goal per page, whether that is book sales, event sign-ups, or newsletter subscribers, with nothing distracting the reader from taking the next step.</p>
+        </div>
       </article>
     </div>
   </div>

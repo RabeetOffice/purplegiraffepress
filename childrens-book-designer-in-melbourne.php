@@ -109,27 +109,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Illustration</h3>
-        <p>Every page tells two stories: the words and the pictures. Our illustrators work closely with your text to create characters and scenes that feel warm, expressive, and right for the age group you are writing for. Whether you need a full set of illustrations for a picture book or a handful of spot images to break up chapters, our book illustration services in Melbourne are built around your story, not a generic style.</p>
+        <div class="fc-body">
+          <p>Every page tells two stories: the words and the pictures. Our illustrators work closely with your text to create characters and scenes that feel warm, expressive, and right for the age group you are writing for. Whether you need a full set of illustrations for a picture book or a handful of spot images to break up chapters, our book illustration services in Melbourne are built around your story, not a generic style.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Layout and Page Design</h3>
-        <p>Good layout is something readers never notice, because it works. Text sits where it should. Pictures breathe. Nothing feels cramped or confusing. As a children’s book layout designer, I think about how a page will actually be read aloud or flipped through by small hands, not just how it looks on a screen.</p>
+        <div class="fc-body">
+          <p>Good layout is something readers never notice, because it works. Text sits where it should. Pictures breathe. Nothing feels cramped or confusing. As a children’s book layout designer, I think about how a page will actually be read aloud or flipped through by small hands, not just how it looks on a screen.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v18"></path></svg></div>
         <h3>Cover Design</h3>
-        <p>A cover has one job. It has to make someone stop scrolling or stop walking past a shelf and pick the book up. As a children’s book cover designer in Melbourne, we design covers that suit the story inside, not just a trend that will look dated in two years.</p>
+        <div class="fc-body">
+          <p>A cover has one job. It has to make someone stop scrolling or stop walking past a shelf and pick the book up. As a children’s book cover designer in Melbourne, we design covers that suit the story inside, not just a trend that will look dated in two years.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Colouring Book Design</h3>
-        <p>Colouring books need a different kind of thought. Lines have to be clean and simple enough for small hands, but still interesting enough to hold attention. As a colouring book designer for kids in Melbourne, we build pages that are fun to fill in, whether the book is for retail, a school fundraiser, or a personal project.</p>
+        <div class="fc-body">
+          <p>Colouring books need a different kind of thought. Lines have to be clean and simple enough for small hands, but still interesting enough to hold attention. As a colouring book designer for kids in Melbourne, we build pages that are fun to fill in, whether the book is for retail, a school fundraiser, or a personal project.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
         <h3>KDP and Self-Publishing Formatting</h3>
-        <p>If you are publishing through Amazon, the technical side matters just as much as the pretty side. Files need to be set up correctly, or your book can end up with awkward margins, blurry images, or rejected uploads. We work as children’s book designers for Amazon KDP in Melbourne, so your print and ebook files are ready to go without back-and-forth guesswork.</p>
+        <div class="fc-body">
+          <p>If you are publishing through Amazon, the technical side matters just as much as the pretty side. Files need to be set up correctly, or your book can end up with awkward margins, blurry images, or rejected uploads. We work as children’s book designers for Amazon KDP in Melbourne, so your print and ebook files are ready to go without back-and-forth guesswork.</p>
+        </div>
       </article>
     </div>
   </div>

@@ -22,6 +22,7 @@ if (!function_exists('service_icon')) {
             'mic'     => '<rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path>',
             'compass' => '<circle cx="12" cy="12" r="9"></circle><path d="m15 9-2 5-4 1 2-5 4-1Z"></path>',
             'globe'   => '<circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path>',
+            'play'    => '<circle cx="12" cy="12" r="9"></circle><path d="M10 8.5 16 12l-6 3.5Z"></path>',
         ];
         return $icons[$name] ?? $icons['book'];
     }
@@ -40,7 +41,7 @@ $service_cards = [
     'childrens-book-printing'     => ['title' => "Children’s Book Printing",     'icon' => 'printer', 'accent' => ['#ffd36e', '#f7a324', '#4a2e00'], 'short' => "From small digital runs to large offset orders, we manage the quality of the physical book, checking paper weight and colour accuracy"],
     'author-websites'             => ['title' => 'Author Websites',             'icon' => 'screen',  'accent' => ['#f08fe4', '#d957c9', '#4a0640'], 'short' => "We build clean, functional sites that help readers and event organisers find you easily"],
     'audiobooks'                  => ['title' => 'Audiobooks',                  'icon' => 'mic',     'accent' => ['#7fd0ff', '#2f8fe6', '#042a4a'], 'short' => "We coordinate professional narration and mastering to reach families who prefer to listen during commutes or at bedtime"],
-    'book-coaching'               => ['title' => 'Book Coaching',               'icon' => 'compass', 'accent' => ['#9be7c4', '#3bbf86', '#053a2c'], 'short' => "One on one guidance for authors who want to write the book themselves, with expert feedback at every stage."],
+    'childrens-book-trailers'     => ['title' => "Children’s Book Trailers",    'icon' => 'play',    'accent' => ['#9be7c4', '#3bbf86', '#053a2c'], 'short' => "Animated trailers that give your story a voice and a face, so readers fall for it before they even pick it up"],
     'distribution'                => ['title' => 'Distribution',                'icon' => 'globe',   'accent' => ['#8ab6ff', '#4f7dff', '#0a1f55'], 'short' => "Get your book onto shelves and screens worldwide, from major retailers to schools and libraries."],
 ];
 

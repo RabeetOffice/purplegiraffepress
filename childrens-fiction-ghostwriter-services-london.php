@@ -117,32 +117,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Crime And Thriller Fiction</h3>
-        <p>Crime and thriller stories need tight plotting and a clear sense of pace. Clues need to be planted early and paid off later, without giving too much away too soon. We map out the mystery or the threat before writing begins, so the tension builds properly across the whole book.</p>
+        <div class="fc-body">
+          <p>Crime and thriller stories need tight plotting and a clear sense of pace. Clues need to be planted early and paid off later, without giving too much away too soon. We map out the mystery or the threat before writing begins, so the tension builds properly across the whole book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Action Fiction</h3>
-        <p>Some stories live and die on their pacing during big set pieces. Our action fiction ghostwriters in London focus on keeping scenes fast, physical, and easy to follow, even when several characters are moving at once. Good action writing needs short, punchy sentences at the right moments, not long descriptions that slow everything down.</p>
+        <div class="fc-body">
+          <p>Some stories live and die on their pacing during big set pieces. Our action fiction ghostwriters in London focus on keeping scenes fast, physical, and easy to follow, even when several characters are moving at once. Good action writing needs short, punchy sentences at the right moments, not long descriptions that slow everything down.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Romance Fiction</h3>
-        <p>Romance readers expect strong emotional beats and characters who feel real. We spend extra time on chemistry between characters and on pacing the relationship so it does not feel rushed or forced.</p>
+        <div class="fc-body">
+          <p>Romance readers expect strong emotional beats and characters who feel real. We spend extra time on chemistry between characters and on pacing the relationship so it does not feel rushed or forced.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Fantasy And Science Fiction</h3>
-        <p>These genres often involve building a whole world from scratch. We keep detailed notes on rules, geography, and history so nothing contradicts itself later, especially across longer series.</p>
+        <div class="fc-body">
+          <p>These genres often involve building a whole world from scratch. We keep detailed notes on rules, geography, and history so nothing contradicts itself later, especially across longer series.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Literary And Character-Driven Fiction</h3>
-        <p>Some stories are quieter, built around character and voice rather than plot twists. These need a writer who can slow down, notice small details, and let a scene breathe without losing the reader's interest.</p>
+        <div class="fc-body">
+          <p>Some stories are quieter, built around character and voice rather than plot twists. These need a writer who can slow down, notice small details, and let a scene breathe without losing the reader's interest.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Short Stories And Serialised Fiction</h3>
-        <p>Not every project is a full novel straight away. We also write short stories and serialised chapters for authors testing an idea, building an audience, or publishing in instalments online.</p>
+        <div class="fc-body">
+          <p>Not every project is a full novel straight away. We also write short stories and serialised chapters for authors testing an idea, building an audience, or publishing in instalments online.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -174,22 +186,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Ages 0 To 5: Picture Books And Early Childhood Stories</h3>
-        <p>Books for younger children rely heavily on simple language, strong emotions, and memorable moments. We focus on clear storytelling, engaging characters, and sentences that sound natural when read aloud by parents or caregivers.</p>
+        <div class="fc-body">
+          <p>Books for younger children rely heavily on simple language, strong emotions, and memorable moments. We focus on clear storytelling, engaging characters, and sentences that sound natural when read aloud by parents or caregivers.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Ages 5 To 8: Early Readers And First Chapter Books</h3>
-        <p>At this stage, children are becoming more independent readers. We create stories with accessible vocabulary, shorter chapters, and a balanced mix of action and description to keep young readers confident and engaged.</p>
+        <div class="fc-body">
+          <p>At this stage, children are becoming more independent readers. We create stories with accessible vocabulary, shorter chapters, and a balanced mix of action and description to keep young readers confident and engaged.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Ages 8 To 12: Middle Grade Fiction</h3>
-        <p>Middle-grade readers are ready for deeper plots, stronger character development, and more complex themes. We focus on building believable worlds, maintaining consistency across chapters, and creating stories that keep children invested from beginning to end.</p>
+        <div class="fc-body">
+          <p>Middle-grade readers are ready for deeper plots, stronger character development, and more complex themes. We focus on building believable worlds, maintaining consistency across chapters, and creating stories that keep children invested from beginning to end.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Ages 12+: Young Adult Fiction</h3>
-        <p>Young adult stories require a stronger emotional connection, relatable characters, and themes that reflect the experiences of older readers. We help shape authentic voices, meaningful conflicts, and engaging narratives that feel relevant to teenage audiences.</p>
+        <div class="fc-body">
+          <p>Young adult stories require a stronger emotional connection, relatable characters, and themes that reflect the experiences of older readers. We help shape authentic voices, meaningful conflicts, and engaging narratives that feel relevant to teenage audiences.</p>
+        </div>
       </article>
     </div>
   </div>

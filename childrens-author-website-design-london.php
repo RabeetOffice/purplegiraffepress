@@ -111,26 +111,34 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Full Author Websites</h3>
-        <p>This is our main service. We design and build a complete website for you, covering your books, your biography, events, press, and contact details. If you are looking for custom author websites in London, this is usually the starting point. We build the site around your existing books and leave room to add new titles as your list grows.</p>
-        <p>We also add practical extras where they make sense, such as a newsletter sign-up box, links to buy your books from a retailer, and a simple press page with a photo and short biography that journalists or event organisers can use.</p>
+        <div class="fc-body">
+          <p>This is our main service. We design and build a complete website for you, covering your books, your biography, events, press, and contact details. If you are looking for custom author websites in London, this is usually the starting point. We build the site around your existing books and leave room to add new titles as your list grows.</p>
+          <p>We also add practical extras where they make sense, such as a newsletter sign-up box, links to buy your books from a retailer, and a simple press page with a photo and short biography that journalists or event organisers can use.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Illustrator Portfolio Sites</h3>
-        <p>If you illustrate as well as write, or you illustrate for other authors, you need a site that shows your artwork properly. We handle children’s book illustrator website design in London with a focus on image quality, gallery layout, and fast loading times, so your pictures never look squashed or pixelated.</p>
-        <p>We pay close attention to how artwork is cropped and framed on different screen sizes, since a spread that looks perfect on a laptop can lose its impact on a phone if it is not set up with care.</p>
+        <div class="fc-body">
+          <p>If you illustrate as well as write, or you illustrate for other authors, you need a site that shows your artwork properly. We handle children’s book illustrator website design in London with a focus on image quality, gallery layout, and fast loading times, so your pictures never look squashed or pixelated.</p>
+          <p>We pay close attention to how artwork is cropped and framed on different screen sizes, since a spread that looks perfect on a laptop can lose its impact on a phone if it is not set up with care.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Book Launch Landing Pages</h3>
-        <p>Sometimes you do not need a full site straight away. You need one strong page to support a launch. We build children’s book landing page designs in London projects for authors who want a single page with a countdown, a pre-order link, or a sign-up form ahead of a release date.</p>
-        <p>This is a good option if you have a publication date coming up and want something live quickly, without committing to a full site build straight away. Many authors later expand this page into a fuller site once the launch has settled down.</p>
+        <div class="fc-body">
+          <p>Sometimes you do not need a full site straight away. You need one strong page to support a launch. We build children’s book landing page designs in London projects for authors who want a single page with a countdown, a pre-order link, or a sign-up form ahead of a release date.</p>
+          <p>This is a good option if you have a publication date coming up and want something live quickly, without committing to a full site build straight away. Many authors later expand this page into a fuller site once the launch has settled down.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"></path><path d="M3 21v-5h5"></path></svg></div>
         <h3>Website Rebuilds and Development</h3>
-        <p>If you already have a site but it feels tired, slow, or hard to update, we can rebuild it. Our book author website development in London work includes moving old sites onto modern, easier-to-manage platforms, without losing your search rankings or your existing content.</p>
-        <p>Before we start any rebuild, we look at what is already working on the old site, such as pages that get good traffic or backlinks from other websites, so we do not accidentally throw away things that are quietly doing their job.</p>
+        <div class="fc-body">
+          <p>If you already have a site but it feels tired, slow, or hard to update, we can rebuild it. Our book author website development in London work includes moving old sites onto modern, easier-to-manage platforms, without losing your search rankings or your existing content.</p>
+          <p>Before we start any rebuild, we look at what is already working on the old site, such as pages that get good traffic or backlinks from other websites, so we do not accidentally throw away things that are quietly doing their job.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -148,27 +156,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 21.5 12C19 16.4 12 21 12 21Z"></path></svg></div>
         <h3>Ages 0 To 3: Gentle Websites For Board Book Authors</h3>
-        <p>Board books are often a child’s first introduction to stories, so the website should feel warm, simple, and visually engaging. We focus on bright artwork, clear navigation, and playful design elements that help parents quickly understand the book’s purpose, characters, and learning value.</p>
+        <div class="fc-body">
+          <p>Board books are often a child’s first introduction to stories, so the website should feel warm, simple, and visually engaging. We focus on bright artwork, clear navigation, and playful design elements that help parents quickly understand the book’s purpose, characters, and learning value.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Ages 3 To 7: Story-Focused Websites For Picture Book Authors</h3>
-        <p>Picture books rely heavily on imagination and illustrations. We create websites that showcase your artwork beautifully, highlight your characters, and make it easy for parents, teachers, and librarians to explore your stories, book details, and author journey.</p>
+        <div class="fc-body">
+          <p>Picture books rely heavily on imagination and illustrations. We create websites that showcase your artwork beautifully, highlight your characters, and make it easy for parents, teachers, and librarians to explore your stories, book details, and author journey.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></div>
         <h3>Ages 5 To 8: Clear And Engaging Sites For Early Readers</h3>
-        <p>Early readers need a balance between independence and support. We design websites that present your books clearly, with simple layouts, readable information, and features that help parents and educators discover books suitable for children building their reading confidence.</p>
+        <div class="fc-body">
+          <p>Early readers need a balance between independence and support. We design websites that present your books clearly, with simple layouts, readable information, and features that help parents and educators discover books suitable for children building their reading confidence.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Ages 8 To 12: Author Platforms For Middle Grade Writers</h3>
-        <p>Middle-grade readers begin developing stronger connections with characters, series, and longer stories. We create websites that give your books more space to shine through detailed book pages, character introductions, series information, and engaging content for young readers and their families.</p>
+        <div class="fc-body">
+          <p>Middle-grade readers begin developing stronger connections with characters, series, and longer stories. We create websites that give your books more space to shine through detailed book pages, character introductions, series information, and engaging content for young readers and their families.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"></path></svg></div>
         <h3>Ages 12+: Modern Websites For Young Adult Authors</h3>
-        <p>Young adult readers expect a more mature online experience. We build author websites with a stronger focus on your brand, themes, upcoming releases, reviews, and community building, helping you connect with teenage readers, parents, educators, and book communities.</p>
+        <div class="fc-body">
+          <p>Young adult readers expect a more mature online experience. We build author websites with a stronger focus on your brand, themes, upcoming releases, reviews, and community building, helping you connect with teenage readers, parents, educators, and book communities.</p>
+        </div>
       </article>
     </div>
   </div>

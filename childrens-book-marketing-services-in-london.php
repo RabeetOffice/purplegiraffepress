@@ -110,27 +110,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Children's Book Promotion Services in London</h3>
-        <p>Children's books need a different kind of promotion. Parents, teachers, librarians, and grandparents all make buying decisions in different ways. We help you reach the right audience through school and library outreach, local events, social media aimed at parents, and review campaigns with book bloggers who cover children's titles. We also support authors doing school visits and local reading events, since these often lead to strong word of mouth in London communities.</p>
+        <div class="fc-body">
+          <p>Children's books need a different kind of promotion. Parents, teachers, librarians, and grandparents all make buying decisions in different ways. We help you reach the right audience through school and library outreach, local events, social media aimed at parents, and review campaigns with book bloggers who cover children's titles. We also support authors doing school visits and local reading events, since these often lead to strong word of mouth in London communities.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Kindle Book Promotion Services in London</h3>
-        <p>Self-published authors on Kindle face a crowded market. We help you improve your book's visibility through better keywords, category selection, cover feedback, and timed promotional pushes. We also help plan review requests and email campaigns that bring genuine readers to your Kindle page, rather than empty clicks that do not lead to sales.</p>
+        <div class="fc-body">
+          <p>Self-published authors on Kindle face a crowded market. We help you improve your book's visibility through better keywords, category selection, cover feedback, and timed promotional pushes. We also help plan review requests and email campaigns that bring genuine readers to your Kindle page, rather than empty clicks that do not lead to sales.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg></div>
         <h3>Amazon Children's Book Promotion Services in London</h3>
-        <p>Amazon is often the biggest sales channel for children's authors, so getting your listing right matters. We look at your book description, keywords, categories, and pricing, then build a short campaign to push traffic towards your Amazon page at the right moment, such as a launch week or a seasonal push around half term or Christmas.</p>
+        <div class="fc-body">
+          <p>Amazon is often the biggest sales channel for children's authors, so getting your listing right matters. We look at your book description, keywords, categories, and pricing, then build a short campaign to push traffic towards your Amazon page at the right moment, such as a launch week or a seasonal push around half term or Christmas.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></div>
         <h3>Book Launch and Ongoing Campaigns</h3>
-        <p>Not every book needs the same length of campaign. Some authors want a focused push around launch week. Others want steady, ongoing support over several months. We build both short bursts and longer campaigns, depending on what suits your book and your budget.</p>
+        <div class="fc-body">
+          <p>Not every book needs the same length of campaign. Some authors want a focused push around launch week. Others want steady, ongoing support over several months. We build both short bursts and longer campaigns, depending on what suits your book and your budget.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Online Book Promotion Services in London</h3>
-        <p>Much of book marketing now happens online, but that does not mean it should be impersonal. We run social media promotion, blogger outreach, newsletter placements, and online advertising, always tailored to your genre and audience rather than a generic template.</p>
+        <div class="fc-body">
+          <p>Much of book marketing now happens online, but that does not mean it should be impersonal. We run social media promotion, blogger outreach, newsletter placements, and online advertising, always tailored to your genre and audience rather than a generic template.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -148,22 +158,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-3.6-8-6.4-8-10a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 3.6-3.5 6.4-8 10Z"></path></svg></div>
         <h3>Ages 0 to 5: Picture Books and Early Childhood Readers</h3>
-        <p>For younger children, parents, grandparents, nurseries, and early learning communities often play the biggest role in discovering new books. Our marketing focuses on reaching these audiences through targeted promotions, parenting communities, book reviews, and opportunities that help your story gain visibility among families.</p>
+        <div class="fc-body">
+          <p>For younger children, parents, grandparents, nurseries, and early learning communities often play the biggest role in discovering new books. Our marketing focuses on reaching these audiences through targeted promotions, parenting communities, book reviews, and opportunities that help your story gain visibility among families.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h13"></path></svg></div>
         <h3>Ages 5 to 8: Early Readers and Growing Independent Readers</h3>
-        <p>At this stage, children begin developing their own reading preferences, while parents and teachers still influence purchasing decisions. We help position your book through reader-focused campaigns, school outreach, educational connections, and promotional activities designed to encourage early reading habits.</p>
+        <div class="fc-body">
+          <p>At this stage, children begin developing their own reading preferences, while parents and teachers still influence purchasing decisions. We help position your book through reader-focused campaigns, school outreach, educational connections, and promotional activities designed to encourage early reading habits.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"></path></svg></div>
         <h3>Ages 8 to 12: Chapter Books and Middle Grade Audiences</h3>
-        <p>Middle-grade readers often look for stronger characters, exciting stories, and themes they can relate to. Marketing strategies for this age group focus on reaching young readers through book communities, schools, libraries, online platforms, and campaigns that highlight the story&rsquo;s unique appeal.</p>
+        <div class="fc-body">
+          <p>Middle-grade readers often look for stronger characters, exciting stories, and themes they can relate to. Marketing strategies for this age group focus on reaching young readers through book communities, schools, libraries, online platforms, and campaigns that highlight the story&rsquo;s unique appeal.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.2"></circle></svg></div>
         <h3>Genre-Focused Marketing For Children&rsquo;s Books</h3>
-        <p>Every children&rsquo;s book has its own audience, whether it is a rhyming picture book, educational story, activity book, fantasy adventure, or a bilingual title. We create marketing campaigns based on your book&rsquo;s format, themes, and ideal readers rather than using the same promotional approach for every children&rsquo;s author.</p>
+        <div class="fc-body">
+          <p>Every children&rsquo;s book has its own audience, whether it is a rhyming picture book, educational story, activity book, fantasy adventure, or a bilingual title. We create marketing campaigns based on your book&rsquo;s format, themes, and ideal readers rather than using the same promotional approach for every children&rsquo;s author.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -181,17 +199,23 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2l14 5V6L3 11Zm14-1.5A3.5 3.5 0 0 1 17 16M7 13.5V18a1.5 1.5 0 0 0 3 0v-3.4"></path></svg></div>
         <h3>Press and Media Outreach</h3>
-        <p>We can reach out to local London press, book blogs and podcasts on your behalf, putting together a short press release and pitching your story where it fits. Coverage is never guaranteed, but a well-written pitch to the right outlet gives your book a fair chance.</p>
+        <div class="fc-body">
+          <p>We can reach out to local London press, book blogs and podcasts on your behalf, putting together a short press release and pitching your story where it fits. Coverage is never guaranteed, but a well-written pitch to the right outlet gives your book a fair chance.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg></div>
         <h3>Author Website and Social Media Support</h3>
-        <p>Many authors do not have time to manage a website or social media page on top of writing. We can help set up or tidy up your online presence, so readers who search for you find something professional and up to date.</p>
+        <div class="fc-body">
+          <p>Many authors do not have time to manage a website or social media page on top of writing. We can help set up or tidy up your online presence, so readers who search for you find something professional and up to date.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Review Campaigns</h3>
-        <p>Genuine reviews help readers trust a new book. We can help organise honest review requests through bloggers, reading groups, and advance copy schemes, always following the rules set by Amazon and other platforms.</p>
+        <div class="fc-body">
+          <p>Genuine reviews help readers trust a new book. We can help organise honest review requests through bloggers, reading groups, and advance copy schemes, always following the rules set by Amazon and other platforms.</p>
+        </div>
       </article>
     </div>
   </div>

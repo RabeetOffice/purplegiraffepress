@@ -111,37 +111,51 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Spelling and Grammar Check</h3>
-        <p>We read through your whole manuscript looking for spelling mistakes, grammar errors, and typos. This includes checking names, made-up words, and any repeated words that should only appear once.</p>
+        <div class="fc-body">
+          <p>We read through your whole manuscript looking for spelling mistakes, grammar errors, and typos. This includes checking names, made-up words, and any repeated words that should only appear once.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Punctuation and Consistency</h3>
-        <p>Children’s books often use dialogue, exclamations and rhythm in specific ways. We check that punctuation is used correctly and consistently across the whole book, including quotation marks, commas and full stops.</p>
+        <div class="fc-body">
+          <p>Children’s books often use dialogue, exclamations and rhythm in specific ways. We check that punctuation is used correctly and consistently across the whole book, including quotation marks, commas and full stops.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Layout and Formatting Check</h3>
-        <p>If your book has already been designed, we check the layout too. This means looking at page breaks, text placement, font consistency, and making sure nothing has shifted or been cut off during formatting.</p>
+        <div class="fc-body">
+          <p>If your book has already been designed, we check the layout too. This means looking at page breaks, text placement, font consistency, and making sure nothing has shifted or been cut off during formatting.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></svg></div>
         <h3>Read Aloud Test</h3>
-        <p>Because children’s books are often read aloud, we check that the text flows well when spoken. Awkward phrasing or accidental tongue twisters get flagged so you can decide if you want to adjust them.</p>
+        <div class="fc-body">
+          <p>Because children’s books are often read aloud, we check that the text flows well when spoken. Awkward phrasing or accidental tongue twisters get flagged so you can decide if you want to adjust them.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Age-Appropriate Language Check</h3>
-        <p>We look at whether the vocabulary and sentence length suit the age group you are writing for. We will not rewrite your book, but we will point out anything that seems out of place for your target readers.</p>
+        <div class="fc-body">
+          <p>We look at whether the vocabulary and sentence length suit the age group you are writing for. We will not rewrite your book, but we will point out anything that seems out of place for your target readers.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Cross Check Against Illustrations</h3>
-        <p>If your book includes illustrations, we check the text against the pictures where possible. This catches small mismatches, like a character wearing a red hat in the picture but a blue one in the text, or a scene description that no longer matches the artwork after changes were made.</p>
+        <div class="fc-body">
+          <p>If your book includes illustrations, we check the text against the pictures where possible. This catches small mismatches, like a character wearing a red hat in the picture but a blue one in the text, or a scene description that no longer matches the artwork after changes were made.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 20 10l-9.5 9.5H4v-6.5L14 4Z" transform="translate(0 0)"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Front and Back Matter Review</h3>
-        <p>It is easy to forget the pages that are not part of the main story. We also check the title page, copyright page, dedication, author bio, and any back cover text, since these often get less attention than the story itself but still need to be error-free.</p>
+        <div class="fc-body">
+          <p>It is easy to forget the pages that are not part of the main story. We also check the title page, copyright page, dedication, author bio, and any back cover text, since these often get less attention than the story itself but still need to be error-free.</p>
+        </div>
       </article>
     </div>
   </div>

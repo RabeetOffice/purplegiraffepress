@@ -115,27 +115,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Interior Children's Book Formatting Services in London</h3>
-        <p>This is where we place your text and artwork onto each page, choose fonts that suit the tone of your story, set the trim size, and make sure margins and bleeds are correct so nothing gets cut off during printing. We also check things authors often miss, such as widows and orphans, inconsistent spacing, and text that runs too close to an illustration.</p>
+        <div class="fc-body">
+          <p>This is where we place your text and artwork onto each page, choose fonts that suit the tone of your story, set the trim size, and make sure margins and bleeds are correct so nothing gets cut off during printing. We also check things authors often miss, such as widows and orphans, inconsistent spacing, and text that runs too close to an illustration.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Children's Book Formatting Layout Services in London, Done Right</h3>
-        <p>Layout is not just about making things look nice. It is about making a book that reads well out loud and holds a child's attention from one page to the next. We work through your manuscript page by page, thinking about where a page turn should land and whether the text needs to be bigger for a younger age group.</p>
+        <div class="fc-body">
+          <p>Layout is not just about making things look nice. It is about making a book that reads well out loud and holds a child's attention from one page to the next. We work through your manuscript page by page, thinking about where a page turn should land and whether the text needs to be bigger for a younger age group.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Trim Size and Print Ready Setup</h3>
-        <p>Every printer and every platform has its own technical requirements for bleed, margins, and file type. We set your book up correctly from the start, so it does not come back from the printer with pages cut in the wrong place.</p>
+        <div class="fc-body">
+          <p>Every printer and every platform has its own technical requirements for bleed, margins, and file type. We set your book up correctly from the start, so it does not come back from the printer with pages cut in the wrong place.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
         <h3>Getting Your Book Ready for Amazon and Other Publishing Platforms</h3>
-        <p>Many of the authors we work with in London are self-publishing through Amazon KDP, IngramSpark, or similar platforms. Each one has its own rules for cover wrap dimensions and interior files. We prepare your files to match the exact specifications of whichever platform you are using, so your book uploads cleanly the first time.</p>
+        <div class="fc-body">
+          <p>Many of the authors we work with in London are self-publishing through Amazon KDP, IngramSpark, or similar platforms. Each one has its own rules for cover wrap dimensions and interior files. We prepare your files to match the exact specifications of whichever platform you are using, so your book uploads cleanly the first time.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Digital and Ebook Formatting</h3>
-        <p>If you also want an ebook version, we format a separate file that reflows properly on phones, tablets, and e-readers, without losing the feel of the print edition where that matters.</p>
+        <div class="fc-body">
+          <p>If you also want an ebook version, we format a separate file that reflows properly on phones, tablets, and e-readers, without losing the feel of the print edition where that matters.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -194,22 +204,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Ages 0 to 5, Board Books and Picture Books</h3>
-        <p>At this age, the book is often read aloud by an adult, so page turns, spacing, and how the text sits next to the artwork all matter more than word count. Board books also need a sturdier file setup for their thicker pages.</p>
+        <div class="fc-body">
+          <p>At this age, the book is often read aloud by an adult, so page turns, spacing, and how the text sits next to the artwork all matter more than word count. Board books also need a sturdier file setup for their thicker pages.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Ages 5 to 8, Early Readers</h3>
-        <p>These are often the first books a child reads on their own. Font size, line spacing, and how much text sits on each page all need careful thought, since the child is decoding the words themselves.</p>
+        <div class="fc-body">
+          <p>These are often the first books a child reads on their own. Font size, line spacing, and how much text sits on each page all need careful thought, since the child is decoding the words themselves.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Ages 8 to 12, Chapter Books and Middle Grade</h3>
-        <p>At this stage, there is more text and fewer pictures, so consistent chapter openers, page numbering, and a clean running layout matter more than illustration placement.</p>
+        <div class="fc-body">
+          <p>At this stage, there is more text and fewer pictures, so consistent chapter openers, page numbering, and a clean running layout matter more than illustration placement.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Genre-Specific Layout</h3>
-        <p>Whether your book is a rhyming story, an activity book full of puzzles, or a bilingual story with two languages side by side, we adjust the layout to suit the format rather than using one generic template for every book.</p>
+        <div class="fc-body">
+          <p>Whether your book is a rhyming story, an activity book full of puzzles, or a bilingual story with two languages side by side, we adjust the layout to suit the format rather than using one generic template for every book.</p>
+        </div>
       </article>
     </div>
   </div>

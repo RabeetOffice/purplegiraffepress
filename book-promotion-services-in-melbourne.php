@@ -110,30 +110,40 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Children's Book Promotion</h3>
-        <p>Picture books and junior fiction need a different approach from adult titles. Parents, teachers, librarians, and gift buyers all look for different things. Our children's book promotion services in Melbourne cover social media content, school and library outreach, review requests, and simple campaigns that introduce your book to the people who buy books for kids.</p>
-        <p>We also think about the small details that matter for this age group, like how your book cover reads at a small size online, whether your book description speaks to parents as well as children, and which age group or reading level your book actually suits. Getting these details right makes every other part of your promotion work harder for you.</p>
+        <div class="fc-body">
+          <p>Picture books and junior fiction need a different approach from adult titles. Parents, teachers, librarians, and gift buyers all look for different things. Our children's book promotion services in Melbourne cover social media content, school and library outreach, review requests, and simple campaigns that introduce your book to the people who buy books for kids.</p>
+          <p>We also think about the small details that matter for this age group, like how your book cover reads at a small size online, whether your book description speaks to parents as well as children, and which age group or reading level your book actually suits. Getting these details right makes every other part of your promotion work harder for you.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Kindle and Amazon Promotion</h3>
-        <p>If your book is on Kindle or listed on Amazon, visibility matters more than almost anything else. Our Kindle book promotion services in Melbourne include keyword and category checks, listing improvements, review outreach, and short promotional pushes timed around your launch or a relaunch. We also offer Amazon children's book promotion services in Melbourne for authors who want their picture books or junior titles to show up higher in search results and category rankings on the platform.</p>
+        <div class="fc-body">
+          <p>If your book is on Kindle or listed on Amazon, visibility matters more than almost anything else. Our Kindle book promotion services in Melbourne include keyword and category checks, listing improvements, review outreach, and short promotional pushes timed around your launch or a relaunch. We also offer Amazon children's book promotion services in Melbourne for authors who want their picture books or junior titles to show up higher in search results and category rankings on the platform.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg></div>
         <h3>Author Website and Online Presence</h3>
-        <p>A lot of readers will look you up before they buy your book. We can help set up or tidy up an author page, social profiles, and a simple online home for your work, so your online book promotion services in Melbourne actually have somewhere solid to point people towards.</p>
+        <div class="fc-body">
+          <p>A lot of readers will look you up before they buy your book. We can help set up or tidy up an author page, social profiles, and a simple online home for your work, so your online book promotion services in Melbourne actually have somewhere solid to point people towards.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></div>
         <h3>Local and Media Outreach</h3>
-        <p>We also help with the practical side of promotion in Melbourne itself. That includes contacting local bookshops, arranging school visits or story time sessions, reaching out to local press, and finding community events where your book fits naturally.</p>
-        <p>If you are launching a picture book, a small local launch event can also make a real difference. It gives you a reason to invite your community, get some photos, and create content you can use online afterwards. We can help you plan one of these if it suits your book.</p>
+        <div class="fc-body">
+          <p>We also help with the practical side of promotion in Melbourne itself. That includes contacting local bookshops, arranging school visits or story time sessions, reaching out to local press, and finding community events where your book fits naturally.</p>
+          <p>If you are launching a picture book, a small local launch event can also make a real difference. It gives you a reason to invite your community, get some photos, and create content you can use online afterwards. We can help you plan one of these if it suits your book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Ongoing Marketing Support</h3>
-        <p>Some authors want a one-off launch push. Others want steady support over several months. We offer both, and we are upfront about what each option involves before you commit to anything.</p>
-        <p>A launch week can generate a burst of attention, but book sales are often a slower, steadier game. Many authors find that a mix of an initial push, followed by smaller ongoing activity, works better than one big campaign that fades after a fortnight.</p>
+        <div class="fc-body">
+          <p>Some authors want a one-off launch push. Others want steady support over several months. We offer both, and we are upfront about what each option involves before you commit to anything.</p>
+          <p>A launch week can generate a burst of attention, but book sales are often a slower, steadier game. Many authors find that a mix of an initial push, followed by smaller ongoing activity, works better than one big campaign that fades after a fortnight.</p>
+        </div>
       </article>
     </div>
   </div>

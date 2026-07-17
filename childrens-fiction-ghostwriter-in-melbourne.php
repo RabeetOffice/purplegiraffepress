@@ -116,32 +116,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Story Development</h3>
-        <p>We sit down with you and talk through your idea. We ask questions about your characters, your setting, and where you want the story to go. From there, we build a clear outline before any writing starts.</p>
+        <div class="fc-body">
+          <p>We sit down with you and talk through your idea. We ask questions about your characters, your setting, and where you want the story to go. From there, we build a clear outline before any writing starts.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Full Manuscript Writing</h3>
-        <p>Once the outline is approved, we write the full manuscript. This includes dialogue, pacing, description, and structure. We match your voice and tone as closely as we can, so the finished book still feels like it came from you.</p>
+        <div class="fc-body">
+          <p>Once the outline is approved, we write the full manuscript. This includes dialogue, pacing, description, and structure. We match your voice and tone as closely as we can, so the finished book still feels like it came from you.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Genre Specific Writing</h3>
-        <p>Different genres need different skills. A slow, emotional family saga reads nothing like a fast-paced thriller. Our writers work across many genres, and we also offer action fiction ghostwriters in Melbourne for clients who want fast-paced plots, strong stakes, and tight pacing throughout.</p>
+        <div class="fc-body">
+          <p>Different genres need different skills. A slow, emotional family saga reads nothing like a fast-paced thriller. Our writers work across many genres, and we also offer action fiction ghostwriters in Melbourne for clients who want fast-paced plots, strong stakes, and tight pacing throughout.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Editing and Polishing</h3>
-        <p>After the first draft, we go back through the manuscript to tighten the writing, fix pacing issues, and check for consistency. This step makes sure the book reads smoothly from start to finish.</p>
+        <div class="fc-body">
+          <p>After the first draft, we go back through the manuscript to tighten the writing, fix pacing issues, and check for consistency. This step makes sure the book reads smoothly from start to finish.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Series and Sequel Planning</h3>
-        <p>If you are planning more than one book, we can help map out a series so each book connects properly and no plot threads get lost along the way.</p>
+        <div class="fc-body">
+          <p>If you are planning more than one book, we can help map out a series so each book connects properly and no plot threads get lost along the way.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Cover Concept and Blurb Support</h3>
-        <p>Once your manuscript is done, you still need a way to describe it to readers. We can help draft a back cover blurb and talk through cover concepts, so your finished book is ready to publish, not just ready to read.</p>
+        <div class="fc-body">
+          <p>Once your manuscript is done, you still need a way to describe it to readers. We can help draft a back cover blurb and talk through cover concepts, so your finished book is ready to publish, not just ready to read.</p>
+        </div>
       </article>
     </div>
   </div>

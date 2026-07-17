@@ -5,8 +5,8 @@
 $GLOBALS['asset_base'] = '../';
 require_once __DIR__ . '/../includes/config.php';
 
-$page_title       = "Children's Book Services by Location | Purple Giraffe Press";
-$page_description = "Purple Giraffe Press works with children's authors right across Australia. Find your city to see the editing, design and publishing services we offer near you.";
+$page_title       = "Children's Book Services by Location | Purple Giraffe";
+$page_description = "Explore Purple Giraffe Press's children's book services across every location. Editing, illustration, publishing and more, wherever you're based.";
 $canonical_path   = 'locations/';
 $breadcrumb_name  = 'Locations';
 $breadcrumbs = [
@@ -32,6 +32,13 @@ $locations = [
         'href'   => 'locations/london.php',
         'image'  => 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=72',
         'short'  => "Children's book editing, design and publishing support for authors across London and the UK.",
+    ],
+    [
+        'name'   => 'Dublin',
+        'region' => 'Ireland',
+        'href'   => 'locations/dublin.php',
+        'image'  => 'https://images.unsplash.com/photo-1549918864-48ac978761a4?auto=format&fit=crop&w=900&q=72',
+        'short'  => "Children's book editing, design and publishing support for authors across Dublin and Ireland.",
     ],
 ];
 ?>

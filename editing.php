@@ -98,32 +98,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Manuscript Assessment</h3>
-        <p>Before any line by line work starts, we read your full manuscript and give you an honest, clear report. We look at the story structure, the pacing, the age fit, and whether the plot holds together. You get practical notes you can actually use, not vague praise.</p>
+        <div class="fc-body">
+          <p>Before any line by line work starts, we read your full manuscript and give you an honest, clear report. We look at the story structure, the pacing, the age fit, and whether the plot holds together. You get practical notes you can actually use, not vague praise.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-2 5-4 1 2-5 4-1Z"></path></svg></div>
         <h3>Developmental Editing</h3>
-        <p>This is big picture editing. We look at character, plot, structure, and voice. If your story sags in the middle, or the ending feels rushed, or a character disappears halfway through, we will flag it and suggest ways to fix it. For picture books, this includes checking the balance between text and the space left for illustrations.</p>
+        <div class="fc-body">
+          <p>This is big picture editing. We look at character, plot, structure, and voice. If your story sags in the middle, or the ending feels rushed, or a character disappears halfway through, we will flag it and suggest ways to fix it. For picture books, this includes checking the balance between text and the space left for illustrations.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Line Editing</h3>
-        <p>Here we work sentence by sentence. We check word choice, sentence rhythm, and flow. Children’s books are often read aloud, so we pay close attention to how the text sounds, not just how it reads on the page.</p>
+        <div class="fc-body">
+          <p>Here we work sentence by sentence. We check word choice, sentence rhythm, and flow. Children’s books are often read aloud, so we pay close attention to how the text sounds, not just how it reads on the page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Children’s Picture Book Editing</h3>
-        <p>Picture books are their own art form. The word count is tight, often under a thousand words, and every sentence has to leave room for the pictures to do their job. Our children’s picture book editing services focus on trimming excess words, sharpening the read aloud rhythm, and making sure the text leaves space for illustration rather than repeating what the pictures already show.</p>
+        <div class="fc-body">
+          <p>Picture books are their own art form. The word count is tight, often under a thousand words, and every sentence has to leave room for the pictures to do their job. Our children’s picture book editing services focus on trimming excess words, sharpening the read aloud rhythm, and making sure the text leaves space for illustration rather than repeating what the pictures already show.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Copy Editing</h3>
-        <p>Once the story and structure are settled, our book copy editor checks grammar, spelling, punctuation, and consistency. We also check that vocabulary and sentence length suit the intended age group, since a copy edit for a board book looks very different to one for a middle grade novel.</p>
+        <div class="fc-body">
+          <p>Once the story and structure are settled, our book copy editor checks grammar, spelling, punctuation, and consistency. We also check that vocabulary and sentence length suit the intended age group, since a copy edit for a board book looks very different to one for a middle grade novel.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Proofreading</h3>
-        <p>This is the final check before your book goes to print or is uploaded for publishing. We look for typos, layout issues, and small errors that slipped through earlier rounds.</p>
+        <div class="fc-body">
+          <p>This is the final check before your book goes to print or is uploaded for publishing. We look for typos, layout issues, and small errors that slipped through earlier rounds.</p>
+        </div>
       </article>
     </div>
   </div>

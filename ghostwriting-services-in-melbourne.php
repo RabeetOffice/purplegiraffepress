@@ -111,30 +111,40 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Story Development</h3>
-        <p>We sit down with you and talk through your idea. What is the story about? Who is it for? What do you want the reader to feel at the end? From this chat, we build a simple outline before any writing starts.</p>
-        <p>This step matters more than people expect. A rushed outline leads to a messy manuscript later on. We would rather spend an extra day getting the outline right than have to rewrite three chapters after the fact. If you already have characters, names, or a setting in mind, we build around those instead of replacing them with something generic.</p>
+        <div class="fc-body">
+          <p>We sit down with you and talk through your idea. What is the story about? Who is it for? What do you want the reader to feel at the end? From this chat, we build a simple outline before any writing starts.</p>
+          <p>This step matters more than people expect. A rushed outline leads to a messy manuscript later on. We would rather spend an extra day getting the outline right than have to rewrite three chapters after the fact. If you already have characters, names, or a setting in mind, we build around those instead of replacing them with something generic.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Full Manuscript Writing</h3>
-        <p>This is the main part of our children's book ghostwriting services in Melbourne. Our writer takes your outline and turns it into a full manuscript, chapter by chapter or page by page, for picture books. You get drafts to read along the way, not just a finished file at the end.</p>
-        <p>For picture books, we write with the page turns in mind, since the rhythm of a story changes when a reader has to physically flip a page every ten or fifteen words. For chapter books, we focus on keeping each chapter tight enough to hold a young reader’s attention without losing the thread of the story.</p>
+        <div class="fc-body">
+          <p>This is the main part of our children's book ghostwriting services in Melbourne. Our writer takes your outline and turns it into a full manuscript, chapter by chapter or page by page, for picture books. You get drafts to read along the way, not just a finished file at the end.</p>
+          <p>For picture books, we write with the page turns in mind, since the rhythm of a story changes when a reader has to physically flip a page every ten or fifteen words. For chapter books, we focus on keeping each chapter tight enough to hold a young reader’s attention without losing the thread of the story.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Ghostwriters for Melbourne Families and First-Time Authors</h3>
-        <p>Some clients just want their memory or family story turned into a picture book for their kids or grandkids. Our ghostwriters in Melbourne handle these personal projects with the same care as any other book.</p>
+        <div class="fc-body">
+          <p>Some clients just want their memory or family story turned into a picture book for their kids or grandkids. Our ghostwriters in Melbourne handle these personal projects with the same care as any other book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Fiction Ghostwriting For Older Readers</h3>
-        <p>If your project is a novel, a chapter book, or a young adult story, our writers can help there too. We offer affordable fiction ghostwriting services in Melbourne for adults working on their first book or their fifth.</p>
+        <div class="fc-body">
+          <p>If your project is a novel, a chapter book, or a young adult story, our writers can help there too. We offer affordable fiction ghostwriting services in Melbourne for adults working on their first book or their fifth.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Ebook Writing</h3>
-        <p>Not every book needs to go to print straight away. If you want a digital release first, we can format your manuscript to suit ebook platforms. Many clients come to us looking for the best ebook ghostwriting services in Melbourne because they want a fast, simple way to publish and test the market before printing.</p>
-        <p>An ebook release is also a good option if you are still deciding whether to go with a traditional publisher, a print-on-demand service, or a small local print run. Getting the manuscript right first means you can make that decision later without any pressure.</p>
+        <div class="fc-body">
+          <p>Not every book needs to go to print straight away. If you want a digital release first, we can format your manuscript to suit ebook platforms. Many clients come to us looking for the best ebook ghostwriting services in Melbourne because they want a fast, simple way to publish and test the market before printing.</p>
+          <p>An ebook release is also a good option if you are still deciding whether to go with a traditional publisher, a print-on-demand service, or a small local print run. Getting the manuscript right first means you can make that decision later without any pressure.</p>
+        </div>
       </article>
     </div>
   </div>

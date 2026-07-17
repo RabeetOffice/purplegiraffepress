@@ -149,17 +149,23 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Picture Books and Early Readers</h3>
-        <p>Picture books look simple. They are not. Every word has to earn its place, because there are so few of them. We write text that matches your illustrations, or works well with an illustrator later, keeps a consistent read-aloud rhythm, and holds a young child's attention from cover to cover.</p>
+        <div class="fc-body">
+          <p>Picture books look simple. They are not. Every word has to earn its place, because there are so few of them. We write text that matches your illustrations, or works well with an illustrator later, keeps a consistent read-aloud rhythm, and holds a young child's attention from cover to cover.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Chapter Books and Middle Grade Fiction</h3>
-        <p>For readers aged seven to twelve, the story needs more. It needs a proper plot, characters kids care about, and pacing that keeps them reading past bedtime. We write full chapter books and middle-grade fiction from your outline, or help build the outline first if you only have a rough idea.</p>
+        <div class="fc-body">
+          <p>For readers aged seven to twelve, the story needs more. It needs a proper plot, characters kids care about, and pacing that keeps them reading past bedtime. We write full chapter books and middle-grade fiction from your outline, or help build the outline first if you only have a rough idea.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Ebooks for Young Readers</h3>
-        <p>Not every book needs to end up in print straight away. If you're planning a digital release, we can write with that format in mind from day one. Clients looking into the best ebook ghostwriting services in London usually want the same quality as a print book, just built for an e-reader instead of a shelf. That means shorter chapters that help pacing, chapter titles that work well in a table of contents, and text that reads cleanly on a small screen. If you're planning to publish through Kindle or another self-publishing platform, we can also flag anything in the manuscript that tends to cause formatting problems later.</p>
+        <div class="fc-body">
+          <p>Not every book needs to end up in print straight away. If you're planning a digital release, we can write with that format in mind from day one. Clients looking into the best ebook ghostwriting services in London usually want the same quality as a print book, just built for an e-reader instead of a shelf. That means shorter chapters that help pacing, chapter titles that work well in a table of contents, and text that reads cleanly on a small screen. If you're planning to publish through Kindle or another self-publishing platform, we can also flag anything in the manuscript that tends to cause formatting problems later.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -198,22 +204,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Ages 0 to 5: Picture Books and Early Childhood Stories</h3>
-        <p>For younger readers, every word matters. Picture books rely on simple language, strong emotions, memorable characters, and a rhythm that works when read aloud by parents or carers. We help transform your ideas into engaging stories that capture a child’s imagination while keeping the language suitable for early development.</p>
+        <div class="fc-body">
+          <p>For younger readers, every word matters. Picture books rely on simple language, strong emotions, memorable characters, and a rhythm that works when read aloud by parents or carers. We help transform your ideas into engaging stories that capture a child’s imagination while keeping the language suitable for early development.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Ages 5 to 8: Early Readers and First Chapter Books</h3>
-        <p>At this stage, children begin building confidence as independent readers. Our ghostwriters focus on clear sentence structures, relatable characters, exciting story progression, and age-appropriate vocabulary that encourages children to continue reading while keeping parents and educators engaged.</p>
+        <div class="fc-body">
+          <p>At this stage, children begin building confidence as independent readers. Our ghostwriters focus on clear sentence structures, relatable characters, exciting story progression, and age-appropriate vocabulary that encourages children to continue reading while keeping parents and educators engaged.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Ages 8 to 12: Chapter Books and Middle Grade Fiction</h3>
-        <p>Middle-grade readers expect deeper stories, stronger character journeys, and more developed plots. We help create manuscripts with engaging chapters, meaningful themes, humour, adventure, and storytelling that connect with children who are becoming more independent readers.</p>
+        <div class="fc-body">
+          <p>Middle-grade readers expect deeper stories, stronger character journeys, and more developed plots. We help create manuscripts with engaging chapters, meaningful themes, humour, adventure, and storytelling that connect with children who are becoming more independent readers.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Genre and Audience-Focused Story Development</h3>
-        <p>Every children’s book has its own purpose, whether it is a funny picture book, educational story, fantasy adventure, family tale, or a book with an important message. We adapt our ghostwriting approach around your genre, themes, and target age group to create a manuscript that feels authentic and connects with the right young audience.</p>
+        <div class="fc-body">
+          <p>Every children’s book has its own purpose, whether it is a funny picture book, educational story, fantasy adventure, family tale, or a book with an important message. We adapt our ghostwriting approach around your genre, themes, and target age group to create a manuscript that feels authentic and connects with the right young audience.</p>
+        </div>
       </article>
     </div>
   </div>

@@ -109,27 +109,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Character Design</h3>
-        <p>Before a single scene is drawn, we sit down and work out who your characters actually are. What do they look like? How do they move? What makes them feel real to a five-year-old reader? We sketch a few options, get your feedback, and lock in a final look before moving further.</p>
+        <div class="fc-body">
+          <p>Before a single scene is drawn, we sit down and work out who your characters actually are. What do they look like? How do they move? What makes them feel real to a five-year-old reader? We sketch a few options, get your feedback, and lock in a final look before moving further.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Full Page Illustrations</h3>
-        <p>This is the heart of the job. Each page of your story gets its own custom illustration, matched to the mood, pacing, and age group of your book. We think about where the eye should land first, how the colours support the story, and how each page flows into the next.</p>
+        <div class="fc-body">
+          <p>This is the heart of the job. Each page of your story gets its own custom illustration, matched to the mood, pacing, and age group of your book. We think about where the eye should land first, how the colours support the story, and how each page flows into the next.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Spot Illustrations</h3>
-        <p>Not every page needs a full scene. Sometimes a small illustration in the corner, or a simple image next to a paragraph, is exactly what a page needs. We offer this as a lighter option for books that mix text-heavy pages with visual ones.</p>
+        <div class="fc-body">
+          <p>Not every page needs a full scene. Sometimes a small illustration in the corner, or a simple image next to a paragraph, is exactly what a page needs. We offer this as a lighter option for books that mix text-heavy pages with visual ones.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Cover Art</h3>
-        <p>Your cover is the first thing anyone sees. We treat it as its own project, separate from the inside pages, so it grabs attention on a shelf or a screen and gives a true sense of what is inside.</p>
+        <div class="fc-body">
+          <p>Your cover is the first thing anyone sees. We treat it as its own project, separate from the inside pages, so it grabs attention on a shelf or a screen and gives a true sense of what is inside.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Style Matching and Development</h3>
-        <p>If you already have a style in mind, tell us, and we will work towards it. If you are not sure yet, we can show you a few different approaches, from soft watercolour looks to bold, flat colour styles, so you can pick what suits your story best.</p>
+        <div class="fc-body">
+          <p>If you already have a style in mind, tell us, and we will work towards it. If you are not sure yet, we can show you a few different approaches, from soft watercolour looks to bold, flat colour styles, so you can pick what suits your story best.</p>
+        </div>
       </article>
     </div>
   </div>

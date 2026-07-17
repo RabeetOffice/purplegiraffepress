@@ -95,32 +95,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>A Homepage That Introduces You Properly</h3>
-        <p>Your homepage is often the first thing anyone sees. We design it to show your latest book clearly, introduce you as the author, and guide visitors toward what they actually want, whether that is buying a book, booking an event, or reading your latest news.</p>
+        <div class="fc-body">
+          <p>Your homepage is often the first thing anyone sees. We design it to show your latest book clearly, introduce you as the author, and guide visitors toward what they actually want, whether that is buying a book, booking an event, or reading your latest news.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Children’s Book Website Design Australia Readers Remember</h3>
-        <p>Every book deserves its own page, not just a single line buried in a list. We build individual book pages with your cover art, a short blurb, age range, and clear links to where the book can be bought. This kind of book page should feel simple to use, not cluttered with too much going on at once, so young readers and busy parents can find what they need straight away.</p>
+        <div class="fc-body">
+          <p>Every book deserves its own page, not just a single line buried in a list. We build individual book pages with your cover art, a short blurb, age range, and clear links to where the book can be bought. This kind of book page should feel simple to use, not cluttered with too much going on at once, so young readers and busy parents can find what they need straight away.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
         <h3>A Landing Page Built Around One Book</h3>
-        <p>Sometimes you just need a single, focused page for a new release or a launch event. A children’s book landing page design like this works well for pre-orders, competitions, or directing people from social media straight to one clear call to action, without distracting them with the rest of your site.</p>
+        <div class="fc-body">
+          <p>Sometimes you just need a single, focused page for a new release or a launch event. A children’s book landing page design like this works well for pre-orders, competitions, or directing people from social media straight to one clear call to action, without distracting them with the rest of your site.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg></div>
         <h3>Illustrator Pages That Actually Show Off the Art</h3>
-        <p>If you illustrate as well as write, or you are an illustrator looking for your own site, we know your artwork needs to be the star. Good children’s book illustrator website design means large, clear images, fast-loading pages, and galleries that let the pictures speak for themselves.</p>
+        <div class="fc-body">
+          <p>If you illustrate as well as write, or you are an illustrator looking for your own site, we know your artwork needs to be the star. Good children’s book illustrator website design means large, clear images, fast-loading pages, and galleries that let the pictures speak for themselves.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-3 3 3 3M16 9l3 3-3 3"></path></svg></div>
         <h3>Built by Real Developers Who Understand Books</h3>
-        <p>We are author website developers in Australia; writers can talk to us directly, not a call centre reading from a script. You deal with people who understand publishing, school visits, and how children’s books actually get sold, alongside the technical side of building your site.</p>
+        <div class="fc-body">
+          <p>We are author website developers in Australia; writers can talk to us directly, not a call centre reading from a script. You deal with people who understand publishing, school visits, and how children’s books actually get sold, alongside the technical side of building your site.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path><path d="M3 21v-5h5"></path></svg></div>
         <h3>Ongoing Updates as Your Career Grows</h3>
-        <p>A website is never really finished. New books come out, events get booked, and reviews come in. Our book author website development Australia service includes support after launch, so your site keeps growing alongside your writing career instead of sitting untouched for years.</p>
+        <div class="fc-body">
+          <p>A website is never really finished. New books come out, events get booked, and reviews come in. Our book author website development Australia service includes support after launch, so your site keeps growing alongside your writing career instead of sitting untouched for years.</p>
+        </div>
       </article>
     </div>
   </div>

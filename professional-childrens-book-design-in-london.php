@@ -113,35 +113,47 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Illustration That Matches Your Story's Tone</h3>
-        <p>Good pictures do more than decorate a page. They carry half the story. Our children's book illustrator in London starts with a conversation about your characters, your setting, and the mood you want, whether that is silly and bright or calm and gentle. From there, we sketch, get your feedback, and only move to finished artwork once you are happy with the direction.</p>
-        <p>We can illustrate from scratch, work from your rough sketches, or build on a style you already like (without copying anyone else's work directly).</p>
+        <div class="fc-body">
+          <p>Good pictures do more than decorate a page. They carry half the story. Our children's book illustrator in London starts with a conversation about your characters, your setting, and the mood you want, whether that is silly and bright or calm and gentle. From there, we sketch, get your feedback, and only move to finished artwork once you are happy with the direction.</p>
+          <p>We can illustrate from scratch, work from your rough sketches, or build on a style you already like (without copying anyone else's work directly).</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v18"></path></svg></div>
         <h3>Cover Design That Stops the Scroll</h3>
-        <p>Most books, especially on Amazon, are judged by their cover in under two seconds. As a children's book cover designer in London, we focus on covers that work small (as a thumbnail) just as well as they work large (as a printed book on a shelf). That means bold shapes, clear titles and colours that pop even on a phone screen.</p>
-        <p>We usually offer a few cover concepts before settling on one, so you are not stuck with the first idea. We also think about the back cover and spine, since these matter more than people expect once a book is printed and sitting on a shelf next to others.</p>
+        <div class="fc-body">
+          <p>Most books, especially on Amazon, are judged by their cover in under two seconds. As a children's book cover designer in London, we focus on covers that work small (as a thumbnail) just as well as they work large (as a printed book on a shelf). That means bold shapes, clear titles and colours that pop even on a phone screen.</p>
+          <p>We usually offer a few cover concepts before settling on one, so you are not stuck with the first idea. We also think about the back cover and spine, since these matter more than people expect once a book is printed and sitting on a shelf next to others.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Page Layout That Reads Well Out Loud</h3>
-        <p>A lot of children's books are read aloud, which changes what a good layout looks like. Text needs to sit where a parent's eye finds it easily. Pictures need to support the words, not fight with them. As a children's book layout designer in London, I think about page turns, pacing, and where the eye lands first on every spread.</p>
-        <p>We also make sure your layout works for both print and digital formats, so you are not paying twice to fix problems later. This includes checking how the book looks on a tablet or e-reader, not just on a printed page, since more families read together on screens now than in the past.</p>
+        <div class="fc-body">
+          <p>A lot of children's books are read aloud, which changes what a good layout looks like. Text needs to sit where a parent's eye finds it easily. Pictures need to support the words, not fight with them. As a children's book layout designer in London, I think about page turns, pacing, and where the eye lands first on every spread.</p>
+          <p>We also make sure your layout works for both print and digital formats, so you are not paying twice to fix problems later. This includes checking how the book looks on a tablet or e-reader, not just on a printed page, since more families read together on screens now than in the past.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Colouring Books for Kids</h3>
-        <p>Colouring books look simple, but they are their own skill. Lines need to be clean and clear enough for small hands, but the pictures still need to be fun to look at. Our work as a colouring book designer for kids in London covers everything from single character sheets to full themed colouring books with dozens of pages.</p>
+        <div class="fc-body">
+          <p>Colouring books look simple, but they are their own skill. Lines need to be clean and clear enough for small hands, but the pictures still need to be fun to look at. Our work as a colouring book designer for kids in London covers everything from single character sheets to full themed colouring books with dozens of pages.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H2Z"></path><path d="M22 4h-7a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h7Z"></path></svg></div>
         <h3>Full Book Illustration Services</h3>
-        <p>If you need more than one piece here and there, we offer complete book illustration services in London that cover a whole manuscript from cover to back page, including any spot illustrations, chapter headers, or maps your story might need.</p>
+        <div class="fc-body">
+          <p>If you need more than one piece here and there, we offer complete book illustration services in London that cover a whole manuscript from cover to back page, including any spot illustrations, chapter headers, or maps your story might need.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
         <h3>Getting Your Book Ready for Amazon KDP</h3>
-        <p>Self-publishing on Amazon comes with its own rules around file types, bleed, margins, and cover templates. As a children's book designer for Amazon KDP in London, we prepare your files to meet these requirements so your book uploads cleanly the first time, without formatting errors bouncing back at you.</p>
+        <div class="fc-body">
+          <p>Self-publishing on Amazon comes with its own rules around file types, bleed, margins, and cover templates. As a children's book designer for Amazon KDP in London, we prepare your files to meet these requirements so your book uploads cleanly the first time, without formatting errors bouncing back at you.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -181,22 +193,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6 .9-4.3 4.2 1 6L12 16.8l-5.4 2.8 1-6L3.3 9.4l6-.9Z"></path></svg></div>
         <h3>Ages 0 to 5: Board Books and Picture Books</h3>
-        <p>For younger children, design plays a major role in capturing attention and supporting read-aloud experiences. We focus on bold illustrations, clear page layouts, engaging colours, and balanced text placement that allows children and parents to enjoy every spread together.</p>
+        <div class="fc-body">
+          <p>For younger children, design plays a major role in capturing attention and supporting read-aloud experiences. We focus on bold illustrations, clear page layouts, engaging colours, and balanced text placement that allows children and parents to enjoy every spread together.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H2Z"></path><path d="M22 4h-7a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h7Z"></path><path d="M12 7v13"></path></svg></div>
         <h3>Ages 5 to 8: Early Readers and Beginning Chapter Books</h3>
-        <p>Early readers need designs that encourage confidence and make reading feel enjoyable. We create layouts with readable typography, balanced text placement, supportive illustrations, and a structure that helps children follow the story as they develop independent reading skills.</p>
+        <div class="fc-body">
+          <p>Early readers need designs that encourage confidence and make reading feel enjoyable. We create layouts with readable typography, balanced text placement, supportive illustrations, and a structure that helps children follow the story as they develop independent reading skills.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4Z"></path></svg></div>
         <h3>Ages 8 to 12: Chapter Books and Middle Grade Design</h3>
-        <p>Middle-grade readers expect more detailed storytelling with fewer illustrations, meaning the design needs to support longer reading sessions. We focus on clean layouts, consistent chapter styling, engaging cover designs, and visual elements that match the themes and tone of the story.</p>
+        <div class="fc-body">
+          <p>Middle-grade readers expect more detailed storytelling with fewer illustrations, meaning the design needs to support longer reading sessions. We focus on clean layouts, consistent chapter styling, engaging cover designs, and visual elements that match the themes and tone of the story.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2M15 10V8M11.5 6h2M17.5 6h2"></path><path d="M4 20 13 11l1.8 1.8-9 9L4 20Z"></path><path d="m13 11 1.8 1.8"></path></svg></div>
         <h3>Genre-Specific Children&rsquo;s Book Design</h3>
-        <p>Every children&rsquo;s book has its own personality, whether it is a playful picture book, educational resource, fantasy adventure, activity book, or colouring book. We adapt the design approach around your book&rsquo;s genre, target audience, and creative direction to create a finished product that feels unique and professionally crafted.</p>
+        <div class="fc-body">
+          <p>Every children&rsquo;s book has its own personality, whether it is a playful picture book, educational resource, fantasy adventure, activity book, or colouring book. We adapt the design approach around your book&rsquo;s genre, target audience, and creative direction to create a finished product that feels unique and professionally crafted.</p>
+        </div>
       </article>
     </div>
   </div>

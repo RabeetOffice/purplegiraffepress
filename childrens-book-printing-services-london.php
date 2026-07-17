@@ -111,30 +111,40 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg></div>
         <h3>Hardback Book Printing for Authors and Publishers</h3>
-        <p>A hardback book in London costs more to produce than a paperback, but it earns its keep. It survives being read again and again. It looks right on a shelf. It feels like a proper book, not a pamphlet.</p>
-        <p>Our hardbound book printing in London service covers case-bound books with printed or laminated boards, a choice of paper stocks inside, and optional dust jackets. We work with picture books, memoirs, cookbooks, photo books and anything else that deserves a sturdy cover. If you are self-publishing and want your book to compete with what you see in a bookshop, hardback is usually the way to go.</p>
+        <div class="fc-body">
+          <p>A hardback book in London costs more to produce than a paperback, but it earns its keep. It survives being read again and again. It looks right on a shelf. It feels like a proper book, not a pamphlet.</p>
+          <p>Our hardbound book printing in London service covers case-bound books with printed or laminated boards, a choice of paper stocks inside, and optional dust jackets. We work with picture books, memoirs, cookbooks, photo books and anything else that deserves a sturdy cover. If you are self-publishing and want your book to compete with what you see in a bookshop, hardback is usually the way to go.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Paperback Printing Done Properly</h3>
-        <p>Most authors start with a paperback, and for good reason. It is cheaper, quicker to produce, and still perfectly professional if it is done well. Our paperback book printing in London service uses perfect binding as standard, which is the same method used by most commercial paperbacks. Pages are glued to a flexible cover along a flat spine, so the book opens and sits well on a shelf.</p>
-        <p>We also offer saddle stitching for shorter paperback printing in London jobs, such as short story collections or slim poetry books, where a stapled spine makes more sense than glue.</p>
+        <div class="fc-body">
+          <p>Most authors start with a paperback, and for good reason. It is cheaper, quicker to produce, and still perfectly professional if it is done well. Our paperback book printing in London service uses perfect binding as standard, which is the same method used by most commercial paperbacks. Pages are glued to a flexible cover along a flat spine, so the book opens and sits well on a shelf.</p>
+          <p>We also offer saddle stitching for shorter paperback printing in London jobs, such as short story collections or slim poetry books, where a stapled spine makes more sense than glue.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Booklets and Softcover Print Runs</h3>
-        <p>Not everything is a full-length book. We also handle booklet hardcovers in London jobs for schools, event organisers, and small businesses who need something between a leaflet and a full book. Think of school yearbooks, event programmes, training manuals or product catalogues. These usually use a lighter-weight cover and simpler binding, which keeps the cost down for a shorter print run.</p>
+        <div class="fc-body">
+          <p>Not everything is a full-length book. We also handle booklet hardcovers in London jobs for schools, event organisers, and small businesses who need something between a leaflet and a full book. Think of school yearbooks, event programmes, training manuals or product catalogues. These usually use a lighter-weight cover and simpler binding, which keeps the cost down for a shorter print run.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"></path><circle cx="12" cy="12" r="4"></circle></svg></div>
         <h3>Cover Finishes and Materials</h3>
-        <p>The cover is the first thing anyone touches, so it is worth getting right. We offer a book cover hardcover in London finish in matt or gloss laminate, spot UV highlights on titles or artwork, foil blocking for a premium look, and embossing on request. If you are after a genuinely hard-cover book in London that will last years of use in a library or classroom, we can talk you through board weights and lamination options that suit your budget. Some clients prefer the older term hardback book in London, and that is exactly the same product, just a different way of saying it.</p>
+        <div class="fc-body">
+          <p>The cover is the first thing anyone touches, so it is worth getting right. We offer a book cover hardcover in London finish in matt or gloss laminate, spot UV highlights on titles or artwork, foil blocking for a premium look, and embossing on request. If you are after a genuinely hard-cover book in London that will last years of use in a library or classroom, we can talk you through board weights and lamination options that suit your budget. Some clients prefer the older term hardback book in London, and that is exactly the same product, just a different way of saying it.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 3 21M21 3h-6M21 3v6M8 8l8 8"></path><rect x="2" y="14" width="8" height="8" rx="1"></rect></svg></div>
         <h3>Paper Stock and Book Sizes</h3>
-        <p>The paper you choose changes how a book feels as much as how it looks. Heavier, uncoated paper suits novels and memoirs, since it feels substantial without adding too much bulk. Coated paper, either matt or gloss, suits picture books, cookbooks, and anything with photographs or illustrations, since it brings out colour and detail properly.</p>
-        <p>Standard trim sizes cover most projects, but we can also work to a custom size if your design needs it. If you are not sure what size suits your book, tell us who will be reading it and how it will be used, and we will suggest something sensible based on similar projects we have printed before.</p>
+        <div class="fc-body">
+          <p>The paper you choose changes how a book feels as much as how it looks. Heavier, uncoated paper suits novels and memoirs, since it feels substantial without adding too much bulk. Coated paper, either matt or gloss, suits picture books, cookbooks, and anything with photographs or illustrations, since it brings out colour and detail properly.</p>
+          <p>Standard trim sizes cover most projects, but we can also work to a custom size if your design needs it. If you are not sure what size suits your book, tell us who will be reading it and how it will be used, and we will suggest something sensible based on similar projects we have printed before.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -152,27 +162,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="8" height="8" rx="1"></rect><rect x="13" y="9" width="8" height="8" rx="1"></rect><rect x="8" y="1" width="8" height="8" rx="1"></rect></svg></div>
         <h3>Ages 0 To 3: Board Books For Early Learners</h3>
-        <p>Books for babies and toddlers need to handle repeated reading and little hands turning pages. We recommend sturdy board book formats with thicker pages, durable finishes, and bright colour printing that keeps illustrations clear and engaging.</p>
+        <div class="fc-body">
+          <p>Books for babies and toddlers need to handle repeated reading and little hands turning pages. We recommend sturdy board book formats with thicker pages, durable finishes, and bright colour printing that keeps illustrations clear and engaging.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg></div>
         <h3>Ages 3 To 7: Picture Books With High-Quality Colour Printing</h3>
-        <p>Picture books rely heavily on artwork to tell the story. We focus on premium paper stocks, accurate colour reproduction, and finishes that make illustrations stand out while creating a professional book children and parents will enjoy reading together.</p>
+        <div class="fc-body">
+          <p>Picture books rely heavily on artwork to tell the story. We focus on premium paper stocks, accurate colour reproduction, and finishes that make illustrations stand out while creating a professional book children and parents will enjoy reading together.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 9h16M4 13h10M4 17h7"></path></svg></div>
         <h3>Ages 5 To 8: Early Readers With Clear Layouts</h3>
-        <p>Early readers need a balance between text and visuals. We help authors choose practical formats with readable page layouts, comfortable paper choices, and printing styles that support children gaining confidence with independent reading.</p>
+        <div class="fc-body">
+          <p>Early readers need a balance between text and visuals. We help authors choose practical formats with readable page layouts, comfortable paper choices, and printing styles that support children gaining confidence with independent reading.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h7a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H2V6Z"></path><path d="M22 6h-7a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h8V6Z"></path></svg></div>
         <h3>Ages 8 To 12: Middle Grade Books With Professional Finishes</h3>
-        <p>Middle-grade readers often move towards longer stories and chapter books. We provide paperback and hardback printing options with durable binding, quality paper, and professional finishes suitable for books that are read repeatedly and kept on shelves.</p>
+        <div class="fc-body">
+          <p>Middle-grade readers often move towards longer stories and chapter books. We provide paperback and hardback printing options with durable binding, quality paper, and professional finishes suitable for books that are read repeatedly and kept on shelves.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.8L6.6 19.7l1-6L3.2 9.4l6.1-.9L12 3Z"></path></svg></div>
         <h3>Ages 12+: Young Adult Books With A Premium Look</h3>
-        <p>Young adult books require a more mature presentation. We help authors select formats, cover finishes, and print styles that reflect the tone of the story while creating a book that appeals to older readers.</p>
+        <div class="fc-body">
+          <p>Young adult books require a more mature presentation. We help authors select formats, cover finishes, and print styles that reflect the tone of the story while creating a book that appeals to older readers.</p>
+        </div>
       </article>
     </div>
   </div>

@@ -110,31 +110,41 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Manuscript Assessment And Editing</h3>
-        <p>Before anything else, your story needs an honest read. We look at pacing, structure, age suitability, and whether the story actually works as a book, not just as an idea. Our editors give clear feedback, not vague praise. If something is not working, we tell you why and how to fix it.</p>
-        <p>This stage often takes longer than authors expect, and that is a good thing. A picture book might only run to five hundred words, but every one of those words has to earn its place. A middle-grade story might need whole chapters reworked so the plot holds together for a nine-year-old reader. We would rather spend proper time here than rush a book into print that is not ready.</p>
-        <p>We also look closely at reading age. A story pitched at four-year-olds needs short sentences and repetition. A story for eight-to ten-year-olds can carry more plot and longer words. Getting this wrong is one of the most common reasons a manuscript struggles to find its readers, so we flag it early rather than after the book is finished.</p>
+        <div class="fc-body">
+          <p>Before anything else, your story needs an honest read. We look at pacing, structure, age suitability, and whether the story actually works as a book, not just as an idea. Our editors give clear feedback, not vague praise. If something is not working, we tell you why and how to fix it.</p>
+          <p>This stage often takes longer than authors expect, and that is a good thing. A picture book might only run to five hundred words, but every one of those words has to earn its place. A middle-grade story might need whole chapters reworked so the plot holds together for a nine-year-old reader. We would rather spend proper time here than rush a book into print that is not ready.</p>
+          <p>We also look closely at reading age. A story pitched at four-year-olds needs short sentences and repetition. A story for eight-to ten-year-olds can carry more plot and longer words. Getting this wrong is one of the most common reasons a manuscript struggles to find its readers, so we flag it early rather than after the book is finished.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Hybrid Publishing For Children's Books In London</h3>
-        <p>For authors who want more control over their book but still want proper editorial and design support, this approach is one of our main services. It sits between traditional publishing and doing everything alone. You share some of the costs and decisions, and in return, you keep more creative control and a bigger share of the outcome. It suits authors who have a strong vision for their book and want a team behind them rather than in front of them.</p>
+        <div class="fc-body">
+          <p>For authors who want more control over their book but still want proper editorial and design support, this approach is one of our main services. It sits between traditional publishing and doing everything alone. You share some of the costs and decisions, and in return, you keep more creative control and a bigger share of the outcome. It suits authors who have a strong vision for their book and want a team behind them rather than in front of them.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Picture Book Submissions</h3>
-        <p>If you write picture books, the submission stage matters a lot. Picture book submissions in London often fail simply because the format is wrong, the word count is too high, or the story does not leave room for an illustrator to add anything. We help you prepare a submission that gives your story the best chance, whether you are sending it to us or to another publisher.</p>
+        <div class="fc-body">
+          <p>If you write picture books, the submission stage matters a lot. Picture book submissions in London often fail simply because the format is wrong, the word count is too high, or the story does not leave room for an illustrator to add anything. We help you prepare a submission that gives your story the best chance, whether you are sending it to us or to another publisher.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.5-3.5L9 20"></path></svg></div>
         <h3>Illustration Coordination</h3>
-        <p>Not every author is an illustrator, and that is completely normal. We can match your story with an illustrator whose style fits the tone of your book, and we manage that relationship so the images and the text grow together instead of being bolted on at the end.</p>
-        <p>We share sample pages with you as the work develops, so you are never waiting until the very end to see how your story looks. If something about the style is not quite right, there is time to say so and adjust it, rather than discovering a problem once the whole book is drawn.</p>
+        <div class="fc-body">
+          <p>Not every author is an illustrator, and that is completely normal. We can match your story with an illustrator whose style fits the tone of your book, and we manage that relationship so the images and the text grow together instead of being bolted on at the end.</p>
+          <p>We share sample pages with you as the work develops, so you are never waiting until the very end to see how your story looks. If something about the style is not quite right, there is time to say so and adjust it, rather than discovering a problem once the whole book is drawn.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="7"></rect></svg></div>
         <h3>Design, Print, and Formats</h3>
-        <p>Once the manuscript and artwork are ready, we handle layout, typesetting, and print preparation. We also prepare digital formats where needed, so your book can reach readers on paper and on screen.</p>
-        <p>Paper choice, page size, and binding all affect how a picture book feels in a child's hands, and they affect cost too. We talk you through the realistic options rather than pushing you towards the most expensive one, and we explain the trade-offs plainly so you can make an informed choice.</p>
+        <div class="fc-body">
+          <p>Once the manuscript and artwork are ready, we handle layout, typesetting, and print preparation. We also prepare digital formats where needed, so your book can reach readers on paper and on screen.</p>
+          <p>Paper choice, page size, and binding all affect how a picture book feels in a child's hands, and they affect cost too. We talk you through the realistic options rather than pushing you towards the most expensive one, and we explain the trade-offs plainly so you can make an informed choice.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -152,27 +162,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="8" height="8" rx="1"></rect><rect x="13" y="12" width="8" height="8" rx="1"></rect><rect x="8" y="3" width="8" height="8" rx="1"></rect></svg></div>
         <h3>Ages 0 To 3: Board Books Designed For Early Learning</h3>
-        <p>Books for the youngest readers rely heavily on simple language, repetition, and strong visual storytelling. We focus on clear layouts, engaging illustrations, durable print choices, and age-appropriate design elements that make the book easy for little hands to explore and enjoy.</p>
+        <div class="fc-body">
+          <p>Books for the youngest readers rely heavily on simple language, repetition, and strong visual storytelling. We focus on clear layouts, engaging illustrations, durable print choices, and age-appropriate design elements that make the book easy for little hands to explore and enjoy.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Ages 3 To 7: Picture Book Publishing With Strong Visual Storytelling</h3>
-        <p>Picture books need the perfect balance between words and illustrations. We help shape stories with engaging pacing, memorable characters, and artwork that supports the narrative while creating an enjoyable reading experience for children and parents reading together.</p>
+        <div class="fc-body">
+          <p>Picture books need the perfect balance between words and illustrations. We help shape stories with engaging pacing, memorable characters, and artwork that supports the narrative while creating an enjoyable reading experience for children and parents reading together.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6s2-2 5-2 5 2 5 2v14s-2-2-5-2-5 2-5 2V6Z"></path><path d="M22 6s-2-2-5-2-5 2-5 2v14s2-2 5-2 5 2 5 2V6Z"></path></svg></div>
         <h3>Ages 5 To 8: Early Reader Books With Growing Independence</h3>
-        <p>Early readers need carefully structured stories that encourage confidence and enjoyment. We focus on suitable vocabulary, readable formatting, balanced text placement, and illustrations that support children as they begin reading more independently.</p>
+        <div class="fc-body">
+          <p>Early readers need carefully structured stories that encourage confidence and enjoyment. We focus on suitable vocabulary, readable formatting, balanced text placement, and illustrations that support children as they begin reading more independently.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg></div>
         <h3>Ages 8 To 12: Middle Grade Books With Deeper Story Development</h3>
-        <p>Middle grade readers enjoy longer stories, richer characters, and more complex themes. We help authors develop strong chapter structures, consistent storytelling, and professional formatting that keeps young readers engaged from the first page to the last.</p>
+        <div class="fc-body">
+          <p>Middle grade readers enjoy longer stories, richer characters, and more complex themes. We help authors develop strong chapter structures, consistent storytelling, and professional formatting that keeps young readers engaged from the first page to the last.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1"></path></svg></div>
         <h3>Ages 12+: Young Adult Stories With Mature Themes</h3>
-        <p>Young adult books require a more developed approach to storytelling, design, and publishing. We help ensure the manuscript, cover design, and overall presentation reflect the expectations of teenage readers while maintaining professional publishing standards.</p>
+        <div class="fc-body">
+          <p>Young adult books require a more developed approach to storytelling, design, and publishing. We help ensure the manuscript, cover design, and overall presentation reflect the expectations of teenage readers while maintaining professional publishing standards.</p>
+        </div>
       </article>
     </div>
   </div>

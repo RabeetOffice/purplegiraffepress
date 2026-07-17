@@ -94,32 +94,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v18"></path></svg></div>
         <h3>Cover Design</h3>
-        <p>Your cover needs to work at any size, from a full print jacket to a tiny thumbnail on a phone screen. We design covers that are bright, clear, and easy to read even when small. As a children’s book cover designer, we think about title placement, font choice, and colour balance so your book stands out on a shelf or in a search result.</p>
+        <div class="fc-body">
+          <p>Your cover needs to work at any size, from a full print jacket to a tiny thumbnail on a phone screen. We design covers that are bright, clear, and easy to read even when small. As a children’s book cover designer, we think about title placement, font choice, and colour balance so your book stands out on a shelf or in a search result.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Book Illustration Services</h3>
-        <p>Not every author can draw, and that is completely fine. This part of our work covers full-page illustrations, spot illustrations for chapter breaks, and character design. We work closely with you so the characters look the way you imagined them, not just the way we imagined them.</p>
+        <div class="fc-body">
+          <p>Not every author can draw, and that is completely fine. This part of our work covers full-page illustrations, spot illustrations for chapter breaks, and character design. We work closely with you so the characters look the way you imagined them, not just the way we imagined them.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Interior Layout and Formatting</h3>
-        <p>A good story can still feel messy if the pages are laid out badly. We work as a children’s book layout designer, setting margins, spacing, and text flow so the book reads smoothly from the first page to the last. This matters just as much for a picture book as it does for a chapter book.</p>
+        <div class="fc-body">
+          <p>A good story can still feel messy if the pages are laid out badly. We work as a children’s book layout designer, setting margins, spacing, and text flow so the book reads smoothly from the first page to the last. This matters just as much for a picture book as it does for a chapter book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Manuscript and design</h3>
-        <p>Before any design work starts, we can also check your manuscript for spelling, grammar, and flow. This is not a full rewrite. It is a careful pass to make sure your story reads clearly and is free of the small errors that pull young readers out of the story.</p>
+        <div class="fc-body">
+          <p>Before any design work starts, we can also check your manuscript for spelling, grammar, and flow. This is not a full rewrite. It is a careful pass to make sure your story reads clearly and is free of the small errors that pull young readers out of the story.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Colouring Book Design</h3>
-        <p>If you are working on an activity book, we can act as your colouring book designer for kids. This includes clean line art, age-appropriate detail levels, and page layouts that print well at home or through print-on-demand services. We can also add simple themes across a set of pages, such as animals, seasons, or everyday routines, so the finished book feels put together rather than random.</p>
+        <div class="fc-body">
+          <p>If you are working on an activity book, we can act as your colouring book designer for kids. This includes clean line art, age-appropriate detail levels, and page layouts that print well at home or through print-on-demand services. We can also add simple themes across a set of pages, such as animals, seasons, or everyday routines, so the finished book feels put together rather than random.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
         <h3>File Preparation for Print and Digital</h3>
-        <p>Once the design work is finished, files still need to be set up correctly for wherever the book is going. We prepare print-ready files with the right bleed and margins, along with digital versions sized for ebook platforms and websites. This step is easy to get wrong if you are doing it for the first time, and small errors here can cause real problems at the printing stage.</p>
+        <div class="fc-body">
+          <p>Once the design work is finished, files still need to be set up correctly for wherever the book is going. We prepare print-ready files with the right bleed and margins, along with digital versions sized for ebook platforms and websites. This step is easy to get wrong if you are doing it for the first time, and small errors here can cause real problems at the printing stage.</p>
+        </div>
       </article>
     </div>
   </div>

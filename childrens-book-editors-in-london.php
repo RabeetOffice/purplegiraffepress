@@ -110,27 +110,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Manuscript Assessment</h3>
-        <p>This is where we start if you are not sure what your book needs. We read your full manuscript and send back a written report. It covers plot, character, pacing, age suitability, and market fit. No line-by-line changes yet, just honest feedback you can act on.</p>
+        <div class="fc-body">
+          <p>This is where we start if you are not sure what your book needs. We read your full manuscript and send back a written report. It covers plot, character, pacing, age suitability, and market fit. No line-by-line changes yet, just honest feedback you can act on.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-2 5-4 1 2-5 4-1Z"></path></svg></div>
         <h3>Developmental Editing</h3>
-        <p>This is the big picture work. We look at structure, story arc, character growth, and whether the book actually delivers on its premise. For picture books, this includes checking whether the text leaves enough room for illustrations to do their job. For longer books, we look at chapter pacing and whether the middle of the book sags.</p>
+        <div class="fc-body">
+          <p>This is the big picture work. We look at structure, story arc, character growth, and whether the book actually delivers on its premise. For picture books, this includes checking whether the text leaves enough room for illustrations to do their job. For longer books, we look at chapter pacing and whether the middle of the book sags.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Line Editing</h3>
-        <p>Here we go, sentence by sentence. We look at word choice, sentence rhythm, dialogue, and how the story sounds when read aloud. This matters more in children's writing than almost any other genre, because so many of these books are read out loud to a child at bedtime.</p>
+        <div class="fc-body">
+          <p>Here we go, sentence by sentence. We look at word choice, sentence rhythm, dialogue, and how the story sounds when read aloud. This matters more in children's writing than almost any other genre, because so many of these books are read out loud to a child at bedtime.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Copy Editing</h3>
-        <p>This is a close check for grammar, spelling, punctuation, and consistency. Names, timelines, and small details all get checked here. If you only need someone to catch these kinds of errors, a children's book copy editor in London can do this stage on their own, without touching your story or your voice.</p>
+        <div class="fc-body">
+          <p>This is a close check for grammar, spelling, punctuation, and consistency. Names, timelines, and small details all get checked here. If you only need someone to catch these kinds of errors, a children's book copy editor in London can do this stage on their own, without touching your story or your voice.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Proofreading</h3>
-        <p>The final check before publication. We read the finished, formatted manuscript one last time to catch anything that slipped through earlier stages.</p>
+        <div class="fc-body">
+          <p>The final check before publication. We read the finished, formatted manuscript one last time to catch anything that slipped through earlier stages.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -193,22 +203,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Ages 0 to 5, Picture Books and Board Books</h3>
-        <p>At this age, the words are read aloud by an adult, so rhythm, repetition, and simplicity matter more than plot complexity. We check that your text works when spoken, not just when read silently on the page.</p>
+        <div class="fc-body">
+          <p>At this age, the words are read aloud by an adult, so rhythm, repetition, and simplicity matter more than plot complexity. We check that your text works when spoken, not just when read silently on the page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H2V5Z"></path><path d="M22 5h-7a3 3 0 0 0-3 3v11a3 3 0 0 1 3-3h7V5Z"></path></svg></div>
         <h3>Ages 5 to 8, Early Readers</h3>
-        <p>These books are often the first stories a child reads independently. Sentence length, vocabulary, and page layout all need careful attention here, since the child is decoding the words themselves.</p>
+        <div class="fc-body">
+          <p>These books are often the first stories a child reads independently. Sentence length, vocabulary, and page layout all need careful attention here, since the child is decoding the words themselves.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-2 5-2 5s3.5-.5 5-2"></path><path d="M12 15 9 12c.9-2.8 2.4-5.3 4.5-7.4A10 10 0 0 1 21 2c0 2.7-.9 5.4-2.6 7.5-2.1 2.1-4.6 3.6-7.4 4.5Z"></path><path d="M9 12H5l3.5-3.5M12 15v4l3.5-3.5"></path></svg></div>
         <h3>Ages 8 to 12, Middle Grade Fiction</h3>
-        <p>At this stage, plot and character depth matter much more. Readers this age want a story with real stakes, humour, and a character they care about. We look closely at pacing across chapters and whether the story earns its ending.</p>
+        <div class="fc-body">
+          <p>At this stage, plot and character depth matter much more. Readers this age want a story with real stakes, humour, and a character they care about. We look closely at pacing across chapters and whether the story earns its ending.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2m0 12v-2m-7-5H6m14 0h-2M6.3 5.3 5 4m14.7 1.3L21 4M9 15l-6 6 2 2 6-6m-2-2 2 2m-2-2 3.5-3.5a1.4 1.4 0 0 1 2 0l.01.01a1.4 1.4 0 0 1 0 2L11 15"></path></svg></div>
         <h3>Genre Specific Editing</h3>
-        <p>Whether your story is a fantasy adventure, a quiet picture book about feelings, a rhyming story, or a funny school story, we adjust our notes to fit the conventions and expectations of that genre, rather than applying one generic approach to every book.</p>
+        <div class="fc-body">
+          <p>Whether your story is a fantasy adventure, a quiet picture book about feelings, a rhyming story, or a funny school story, we adjust our notes to fit the conventions and expectations of that genre, rather than applying one generic approach to every book.</p>
+        </div>
       </article>
     </div>
   </div>

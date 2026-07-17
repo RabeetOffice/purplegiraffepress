@@ -97,27 +97,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"></path></svg></div>
         <h3>Full Picture Book Illustration</h3>
-        <p>This is the biggest part of what we do. A full picture book usually needs somewhere between 12 and 32 illustrated pages, depending on length and age group. We plan out the pages together, agree on the style, and then move page by page from rough sketch to finished art.</p>
+        <div class="fc-body">
+          <p>This is the biggest part of what we do. A full picture book usually needs somewhere between 12 and 32 illustrated pages, depending on length and age group. We plan out the pages together, agree on the style, and then move page by page from rough sketch to finished art.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Character Design and Development</h3>
-        <p>Before any full pages are drawn, we usually spend time getting the main characters right. This means drawing them from a few angles, working out how they will look happy, sad, tired, or excited, and making sure they stay consistent from the first page to the last.</p>
+        <div class="fc-body">
+          <p>Before any full pages are drawn, we usually spend time getting the main characters right. This means drawing them from a few angles, working out how they will look happy, sad, tired, or excited, and making sure they stay consistent from the first page to the last.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Cover Illustration and Design</h3>
-        <p>The cover is often the first thing anyone sees, whether that is a parent in a shop or a reader scrolling online. We treat cover design as its own task, separate from the inside pages, because it has a different job to do. It needs to grab attention fast.</p>
+        <div class="fc-body">
+          <p>The cover is often the first thing anyone sees, whether that is a parent in a shop or a reader scrolling online. We treat cover design as its own task, separate from the inside pages, because it has a different job to do. It needs to grab attention fast.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Spot Illustrations and Chapter Art</h3>
-        <p>Not every book needs full-colour pages on every spread. For early readers and chapter books, we often use smaller spot illustrations, black-and-white line drawings, or the odd full-page image to break up the text without slowing down the story.</p>
+        <div class="fc-body">
+          <p>Not every book needs full-colour pages on every spread. For early readers and chapter books, we often use smaller spot illustrations, black-and-white line drawings, or the odd full-page image to break up the text without slowing down the story.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Digital and Traditional Illustration</h3>
-        <p>Every book illustrator we work with in London has their own tools and habits. Some draw digitally from the start. Others sketch by hand and then scan and colour their work on a screen. We do not force one method. What matters is the final result and whether it suits your story.</p>
+        <div class="fc-body">
+          <p>Every book illustrator we work with in London has their own tools and habits. Some draw digitally from the start. Others sketch by hand and then scan and colour their work on a screen. We do not force one method. What matters is the final result and whether it suits your story.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -149,22 +159,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 9h.01M15 9h.01"></path><path d="M9 15c.8.8 1.8 1.2 3 1.2s2.2-.4 3-1.2"></path></svg></div>
         <h3>Ages 0–3: Board Books and Early Readers</h3>
-        <p>For very young children, illustrations need to be simple, bold, and easy to understand. Bright colours, clear shapes and minimal backgrounds help children recognise characters, objects and emotions while supporting early learning.</p>
+        <div class="fc-body">
+          <p>For very young children, illustrations need to be simple, bold, and easy to understand. Bright colours, clear shapes and minimal backgrounds help children recognise characters, objects and emotions while supporting early learning.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Ages 3–7: Picture Books</h3>
-        <p>Picture books allow for more detailed scenes and expressive characters. Since these books are often read aloud, illustrations help build the world of the story, create emotion, and make every page turn more engaging.</p>
+        <div class="fc-body">
+          <p>Picture books allow for more detailed scenes and expressive characters. Since these books are often read aloud, illustrations help build the world of the story, create emotion, and make every page turn more engaging.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg></div>
         <h3>Ages 5–8: Early Readers and Chapter Books</h3>
-        <p>At this stage, illustrations support children as they begin reading independently. Artwork is usually lighter, with simple line illustrations or smaller visuals that complement the text without distracting from the story.</p>
+        <div class="fc-body">
+          <p>At this stage, illustrations support children as they begin reading independently. Artwork is usually lighter, with simple line illustrations or smaller visuals that complement the text without distracting from the story.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 4.5L19 8l-3.5 3.5L16.5 16 12 13.5 7.5 16l1-4.5L5 8l5-0.5Z"></path><path d="M12 17v4"></path></svg></div>
         <h3>Ages 8–12: Middle Grade Fiction</h3>
-        <p>Older children’s books rely more on storytelling, characters and imagination. Illustrations are often used for covers, chapter openings or key moments to strengthen the book’s theme and overall identity.</p>
+        <div class="fc-body">
+          <p>Older children’s books rely more on storytelling, characters and imagination. Illustrations are often used for covers, chapter openings or key moments to strengthen the book’s theme and overall identity.</p>
+        </div>
       </article>
     </div>
   </div>

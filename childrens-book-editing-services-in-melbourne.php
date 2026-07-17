@@ -110,33 +110,45 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Manuscript Assessment</h3>
-        <p>Before any editing starts, we read your full manuscript and give you honest feedback. We look at the plot, the characters, the pacing, and whether the story works for its intended age group. You get a clear written report, not just a few scribbled notes.</p>
-        <p>This step is often the most useful one, especially for first-time authors. It tells you exactly where your manuscript stands before you spend money on deeper editing. Sometimes a manuscript needs a small polish. Sometimes it needs a bigger rework. Either way, you will know what you are dealing with before you commit to the next stage.</p>
+        <div class="fc-body">
+          <p>Before any editing starts, we read your full manuscript and give you honest feedback. We look at the plot, the characters, the pacing, and whether the story works for its intended age group. You get a clear written report, not just a few scribbled notes.</p>
+          <p>This step is often the most useful one, especially for first-time authors. It tells you exactly where your manuscript stands before you spend money on deeper editing. Sometimes a manuscript needs a small polish. Sometimes it needs a bigger rework. Either way, you will know what you are dealing with before you commit to the next stage.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-2 5-4 1 2-5 4-1Z"></path></svg></div>
         <h3>Developmental Editing</h3>
-        <p>This is the big picture stuff. We look at structure, story arc, character growth, and whether the book actually holds together from start to finish. If something is not working, we tell you why and suggest ways to fix it.</p>
+        <div class="fc-body">
+          <p>This is the big picture stuff. We look at structure, story arc, character growth, and whether the book actually holds together from start to finish. If something is not working, we tell you why and suggest ways to fix it.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Line Editing</h3>
-        <p>Here we work sentence by sentence. We look at how the story flows, how the dialogue sounds, and whether the language suits the age group you are writing for. Picture books need rhythm and simplicity. Junior fiction needs a different kind of pacing. We adjust our approach depending on what you are writing.</p>
+        <div class="fc-body">
+          <p>Here we work sentence by sentence. We look at how the story flows, how the dialogue sounds, and whether the language suits the age group you are writing for. Picture books need rhythm and simplicity. Junior fiction needs a different kind of pacing. We adjust our approach depending on what you are writing.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Copy Editing</h3>
-        <p>This is where grammar, spelling, punctuation, and consistency get sorted out. If you are after a children’s book copy editor in Melbourne who checks every detail without changing your voice, this is the service for you. We fix the small things so your story reads cleanly, without turning your writing into something it is not.</p>
+        <div class="fc-body">
+          <p>This is where grammar, spelling, punctuation, and consistency get sorted out. If you are after a children’s book copy editor in Melbourne who checks every detail without changing your voice, this is the service for you. We fix the small things so your story reads cleanly, without turning your writing into something it is not.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Proofreading</h3>
-        <p>The final check before your book goes to print or gets submitted to a publisher. We catch typos, formatting slips and anything that was missed earlier in the process.</p>
+        <div class="fc-body">
+          <p>The final check before your book goes to print or gets submitted to a publisher. We catch typos, formatting slips and anything that was missed earlier in the process.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Picture Book Specific Editing</h3>
-        <p>Picture books are their own beast. The words need to work with the pictures, not just sit next to them. Our children’s picture book editing services in Melbourne look at word count, page turns, read aloud rhythm and how well the text leaves room for illustration. A picture book editor needs to think like an illustrator as much as a writer, and that is exactly how we approach it.</p>
+        <div class="fc-body">
+          <p>Picture books are their own beast. The words need to work with the pictures, not just sit next to them. Our children’s picture book editing services in Melbourne look at word count, page turns, read aloud rhythm and how well the text leaves room for illustration. A picture book editor needs to think like an illustrator as much as a writer, and that is exactly how we approach it.</p>
+        </div>
       </article>
     </div>
   </div>

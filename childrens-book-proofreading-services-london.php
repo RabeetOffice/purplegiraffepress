@@ -109,32 +109,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Picture Books</h3>
-        <p>Picture books rely on rhythm and simplicity. We check every line for flow, especially if your book rhymes. Rhyming text needs a proofreader who reads it aloud, not just on the page, because a word that looks fine can still throw off the beat.</p>
+        <div class="fc-body">
+          <p>Picture books rely on rhythm and simplicity. We check every line for flow, especially if your book rhymes. Rhyming text needs a proofreader who reads it aloud, not just on the page, because a word that looks fine can still throw off the beat.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Early Readers and Chapter Books</h3>
-        <p>These books are often a child's first step into reading alone. We look closely at repeated words, sentence length, and anything that might confuse a young reader who is still building confidence.</p>
+        <div class="fc-body">
+          <p>These books are often a child's first step into reading alone. We look closely at repeated words, sentence length, and anything that might confuse a young reader who is still building confidence.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Middle Grade and Young Adult Manuscripts</h3>
-        <p>Longer manuscripts need a proofreader who can track details across many chapters. We keep notes on names, timelines, and small facts so nothing slips through by chapter twenty.</p>
+        <div class="fc-body">
+          <p>Longer manuscripts need a proofreader who can track details across many chapters. We keep notes on names, timelines, and small facts so nothing slips through by chapter twenty.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 20 10l-9.5 9.5H4v-6.5L14 4Z" transform="translate(0 0)"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Self-Published and Print-Ready Files</h3>
-        <p>If you are about to upload a file to a print-on-demand platform or send it to a printer, we do a final pass on the exact file you plan to use, checking layout as well as text.</p>
+        <div class="fc-body">
+          <p>If you are about to upload a file to a print-on-demand platform or send it to a printer, we do a final pass on the exact file you plan to use, checking layout as well as text.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Board Books for Very Young Readers</h3>
-        <p>Books for toddlers and pre-schoolers often have very few words, which means every single one carries weight. We check board books with the same care we give longer manuscripts, since a mistake stands out even more when there are only a handful of words on the page.</p>
+        <div class="fc-body">
+          <p>Books for toddlers and pre-schoolers often have very few words, which means every single one carries weight. We check board books with the same care we give longer manuscripts, since a mistake stands out even more when there are only a handful of words on the page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Bilingual and Dual-Language Books</h3>
-        <p>Some children's books are written in two languages side by side. We proofread the English text carefully and flag any spacing or layout issues that come from working with two languages on the same page.</p>
+        <div class="fc-body">
+          <p>Some children's books are written in two languages side by side. We proofread the English text carefully and flag any spacing or layout issues that come from working with two languages on the same page.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -166,22 +178,30 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg></div>
         <h3>Ages 0 to 3: Board Books</h3>
-        <p>For very young children, text is often just a handful of words per page. We check that every single word is spelled correctly and that nothing breaks the simple rhythm these books rely on.</p>
+        <div class="fc-body">
+          <p>For very young children, text is often just a handful of words per page. We check that every single word is spelled correctly and that nothing breaks the simple rhythm these books rely on.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></svg></div>
         <h3>Ages 3 to 7: Picture Books</h3>
-        <p>Picture books are usually read aloud by an adult, so we pay close attention to how sentences sound, not just how they look on the page.</p>
+        <div class="fc-body">
+          <p>Picture books are usually read aloud by an adult, so we pay close attention to how sentences sound, not just how they look on the page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Ages 5 to 8: Early Readers</h3>
-        <p>At this stage, children are often reading alone for the first time. We check that vocabulary stays consistent, and that sentence structure does not suddenly become too difficult partway through the book.</p>
+        <div class="fc-body">
+          <p>At this stage, children are often reading alone for the first time. We check that vocabulary stays consistent, and that sentence structure does not suddenly become too difficult partway through the book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Ages 8 to 12: Middle Grade Fiction</h3>
-        <p>Longer stories at this age rely on consistency across many chapters. We track names, places, and small details so nothing contradicts itself later in the book.</p>
+        <div class="fc-body">
+          <p>Longer stories at this age rely on consistency across many chapters. We track names, places, and small details so nothing contradicts itself later in the book.</p>
+        </div>
       </article>
     </div>
   </div>

@@ -94,32 +94,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Shaping Your Idea Into A Real Story</h3>
-        <p>If you only have a rough idea, we help you shape it into a proper story. We work out the plot, the characters, the setting, and the lesson or message, if you want one. This stage is about getting the bones of the book right before any real writing starts.</p>
+        <div class="fc-body">
+          <p>If you only have a rough idea, we help you shape it into a proper story. We work out the plot, the characters, the setting, and the lesson or message, if you want one. This stage is about getting the bones of the book right before any real writing starts.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Writing The Whole Book, Start To Finish</h3>
-        <p>Once the story is mapped out, we write the whole manuscript for you. This includes the text for picture books, chapter books, or early reader stories. We match the word count, reading level, and tone to your target age group, whether that is toddlers, primary schoolers, or tweens.</p>
+        <div class="fc-body">
+          <p>Once the story is mapped out, we write the whole manuscript for you. This includes the text for picture books, chapter books, or early reader stories. We match the word count, reading level, and tone to your target age group, whether that is toddlers, primary schoolers, or tweens.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Turning Your Notes And Drafts Into A Proper Manuscript</h3>
-        <p>Some clients already have a messy draft, some voice notes, or pages of scribbled ideas. We can take what you have and turn it into a clean, readable manuscript that still sounds like your idea, just polished and structured properly.</p>
+        <div class="fc-body">
+          <p>Some clients already have a messy draft, some voice notes, or pages of scribbled ideas. We can take what you have and turn it into a clean, readable manuscript that still sounds like your idea, just polished and structured properly.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Building A Series That Holds Together</h3>
-        <p>If you are planning more than one book, we can help you build a consistent world, characters, and voice across the whole series. This is common for authors who want a set of books rather than a single title.</p>
+        <div class="fc-body">
+          <p>If you are planning more than one book, we can help you build a consistent world, characters, and voice across the whole series. This is common for authors who want a set of books rather than a single title.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Writing With The Illustrations In Mind</h3>
-        <p>For picture books, we write with illustration in mind. That means leaving room for pictures to do some of the storytelling, and writing text that flows well on each page or spread.</p>
+        <div class="fc-body">
+          <p>For picture books, we write with illustration in mind. That means leaving room for pictures to do some of the storytelling, and writing text that flows well on each page or spread.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Already Have A Draft? We Can Polish It</h3>
-        <p>Some clients only need a light touch. If you already have a full draft that just needs tightening up, we can work on it as a smaller project rather than a full rewrite. We will always tell you honestly which approach your manuscript actually needs, rather than pushing you toward the bigger option.</p>
+        <div class="fc-body">
+          <p>Some clients only need a light touch. If you already have a full draft that just needs tightening up, we can work on it as a smaller project rather than a full rewrite. We will always tell you honestly which approach your manuscript actually needs, rather than pushing you toward the bigger option.</p>
+        </div>
       </article>
     </div>
   </div>

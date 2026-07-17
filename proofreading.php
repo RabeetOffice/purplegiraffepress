@@ -93,27 +93,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Spelling and Grammar Checks</h3>
-        <p>We go through your manuscript line by line, looking for spelling mistakes, grammar slips, and small errors that spellcheck tools often miss. Software cannot tell the difference between “there” and “their” if both are spelled correctly. A human eye can.</p>
+        <div class="fc-body">
+          <p>We go through your manuscript line by line, looking for spelling mistakes, grammar slips, and small errors that spellcheck tools often miss. Software cannot tell the difference between “there” and “their” if both are spelled correctly. A human eye can.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Punctuation and Formatting</h3>
-        <p>Children’s books often use dialogue, short punchy sentences, and playful formatting. We check that punctuation is consistent, that quotation marks are used correctly, and that spacing and line breaks look right on the page.</p>
+        <div class="fc-body">
+          <p>Children’s books often use dialogue, short punchy sentences, and playful formatting. We check that punctuation is consistent, that quotation marks are used correctly, and that spacing and line breaks look right on the page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Consistency Checks</h3>
-        <p>Character names, place names, and small story details need to stay the same from the first page to the last. We track these details and flag anything that changes partway through, like a character’s eye colour switching or a name being spelled two different ways.</p>
+        <div class="fc-body">
+          <p>Character names, place names, and small story details need to stay the same from the first page to the last. We track these details and flag anything that changes partway through, like a character’s eye colour switching or a name being spelled two different ways.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Layout and Print-Ready Review</h3>
-        <p>If your book is heading to print, we also check how the text sits alongside illustrations, page numbers, and chapter headings. We make sure nothing is cut off, squashed, or out of place once the book is laid out.</p>
+        <div class="fc-body">
+          <p>If your book is heading to print, we also check how the text sits alongside illustrations, page numbers, and chapter headings. We make sure nothing is cut off, squashed, or out of place once the book is laid out.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 18v3"></path></svg></div>
         <h3>Digital and Ebook Checks</h3>
-        <p>If your book is going out as an ebook, we also look at how the text will appear on a screen. Line breaks and spacing can shift when a file is converted to an ebook format, so we check for any awkward breaks or formatting issues that might pop up along the way.</p>
+        <div class="fc-body">
+          <p>If your book is going out as an ebook, we also look at how the text will appear on a screen. Line breaks and spacing can shift when a file is converted to an ebook format, so we check for any awkward breaks or formatting issues that might pop up along the way.</p>
+        </div>
       </article>
     </div>
   </div>

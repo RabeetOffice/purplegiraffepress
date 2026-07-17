@@ -109,27 +109,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Script and Manuscript Prep</h3>
-        <p>Before anyone picks up a microphone, your manuscript needs a once-over. We check pacing, flag anything that reads awkwardly out loud, and prepare a clean script for the narrator to follow. This step catches problems early, before they cost you studio time.</p>
+        <div class="fc-body">
+          <p>Before anyone picks up a microphone, your manuscript needs a once-over. We check pacing, flag anything that reads awkwardly out loud, and prepare a clean script for the narrator to follow. This step catches problems early, before they cost you studio time.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></svg></div>
         <h3>Professional Voice Recording</h3>
-        <p>This is the heart of the job. We offer audiobook recording services in Melbourne with a small pool of trained narrators, so you can choose a voice that actually fits your story. Whether it is fiction, memoir, business, or non-fiction, we match tone and pace to the content, not just to whoever is free that week.</p>
+        <div class="fc-body">
+          <p>This is the heart of the job. We offer audiobook recording services in Melbourne with a small pool of trained narrators, so you can choose a voice that actually fits your story. Whether it is fiction, memoir, business, or non-fiction, we match tone and pace to the content, not just to whoever is free that week.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Editing and Sound Cleanup</h3>
-        <p>Raw recordings always need work. We remove breath sounds, clicks, and background noise. We balance levels, so listeners are not reaching for the volume dial every few minutes. We also check for consistency across chapters, so the whole book sounds like one project, not ten separate files stitched together.</p>
+        <div class="fc-body">
+          <p>Raw recordings always need work. We remove breath sounds, clicks, and background noise. We balance levels, so listeners are not reaching for the volume dial every few minutes. We also check for consistency across chapters, so the whole book sounds like one project, not ten separate files stitched together.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"></path></svg></div>
         <h3>Publishing and Distribution</h3>
-        <p>Once your audiobook is recorded and polished, we help you get it out into the world. Our audiobook publishing services in Melbourne cover formatting for platforms like Audible, Apple Books, and Spotify, along with the technical file requirements each one demands. We handle the paperwork side too, so you are not stuck reading platform guidelines at midnight.</p>
+        <div class="fc-body">
+          <p>Once your audiobook is recorded and polished, we help you get it out into the world. Our audiobook publishing services in Melbourne cover formatting for platforms like Audible, Apple Books, and Spotify, along with the technical file requirements each one demands. We handle the paperwork side too, so you are not stuck reading platform guidelines at midnight.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Audiobooks and Ebooks, Working Together</h3>
-        <p>Many authors want more than one format. We also provide audio books ebooks services in Melbourne, so your readers can choose how they want to experience your book. Some people love the printed page, others want to listen on the way to work, and plenty of readers want both, sitting in their library. Having both formats ready at launch often means a wider audience from day one, and it saves you from managing two separate projects with two separate teams later on.</p>
+        <div class="fc-body">
+          <p>Many authors want more than one format. We also provide audio books ebooks services in Melbourne, so your readers can choose how they want to experience your book. Some people love the printed page, others want to listen on the way to work, and plenty of readers want both, sitting in their library. Having both formats ready at launch often means a wider audience from day one, and it saves you from managing two separate projects with two separate teams later on.</p>
+        </div>
       </article>
     </div>
   </div>

@@ -24,7 +24,7 @@
   <url><loc>https://purplegiraffepress.com/childrens-book-printing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/author-websites/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/audiobooks/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://purplegiraffepress.com/book-coaching/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-trailers/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/distribution/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Locations -->
@@ -40,6 +40,9 @@
   <url><loc>https://purplegiraffepress.com/childrens-book-proofreading-services-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/childrens-audiobook-production-services-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/childrens-book-website-development-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-printing-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-publishers-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-trailers-service-in-melbourne/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/locations/london/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://purplegiraffepress.com/childrens-book-editors-in-london/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/professional-childrens-book-design-in-london/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -53,6 +56,22 @@
   <url><loc>https://purplegiraffepress.com/childrens-author-website-design-london/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/childrens-book-printing-services-london/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://purplegiraffepress.com/childrens-book-publishing-in-london/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/london-childrens-video-book-trailer-service/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://purplegiraffepress.com/locations/dublin/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-editing-service-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-books-design-services-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-ghostwriting-services-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/book-marketing-services-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-formatting-service-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-fiction-ghostwriter-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-illustration-service-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-proofreading-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-audiobook-service-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-author-website-design-and-development-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-printing-services-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-publishing-service-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://purplegiraffepress.com/childrens-book-trailers-service-in-dublin/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Network -->
   <url><loc>https://purplegiraffepress.com/partners/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>

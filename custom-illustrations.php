@@ -93,27 +93,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></div>
         <h3>Character Design</h3>
-        <p>Before a single page is illustrated, we develop your main characters. We sketch different versions, test expressions, and work with you until the character feels right. We think about how the character moves, how they show emotion, and how they will look from different angles across the book. This step matters because young readers connect with characters they recognise from page to page, so getting the design right early saves time and confusion later.</p>
+        <div class="fc-body">
+          <p>Before a single page is illustrated, we develop your main characters. We sketch different versions, test expressions, and work with you until the character feels right. We think about how the character moves, how they show emotion, and how they will look from different angles across the book. This step matters because young readers connect with characters they recognise from page to page, so getting the design right early saves time and confusion later.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg></div>
         <h3>Full Page Illustrations</h3>
-        <p>Once characters are locked in, we move to full illustrations for each page or spread. This includes backgrounds, colour, and layout that match the pacing of your story. We think carefully about where the text will sit on each page, so the words and pictures work together instead of fighting for space.</p>
+        <div class="fc-body">
+          <p>Once characters are locked in, we move to full illustrations for each page or spread. This includes backgrounds, colour, and layout that match the pacing of your story. We think carefully about where the text will sit on each page, so the words and pictures work together instead of fighting for space.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v18"></path></svg></div>
         <h3>Cover Illustration</h3>
-        <p>Your cover is the first thing people see. We design a cover that stands out on a shelf or online, while staying true to the story inside. A strong cover gives a reader a quick sense of the tone of your book, whether that is playful, gentle, or adventurous, before they even open the first page.</p>
+        <div class="fc-body">
+          <p>Your cover is the first thing people see. We design a cover that stands out on a shelf or online, while staying true to the story inside. A strong cover gives a reader a quick sense of the tone of your book, whether that is playful, gentle, or adventurous, before they even open the first page.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Illustration Books and Series Work</h3>
-        <p>If you are working on more than one book, we can help keep the illustration books consistent across the series. Same characters, same style, same feel, book after book. This is especially useful for authors building a brand around one set of characters, since readers come to expect a familiar look.</p>
+        <div class="fc-body">
+          <p>If you are working on more than one book, we can help keep the illustration books consistent across the series. Same characters, same style, same feel, book after book. This is especially useful for authors building a brand around one set of characters, since readers come to expect a familiar look.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Digital and Print Ready Files</h3>
-        <p>Every illustration book illustrator project we finish is delivered in the file formats you need, ready for print or for digital publishing platforms. We can prepare files for local Australian printers, print-on-demand services, or ebook platforms, depending on how you plan to publish.</p>
+        <div class="fc-body">
+          <p>Every illustration book illustrator project we finish is delivered in the file formats you need, ready for print or for digital publishing platforms. We can prepare files for local Australian printers, print-on-demand services, or ebook platforms, depending on how you plan to publish.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -131,17 +141,23 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Hand-Drawn and Painterly</h3>
-        <p>Soft, textured illustrations that feel warm and personal. This style often suits gentle stories, bedtime books, and stories about nature or family.</p>
+        <div class="fc-body">
+          <p>Soft, textured illustrations that feel warm and personal. This style often suits gentle stories, bedtime books, and stories about nature or family.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Bright Digital Illustration</h3>
-        <p>Clean, bold, colourful artwork made digitally. This style works well for energetic stories, adventure books, and books aimed at slightly older readers.</p>
+        <div class="fc-body">
+          <p>Clean, bold, colourful artwork made digitally. This style works well for energetic stories, adventure books, and books aimed at slightly older readers.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5M3 17l9 5 9-5"></path></svg></div>
         <h3>Mixed Media</h3>
-        <p>A combination of hand-drawn textures and digital finishing. This gives a book a unique look that still feels warm and human.</p>
+        <div class="fc-body">
+          <p>A combination of hand-drawn textures and digital finishing. This gives a book a unique look that still feels warm and human.</p>
+        </div>
       </article>
     </div>
   </div>

@@ -110,29 +110,39 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Interior Layout and Page Design</h3>
-        <p>This is the heart of interior children's book formatting services in Melbourne. We set up your page size, margins, and gutters so the book prints cleanly with no text cut off near the spine. We place your text and images on each page and make sure nothing feels cramped or crowded.</p>
-        <p>We also think about how a book will actually be read. A picture book is often read aloud, page by page, so the layout needs to support that rhythm. A page turn should feel natural, not awkward. If your story has a big reveal or a funny moment, we think about where that lands on the page so the timing still works once it is printed.</p>
+        <div class="fc-body">
+          <p>This is the heart of interior children's book formatting services in Melbourne. We set up your page size, margins, and gutters so the book prints cleanly with no text cut off near the spine. We place your text and images on each page and make sure nothing feels cramped or crowded.</p>
+          <p>We also think about how a book will actually be read. A picture book is often read aloud, page by page, so the layout needs to support that rhythm. A page turn should feel natural, not awkward. If your story has a big reveal or a funny moment, we think about where that lands on the page so the timing still works once it is printed.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Font Selection and Text Styling</h3>
-        <p>Picture books often need a font that feels playful but is still easy to read aloud. Chapter books need a font that is comfortable for a child reading alone. We choose a type that suits the age group and the tone of your story, and we keep it consistent from the first page to the last.</p>
+        <div class="fc-body">
+          <p>Picture books often need a font that feels playful but is still easy to read aloud. Chapter books need a font that is comfortable for a child reading alone. We choose a type that suits the age group and the tone of your story, and we keep it consistent from the first page to the last.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l4.5-6 4 5 3.5-5 4 6H4Z"></path><circle cx="8" cy="7" r="2"></circle></svg></div>
         <h3>Image Placement and Sizing</h3>
-        <p>If your book has illustrations, we place them so they line up with the right page of text. We check the resolution so images do not look blurry or pixelated once printed. We also make sure images do not get cropped awkwardly near page edges or the spine.</p>
-        <p>This part of the job takes patience. Illustrations are often drawn at different sizes and resolutions, especially if more than one illustrator has worked on a book, or if some artwork was drawn digitally and some by hand and scanned in later. We adjust and align everything so the finished book feels like one consistent piece of work, not a patchwork of different image sizes.</p>
+        <div class="fc-body">
+          <p>If your book has illustrations, we place them so they line up with the right page of text. We check the resolution so images do not look blurry or pixelated once printed. We also make sure images do not get cropped awkwardly near page edges or the spine.</p>
+          <p>This part of the job takes patience. Illustrations are often drawn at different sizes and resolutions, especially if more than one illustrator has worked on a book, or if some artwork was drawn digitally and some by hand and scanned in later. We adjust and align everything so the finished book feels like one consistent piece of work, not a patchwork of different image sizes.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Front Matter and Back Matter</h3>
-        <p>Every book needs the small details done properly. Title page, copyright page, dedication, and sometimes an “about the author” page at the back. We format all of this so it looks tidy and professional, not like an afterthought.</p>
+        <div class="fc-body">
+          <p>Every book needs the small details done properly. Title page, copyright page, dedication, and sometimes an “about the author” page at the back. We format all of this so it looks tidy and professional, not like an afterthought.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"></path><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"></path><rect x="7" y="14" width="10" height="7" rx="1"></rect></svg></div>
         <h3>Print-Ready and Digital File Preparation</h3>
-        <p>Once the layout is done, we prepare your files for whatever comes next. This might mean a print-ready PDF for a local printer, or files set up correctly for Kindle Direct Publishing. Our Amazon children's book formatting services in Melbourne make sure your file meets the platform’s technical requirements before you upload it.</p>
+        <div class="fc-body">
+          <p>Once the layout is done, we prepare your files for whatever comes next. This might mean a print-ready PDF for a local printer, or files set up correctly for Kindle Direct Publishing. Our Amazon children's book formatting services in Melbourne make sure your file meets the platform’s technical requirements before you upload it.</p>
+        </div>
       </article>
     </div>
   </div>

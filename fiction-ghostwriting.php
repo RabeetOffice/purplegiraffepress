@@ -94,32 +94,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Full Manuscript Ghostwriting</h3>
-        <p>You give us your idea, whether that’s a rough concept, a few chapters you’ve already written, or a detailed outline. We turn it into a complete manuscript, chapter by chapter, in your voice and style. You’ll see chapters as we go, so you can flag anything that doesn’t feel right early on, rather than waiting until the whole book is done.</p>
+        <div class="fc-body">
+          <p>You give us your idea, whether that’s a rough concept, a few chapters you’ve already written, or a detailed outline. We turn it into a complete manuscript, chapter by chapter, in your voice and style. You’ll see chapters as we go, so you can flag anything that doesn’t feel right early on, rather than waiting until the whole book is done.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Genre Specific Writing</h3>
-        <p>We write across most fiction genres, including romance, mystery, thriller, fantasy, and action fiction. Ghostwriters are part of our team too, for stories that need pace, tension, and strong plotting. Tell us your genre, and we’ll match you with a writer who reads and understands that space.</p>
+        <div class="fc-body">
+          <p>We write across most fiction genres, including romance, mystery, thriller, fantasy, and action fiction. Ghostwriters are part of our team too, for stories that need pace, tension, and strong plotting. Tell us your genre, and we’ll match you with a writer who reads and understands that space.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-2 5-4 1 2-5 4-1Z"></path></svg></div>
         <h3>Co-Writing and Story Development</h3>
-        <p>Some clients have a strong idea but need help shaping it into a proper plot. We can work with you to build out characters, structure, and pacing before the actual writing begins.</p>
+        <div class="fc-body">
+          <p>Some clients have a strong idea but need help shaping it into a proper plot. We can work with you to build out characters, structure, and pacing before the actual writing begins.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 6 6-9.5 9.5H4v-6.5L14 4Z"></path><path d="m13 5 6 6"></path></svg></div>
         <h3>Rewriting and Finishing Existing Drafts</h3>
-        <p>Started a manuscript but got stuck halfway? We can pick up where you left off, matching your existing tone and finishing the story. This is one of the more common requests we get. A lot of writers get eighty per cent of the way through a book and then lose momentum, or hit a plot problem they can’t quite solve on their own. We read through what you’ve already written, work out where the story needs to go, and finish it in a way that feels like one continuous book, not two different writers stitched together.</p>
+        <div class="fc-body">
+          <p>Started a manuscript but got stuck halfway? We can pick up where you left off, matching your existing tone and finishing the story. This is one of the more common requests we get. A lot of writers get eighty per cent of the way through a book and then lose momentum, or hit a plot problem they can’t quite solve on their own. We read through what you’ve already written, work out where the story needs to go, and finish it in a way that feels like one continuous book, not two different writers stitched together.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Series and Multi-Book Projects</h3>
-        <p>If you’re planning a trilogy or an ongoing series, we can work with you across multiple books, keeping characters, timelines, and world details consistent from one book to the next. We keep detailed notes on names, dates, and backstory as we go, so book three still lines up with something you mentioned in book one.</p>
+        <div class="fc-body">
+          <p>If you’re planning a trilogy or an ongoing series, we can work with you across multiple books, keeping characters, timelines, and world details consistent from one book to the next. We keep detailed notes on names, dates, and backstory as we go, so book three still lines up with something you mentioned in book one.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21s4-1 7-4l9-9-3-3-9 9c-3 3-4 7-4 7Z"></path><path d="m14 6 4 4"></path></svg></div>
         <h3>Editing Support Alongside Writing</h3>
-        <p>If you’d rather write parts of the book yourself but want help polishing the rest, we can slot in wherever it’s useful. Some clients write a rough first pass and want us to smooth out the pacing and dialogue. Others write half the book and want us to finish the second half. We’re happy to work around whatever setup suits you.</p>
+        <div class="fc-body">
+          <p>If you’d rather write parts of the book yourself but want help polishing the rest, we can slot in wherever it’s useful. Some clients write a rough first pass and want us to smooth out the pacing and dialogue. Others write half the book and want us to finish the second half. We’re happy to work around whatever setup suits you.</p>
+        </div>
       </article>
     </div>
   </div>

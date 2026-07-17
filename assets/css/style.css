@@ -6210,3 +6210,145 @@ body.qp-open { overflow: hidden; }
   .pgp-chat-greet { animation: none; transition: none; }
 }
 
+
+/* ==========================================================================
+   EQUAL-HEIGHT CARD COPY  (appended 2026-07-17)
+   --------------------------------------------------------------------------
+   Cards in a row stretch to the tallest one, so a card with three lines of
+   copy next to a card with fifteen left a big well of dead space. The copy
+   now lives in a capped, scrollable box: every card in the row lands on the
+   same height, short copy sits centred instead of stranded at the top, and
+   only the long outlier scrolls. Nested scrolling is dropped below the grid
+   breakpoint, where each card is alone in its row and can just grow.
+   ========================================================================== */
+
+/* --- "what we offer" feature cards --------------------------------------- */
+.feature-card { display: flex; flex-direction: column; }
+/* The icon keeps its 52px box and the title its full height — only the copy
+   below them is allowed to flex. */
+.feature-card > .icon, .feature-card > h3 { flex: 0 0 auto; }
+
+.feature-card .fc-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 15rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  justify-content: safe center;  /* keeps the first line reachable when it scrolls */
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(123, 53, 208, .35) transparent;
+}
+.feature-card .fc-body > :is(p, ul) { margin: 0; }
+
+/* --- "why choose us" benefit cards ---------------------------------------- */
+.benefit-grid article { display: flex; flex-direction: column; }
+.benefit-grid article > span, .benefit-grid article > h3 { flex: 0 0 auto; }
+
+.benefit-grid article > p {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 8.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: safe center;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(123, 53, 208, .35) transparent;
+}
+
+/* --- shared scrollbar chrome (WebKit/Blink) ------------------------------- */
+.feature-card .fc-body::-webkit-scrollbar,
+.benefit-grid article > p::-webkit-scrollbar { width: 6px; }
+.feature-card .fc-body::-webkit-scrollbar-track,
+.benefit-grid article > p::-webkit-scrollbar-track { background: transparent; }
+.feature-card .fc-body::-webkit-scrollbar-thumb,
+.benefit-grid article > p::-webkit-scrollbar-thumb {
+  background: rgba(123, 53, 208, .3);
+  border-radius: 999px;
+}
+.feature-card .fc-body:hover::-webkit-scrollbar-thumb,
+.benefit-grid article > p:hover::-webkit-scrollbar-thumb { background: rgba(123, 53, 208, .5); }
+
+/* Below 680px both grids collapse to a single column, so each card is alone in
+   its row and can simply grow — drop the cap rather than trap a touch scroll.
+   (Keep this breakpoint in step with the 1-column rules above; while the grid
+   is still multi-column the cap is what keeps a row even.) */
+@media (max-width: 680px) {
+  .benefit-grid article > p { max-height: none; overflow-y: visible; display: block; }
+  .feature-card .fc-body {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+    display: block;
+  }
+  .feature-card .fc-body > :is(p, ul) + :is(p, ul) { margin-top: 12px; }
+}
+
+/* ==========================================================================
+   NO ORPHAN GAP IN THE LAST ROW  (appended 2026-07-17)
+   --------------------------------------------------------------------------
+   A 5-card "what we offer" / "how it works" grid left 3 cards up top and 2
+   adrift with a hole beside them; a 5-card "why choose us" left one card and a
+   hole. Nothing is added or removed — the cards in an incomplete last row just
+   widen to use the space, so an even count is untouched and an odd one closes
+   up.
+
+   The 3-column grids run on a 6-column track (each card spans 2) purely so a
+   short last row has halves to stretch into:
+     count % 3 == 2  ->  last 2 cards span 3  ->  a full row of 2
+     count % 3 == 1  ->  last 4 cards span 3  ->  two full rows of 2, which
+                         reads better than one lone full-bleed card
+   :has() scopes each rule to the counts that actually need it. Browsers
+   without :has() simply keep today's layout, so this can only improve things.
+   ========================================================================== */
+
+/* --- "what we offer" feature cards · 3-col tier (>1080px) ----------------- */
+@media (min-width: 1081px) {
+  .feature-grid { grid-template-columns: repeat(6, 1fr); }
+  .feature-grid > * { grid-column: span 2; }
+  .feature-grid:has(> :last-child:nth-child(3n + 2)) > :nth-last-child(-n + 2) { grid-column: span 3; }
+  .feature-grid:has(> :last-child:nth-child(3n + 1)) > :nth-last-child(-n + 4) { grid-column: span 3; }
+}
+
+/* --- "how it works" process steps · 3-col tier (>900px) ------------------- */
+@media (min-width: 901px) {
+  .svc-steps { grid-template-columns: repeat(6, 1fr); }
+  .svc-steps > * { grid-column: span 2; }
+  .svc-steps:has(> :last-child:nth-child(3n + 2)) > :nth-last-child(-n + 2) { grid-column: span 3; }
+  .svc-steps:has(> :last-child:nth-child(3n + 1)) > :nth-last-child(-n + 4) { grid-column: span 3; }
+}
+
+/* --- 2-col tiers: an odd count leaves one card alone, so let it fill ------ */
+@media (min-width: 681px) and (max-width: 1080px) {
+  .feature-grid > :last-child:nth-child(2n + 1) { grid-column: span 2; }
+}
+@media (min-width: 561px) and (max-width: 900px) {
+  .svc-steps > :last-child:nth-child(2n + 1) { grid-column: span 2; }
+}
+
+/* --- "why choose us" benefit cards · always 2-col until 680px ------------- */
+@media (min-width: 681px) {
+  .benefit-grid > :last-child:nth-child(2n + 1) { grid-column: span 2; }
+}
+
+/* --- city service cards (hubs + the per-city block) ----------------------- */
+/* Same last-row fill as above. Only bites above 1025px, where .mobile-swiper
+   is a plain grid and Swiper is not driving the wrapper. The Melbourne hub
+   (13 cards) lands as 3/3/3/2/2; the 6-card page blocks and London's 12 are
+   exact multiples of 3, so they are untouched. */
+@media (min-width: 1025px) {
+  .services-grid.mobile-swiper > .swiper-wrapper { grid-template-columns: repeat(6, 1fr); }
+  .services-grid.mobile-swiper > .swiper-wrapper > .swiper-slide { grid-column: span 2; }
+  .services-grid.mobile-swiper > .swiper-wrapper:has(> :last-child:nth-child(3n + 2)) > :nth-last-child(-n + 2) { grid-column: span 3; }
+  .services-grid.mobile-swiper > .swiper-wrapper:has(> :last-child:nth-child(3n + 1)) > :nth-last-child(-n + 4) { grid-column: span 3; }
+  /* A lone card keeps the centred single-column track the include sets inline. */
+  .services-grid.mobile-swiper > .swiper-wrapper > .swiper-slide:only-child { grid-column: auto; }
+}

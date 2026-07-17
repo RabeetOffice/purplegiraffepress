@@ -109,41 +109,49 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></svg></div>
         <h3>Audio Book Recording Services in London</h3>
-        <p>This is where the book becomes a performance. We arrange:</p>
-        <ul style="list-style:none; margin:14px 0 0; padding:0; text-align:left; display:grid; gap:10px;">
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Professional studio recording, either at our London studio or a partner facility</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Narrator casting, whether you want one voice or a full cast for dialogue-heavy fiction</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Directed sessions, so pacing, tone, and character voices stay consistent from chapter one to the end</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Pronunciation guides for unusual names, places, or technical terms</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Punch-in fixes and re-reads, so you're not stuck with a mistake baked into the final file</span></li>
-        </ul>
-        <p style="margin-top:14px;">Every session is supervised by someone who has actually directed audiobooks before. That matters more than people expect. A narrator left alone in a booth will often flatten out over a long book, especially past the halfway point, when fatigue creeps into the pacing without anyone noticing until playback. Direction keeps the energy where it needs to be, chapter after chapter, right through to the final page.</p>
-        <p style="margin-top:14px;">We also plan sessions around your book's actual demands rather than a one-size-fits-all schedule. A 60,000-word memoir needs a different studio plan from a 120,000-word fantasy novel with a dozen speaking characters, and treating them the same usually shows up as rushed, uneven audio later on.</p>
+        <div class="fc-body">
+          <p>This is where the book becomes a performance. We arrange:</p>
+          <ul style="list-style:none; margin:14px 0 0; padding:0; text-align:left; display:grid; gap:10px;">
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Professional studio recording, either at our London studio or a partner facility</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Narrator casting, whether you want one voice or a full cast for dialogue-heavy fiction</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Directed sessions, so pacing, tone, and character voices stay consistent from chapter one to the end</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Pronunciation guides for unusual names, places, or technical terms</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Punch-in fixes and re-reads, so you're not stuck with a mistake baked into the final file</span></li>
+          </ul>
+          <p style="margin-top:14px;">Every session is supervised by someone who has actually directed audiobooks before. That matters more than people expect. A narrator left alone in a booth will often flatten out over a long book, especially past the halfway point, when fatigue creeps into the pacing without anyone noticing until playback. Direction keeps the energy where it needs to be, chapter after chapter, right through to the final page.</p>
+          <p style="margin-top:14px;">We also plan sessions around your book's actual demands rather than a one-size-fits-all schedule. A 60,000-word memoir needs a different studio plan from a 120,000-word fantasy novel with a dozen speaking characters, and treating them the same usually shows up as rushed, uneven audio later on.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"></path></svg></div>
         <h3>Audio Book Publishing Services in London</h3>
-        <p>Recording the book is only half the job. Once the audio is finished, it needs to reach the platforms where people actually buy and stream audiobooks. We manage:</p>
-        <ul style="list-style:none; margin:14px 0 0; padding:0; text-align:left; display:grid; gap:10px;">
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Distribution to Audible, Apple Books, Spotify, Kobo, and other major retailers</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Library and institutional platforms, including OverDrive, for authors who want their book in public libraries</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Metadata, categories, and keywords, so your book shows up when someone searches for it</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>ISBN guidance for the audio edition, separate from your print or ebook ISBN</span></li>
-          <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Basic royalty and reporting guidance, so you understand what to expect from each platform</span></li>
-        </ul>
-        <p style="margin-top:14px;">We won't pretend every platform pays the same or reaches the same audience. Part of our job is being honest with you about where your book is likely to perform best, based on genre and format.</p>
-        <p style="margin-top:14px;">Some authors want to go exclusive with one retailer for better royalty terms and stronger placement in that store's search results. Others would rather be everywhere at once, accepting a smaller cut per sale in exchange for wider reach. Neither approach is wrong. It depends on your goals, your genre, and how much of your audience already listens through a specific app. We'll talk through the trade-offs plainly before you commit either way.</p>
+        <div class="fc-body">
+          <p>Recording the book is only half the job. Once the audio is finished, it needs to reach the platforms where people actually buy and stream audiobooks. We manage:</p>
+          <ul style="list-style:none; margin:14px 0 0; padding:0; text-align:left; display:grid; gap:10px;">
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Distribution to Audible, Apple Books, Spotify, Kobo, and other major retailers</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Library and institutional platforms, including OverDrive, for authors who want their book in public libraries</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Metadata, categories, and keywords, so your book shows up when someone searches for it</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>ISBN guidance for the audio edition, separate from your print or ebook ISBN</span></li>
+            <li style="display:flex; gap:10px; align-items:flex-start;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto; width:18px; height:18px; margin-top:4px; color:var(--figma-purple-2);"><path d="M20 6 9 17l-5-5"/></svg><span>Basic royalty and reporting guidance, so you understand what to expect from each platform</span></li>
+          </ul>
+          <p style="margin-top:14px;">We won't pretend every platform pays the same or reaches the same audience. Part of our job is being honest with you about where your book is likely to perform best, based on genre and format.</p>
+          <p style="margin-top:14px;">Some authors want to go exclusive with one retailer for better royalty terms and stronger placement in that store's search results. Others would rather be everywhere at once, accepting a smaller cut per sale in exchange for wider reach. Neither approach is wrong. It depends on your goals, your genre, and how much of your audience already listens through a specific app. We'll talk through the trade-offs plainly before you commit either way.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h6a4 4 0 0 1 4 4v12H8a3 3 0 0 1-3-3V4Z"></path><path d="M19 4h-4a4 4 0 0 0-4 4v12h5a3 3 0 0 0 3-3V4Z"></path></svg></div>
         <h3>Audio Books, Ebooks Services in London, Together</h3>
-        <p>Some authors want to launch both formats at once. Rather than treating your ebook and audiobook as two separate projects, we offer audio books ebooks services in London that keep formatting, cover assets, and metadata consistent across both. That means your book looks and reads as one product, not two rushed jobs stitched together at the last minute.</p>
+        <div class="fc-body">
+          <p>Some authors want to launch both formats at once. Rather than treating your ebook and audiobook as two separate projects, we offer audio books ebooks services in London that keep formatting, cover assets, and metadata consistent across both. That means your book looks and reads as one product, not two rushed jobs stitched together at the last minute.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4Z"></path></svg></div>
         <h3>Is there an audiobook service like Netflix in London?</h3>
-        <p>We get asked this a lot, usually by authors who've noticed how much listening has shifted towards subscription apps. Audible, Spotify, and Storytel all work a bit like Netflix, in the sense that listeners pay monthly and get access to a large catalogue rather than buying one title at a time.</p>
-        <p style="margin-top:14px;">There isn&rsquo;t a single "audiobook Netflix" that owns the whole market. What matters for you as an author is making sure your book is properly set up for whichever subscription platforms suit your genre, with the right keywords, sample length, and cover design to stand out inside a crowded catalogue rather than getting lost in it.</p>
+        <div class="fc-body">
+          <p>We get asked this a lot, usually by authors who've noticed how much listening has shifted towards subscription apps. Audible, Spotify, and Storytel all work a bit like Netflix, in the sense that listeners pay monthly and get access to a large catalogue rather than buying one title at a time.</p>
+          <p style="margin-top:14px;">There isn&rsquo;t a single "audiobook Netflix" that owns the whole market. What matters for you as an author is making sure your book is properly set up for whichever subscription platforms suit your genre, with the right keywords, sample length, and cover design to stand out inside a crowded catalogue rather than getting lost in it.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -161,27 +169,37 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.4 3-3.1 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2C10.5 3.5 9.3 3 7.5 3A5.5 5.5 0 0 0 2 8.5c0 2.4 1.5 4.1 3 5.5l7 7Z"></path></svg></div>
         <h3>Ages 0 To 5: Gentle And Engaging Audiobooks For Young Children</h3>
-        <p>For board books and early picture books, narration needs to be warm, expressive, and easy for young listeners to follow. We focus on clear pronunciation, playful pacing, and voices that bring simple stories and characters to life while keeping children engaged throughout shorter listening sessions.</p>
+        <div class="fc-body">
+          <p>For board books and early picture books, narration needs to be warm, expressive, and easy for young listeners to follow. We focus on clear pronunciation, playful pacing, and voices that bring simple stories and characters to life while keeping children engaged throughout shorter listening sessions.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z"></path></svg></div>
         <h3>Ages 5 To 8: Expressive Audiobooks For Early Readers</h3>
-        <p>At this stage, children are developing stronger listening skills and beginning to connect with characters and stories independently. We create audiobooks with lively narration, clear storytelling, and carefully controlled pacing to help young listeners follow the plot and enjoy every moment of the journey.</p>
+        <div class="fc-body">
+          <p>At this stage, children are developing stronger listening skills and beginning to connect with characters and stories independently. We create audiobooks with lively narration, clear storytelling, and carefully controlled pacing to help young listeners follow the plot and enjoy every moment of the journey.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
         <h3>Ages 8 To 12: Character-Driven Audiobooks For Middle Grade Stories</h3>
-        <p>Middle-grade fiction often includes longer plots, multiple characters, and more detailed worlds. We focus on professional narration that creates distinct personalities, maintains story momentum, and keeps younger listeners connected through longer chapters and more complex adventures.</p>
+        <div class="fc-body">
+          <p>Middle-grade fiction often includes longer plots, multiple characters, and more detailed worlds. We focus on professional narration that creates distinct personalities, maintains story momentum, and keeps younger listeners connected through longer chapters and more complex adventures.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5ZM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5Z"></path></svg></div>
         <h3>Ages 12+: Mature Audiobook Production For Young Adult Stories</h3>
-        <p>Young adult audiobooks require a more developed emotional range and a narration style that reflects deeper themes, relationships, and character experiences. We work with voices that feel authentic to teenage audiences while maintaining the professional quality expected across major audiobook platforms.</p>
+        <div class="fc-body">
+          <p>Young adult audiobooks require a more developed emotional range and a narration style that reflects deeper themes, relationships, and character experiences. We work with voices that feel authentic to teenage audiences while maintaining the professional quality expected across major audiobook platforms.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"></path></svg></div>
         <h3>Adult Fiction And Non-Fiction: Professional Narration For Every Genre</h3>
-        <p>Adult audiobooks require a strong understanding of tone, emotion, and audience expectations. Whether it is a thriller, romance, memoir, business book, or self-help title, we match narration style, pacing, and production quality with the purpose of the book to create a polished listening experience.</p>
+        <div class="fc-body">
+          <p>Adult audiobooks require a strong understanding of tone, emotion, and audience expectations. Whether it is a thriller, romance, memoir, business book, or self-help title, we match narration style, pacing, and production quality with the purpose of the book to create a polished listening experience.</p>
+        </div>
       </article>
     </div>
   </div>

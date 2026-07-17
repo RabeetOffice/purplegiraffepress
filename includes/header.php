@@ -304,7 +304,7 @@ $page_noindex = ($page_noindex ?? false);
                   <a href="<?php echo e(asset('childrens-book-printing.php')); ?>">Children's Book Printing</a>
                   <a href="<?php echo e(asset('author-websites.php')); ?>">Author Websites</a>
                   <a href="<?php echo e(asset('audiobooks.php')); ?>">Audiobooks</a>
-                  <a href="<?php echo e(asset('book-coaching.php')); ?>">Book Coaching</a>
+                  <a href="<?php echo e(asset('childrens-book-trailers.php')); ?>">Children's Book Trailers</a>
                   <a href="<?php echo e(asset('distribution.php')); ?>">Distribution</a>
                 </div>
               </div>
@@ -343,7 +343,7 @@ $page_noindex = ($page_noindex ?? false);
           <a href="<?php echo e(asset('childrens-book-printing.php')); ?>">Children's Book Printing</a>
           <a href="<?php echo e(asset('author-websites.php')); ?>">Author Websites</a>
           <a href="<?php echo e(asset('audiobooks.php')); ?>">Audiobooks</a>
-          <a href="<?php echo e(asset('book-coaching.php')); ?>">Book Coaching</a>
+          <a href="<?php echo e(asset('childrens-book-trailers.php')); ?>">Children's Book Trailers</a>
           <a href="<?php echo e(asset('distribution.php')); ?>">Distribution</a>
         </div>
       <?php else: ?>

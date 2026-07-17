@@ -26,19 +26,6 @@ $location_business = [
 ];
 
 require __DIR__ . '/../includes/header.php';
-
-/* Services offered to London authors. Sourced from the shared city services
-   data (includes/location-services-data.php) so the hub and every London
-   service page stay in sync from one place. */
-require_once __DIR__ . '/../includes/location-services-data.php';
-$lon_services = pgp_location_services('london')['services'];
-
-/* Centre the grid when a handful of services exist, so cards do not sit
-   awkwardly against the left edge. */
-$n = count($lon_services);
-$grid_style = $n === 1 ? 'grid-template-columns:minmax(0,400px);justify-content:center;'
-            : ($n === 2 ? 'grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;'
-            : ($n === 4 ? 'grid-template-columns:repeat(2,minmax(0,340px));justify-content:center;' : ''));
 ?>
 
 <section class="banner">
@@ -56,34 +43,17 @@ $grid_style = $n === 1 ? 'grid-template-columns:minmax(0,400px);justify-content:
   </div>
 </section>
 
-<section class="section section-white">
-  <div class="container section-heading center">
-    <p class="eyebrow script-mark">- london services</p>
-    <h2>Services for London Authors</h2>
-    <p>Pick the help your book needs. We work with authors across London and the UK, so you get children's book specialists close to home.</p>
-  </div>
-  <div class="container">
-    <div class="services-grid" style="<?php echo $grid_style; ?>">
-      <?php $i = 0; foreach ($lon_services as $s): $a = $s['accent'];
-        $style = sprintf('--accent:%s;--accent-2:%s;--accent-ink:%s;--i:%d;', $a[0], $a[1], $a[2], $i); ?>
-      <article class="service-card reveal" style="<?php echo e($style); ?>">
-        <span class="service-shine" aria-hidden="true"></span>
-        <span class="service-num" aria-hidden="true"><?php echo sprintf('%02d', $i + 1); ?></span>
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><?php echo $s['icon']; ?></svg>
-        </div>
-        <h3><?php echo e($s['title']); ?></h3>
-        <p><?php echo e($s['short']); ?></p>
-        <a class="card-link" href="<?php echo e(asset($s['href'])); ?>">
-          <span class="card-link-label">Learn more</span>
-          <span class="card-link-arrow" aria-hidden="true">&rarr;</span>
-          <span class="sr-only"> about <?php echo e($s['title']); ?> in London</span>
-        </a>
-      </article>
-      <?php $i++; endforeach; ?>
-    </div>
-  </div>
-</section>
+<?php
+/* Service cards come from the shared city renderer, so adding a London page to
+   includes/location-services-data.php surfaces it here automatically. */
+$location_city             = 'london';
+$location_services_limit   = 0;   // the city index links to every London service; service pages show a rotating 6
+$location_services_eyebrow = '- explore more services';
+$location_services_heading = 'Services for London Authors';
+$location_services_intro   = "Pick the help your book needs. We work with authors across London and the UK, so you get children's book specialists close to home.";
+$location_services_section = 'section section-white';
+require __DIR__ . '/../includes/location-services.php';
+?>
 
 <?php require __DIR__ . '/../includes/cta.php'; ?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

@@ -95,32 +95,44 @@ include 'includes/header.php';
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
         <h3>Amazon and Kindle Listing Optimisation</h3>
-        <p>Your book’s listing is often the first thing a reader or parent sees. We check your title, subtitle, description, categories, and keywords, then rewrite what needs fixing. This falls under Amazon children's book promotion services and covers both the print and Kindle versions of your book.</p>
+        <div class="fc-body">
+          <p>Your book’s listing is often the first thing a reader or parent sees. We check your title, subtitle, description, categories, and keywords, then rewrite what needs fixing. This falls under Amazon children's book promotion services and covers both the print and Kindle versions of your book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.5L19 9l-4.7 3.4L16 18l-4-3.3L8 18l1.7-5.6L5 9l5.4-1.5Z"></path></svg></div>
         <h3>Kindle Promotion Campaigns</h3>
-        <p>If your book is on Kindle, we can run Kindle book promotion services that include price promotion timing, Kindle category placement, and coordinated pushes during free or discounted days. We also help you understand Kindle Unlimited and how page reads affect your ranking.</p>
+        <div class="fc-body">
+          <p>If your book is on Kindle, we can run Kindle book promotion services that include price promotion timing, Kindle category placement, and coordinated pushes during free or discounted days. We also help you understand Kindle Unlimited and how page reads affect your ranking.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M20 6 9 17l-5-5"></path></svg></div>
         <h3>Review Building Support</h3>
-        <p>Reviews help readers trust a book they have never seen before. We help you build a genuine plan to reach reviewers, bloggers and early readers who are a real fit for children’s books. We never buy or fake reviews. We only help you find real people who want to read your book.</p>
+        <div class="fc-body">
+          <p>Reviews help readers trust a book they have never seen before. We help you build a genuine plan to reach reviewers, bloggers and early readers who are a real fit for children’s books. We never buy or fake reviews. We only help you find real people who want to read your book.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg></div>
         <h3>Social Media and Content Support</h3>
-        <p>Many parents and teachers discover books through social media, not through search. We can create simple, warm content around your book, including sample pages, author posts, and launch graphics, so your book has a presence beyond the bookshop shelf.</p>
+        <div class="fc-body">
+          <p>Many parents and teachers discover books through social media, not through search. We can create simple, warm content around your book, including sample pages, author posts, and launch graphics, so your book has a presence beyond the bookshop shelf.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></div>
         <h3>Email and Newsletter Outreach</h3>
-        <p>If you have a mailing list or want to start one, we help you write launch emails and reader updates that do not feel pushy. A short, friendly email often does more than a big ad spend.</p>
+        <div class="fc-body">
+          <p>If you have a mailing list or want to start one, we help you write launch emails and reader updates that do not feel pushy. A short, friendly email often does more than a big ad spend.</p>
+        </div>
       </article>
       <article class="feature-card reveal">
         <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></div>
         <h3>Local and Online Media Outreach</h3>
-        <p>We reach out to book bloggers, parenting websites, local newspapers, and podcasts on your behalf, pitching your story in a way that fits their audience. This is part of our wider book promotion and marketing services and works well alongside listing and review work.</p>
+        <div class="fc-body">
+          <p>We reach out to book bloggers, parenting websites, local newspapers, and podcasts on your behalf, pitching your story in a way that fits their audience. This is part of our wider book promotion and marketing services and works well alongside listing and review work.</p>
+        </div>
       </article>
     </div>
   </div>
