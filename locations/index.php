@@ -27,6 +27,20 @@ $locations = [
         'short'  => "Children's book editing, design and publishing support for authors across Melbourne and Victoria.",
     ],
     [
+        'name'   => 'Sydney',
+        'region' => 'New South Wales',
+        'href'   => 'locations/sydney.php',
+        'image'  => 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=900&q=72',
+        'short'  => "Children's book editing, design and publishing support for authors across Sydney and New South Wales.",
+    ],
+    [
+        'name'   => 'Queensland',
+        'region' => 'Australia',
+        'href'   => 'locations/queensland.php',
+        'image'  => 'https://images.unsplash.com/photo-1548661625-a30d197ce439?auto=format&fit=crop&w=900&q=72',
+        'short'  => "Children's book editing, design and publishing support for authors from Brisbane to regional Queensland.",
+    ],
+    [
         'name'   => 'London',
         'region' => 'United Kingdom',
         'href'   => 'locations/london.php',
