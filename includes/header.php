@@ -86,6 +86,9 @@ $page_noindex = ($page_noindex ?? false);
   <?php if ($__ga4 !== ''): ?>
   <!-- Google tag (gtag.js) - GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo e($__ga4); ?>"></script>
+
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="s3Poe/qpjeQfrtN7jpayow" async></script>
+  
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
