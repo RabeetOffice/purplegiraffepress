@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>We Built Purple Giraffe Press to Be Different</h2>
       <p>Finding good ghostwriters in Sydney is not always easy. There are a lot of freelancers online promising the world and delivering very little. We built Purple Giraffe Press to be different. We are upfront about pricing, honest about timelines, and we treat every project, big or small, with the same care.</p>
       <p>Whether you want a picture book for your grandchildren, a novel you have been carrying around in your head, or a short ebook to grow your business, this page will walk you through exactly what we offer and how it works.</p>
       <p>Sydney has a lot of talented writers, but not all of them are set up to work with someone who has never written a book before. You should not need a writing degree to get a book made. You just need a clear idea and a writer who knows how to ask the right questions, listen properly, and turn your answers into something worth reading.</p>

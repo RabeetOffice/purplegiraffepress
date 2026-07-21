@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>Simple, honest, and easy to follow</h2>
       <p>Maybe you've written your first picture book, and you're not sure what happens next. Maybe you've been through a few designers already, and you're tired of getting files back that don't feel right for kids. Either way, you don't need to know anything about design software or publishing formats. You just need someone who knows what makes a children's book work and who will explain things plainly along the way.</p>
       <p>We keep things simple, honest, and easy to follow from the first email to the final file. If you're comparing your options and searching for the best children's book designer in Dublin, the main thing to look for is someone who treats your book as its own project, not a template with your title dropped in. That's the approach we take with every author who gets in touch.</p>
       <p>Every book is different, so we don't force your story into a fixed package. We look at what you've got, what you need, and what will actually help a child pick up the book and stay with it to the last page.</p>

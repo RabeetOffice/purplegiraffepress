@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>We are a small team based here in Dublin</h2>
       <p>That is where we come in. We are a small team based here in Dublin, and we work with parents, authors, schools, and small publishers who want proper illustration for their book. We are not a big faceless agency. You will deal with real people who read your story, ask questions about your characters, and draw pictures that match what you had in your head.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Illustrations &rarr;</a></div>
     </div>

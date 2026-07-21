@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>A clean, correct manuscript matters</h2>
       <p>Whether you are self-publishing your first picture book or finishing the fourth title in a series, a clean, correct manuscript matters. Parents notice typos. Teachers notice them too. And once a book is printed, fixing a mistake is far harder than catching it before it goes to print.</p>
       <p>We work with writers across Dublin and the wider country, and we keep things simple. No jargon, no confusing quotes, no long waits for a reply.</p>
       <p>Not every book proofreading services in Dublin provider understands children's writing specifically. Some treat every manuscript the same, whether it is a business report, a novel for adults, or a picture book for a five-year-old. We do not. Children's books have their own rhythm, their own rules around vocabulary, and their own way of reading aloud. That is the lens we bring to every manuscript that lands in our inbox.</p>

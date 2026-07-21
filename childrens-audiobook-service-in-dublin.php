@@ -99,7 +99,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>A Clear, Honest Process From Start To Finish</h2>
       <p>We are based here in Dublin, and we know the local voice talent, the local studios, and the local market. You won't be sending your manuscript off to a call centre abroad and hoping for the best. You'll be working with people you can actually meet for a coffee if you want to.</p>
       <p>Whether you have written a novel, a memoir, a business book, or a set of training materials, we can help you turn it into an audiobook that sounds like it was made with care. No upselling you on things you don't need. Just a clear, honest process from start to finish.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Audiobook &rarr;</a></div>

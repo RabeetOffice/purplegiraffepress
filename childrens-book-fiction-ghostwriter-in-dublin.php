@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>There's no wrong starting point</h2>
       <p>Whether you want a gritty thriller, a family saga, a romance, or something that doesn't fit neatly into any genre, we sit down with you first and listen. Then we write. You stay in the driver's seat the whole way through, and we handle the parts that usually stop people from finishing a book: structure, pacing, dialogue, and getting words on the page every single week.</p>
       <p>If you've been putting off writing your novel because life keeps getting in the way. Most people who reach out to us have tried to write the book themselves at some point. Some got a few chapters in and lost momentum. Others have never written more than a diary entry but have carried a story around in their head for years. There's no wrong starting point. What matters is that you have something worth telling, and you'd rather have a professional shape it properly than let it sit unfinished.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Novel &rarr;</a></div>

@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>That is our job to explain, in plain terms</h2>
       <p>Most people who come to us have never printed a book before, and that is completely fine. You do not need to know the difference between a matt cover and a gloss cover, or what page count works out cheapest. That is our job to explain, in plain terms, before you spend a penny.</p>
       <p>What you do need is someone who will look at your actual files, tell you honestly what will and will not work, and give you a proof to check before committing to a full print run. That is the standard we hold ourselves to on every job, big or small.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Print Run &rarr;</a></div>

@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>The book stays the star of the show</h2>
       <p>At Purple Giraffe Press, we work with children's authors and small publishers across Dublin to turn picture books into short, warm, engaging videos. We are not a big faceless studio. We are a small team that reads your book properly before we touch a single frame.</p>
       <p>Whether you are self-published or working with a small press, we build videos that respect your story and your budget. No upsells you do not need, just a trailer that does its job.</p>
       <p>We call this simple children's story video promotion in Dublin, but really it is just old-fashioned storytelling, moved onto a screen. The book stays the star of the show. The video is only there to open the door and invite a reader in.</p>

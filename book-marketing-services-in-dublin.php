@@ -89,7 +89,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>Most books don't fail because they're bad</h2>
       <p>If you've published a book and it's sitting quietly on Amazon with barely any sales, you're not alone. Most books don't fail because they're bad. They fail because nobody knows they exist. Our children's book promotion services in Dublin are built to fix exactly that problem, with a plan that fits your budget and your goals.</p>
       <p>Whether you're self-published or working with a small press, we'll sit down with you, look at what you've got, and build a plan that actually makes sense for your book and your readers.</p>
       <p>Marketing a book isn't about shouting the loudest. It's about finding the right readers and putting your book in front of them at the right time, in the right place. That might mean a school visit, a well-timed Kindle promotion, a handful of genuine reviews, or a mix of all three.</p>
