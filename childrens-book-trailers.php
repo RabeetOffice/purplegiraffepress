@@ -73,7 +73,6 @@ include 'includes/header.php';
   <div class="container svc-split">
     <div class="svc-copy reveal">
       <p class="eyebrow script-mark">- what it is</p>
-      <h2>Your book seen, not just listed</h2>
       <p>Purple Giraffe Press builds video trailers for children’s authors, illustrators, and small publishers who want their book seen, not just listed. We handle the script, the animation, the voice work, and the final edit, so you can focus on writing your next book instead of learning video software.</p>
       <p>Most authors we talk to have the same problem. They’ve spent years on the manuscript, found an illustrator, printed copies, and then hit a wall. They post a photo of the cover, share it with family, and hope word of mouth does the rest. It rarely does, not because the book isn’t good, but because a still photo of a cover asks a lot from a stranger’s imagination. A video does some of that imagining for them.</p>
       <div class="button-row"><a class="btn btn-primary" href="contact.php" data-quote-open>Start Your Book &rarr;</a></div>
