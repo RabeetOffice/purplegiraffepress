@@ -1,9 +1,9 @@
 <?php
 include 'includes/config.php';
 
-$page_title       = 'Audiobook Production Services Sydney | Narration & Publishing';
-$page_description = 'Professional audiobook production in Sydney, including narration, recording, editing, mastering, and distribution for authors and publishers.';
-$canonical_path   = 'childrens-book-audiobook-production-services-in-sydney.php';
+$page_title       = 'Children\'s Audiobook Production for Sydney Authors';
+$page_description = 'Bring your children\'s book to life with expert audiobook production in Sydney. Skilled narration and sound quality tailored to your story\'s genre.';
+$canonical_path   = 'childrens-audiobook-production-services-in-sydney.php';
 $breadcrumb_name  = 'Audiobook Production in Sydney';
 $breadcrumbs = [
     ['name' => 'Home',                 'url' => page_url('index.php')],
@@ -74,7 +74,7 @@ include 'includes/header.php';
   <div class="container svc-hero-grid">
     <div class="svc-hero-copy">
       <div class="breadcrumbs"><a href="index.php">Home</a> / <a href="locations/">Locations</a> / <a href="locations/sydney.php">Sydney</a> / Audiobook Production</div>
-      <h1>Sydney <em>Audiobook Services</em> That Bring Your Book to <strong>Life</strong></h1>
+      <h1>Turn <strong>Your Story</strong> into a Voice Kids Love, <em>Sydney Children's Audiobook</em> Services</h1>
       <p class="lead">Your book is written. Now readers want to listen to it too. More people are choosing audiobooks over paperbacks, and if your book isn't available as one, you are missing a growing part of your audience.</p>
       <p class="lead">At Purple Giraffe Press, we help Sydney authors and publishers turn manuscripts into audiobooks that sound as good as anything on a big platform. We handle the narration, the sound editing, and the distribution, so you don't have to learn a new skill on top of writing your book.</p>
       <div class="button-row">
