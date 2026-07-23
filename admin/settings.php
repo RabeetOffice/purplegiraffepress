@@ -17,12 +17,15 @@ $OVR_PATH = ADMIN_DATA_DIR . '/settings-overrides.json';
 $CONTACT_KEYS = ['site_phone', 'site_email', 'site_address', 'site_trading_address', 'site_hours'];
 
 /* Defaults duplicated from includes/config.php so the social form can show the
-   raw override-or-default map (config hides TikTok/YouTube by default). */
+   raw override-or-default map. */
 $SOCIAL_DEFAULTS = [
-    'Instagram' => 'https://instagram.com/purplegiraffepress',
-    'Facebook'  => 'https://www.facebook.com/people/Purple-Giraffe-Press/61575292427308/',
-    'TikTok'    => '',
-    'YouTube'   => '',
+    'Facebook'  => 'https://www.facebook.com/PurpleGiraffePress',
+    'Instagram' => 'https://www.instagram.com/purplegiraffepress',
+    'YouTube'   => 'https://www.youtube.com/@PurpleGiraffePress',
+    'LinkedIn'  => 'https://www.linkedin.com/company/purple-giraffe-press',
+    'X'         => 'https://x.com/purplegiraffep',
+    'Pinterest' => 'https://www.pinterest.com/PurpleGiraffePress/',
+    'TikTok'    => 'https://www.tiktok.com/@purplegiraffepress',
 ];
 
 /* ---------------------------------------------------------------- actions */

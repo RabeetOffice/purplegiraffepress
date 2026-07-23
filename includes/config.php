@@ -34,10 +34,13 @@ define('MAIN_CTA_TEXT', 'Start Publishing');
 define('MAIN_CTA_LINK', 'contact.php');
 
 $social_links = pgp_setting('social_links', [
-    'Instagram' => 'https://instagram.com/purplegiraffepress',
-    'Facebook' => 'https://www.facebook.com/people/Purple-Giraffe-Press/61575292427308/',
-    // 'TikTok' => 'https://tiktok.com/@purplegiraffepress',
-    // 'YouTube' => 'https://youtube.com/purplegiraffepress',
+    'Facebook' => 'https://www.facebook.com/PurpleGiraffePress',
+    'Instagram' => 'https://www.instagram.com/purplegiraffepress',
+    'YouTube' => 'https://www.youtube.com/@PurpleGiraffePress',
+    'LinkedIn' => 'https://www.linkedin.com/company/purple-giraffe-press',
+    'X' => 'https://x.com/purplegiraffep',
+    'Pinterest' => 'https://www.pinterest.com/PurpleGiraffePress/',
+    'TikTok' => 'https://www.tiktok.com/@purplegiraffepress',
 ]);
 /* Blank entries mean "hidden" - drop them from the rendered list. */
 if (!is_array($social_links)) { $social_links = []; }
