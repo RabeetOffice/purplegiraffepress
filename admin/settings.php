@@ -169,7 +169,7 @@ admin_layout_start('Site Settings', 'settings');
       <div class="adm-field-row">
         <label class="adm-field">
           <span>Phone number</span>
-          <input type="text" name="site_phone" value="<?php echo e($contactCurrent['site_phone']); ?>" placeholder="(07) 5690 2990">
+          <input type="text" name="site_phone" value="<?php echo e($contactCurrent['site_phone']); ?>" placeholder="+61 7 5690 2990">
         </label>
         <label class="adm-field">
           <span>Public email</span>

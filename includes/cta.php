@@ -9,7 +9,7 @@
       <p>Tell us about your book in 60 seconds. We&apos;ll come back with a free, no-pressure consultation and a real plan.</p>
       <div class="button-row">
         <a class="btn btn-sun" href="<?php echo e(asset('contact.php')); ?>" data-quote-open>Get a Free Consultation →</a>
-        <a class="cta-call" href="tel:<?php echo e(preg_replace('/[^0-9]/', '', SITE_PHONE)); ?>">or call <strong><?php echo e(SITE_PHONE); ?></strong></a>
+        <a class="cta-call" href="tel:<?php echo e(preg_replace('/[^0-9+]/', '', SITE_PHONE)); ?>">or call <strong><?php echo e(SITE_PHONE); ?></strong></a>
       </div>
     </div>
     <div class="cta-mascot">

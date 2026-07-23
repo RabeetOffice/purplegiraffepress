@@ -62,7 +62,7 @@
         <ul class="footer-contact-list">
           <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('phone'); ?></svg></span>
-            <a href="tel:<?php echo e(preg_replace('/[^0-9]/', '', SITE_PHONE)); ?>"><?php echo e(SITE_PHONE); ?></a>
+            <a href="tel:<?php echo e(preg_replace('/[^0-9+]/', '', SITE_PHONE)); ?>"><?php echo e(SITE_PHONE); ?></a>
           </li>
           <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('mail'); ?></svg></span>
@@ -70,7 +70,7 @@
           </li>
           <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('pin'); ?></svg></span>
-            <span><?php echo e(SITE_ADDRESS); ?></span>
+            <a href="<?php echo e(SITE_REVIEW_URL); ?>" target="_blank" rel="noopener"><?php echo e(SITE_ADDRESS); ?></a>
           </li>
           <?php if (defined('SITE_TRADING_ADDRESS') && SITE_TRADING_ADDRESS !== ''): ?>
           <!-- <li>

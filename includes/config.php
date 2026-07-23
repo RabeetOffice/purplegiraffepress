@@ -23,9 +23,10 @@ define('SITE_TAGLINE', 'Where little stories become big adventures');
 define('SITE_FOUNDED_YEAR', '2022');                       // brand founding year — used across copy + meta
 define('SITE_LOGO', 'assets/images/logo.webp');
 define('SITE_MASCOT', 'assets/images/mascot.webp');
-define('SITE_PHONE', (string) pgp_setting('site_phone', '(07) 5690 2990'));
+define('SITE_PHONE', (string) pgp_setting('site_phone', '+61 7 5690 2990'));
 define('SITE_EMAIL', (string) pgp_setting('site_email', 'info@purplegiraffepress.com'));
 define('SITE_ADDRESS', (string) pgp_setting('site_address', 'Level 9 Corporate Ct, Bundall QLD 4217, Australia'));
+define('SITE_REVIEW_URL', (string) pgp_setting('site_review_url', 'https://g.page/r/CQAkRVYrbqSLEBM/'));
 define('SITE_TRADING_ADDRESS', (string) pgp_setting('site_trading_address', '60 E 42nd St #4600, New York, NY 10165, United States'));
 define('SITE_HOURS', (string) pgp_setting('site_hours', 'Monday to Friday, 9:00 AM to 5:00 PM AEST'));
 define('SITE_CANONICAL_URL', 'https://purplegiraffepress.com/');
