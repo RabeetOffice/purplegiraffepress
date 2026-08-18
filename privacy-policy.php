@@ -100,7 +100,7 @@ $legal_sections = [
 <section class="section legal-body">
   <div class="container">
     <div class="legal-intro">
-      <p>Purple Giraffe Press (ABN available on request).</p>
+      <p>Purple Giraffe Press is operated by <a href="https://keystonepublishinggroup.com/" target="_blank" rel="nofollow noopener">Keystone Publishing Group Pty Ltd</a> (ABN <a href="https://abr.business.gov.au/ABN/View?id=21697806447" target="_blank" rel="nofollow noopener">21 697 806 447</a>), which is the entity responsible for the personal information described in this policy.</p>
       <p>This Privacy Policy applies to all personal information collected through our website at purplegiraffepress.com, our contact forms, and our manuscript submission portal. By using our website or submitting your details, you agree to the collection and use of information in accordance with this policy.</p>
     </div>
 

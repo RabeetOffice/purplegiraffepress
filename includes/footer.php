@@ -75,6 +75,10 @@
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('pin'); ?></svg></span>
             <a href="<?php echo e(SITE_REVIEW_URL); ?>" target="_blank" rel="noopener"><?php echo e(SITE_ADDRESS); ?></a>
           </li>
+          <li class="footer-abn">
+            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('globe'); ?></svg></span>
+            <span><a href="https://keystonepublishinggroup.com/" target="_blank" rel="nofollow noopener"><b>Keystone Publishing Group Pty Ltd ABN:</b></a> <a href="https://abr.business.gov.au/ABN/View?id=21697806447" target="_blank" rel="nofollow noopener">21 697 806 447</a></span>
+          </li>
           <?php if (defined('SITE_TRADING_ADDRESS') && SITE_TRADING_ADDRESS !== ''): ?>
           <!-- <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('globe'); ?></svg></span>

@@ -6352,3 +6352,9 @@ body.qp-open { overflow: hidden; }
   /* A lone card keeps the centred single-column track the include sets inline. */
   .services-grid.mobile-swiper > .swiper-wrapper > .swiper-slide:only-child { grid-column: auto; }
 }
+
+/* --- footer ABN / registered entity line ---------------------------------- */
+/* Wraps to two lines on narrow columns, so the icon stays pinned to the top
+   instead of floating to the vertical middle of the text block. */
+.footer-contact-list li.footer-abn { align-items: flex-start; }
+.footer-contact-list li.footer-abn b { font-weight: 800; color: rgba(255, 255, 255, .9); }
