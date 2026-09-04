@@ -101,7 +101,9 @@
           <li class="footer-office">
             <?php echo site_flag($office['flag'], 'ft'); ?>
             <div class="footer-office-body">
-              <h3><?php echo e($office['region']); ?><small><?php echo e($office['label']); ?></small></h3>
+              <h3><?php echo e($office['region']); ?>
+                <!-- <small><?php echo e($office['label']); ?></small> -->
+              </h3>
               <?php if (trim((string) $office['map']) !== ''): ?>
                 <a class="footer-office-address" href="<?php echo e($office['map']); ?>" target="_blank" rel="noopener"><?php echo e($office['address']); ?></a>
               <?php else: ?>
