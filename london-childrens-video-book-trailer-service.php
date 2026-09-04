@@ -53,9 +53,10 @@ $page_faqs = array (
 
 /* City LocalBusiness schema (see includes/header.php). */
 $location_business = [
+    'streetAddress' => '20 Old Bailey',
     'locality'   => 'London',
     'region'     => 'London',
-    'postalCode' => 'EC1V 2NX',
+    'postalCode' => 'EC4M 7EN',
     'country'    => 'GB',
 ];
 

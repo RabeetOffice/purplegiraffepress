@@ -16,12 +16,13 @@ $breadcrumbs = [
     ['name' => 'London',    'url' => page_url('locations/london.php')],
 ];
 
-/* City LocalBusiness schema (see includes/header.php). UK country code and a
-   central-London placeholder postcode until we have a real London address. */
+/* City LocalBusiness schema (see includes/header.php). Real London office
+   address, kept in step with SITE_ADDRESS_UK in includes/config.php. */
 $location_business = [
+    'streetAddress' => '20 Old Bailey',
     'locality'   => 'London',
     'region'     => 'London',
-    'postalCode' => 'EC1V 2NX',
+    'postalCode' => 'EC4M 7EN',
     'country'    => 'GB',
 ];
 

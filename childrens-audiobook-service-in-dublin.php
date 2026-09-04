@@ -61,12 +61,13 @@ $page_faqs = array (
   ),
 );
 
-/* City LocalBusiness schema (see includes/header.php). streetAddress is left out
-   until we have a Dublin address; D01 is the city-centre postal district. */
+/* City LocalBusiness schema (see includes/header.php). Real Dublin office
+   address, kept in step with SITE_ADDRESS_IE in includes/config.php. */
 $location_business = [
+    'streetAddress' => 'Canon Hall, North Wall',
     'locality'   => 'Dublin',
     'region'     => 'Dublin',
-    'postalCode' => 'D01',
+    'postalCode' => 'D03 WP86',
     'country'    => 'IE',
 ];
 

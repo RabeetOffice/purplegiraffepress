@@ -28,8 +28,10 @@ define('SITE_PHONE_US', (string) pgp_setting('site_phone_us', '+1 628 265 7210')
 define('SITE_PHONE_UK', (string) pgp_setting('site_phone_uk', '+44 20 3048 2609'));
 define('SITE_EMAIL', (string) pgp_setting('site_email', 'info@purplegiraffepress.com'));
 define('SITE_ADDRESS', (string) pgp_setting('site_address', 'Level 9 Corporate Ct, Bundall QLD 4217, Australia'));
+define('SITE_ADDRESS_UK', (string) pgp_setting('site_address_uk', '20 Old Bailey, London EC4M 7EN, United Kingdom'));
+define('SITE_ADDRESS_IE', (string) pgp_setting('site_address_ie', 'Canon Hall, North Wall, Dublin, D03 WP86, Ireland'));
 define('SITE_REVIEW_URL', (string) pgp_setting('site_review_url', 'https://g.page/r/CQAkRVYrbqSLEBM/'));
-define('SITE_TRADING_ADDRESS', (string) pgp_setting('site_trading_address', '60 E 42nd St #4600, New York, NY 10165, United States'));
+define('SITE_TRADING_ADDRESS', (string) pgp_setting('site_trading_address', '465 California St 17th Fl - Ste 1700, San Francisco, CA 94104, United States'));
 define('SITE_HOURS', (string) pgp_setting('site_hours', 'Monday to Friday, 9:00 AM to 5:00 PM AEST'));
 define('SITE_CANONICAL_URL', 'https://purplegiraffepress.com/');
 define('MAIN_CTA_TEXT', 'Start Publishing');
@@ -48,6 +50,130 @@ function site_phones() {
     return array_values(array_filter($rows, static function ($row) {
         return trim((string) $row['number']) !== '';
     }));
+}
+
+/* The offices we publish an address for, used by the footer strip, the contact
+   panels and the schema markup. Blank an address in the admin and its card
+   disappears. Same order as site_phones() so the footer reads consistently. */
+function site_offices() {
+    $rows = [
+        [
+            'region'  => 'Australia',
+            'short'   => 'AU',
+            'flag'    => 'au',
+            'label'   => 'Head office',
+            'address' => SITE_ADDRESS,
+            'phone'   => SITE_PHONE,
+            'map'     => SITE_REVIEW_URL,
+            'schema'  => ['street' => 'Level 9 Corporate Ct', 'locality' => 'Bundall', 'region' => 'QLD', 'postal' => '4217', 'country' => 'AU'],
+        ],
+        [
+            'region'  => 'United States',
+            'short'   => 'US',
+            'flag'    => 'us',
+            'label'   => 'Trading address',
+            'address' => SITE_TRADING_ADDRESS,
+            'phone'   => SITE_PHONE_US,
+            'map'     => '',
+            'schema'  => ['street' => '465 California St 17th Fl - Ste 1700', 'locality' => 'San Francisco', 'region' => 'CA', 'postal' => '94104', 'country' => 'US'],
+        ],
+        [
+            'region'  => 'United Kingdom',
+            'short'   => 'UK',
+            'flag'    => 'gb',
+            'label'   => 'London office',
+            'address' => SITE_ADDRESS_UK,
+            'phone'   => SITE_PHONE_UK,
+            'map'     => '',
+            'schema'  => ['street' => '20 Old Bailey', 'locality' => 'London', 'region' => 'London', 'postal' => 'EC4M 7EN', 'country' => 'GB'],
+        ],
+        [
+            'region'  => 'Ireland',
+            'short'   => 'IE',
+            'flag'    => 'ie',
+            'label'   => 'Dublin office',
+            'address' => SITE_ADDRESS_IE,
+            'phone'   => '',
+            'map'     => '',
+            'schema'  => ['street' => 'Canon Hall, North Wall', 'locality' => 'Dublin', 'region' => 'Dublin', 'postal' => 'D03 WP86', 'country' => 'IE'],
+        ],
+    ];
+    return array_values(array_filter($rows, static function ($row) {
+        return trim((string) $row['address']) !== '';
+    }));
+}
+
+/* The Union Jack, drawn on a 60x30 box. Used on its own for the UK and scaled
+   into the canton of the Australian flag, so each copy takes its own clip id. */
+function site_union_jack($clip_id) {
+    return '<clipPath id="' . $clip_id . '"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>'
+         . '<rect width="60" height="30" fill="#012169"/>'
+         . '<path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/>'
+         . '<path d="M0,0 60,30M60,0 0,30" clip-path="url(#' . $clip_id . ')" stroke="#c8102e" stroke-width="4"/>'
+         . '<path d="M30,0V30M0,15H60" stroke="#fff" stroke-width="10"/>'
+         . '<path d="M30,0V30M0,15H60" stroke="#c8102e" stroke-width="6"/>';
+}
+
+/* Inline country flags (used on the locations hub and the footer office strip).
+   Inline SVG stays sharp on every screen, needs no extra request and never
+   falls back to a pair of letters the way flag emoji do on Windows. $suffix
+   keeps the clip-path ids unique when a page prints the same flag twice. */
+function site_flag($code, $suffix = '') {
+    $star7 = 'M0,-1L.19,-.4L.78,-.62L.43,-.1L.97,.22L.35,.28L.43,.9L0,.44L-.43,.9L-.35,.28L-.97,.22L-.43,-.1L-.78,-.62L-.19,-.4Z';
+    $star5 = 'M0,-1L.24,-.32L.95,-.31L.38,.12L.59,.81L0,.4L-.59,.81L-.38,.12L-.95,-.31L-.24,-.32Z';
+    $uid   = $suffix !== '' ? '-' . preg_replace('/[^a-z0-9-]/i', '', (string) $suffix) : '';
+
+    switch ($code) {
+        case 'au':
+            $body = '<rect width="60" height="30" fill="#00247d"/>'
+                  . '<g transform="scale(.5)">' . site_union_jack('pgp-jack-au' . $uid) . '</g>'
+                  . '<g fill="#fff">'
+                  . '<path d="' . $star7 . '" transform="translate(15,22.5) scale(4.5)"/>'
+                  . '<path d="' . $star7 . '" transform="translate(45,25.9) scale(2.15)"/>'
+                  . '<path d="' . $star7 . '" transform="translate(38,17.5) scale(2.15)"/>'
+                  . '<path d="' . $star7 . '" transform="translate(45,9.4) scale(2.15)"/>'
+                  . '<path d="' . $star7 . '" transform="translate(50,13.5) scale(2.15)"/>'
+                  . '<path d="' . $star5 . '" transform="translate(47,19.9) scale(1.25)"/>'
+                  . '</g>';
+            break;
+        case 'gb':
+            $body = site_union_jack('pgp-jack-gb' . $uid);
+            break;
+        case 'us':
+            /* 13 stripes, then the canton's 50 stars laid out the official way:
+               nine rows alternating six and five, drawn from one <use> symbol so
+               the markup stays small. */
+            $stripe = 30 / 13;
+            $body   = '<rect width="60" height="30" fill="#fff"/><g fill="#b31942">';
+            for ($i = 0; $i < 13; $i += 2) {
+                $body .= '<rect y="' . round($i * $stripe, 2) . '" width="60" height="' . round($stripe, 2) . '"/>';
+            }
+            $body .= '</g><rect width="24" height="' . round(7 * $stripe, 2) . '" fill="#0a3161"/>'
+                   . '<defs><g id="pgp-star-us' . $uid . '" transform="scale(.92)"><path d="' . $star5 . '"/></g></defs>'
+                   . '<g fill="#fff">';
+            $row_step = (7 * $stripe) / 10;
+            for ($r = 0; $r < 9; $r++) {
+                $y     = round($row_step * ($r + 1), 2);
+                $count = ($r % 2 === 0) ? 6 : 5;
+                for ($c = 0; $c < $count; $c++) {
+                    $x = ($r % 2 === 0) ? 2 + 4 * $c : 4 + 4 * $c;
+                    $body .= '<use href="#pgp-star-us' . $uid . '" x="' . $x . '" y="' . $y . '"/>';
+                }
+            }
+            $body .= '</g>';
+            break;
+        case 'ie':
+            $body = '<rect width="60" height="30" fill="#fff"/>'
+                  . '<rect width="20" height="30" fill="#169b62"/>'
+                  . '<rect x="40" width="20" height="30" fill="#ff883e"/>';
+            break;
+        default:
+            return '';
+    }
+
+    return '<span class="location-flag" aria-hidden="true">'
+         . '<svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">' . $body . '</svg>'
+         . '</span>';
 }
 
 $social_links = pgp_setting('social_links', [

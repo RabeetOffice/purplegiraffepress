@@ -17,7 +17,17 @@
           <li><a href="tel:<?php echo e(tel_href($phone['number'])); ?>"><span class="phone-region"><?php echo e($phone['short']); ?></span><?php echo e($phone['number']); ?></a></li>
         <?php endforeach; ?>
         <li><a href="mailto:<?php echo e(SITE_EMAIL); ?>"><?php echo e(SITE_EMAIL); ?></a></li>
-        <li><a href="<?php echo e(SITE_REVIEW_URL); ?>" target="_blank" rel="noopener"><?php echo e(SITE_ADDRESS); ?></a></li>
+        <?php /* One line per office: Australia links to the Google listing, the
+                 rest are plain addresses. See site_offices() in config. */ ?>
+        <?php foreach (site_offices() as $office): ?>
+          <li>
+            <?php if (trim((string) $office['map']) !== ''): ?>
+              <a href="<?php echo e($office['map']); ?>" target="_blank" rel="noopener"><span class="phone-region"><?php echo e($office['short']); ?></span><?php echo e($office['address']); ?></a>
+            <?php else: ?>
+              <span class="phone-region"><?php echo e($office['short']); ?></span><?php echo e($office['address']); ?>
+            <?php endif; ?>
+          </li>
+        <?php endforeach; ?>
         <li><?php echo e(SITE_HOURS); ?></li>
       </ul>
     </div>

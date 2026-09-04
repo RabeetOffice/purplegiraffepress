@@ -64,10 +64,11 @@
         <h2>Contact</h2>
         <ul class="footer-contact-list">
           <li class="footer-phone-row">
-            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('phone'); ?></svg></span>
             <span class="footer-phones">
+              <?php /* The country chip doubles as the row icon, so every phone
+                       line sits in the same left column as the rows below. */ ?>
               <?php foreach (site_phones() as $phone): ?>
-                <a href="tel:<?php echo e(tel_href($phone['number'])); ?>"><span class="phone-region"><?php echo e($phone['short']); ?></span><?php echo e($phone['number']); ?></a>
+                <a href="tel:<?php echo e(tel_href($phone['number'])); ?>"><span class="contact-icon contact-chip"><?php echo e($phone['short']); ?></span><span><?php echo e($phone['number']); ?></span></a>
               <?php endforeach; ?>
             </span>
           </li>
@@ -75,20 +76,11 @@
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('mail'); ?></svg></span>
             <a href="mailto:<?php echo e(SITE_EMAIL); ?>"><?php echo e(SITE_EMAIL); ?></a>
           </li>
-          <li>
-            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('pin'); ?></svg></span>
-            <a href="<?php echo e(SITE_REVIEW_URL); ?>" target="_blank" rel="noopener"><?php echo e(SITE_ADDRESS); ?></a>
-          </li>
+          <?php /* Street addresses live in the office strip under this grid. */ ?>
           <li class="footer-abn">
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('globe'); ?></svg></span>
             <span><a href="https://keystonepublishinggroup.com/" target="_blank" rel="nofollow noopener"><b>Keystone Publishing Group Pty Ltd ABN:</b></a> <a href="https://abr.business.gov.au/ABN/View?id=21697806447" target="_blank" rel="nofollow noopener">21 697 806 447</a></span>
           </li>
-          <?php if (defined('SITE_TRADING_ADDRESS') && SITE_TRADING_ADDRESS !== ''): ?>
-          <!-- <li>
-            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('globe'); ?></svg></span>
-            <span><strong style="display:block;font-weight:800;">Trading address</strong><?php echo e(SITE_TRADING_ADDRESS); ?></span>
-          </li> -->
-          <?php endif; ?>
           <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('clock'); ?></svg></span>
             <span><?php echo e(SITE_HOURS); ?></span>
@@ -96,6 +88,35 @@
         </ul>
       </div>
     </div>
+    <?php /* Office strip: one card per country we hold an address for. Edit the
+             addresses in the admin (Site Settings) or site_offices() in
+             includes/config.php. */ ?>
+    <?php $footer_offices = site_offices(); ?>
+    <?php if ($footer_offices): ?>
+    <div class="footer-offices">
+      <div class="container">
+        <h2 class="footer-offices-title">Our offices</h2>
+        <ul class="footer-offices-grid">
+          <?php foreach ($footer_offices as $office): ?>
+          <li class="footer-office">
+            <?php echo site_flag($office['flag'], 'ft'); ?>
+            <div class="footer-office-body">
+              <h3><?php echo e($office['region']); ?><small><?php echo e($office['label']); ?></small></h3>
+              <?php if (trim((string) $office['map']) !== ''): ?>
+                <a class="footer-office-address" href="<?php echo e($office['map']); ?>" target="_blank" rel="noopener"><?php echo e($office['address']); ?></a>
+              <?php else: ?>
+                <p class="footer-office-address"><?php echo e($office['address']); ?></p>
+              <?php endif; ?>
+              <?php if (trim((string) $office['phone']) !== ''): ?>
+                <a class="footer-office-phone" href="tel:<?php echo e(tel_href($office['phone'])); ?>"><?php echo e($office['phone']); ?></a>
+              <?php endif; ?>
+            </div>
+          </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    </div>
+    <?php endif; ?>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p><?php echo e(COPYRIGHT_TEXT); ?></p>

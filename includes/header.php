@@ -179,6 +179,27 @@ $page_noindex = ($page_noindex ?? false);
       }
       echo json_encode($__cp, JSON_UNESCAPED_SLASHES);
     ?>,
+    <?php /* Every office we publish an address for, so each country's listing
+             carries a real postal address. */ ?>
+    "location": <?php
+      $__places = [];
+      foreach (site_offices() as $__o) {
+          $__sc = $__o['schema'];
+          $__places[] = [
+              '@type'   => 'Place',
+              'name'    => SITE_NAME . ' ' . $__sc['locality'],
+              'address' => [
+                  '@type'           => 'PostalAddress',
+                  'streetAddress'   => $__sc['street'],
+                  'addressLocality' => $__sc['locality'],
+                  'addressRegion'   => $__sc['region'],
+                  'postalCode'      => $__sc['postal'],
+                  'addressCountry'  => $__sc['country'],
+              ],
+          ];
+      }
+      echo json_encode($__places, JSON_UNESCAPED_SLASHES);
+    ?>,
     "sameAs": <?php echo json_encode(array_values($social_links)); ?>
   }
   </script>

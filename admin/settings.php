@@ -14,7 +14,7 @@ $user = admin_require_module('settings');
 
 $OVR_PATH = ADMIN_DATA_DIR . '/settings-overrides.json';
 
-$CONTACT_KEYS = ['site_phone', 'site_phone_us', 'site_phone_uk', 'site_email', 'site_address', 'site_trading_address', 'site_hours'];
+$CONTACT_KEYS = ['site_phone', 'site_phone_us', 'site_phone_uk', 'site_email', 'site_address', 'site_address_uk', 'site_address_ie', 'site_trading_address', 'site_hours'];
 
 /* Defaults duplicated from includes/config.php so the social form can show the
    raw override-or-default map. */
@@ -134,6 +134,8 @@ $contactCurrent = [
     'site_phone_uk'        => SITE_PHONE_UK,
     'site_email'           => SITE_EMAIL,
     'site_address'         => SITE_ADDRESS,
+    'site_address_uk'      => SITE_ADDRESS_UK,
+    'site_address_ie'      => SITE_ADDRESS_IE,
     'site_trading_address' => SITE_TRADING_ADDRESS,
     'site_hours'           => SITE_HOURS,
 ];
@@ -195,9 +197,19 @@ admin_layout_start('Site Settings', 'settings');
         <span>Registered address (Australia)</span>
         <input type="text" name="site_address" value="<?php echo e($contactCurrent['site_address']); ?>">
       </label>
+      <div class="adm-field-row">
+        <label class="adm-field">
+          <span>Office address (United Kingdom)</span>
+          <input type="text" name="site_address_uk" value="<?php echo e($contactCurrent['site_address_uk']); ?>" placeholder="20 Old Bailey, London EC4M 7EN, United Kingdom">
+        </label>
+        <label class="adm-field">
+          <span>Office address (Ireland)</span>
+          <input type="text" name="site_address_ie" value="<?php echo e($contactCurrent['site_address_ie']); ?>" placeholder="Canon Hall, North Wall, Dublin, D03 WP86, Ireland">
+        </label>
+      </div>
       <label class="adm-field">
         <span>Trading address (United States)</span>
-        <input type="text" name="site_trading_address" value="<?php echo e($contactCurrent['site_trading_address']); ?>">
+        <input type="text" name="site_trading_address" value="<?php echo e($contactCurrent['site_trading_address']); ?>" placeholder="465 California St 17th Fl - Ste 1700, San Francisco, CA 94104, United States">
       </label>
       <label class="adm-field">
         <span>Opening hours</span>
