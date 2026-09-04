@@ -6358,3 +6358,30 @@ body.qp-open { overflow: hidden; }
    instead of floating to the vertical middle of the text block. */
 .footer-contact-list li.footer-abn { align-items: flex-start; }
 .footer-contact-list li.footer-abn b { font-weight: 800; color: rgba(255, 255, 255, .9); }
+
+/* --- regional phone numbers (AU / US / UK) -------------------------------- */
+/* One line per country in the footer and in the contact info cards. The little
+   country chip sits inside the link so the whole row stays tappable. */
+.phone-region {
+  display: inline-block;
+  min-width: 32px;
+  margin-right: 9px;
+  padding: 1px 7px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08);
+  color: var(--gold);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+.footer-contact-list li.footer-phone-row { align-items: flex-start; }
+.footer-phones { display: grid; gap: 8px; }
+.footer-phones a { display: block; }
+.contact-grid .info-card .check-list a .phone-region { color: var(--gold); }
+@media (max-width: 560px) {
+  .phone-region { min-width: 28px; margin-right: 7px; font-size: .62rem; }
+}

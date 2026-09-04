@@ -63,9 +63,13 @@
       <div class="footer-col footer-contact">
         <h2>Contact</h2>
         <ul class="footer-contact-list">
-          <li>
+          <li class="footer-phone-row">
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('phone'); ?></svg></span>
-            <a href="tel:<?php echo e(preg_replace('/[^0-9+]/', '', SITE_PHONE)); ?>"><?php echo e(SITE_PHONE); ?></a>
+            <span class="footer-phones">
+              <?php foreach (site_phones() as $phone): ?>
+                <a href="tel:<?php echo e(tel_href($phone['number'])); ?>"><span class="phone-region"><?php echo e($phone['short']); ?></span><?php echo e($phone['number']); ?></a>
+              <?php endforeach; ?>
+            </span>
           </li>
           <li>
             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><?php echo footer_svg_icon('mail'); ?></svg></span>

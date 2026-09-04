@@ -24,6 +24,8 @@ define('SITE_FOUNDED_YEAR', '2022');                       // brand founding yea
 define('SITE_LOGO', 'assets/images/logo.webp');
 define('SITE_MASCOT', 'assets/images/mascot.webp');
 define('SITE_PHONE', (string) pgp_setting('site_phone', '+61 7 5690 2990'));
+define('SITE_PHONE_US', (string) pgp_setting('site_phone_us', '+1 628 265 7210'));
+define('SITE_PHONE_UK', (string) pgp_setting('site_phone_uk', '+44 20 3048 2609'));
 define('SITE_EMAIL', (string) pgp_setting('site_email', 'info@purplegiraffepress.com'));
 define('SITE_ADDRESS', (string) pgp_setting('site_address', 'Level 9 Corporate Ct, Bundall QLD 4217, Australia'));
 define('SITE_REVIEW_URL', (string) pgp_setting('site_review_url', 'https://g.page/r/CQAkRVYrbqSLEBM/'));
@@ -32,6 +34,21 @@ define('SITE_HOURS', (string) pgp_setting('site_hours', 'Monday to Friday, 9:00 
 define('SITE_CANONICAL_URL', 'https://purplegiraffepress.com/');
 define('MAIN_CTA_TEXT', 'Start Publishing');
 define('MAIN_CTA_LINK', 'contact.php');
+
+/* Regional contact numbers, rendered wherever the site lists a way to call us
+   (footer, contact page, contact band). SITE_PHONE stays the head-office
+   number used for schema and the header nav. Blank a number in the admin and
+   its row simply disappears. */
+function site_phones() {
+    $rows = [
+        ['region' => 'Australia',      'short' => 'AU', 'number' => SITE_PHONE],
+        ['region' => 'United States',  'short' => 'US', 'number' => SITE_PHONE_US],
+        ['region' => 'United Kingdom', 'short' => 'UK', 'number' => SITE_PHONE_UK],
+    ];
+    return array_values(array_filter($rows, static function ($row) {
+        return trim((string) $row['number']) !== '';
+    }));
+}
 
 $social_links = pgp_setting('social_links', [
     'Facebook' => 'https://www.facebook.com/PurpleGiraffePress',
@@ -167,6 +184,12 @@ unset($__pgp_host);
 
 function e($value) {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
+
+/* Dial-able form of a printed number: strip spaces, brackets and dashes so the
+   tel: link works from a phone. */
+function tel_href($number) {
+    return preg_replace('/[^0-9+]/', '', (string) $number);
 }
 
 /**

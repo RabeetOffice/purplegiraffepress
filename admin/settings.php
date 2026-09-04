@@ -14,7 +14,7 @@ $user = admin_require_module('settings');
 
 $OVR_PATH = ADMIN_DATA_DIR . '/settings-overrides.json';
 
-$CONTACT_KEYS = ['site_phone', 'site_email', 'site_address', 'site_trading_address', 'site_hours'];
+$CONTACT_KEYS = ['site_phone', 'site_phone_us', 'site_phone_uk', 'site_email', 'site_address', 'site_trading_address', 'site_hours'];
 
 /* Defaults duplicated from includes/config.php so the social form can show the
    raw override-or-default map. */
@@ -130,6 +130,8 @@ if (!is_array($ovr)) { $ovr = []; }
 /* Contact + leads show the EFFECTIVE values (config already merged the JSON). */
 $contactCurrent = [
     'site_phone'           => SITE_PHONE,
+    'site_phone_us'        => SITE_PHONE_US,
+    'site_phone_uk'        => SITE_PHONE_UK,
     'site_email'           => SITE_EMAIL,
     'site_address'         => SITE_ADDRESS,
     'site_trading_address' => SITE_TRADING_ADDRESS,
@@ -171,12 +173,22 @@ admin_layout_start('Site Settings', 'settings');
       <input type="hidden" name="section" value="contact">
       <div class="adm-field-row">
         <label class="adm-field">
-          <span>Phone number</span>
+          <span>Phone number (Australia)</span>
           <input type="text" name="site_phone" value="<?php echo e($contactCurrent['site_phone']); ?>" placeholder="+61 7 5690 2990">
         </label>
         <label class="adm-field">
           <span>Public email</span>
           <input type="email" name="site_email" value="<?php echo e($contactCurrent['site_email']); ?>" placeholder="info@purplegiraffepress.com">
+        </label>
+      </div>
+      <div class="adm-field-row">
+        <label class="adm-field">
+          <span>Phone number (United States)</span>
+          <input type="text" name="site_phone_us" value="<?php echo e($contactCurrent['site_phone_us']); ?>" placeholder="+1 628 265 7210">
+        </label>
+        <label class="adm-field">
+          <span>Phone number (United Kingdom)</span>
+          <input type="text" name="site_phone_uk" value="<?php echo e($contactCurrent['site_phone_uk']); ?>" placeholder="+44 20 3048 2609">
         </label>
       </div>
       <label class="adm-field">

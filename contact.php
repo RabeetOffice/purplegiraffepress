@@ -24,7 +24,9 @@ $canonical_path = 'contact.php';
       <h2>We are here for story questions.</h2>
       <p class="info-lead">Prefer to reach out directly? Call, email, or drop by the studio. We read every message ourselves.</p>
       <ul class="check-list">
-        <li><a href="tel:<?php echo e(preg_replace('/[^0-9+]/', '', SITE_PHONE)); ?>"><?php echo e(SITE_PHONE); ?></a></li>
+        <?php foreach (site_phones() as $phone): ?>
+          <li><a href="tel:<?php echo e(tel_href($phone['number'])); ?>"><span class="phone-region"><?php echo e($phone['short']); ?></span><?php echo e($phone['number']); ?></a></li>
+        <?php endforeach; ?>
         <li><a href="mailto:<?php echo e(SITE_EMAIL); ?>"><?php echo e(SITE_EMAIL); ?></a></li>
         <li><a href="<?php echo e(SITE_REVIEW_URL); ?>" target="_blank" rel="noopener"><?php echo e(SITE_ADDRESS); ?></a></li>
         <li><?php echo e(SITE_HOURS); ?></li>

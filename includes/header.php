@@ -163,6 +163,22 @@ $page_noindex = ($page_noindex ?? false);
     "description": "<?php echo e($page_description); ?>",
     "email": "<?php echo e(SITE_EMAIL); ?>",
     "telephone": "<?php echo e(SITE_PHONE); ?>",
+    <?php /* One contact point per country so search engines can surface the
+             right number for the searcher's region. */ ?>
+    "contactPoint": <?php
+      $__cp = [];
+      foreach (site_phones() as $__p) {
+          $__cp[] = [
+              '@type'       => 'ContactPoint',
+              'contactType' => 'customer service',
+              'telephone'   => tel_href($__p['number']),
+              'email'       => SITE_EMAIL,
+              'areaServed'  => $__p['short'] === 'UK' ? 'GB' : $__p['short'],
+              'availableLanguage' => 'English',
+          ];
+      }
+      echo json_encode($__cp, JSON_UNESCAPED_SLASHES);
+    ?>,
     "sameAs": <?php echo json_encode(array_values($social_links)); ?>
   }
   </script>
